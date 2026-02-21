@@ -9,7 +9,7 @@ frontend:
         - cd fyt-amplified && npm install
     build:
       commands:
-        - cd fyt-amplified && ../hugo --minify
+        - $CODEBUILD_SRC_DIR/hugo --minify -s $CODEBUILD_SRC_DIR/fyt-amplified
   artifacts:
     baseDirectory: fyt-amplified/public
     files:
