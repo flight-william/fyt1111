@@ -1,0 +1,50 @@
+[nav_brand]
+other = "富易堂"
+
+[tagline]
+other = "让 BC 成为娱乐"
+
+[scroll_hint]
+other = "向下滚动"
+
+[section_origin]
+other = "始于 11.11.11"
+
+[section_o2o]
+other = "线上到线下"
+
+[section_mascot]
+other = "认识阿富"
+
+[section_evolution]
+other = "设计演变"
+
+[section_vip]
+other = "贵宾之道"
+
+[section_charity]
+other = "把爱传出去"
+
+[section_platform]
+other = "自研 · 自建"
+
+[closing_philosophy]
+other = "十年如一 · 待客如初"
+
+[cs_label]
+other = "专属客服 · 全天候守候"
+
+[cs_sublabel]
+other = "24/7 专属服务"
+
+[play_video]
+other = "播放视频"
+
+[from_archives]
+other = "历史档案"
+
+[lang_toggle_zh]
+other = "中"
+
+[lang_toggle_en]
+other = "EN"

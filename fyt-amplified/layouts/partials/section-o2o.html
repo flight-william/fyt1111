@@ -1,0 +1,54 @@
+{{/* ===== O2O Experiences — Macau Tower video hero, magazine ===== */}}
+<section id="o2o" data-section="2" class="page section-dark section-border-top">
+  <div class="page-inner">
+    {{/* Section header */}}
+    <div class="relative mb-3 reveal">
+      <span class="vertical-label">{{ i18n "section_o2o" }}</span>
+      <div class="gold-line mb-3"></div>
+      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}体验{{ else }}Experience{{ end }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}线上到<span class="text-gold">线下</span>{{ else }}Online to <span class="text-gold">Offline</span>{{ end }}
+      </h2>
+    </div>
+
+    {{/* Top: Macau Tower bungy video — center, constrained */}}
+    <div class="reveal mb-3">
+      <div class="artifact auto-video-section mx-auto" style="max-height: 30vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+          <source src="/video/macau-tower.mp4" type="video/mp4">
+        </video>
+      </div>
+      <span class="artifact-caption block mt-2 text-center">{{ if eq .Language.Lang "zh" }}五周年 · 澳门塔蹦极{{ else }}5th Anniversary · Macau Tower{{ end }}</span>
+    </div>
+
+    {{/* Bottom: text left + magazine right — forced side by side */}}
+    <div class="reveal" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+      {{/* Left: text */}}
+      <div style="flex: 1; min-width: 0;">
+        {{ if eq .Language.Lang "zh" }}
+        <p class="drop-cap">
+          富易堂从不止步于屏幕。与澳门贵宾厅集团钜星的深度合作，将品牌杂志铺设至澳门各大赌场的VIP贵宾厅，实现了线上到线下的真正联动。
+        </p>
+        <p>
+          五周年庆典，品牌带领贵宾亲赴澳门旅游塔，纵身233米的极限蹦极——将「一点都不难」的品牌精神化为肾上腺素飙升的切身体验。新加坡F1赛道的贵宾体验同样如此：敢于尝试，赢就在眼前。
+        </p>
+        {{ else }}
+        <p class="drop-cap">
+          FYT never stayed behind the screen. Through a deep partnership with Juxing, a Macau-based VIP concierge group, the brand's magazine was placed in VIP lounges across Macau's casinos — a true online-to-offline bridge.
+        </p>
+        <p>
+          For the 5th anniversary, the brand brought VIP guests to Macau Tower for the iconic 233-meter bungy jump — turning "It's not hard at all" into a lived, adrenaline-fueled experience. The Singapore F1 street circuit drive followed the same spirit: dare to try, and winning is never far away.
+        </p>
+        {{ end }}
+      </div>
+
+      {{/* Right: magazine */}}
+      <div style="flex: 0 0 220px;">
+        <figure style="max-height: 20vh; overflow: hidden;">
+          <img src="/images/macau-print.webp" alt="{{ if eq .Language.Lang "zh" }}澳门贵宾厅杂志{{ else }}Macau VIP lounge magazine{{ end }}" loading="lazy" class="w-full h-auto rounded-sm">
+        </figure>
+        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}澳门贵宾厅 · 杂志{{ else }}Macau VIP Lounge{{ end }}</span>
+      </div>
+    </div>
+  </div>
+</section>

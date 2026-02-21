@@ -1,0 +1,61 @@
+{{/* ===== VIP — 1 page ===== */}}
+<section id="vip" data-section="5" class="page section-dark section-border-top">
+  <div class="page-inner">
+    {{/* Section header */}}
+    <div class="relative mb-3 reveal">
+      <span class="vertical-label">{{ i18n "section_vip" }}</span>
+      <div class="gold-line mb-3"></div>
+      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}礼遇{{ else }}Experience{{ end }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}<span class="text-gold">贵宾</span>之道{{ else }}The <span class="text-gold">VIP</span> Way{{ end }}
+      </h2>
+    </div>
+
+    {{/* Layout: left images + right text */}}
+    <div class="reveal" style="display: flex; gap: 1.5rem; align-items: flex-start;">
+      {{/* Left: Haig Club card + poker cards */}}
+      <div style="flex: 0 0 40%; display: flex; flex-direction: column; gap: 0.5rem;">
+        <figure class="artifact" style="max-height: 18vh;">
+          <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy">
+        </figure>
+        <div style="display: flex; gap: 0.5rem;">
+          <figure class="artifact artifact-tilted" style="max-height: 12vh; flex: 1;">
+            <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy">
+          </figure>
+          <figure class="artifact artifact-tilted-r" style="max-height: 12vh; flex: 1;">
+            <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy">
+          </figure>
+        </div>
+        <span class="artifact-caption block">{{ if eq .Language.Lang "zh" }}金箔定制 · RICHE88{{ else }}Gold Foil · RICHE88{{ end }}</span>
+      </div>
+
+      {{/* Right: motto + text */}}
+      <div style="flex: 1; min-width: 0;">
+        <div class="mb-3">
+          <div class="pull-quote text-lg md:text-xl tracking-[0.15em]">
+            小大由之 · 富在知足
+          </div>
+          <p class="text-center text-fyt-muted text-xs mt-1 opacity-60">
+            {{ if eq .Language.Lang "zh" }}「无论大小，真正的富足在于知足常乐」{{ else }}"In all things great and small, true wealth lies in contentment"{{ end }}
+          </p>
+        </div>
+
+        {{ if eq .Language.Lang "zh" }}
+        <p>
+          贵宾之道，始于澳门。富易堂与澳门贵宾厅集团钜星的合作，将线下贵宾服务的精髓注入品牌血脉。从Macau Tower的极限蹦极，到新加坡F1赛道的速度与激情——以「一点都不难」的精神，让每位贵宾亲身体验不可能。
+        </p>
+        <p>
+          在VIP礼遇方面，富易堂曾携手世界名酒Haig Club，以限量40年单一谷物苏格兰威士忌搭配手工吹制水晶酒瓶，作为新年贺礼。这份心意不是账号式的对待，而是以诚待客的信念——如今延续到数字空间。
+        </p>
+        {{ else }}
+        <p>
+          The VIP way begins in Macau. FYT's partnership with Juxing, a Macau-based VIP concierge group, infused the essence of landed casino hospitality into the brand's DNA. From the Macau Tower bungy jump to driving the Singapore F1 street circuit — each experience embodies "It's not hard at all."
+        </p>
+        <p>
+          FYT partnered with Haig Club to present VIP customers with a limited edition 40-year single grain Scotch whisky in a handblown crystal decanter. This level of care — treating guests as valued individuals, not account numbers — now extends into the digital space.
+        </p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

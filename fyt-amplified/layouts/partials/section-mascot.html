@@ -1,0 +1,52 @@
+{{/* ===== 认识阿富 — 1 page: Just Ah Fu + stickers ===== */}}
+<section id="mascot" data-section="3" class="page section-gradient section-border-top">
+  <div class="page-inner">
+    {{/* Section header */}}
+    <div class="relative mb-4 reveal">
+      <span class="vertical-label">{{ i18n "section_mascot" }}</span>
+      <div class="gold-line mb-4"></div>
+      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}匠心{{ else }}Craft{{ end }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}认识<span class="text-gold">阿富</span>{{ else }}Meet <span class="text-gold">Ah Fu</span>{{ end }}
+      </h2>
+    </div>
+
+    {{/* Mascot hero + intro text */}}
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal">
+      <div class="md:col-span-3 flex justify-center">
+        <figure class="relative" style="max-height: 25vh;">
+          <img src="/images/afu-hero.webp" alt="{{ if eq .Language.Lang "zh" }}阿富{{ else }}Ah Fu{{ end }}" loading="lazy" class="afu-hero h-full w-auto mx-auto drop-shadow-[0_12px_25px_rgba(0,0,0,0.5)]">
+        </figure>
+      </div>
+      <div class="md:col-span-9">
+        {{ if eq .Language.Lang "zh" }}
+        <p class="drop-cap">
+          阿富诞生于2015年。头顶标志性棕色卷发、穿着红色背带裤、胸口绣着「富」字——这个俏皮的卡通男孩，是富易堂最温暖的代言人。每一个表情都是一种态度，每一个姿态都是品牌性格的延伸。
+        </p>
+        <p>
+          阿富不仅活在屏幕上。他曾亲临粤鄂明星慈善足球赛，与来宾互动。一套完整的社交表情贴纸，让阿富走进玩家的日常对话，成为品牌最生动的代言人。
+        </p>
+        {{ else }}
+        <p class="drop-cap">
+          Ah Fu was born in 2015. With his signature brown swirl hairstyle, red suspenders, and the character "富" on his shirt, this spirited mascot became the warmest ambassador of the FYT brand. Every expression carries an attitude; every pose is an extension of the brand's character.
+        </p>
+        <p>
+          Ah Fu lives beyond the screen. He appeared at the Guangdong-Hubei Charity Soccer Match, engaging with guests in person. A full set of social stickers brought Ah Fu into everyday conversations — the brand's most vivid ambassador.
+        </p>
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Sticker collage */}}
+    <div class="reveal mt-3">
+      <div class="sticker-collage">
+        <img src="/images/stickers/afu-1.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 0;">
+        <img src="/images/stickers/afu-2.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 1;">
+        <img src="/images/stickers/afu-3.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 2;">
+        <img src="/images/stickers/afu-4.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 3;">
+        <img src="/images/stickers/afu-5.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 4;">
+        <img src="/images/stickers/afu-6.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 5;">
+      </div>
+    </div>
+  </div>
+</section>

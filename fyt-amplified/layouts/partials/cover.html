@@ -1,0 +1,33 @@
+<section class="cover grain">
+  <div class="relative z-10 text-center px-6 max-w-xl mx-auto">
+    {{/* Heritage logo — very ghosted, contextual "where we came from" */}}
+    <div class="mb-6 cover-fade-1">
+      <img src="/images/logo-heritage-light.webp" alt="富易堂 RICHE88" class="w-20 md:w-24 mx-auto opacity-10">
+    </div>
+
+    {{/* Gold connector */}}
+    <div class="gold-line-v mx-auto mb-6 cover-fade-2"></div>
+
+    {{/* Current FYTBET logo — the hero, transparent PNG */}}
+    <div class="mb-14 cover-fade-2">
+      <img src="/images/logo-fytbet.webp" alt="FYTBET" class="w-40 md:w-52 mx-auto opacity-90">
+    </div>
+
+    {{/* Tagline */}}
+    <p class="cover-fade-3 text-fyt-cream opacity-35 text-base md:text-xl font-extralight tracking-[0.3em] leading-relaxed">
+      {{ i18n "tagline" }}
+    </p>
+
+    {{/* Founding date */}}
+    <p class="cover-fade-4 mt-8 font-sans text-[10px] tracking-[0.6em] text-fyt-muted opacity-25">
+      EST. 2011.11.11
+    </p>
+  </div>
+
+  {{/* Scroll hint */}}
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 chevron-anim">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-25 text-fyt-cream">
+      <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>

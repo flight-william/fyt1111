@@ -1,0 +1,87 @@
+[zh]
+  languageName = "中文"
+  languageCode = "zh-CN"
+  weight = 1
+  title = "富易堂 | 始于2011 — 品牌故事"
+
+  [zh.params]
+    description = "富易堂(Riche88/FYT)，创立于2011年11月11日。十五年深耕体育竞猜，自主研发，专注VIP服务。"
+
+  [[zh.menus.main]]
+    name = "始于 11.11.11"
+    url = "#origin"
+    weight = 1
+
+  [[zh.menus.main]]
+    name = "线上到线下"
+    url = "#o2o"
+    weight = 2
+
+  [[zh.menus.main]]
+    name = "认识阿富"
+    url = "#mascot"
+    weight = 3
+
+  [[zh.menus.main]]
+    name = "设计演变"
+    url = "#evolution"
+    weight = 4
+
+  [[zh.menus.main]]
+    name = "贵宾之道"
+    url = "#vip"
+    weight = 5
+
+  [[zh.menus.main]]
+    name = "把爱传出去"
+    url = "#charity"
+    weight = 6
+
+  [[zh.menus.main]]
+    name = "自研 · 自建"
+    url = "#platform"
+    weight = 7
+
+[en]
+  languageName = "EN"
+  languageCode = "en"
+  weight = 2
+  title = "FYT | Since 2011 — Brand Story"
+
+  [en.params]
+    description = "FYT (Riche88/FYTBET), founded November 11, 2011. Fifteen years of sportsbook expertise, in-house development, dedicated VIP service."
+
+  [[en.menus.main]]
+    name = "Origin"
+    url = "#origin"
+    weight = 1
+
+  [[en.menus.main]]
+    name = "O2O"
+    url = "#o2o"
+    weight = 2
+
+  [[en.menus.main]]
+    name = "Ah Fu"
+    url = "#mascot"
+    weight = 3
+
+  [[en.menus.main]]
+    name = "Evolution"
+    url = "#evolution"
+    weight = 4
+
+  [[en.menus.main]]
+    name = "VIP"
+    url = "#vip"
+    weight = 5
+
+  [[en.menus.main]]
+    name = "Charity"
+    url = "#charity"
+    weight = 6
+
+  [[en.menus.main]]
+    name = "Platform"
+    url = "#platform"
+    weight = 7

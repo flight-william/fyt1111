@@ -1,0 +1,16 @@
+<nav class="nav-floating px-6 md:px-10 py-5 flex items-center justify-between" style="padding-right: max(1.5rem, env(safe-area-inset-right));">
+  <div class="flex items-center">
+    <img src="/images/logo-fytbet.webp" alt="FYTBET" class="h-5 w-auto opacity-50 hover:opacity-70 transition-opacity duration-300">
+  </div>
+  <div class="lang-toggle flex items-center gap-3 mr-4">
+    {{ if eq .Language.Lang "zh" }}
+    <a href="/" class="active" data-lang-toggle="zh">中</a>
+    <span class="text-fyt-subtle text-xs">/</span>
+    <a href="/en/" data-lang-toggle="en">EN</a>
+    {{ else }}
+    <a href="/" data-lang-toggle="zh">中</a>
+    <span class="text-fyt-subtle text-xs">/</span>
+    <a href="/en/" class="active" data-lang-toggle="en">EN</a>
+    {{ end }}
+  </div>
+</nav>

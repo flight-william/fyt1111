@@ -1,0 +1,66 @@
+{{/* ===== Origin — 1 page: Header + Hero + Text + Pull Quote ===== */}}
+<section id="origin" data-section="1" class="page section-gradient-up section-border-top">
+  <div class="page-inner">
+    {{/* Section header */}}
+    <div class="relative mb-4 reveal">
+      <span class="vertical-label">{{ i18n "section_origin" }}</span>
+      <div class="gold-line mb-4"></div>
+      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}溯源{{ else }}Origin{{ end }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}始于 <span class="text-gold">11.11.11</span>{{ else }}Since <span class="text-gold">11.11.11</span>{{ end }}
+      </h2>
+      <p class="mt-2 font-sans text-xs tracking-[0.5em] text-fyt-muted opacity-40">
+        2011 · 11 · 11 — 11:11:11
+      </p>
+    </div>
+
+    {{/* Magazine layout: hero left + text right */}}
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 reveal">
+      {{/* Hero banner */}}
+      <div class="md:col-span-5">
+        <figure class="artifact" style="max-height: 25vh;">
+          <img src="/images/hero-banner-classic.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂经典横幅{{ else }}Classic FYT hero banner{{ end }}" loading="lazy">
+        </figure>
+        <span class="artifact-caption block mt-1">{{ i18n "from_archives" }} · 2014</span>
+      </div>
+      {{/* Text column */}}
+      <div class="md:col-span-7">
+        {{ if eq .Language.Lang "zh" }}
+        <p class="drop-cap">
+          富易堂诞生于2011年11月11日上午11时11分11秒——被称为「世纪光棍节」的历史时刻。这个百年一遇的日期，成为品牌基因中不可磨灭的印记。
+        </p>
+        <p>
+          创立之初，隶属于Cube集团旗下，与业界知名品牌188BET同属一家。Cube持有马恩岛及菲律宾PAGCOR双重牌照，为品牌运营奠定了合规基础。PrestigeIM更持有FCLRC互动博彩牌照至2024年，三地监管资质完整覆盖。
+        </p>
+        {{ else }}
+        <p class="drop-cap">
+          FYT was born at 11:11:11 AM on November 11, 2011 — a once-in-a-century moment known as "Century Singles' Day." This extraordinary timestamp became an indelible mark in the brand's DNA.
+        </p>
+        <p>
+          Founded under the Cube group alongside the renowned 188BET brand, FYT inherited licenses from the Isle of Man and PAGCOR. PrestigeIM held an FCLRC interactive gaming license through 2024 — establishing regulatory presence across three jurisdictions.
+        </p>
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Second text block + pull quote */}}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal mt-4">
+      <div>
+        {{ if eq .Language.Lang "zh" }}
+        <p>
+          在中文论坛的黄金时代，富易堂活跃于天朝论坛、华人论坛、海燕论坛、博人论坛和万博论坛，与社区建立了深厚的草根联系。品牌同样经历了蜕变：从富易堂 Riche88 到 FYTBET——传承不断，面貌常新。
+        </p>
+        {{ else }}
+        <p>
+          During the golden era of Chinese forums, FYT built a grassroots presence across Tianchao, Huaren, Haiyan, Boren, and Wanbo forums. The brand identity evolved: from 富易堂 Riche88 to FYTBET — heritage preserved, expression renewed.
+        </p>
+        {{ end }}
+      </div>
+      <div>
+        <div class="pull-quote">
+          {{ if eq .Language.Lang "zh" }}要赢？一点都不难！{{ else }}Want to win? It's not hard at all!{{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

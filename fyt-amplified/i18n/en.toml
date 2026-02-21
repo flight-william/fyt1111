@@ -1,0 +1,50 @@
+[nav_brand]
+other = "FYT"
+
+[tagline]
+other = "Make BC Entertainment"
+
+[scroll_hint]
+other = "Scroll down"
+
+[section_origin]
+other = "Since 11.11.11"
+
+[section_o2o]
+other = "Online to Offline"
+
+[section_mascot]
+other = "Meet Ah Fu"
+
+[section_evolution]
+other = "Design Evolution"
+
+[section_vip]
+other = "The VIP Way"
+
+[section_charity]
+other = "Spread the Love"
+
+[section_platform]
+other = "Built, Not Bought"
+
+[closing_philosophy]
+other = "A decade unchanged · Treating guests as we did from the start"
+
+[cs_label]
+other = "Dedicated concierge · Always here"
+
+[cs_sublabel]
+other = "24/7 dedicated service"
+
+[play_video]
+other = "Play video"
+
+[from_archives]
+other = "From the archives"
+
+[lang_toggle_zh]
+other = "中"
+
+[lang_toggle_en]
+other = "EN"

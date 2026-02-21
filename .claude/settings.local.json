@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo new:*)",
+      "Bash(npm init:*)",
+      "Bash(hugo:*)",
+      "Bash(# Download Inter variable font cd /Users/wt/Development/FYT1111/fyt-amplified/static/fonts npm install --prefix /tmp/inter-font @fontsource/inter cp /tmp/inter-font/node_modules/@fontsource/inter/files/inter-latin-*-normal.woff2 . # Check if we got it ls inter-*.woff2)",
+      "Bash(pkill:*)",
+      "Bash(/usr/bin/find:*)",
+      "Bash(/usr/bin/sort:*)",
+      "Bash(sips:*)",
+      "Bash(echo webp not installed:*)",
+      "Bash(grep pixel:*)",
+      "Bash(head:*)",
+      "Bash(cp:*)"
+    ]
+  }
+}

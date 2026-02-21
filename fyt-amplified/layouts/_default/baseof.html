@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
+  <meta name="keywords" content="富易堂,Riche88,FYTBET,FYT,fyt1111,fytbet,x88bet,富易堂官网,Riche88官网,体育竞猜,富贵保">
+  <link rel="canonical" href="{{ "https://riche88.com/" }}{{ if eq .Language.Lang "en" }}en/{{ end }}">
+  {{ if eq .Language.Lang "zh" }}
+  <link rel="alternate" hreflang="zh" href="https://riche88.com/">
+  <link rel="alternate" hreflang="en" href="https://riche88.com/en/">
+  {{ else }}
+  <link rel="alternate" hreflang="en" href="https://riche88.com/en/">
+  <link rel="alternate" hreflang="zh" href="https://riche88.com/">
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="https://riche88.com/">
+
+  {{/* Tailwind CSS — built by Hugo Pipes */}}
+  {{ $css := resources.Get "css/main.css" }}
+  {{ $opts := dict "inlineImports" true }}
+  {{ with $css }}
+    {{ $processed := . | css.TailwindCSS $opts }}
+    {{ if hugo.IsProduction }}
+      {{ $processed = $processed | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $processed.RelPermalink }}">
+  {{ end }}
+
+  {{/* Self-hosted fonts — Noto Serif SC (unicode-range subsets) + Inter */}}
+  <link rel="stylesheet" href="/fonts/noto-serif-sc.css">
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url('/fonts/inter-latin-300-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/inter-latin-400-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('/fonts/inter-latin-500-normal.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/fonts/inter-latin-700-normal.woff2') format('woff2');
+    }
+  </style>
+
+  {{/* JSON-LD Organization Schema */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "富易堂",
+    "alternateName": ["Riche88", "FYT", "FYTBET"],
+    "url": "https://riche88.com",
+    "foundingDate": "2011-11-11",
+    "logo": "https://riche88.com/images/logo-heritage.png",
+    "sameAs": [
+      "https://fyt1111.com",
+      "https://fytbet.com",
+      "https://x88.bet"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-fyt-black text-fyt-warm-white antialiased">
+  {{/* Progress bar */}}
+  <div class="progress-bar" style="width: 0%;"></div>
+
+  {{/* Navigation */}}
+  {{ partial "nav.html" . }}
+
+  {{/* Section dots */}}
+  {{ partial "section-dots.html" . }}
+
+  {{/* Main content */}}
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{/* Scripts */}}
+  {{ $scrollJs := resources.Get "js/scroll.js" }}
+  {{ $toggleJs := resources.Get "js/toggle.js" }}
+  {{ $linksJs := resources.Get "js/links.js" }}
+  {{ if hugo.IsProduction }}
+    {{ $scrollJs = $scrollJs | minify | fingerprint }}
+    {{ $toggleJs = $toggleJs | minify | fingerprint }}
+    {{ $linksJs = $linksJs | minify | fingerprint }}
+  {{ end }}
+  <script defer src="{{ $scrollJs.RelPermalink }}"></script>
+  <script defer src="{{ $toggleJs.RelPermalink }}"></script>
+  <script defer src="{{ $linksJs.RelPermalink }}"></script>
+</body>
+</html>

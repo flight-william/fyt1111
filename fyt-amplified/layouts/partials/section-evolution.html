@@ -1,0 +1,51 @@
+{{/* ===== Design Evolution — 1 page ===== */}}
+<section id="evolution" data-section="4" class="page section-gradient section-border-top">
+  <div class="page-inner">
+    {{/* Section header */}}
+    <div class="relative mb-3 reveal">
+      <span class="vertical-label">{{ i18n "section_evolution" }}</span>
+      <div class="gold-line mb-3"></div>
+      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}蜕变{{ else }}Evolution{{ end }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}设计<span class="text-gold">演变</span>{{ else }}Design <span class="text-gold">Evolution</span>{{ end }}
+      </h2>
+      {{ if eq .Language.Lang "zh" }}
+      <p class="mt-2 max-w-2xl text-fyt-cream opacity-60">
+        从2011年灰蓝清新的Apple风格起步，到2020年黑橙重塑品牌形象，再到全橙的大胆试验——勇于探索，不惧试错。最终回归精炼的黑橙，沉稳而有力。十五年四次蜕变，每一次都是对完美体验的不懈追求，也是团队自主研发能力的最好证明。
+      </p>
+      {{ else }}
+      <p class="mt-2 max-w-2xl text-fyt-cream opacity-60">
+        Starting with an Apple-inspired grey-blue aesthetic in 2011, through the bold black-orange rebrand of 2020, then a daring all-orange experiment — unafraid to try, unafraid to fail. The return to refined black-orange proved decisive. Four evolutions in fifteen years, each an unwavering pursuit of the perfect experience — and proof of the team's in-house capability.
+      </p>
+      {{ end }}
+    </div>
+
+    {{/* 2x2 grid — centered, uniform 16:9 */}}
+    <div class="grid grid-cols-2 gap-3 reveal max-w-3xl mx-auto">
+      <div>
+        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+          <img src="/images/website-v1.webp" alt="{{ if eq .Language.Lang "zh" }}原版网站{{ else }}Original website{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+        </div>
+        <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}灰蓝 · 2011{{ else }}Grey-Blue · 2011{{ end }}</span>
+      </div>
+      <div>
+        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+          <img src="/images/website-rebrand.webp" alt="{{ if eq .Language.Lang "zh" }}品牌重塑{{ else }}Rebrand{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+        </div>
+        <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}黑橙 · 2020{{ else }}Black-Orange · 2020{{ end }}</span>
+      </div>
+      <div>
+        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+          <img src="/images/app-2026-web1.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
+        </div>
+        <span class="artifact-caption block mt-1 text-[10px]">2026</span>
+      </div>
+      <div>
+        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+          <img src="/images/app-2026-web2.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
+        </div>
+        <span class="artifact-caption block mt-1 text-[10px]">2026</span>
+      </div>
+    </div>
+  </div>
+</section>

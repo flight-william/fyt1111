@@ -1,0 +1,7 @@
+<div class="section-dots" aria-label="Section navigation">
+  {{ range .Site.Menus.main }}
+  <a href="{{ .URL }}" class="section-dot" data-dot="{{ .Weight }}" aria-label="{{ .Name }}">
+    <span class="dot-tooltip">{{ .Name }}</span>
+  </a>
+  {{ end }}
+</div>

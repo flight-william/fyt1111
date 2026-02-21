@@ -1,0 +1,65 @@
+{{/* ===== Charity — 1 page ===== */}}
+<section id="charity" data-section="6" class="page section-gradient section-border-top">
+  <div class="page-inner">
+    {{/* Section header */}}
+    <div class="relative mb-3 reveal">
+      <span class="vertical-label">{{ i18n "section_charity" }}</span>
+      <div class="gold-line mb-3"></div>
+      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}公益{{ else }}Giving Back{{ end }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}<span class="text-gold">把爱</span>传出去{{ else }}<span class="text-gold">Spread</span> the Love{{ end }}
+      </h2>
+    </div>
+
+    {{/* Hero video — autoplay on section focus */}}
+    <div class="reveal mb-3">
+      <div class="auto-video-section mx-auto" style="max-height: 28vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
+        <video loop muted playsinline class="w-full h-full object-cover">
+          <source src="/video/charity-soccer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
+    </div>
+
+    {{/* Text */}}
+    <div class="reveal">
+      {{ if eq .Language.Lang "zh" }}
+      <p class="drop-cap">
+        那些被遗忘的孩子——这份纪实报告的标题，也是富易堂公益行动的起点。团队深入中国偏远山区，为贫困学校捐赠资金，为家庭送去食用油、大米和生活物资。穿着印有「把爱传出去」的慈善T恤，翻山越岭，将书包、足球、蜡笔和文具亲手交到孩子们手中。
+      </p>
+      <p>
+        2015年5月2日，诚十杯粤鄂足球慈善赛在广东省人民体育场举行。诚十集团与富易堂联合赞助，33位福利院的孩子对阵11名退役国脚——一场温暖人心的33对11表演赛。广州电视台全程报道。
+      </p>
+      {{ else }}
+      <p class="drop-cap">
+        "The Forgotten Children" — this documentary report's title was also the starting point of FYT's charitable mission. The team traveled deep into rural China, donating funds to schools, delivering cooking oil, rice, and daily necessities to families in need.
+      </p>
+      <p>
+        On May 2, 2015, the Chengshi Cup charity soccer match was held at Guangdong Provincial People's Stadium. Co-sponsored by Chengshi Group and FYT, 33 children from welfare homes played against 11 veteran national football players — broadcast on Guangzhou television.
+      </p>
+      {{ end }}
+    </div>
+
+    {{/* Bottom row: t-shirt + hero photo + distribution */}}
+    <div class="grid grid-cols-3 gap-3 reveal mt-3">
+      <div>
+        <figure class="artifact" style="max-height: 11vh;">
+          <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else }}Charity T-shirt{{ end }}" loading="lazy">
+        </figure>
+        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}把爱传出去{{ else }}Spread the Love{{ end }}</span>
+      </div>
+      <div>
+        <figure class="artifact" style="max-height: 11vh;">
+          <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural donations{{ end }}" loading="lazy">
+        </figure>
+        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural China{{ end }}</span>
+      </div>
+      <div>
+        <figure class="artifact" style="max-height: 11vh;">
+          <img src="/images/charity-distribute.webp" alt="{{ if eq .Language.Lang "zh" }}物资发放{{ else }}Distribution{{ end }}" loading="lazy">
+        </figure>
+        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}物资发放{{ else }}Distribution{{ end }}</span>
+      </div>
+    </div>
+  </div>
+</section>

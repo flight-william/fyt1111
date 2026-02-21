@@ -1,0 +1,30 @@
+baseURL = "https://riche88.com/"
+title = "富易堂 | 始于2011 — 品牌故事"
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "section", "RSS"]
+disableHugoGeneratorInject = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  [build.buildStats]
+    enable = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "sitemap"]
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = true
+    [minify.tdewolff.css]
+      version = 4
