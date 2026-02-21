@@ -1,53 +1,104 @@
-{{/* ===== O2O Experiences — Macau Tower video hero, magazine ===== */}}
+{{/* ===== O2O — PPT slides: Macau partnership, experiential events ===== */}}
 <section id="o2o" data-section="2" class="page section-dark section-border-top">
   <div class="page-inner">
-    {{/* Section header */}}
+    {{/* Section header — static */}}
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_o2o" }}</span>
-      <div class="gold-line mb-3"></div>
-      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}体验{{ else }}Experience{{ end }}</p>
+      <div class="gold-line mb-2"></div>
+      <p class="heading-sub mb-1">{{ if eq .Language.Lang "zh" }}体验{{ else }}Experience{{ end }}</p>
       <h2 class="heading-display">
         {{ if eq .Language.Lang "zh" }}线上到<span class="text-gold">线下</span>{{ else }}Online to <span class="text-gold">Offline</span>{{ end }}
       </h2>
     </div>
 
-    {{/* Top: Macau Tower bungy video — center, constrained */}}
-    <div class="reveal mb-3">
-      <div class="artifact auto-video-section mx-auto" style="max-height: 30vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
-        <video loop playsinline controls class="w-full h-full object-cover">
-          <source src="/video/macau-tower.mp4" type="video/mp4">
-        </video>
-      </div>
-      <span class="artifact-caption block mt-2 text-center">{{ if eq .Language.Lang "zh" }}五周年 · 澳门塔蹦极{{ else }}5th Anniversary · Macau Tower{{ end }}</span>
-    </div>
+    {{/* Scroll feed — PPT slides */}}
+    <div class="scroll-feed reveal" data-scroll-interval="7000">
+      <div class="scroll-feed-track">
 
-    {{/* Bottom: text left + magazine right — forced side by side */}}
-    <div class="reveal" style="display: flex; gap: 1.5rem; align-items: flex-start;">
-      {{/* Left: text */}}
-      <div style="flex: 1; min-width: 0;">
-        {{ if eq .Language.Lang "zh" }}
-        <p class="drop-cap">
-          富易堂从不止步于屏幕。与澳门贵宾厅集团钜星的深度合作，将品牌杂志铺设至澳门各大赌场的VIP贵宾厅，实现了线上到线下的真正联动。
-        </p>
-        <p>
-          五周年庆典，品牌带领贵宾亲赴澳门旅游塔，纵身233米的极限蹦极——将「一点都不难」的品牌精神化为肾上腺素飙升的切身体验。新加坡F1赛道的贵宾体验同样如此：敢于尝试，赢就在眼前。
-        </p>
-        {{ else }}
-        <p class="drop-cap">
-          FYT never stayed behind the screen. Through a deep partnership with Juxing, a Macau-based VIP concierge group, the brand's magazine was placed in VIP lounges across Macau's casinos — a true online-to-offline bridge.
-        </p>
-        <p>
-          For the 5th anniversary, the brand brought VIP guests to Macau Tower for the iconic 233-meter bungy jump — turning "It's not hard at all" into a lived, adrenaline-fueled experience. The Singapore F1 street circuit drive followed the same spirit: dare to try, and winning is never far away.
-        </p>
-        {{ end }}
-      </div>
+        {{/* Slide 1: Macau Tower bungy + Juxing partnership */}}
+        <div class="scroll-block">
+          <div class="mb-2">
+            <div class="artifact auto-video-section mx-auto" style="max-height: 32vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
+              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" class="w-full h-full object-cover">
+                <source src="/video/macau-tower.mp4" type="video/mp4">
+              </video>
+            </div>
+            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}五周年 · 澳门塔蹦极{{ else }}5th Anniversary · Macau Tower{{ end }}</span>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: flex-start;">
+            <div style="flex: 1; min-width: 0;">
+              {{ if eq .Language.Lang "zh" }}
+              <p class="drop-cap">
+                富易堂从不止步于屏幕。与澳门贵宾厅集团钜星的深度合作，将品牌杂志铺设至澳门各大赌场的VIP贵宾厅，实现了线上到线下的真正联动。
+              </p>
+              <p>
+                五周年庆典，品牌带领贵宾亲赴澳门旅游塔，纵身233米的极限蹦极——将「一点都不难」的品牌精神化为肾上腺素飙升的切身体验。新加坡F1赛道的贵宾体验同样如此：敢于尝试，赢就在眼前。
+              </p>
+              {{ else }}
+              <p class="drop-cap">
+                FYT never stayed behind the screen. A partnership with Juxing, Macau's VIP concierge group, placed the brand magazine in casino VIP lounges — bridging online to offline in the most exclusive setting.
+              </p>
+              <p>
+                For the 5th anniversary, VIP guests were taken to Macau Tower for the 233-meter bungy jump — turning a tagline into a 10-second freefall. The Singapore F1 street circuit drive carried the same message: step up, and winning follows.
+              </p>
+              {{ end }}
+            </div>
+            <div style="flex: 0 0 220px;">
+              <figure style="max-height: 12vh; overflow: hidden;">
+                <img src="/images/macau-print.webp" alt="{{ if eq .Language.Lang "zh" }}澳门贵宾厅杂志{{ else }}Macau VIP lounge magazine{{ end }}" loading="lazy" class="w-full h-auto rounded-sm">
+              </figure>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}澳门贵宾厅 · 杂志{{ else }}Macau VIP Lounge{{ end }}</span>
+            </div>
+          </div>
+        </div>
 
-      {{/* Right: magazine */}}
-      <div style="flex: 0 0 220px;">
-        <figure style="max-height: 20vh; overflow: hidden;">
-          <img src="/images/macau-print.webp" alt="{{ if eq .Language.Lang "zh" }}澳门贵宾厅杂志{{ else }}Macau VIP lounge magazine{{ end }}" loading="lazy" class="w-full h-auto rounded-sm">
-        </figure>
-        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}澳门贵宾厅 · 杂志{{ else }}Macau VIP Lounge{{ end }}</span>
+        {{/* Slide 2: Deeper partnership philosophy + experiential marketing */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                在那些只有受邀才能进入的澳门贵宾厅中，品牌杂志静静陈列在茶几和阅读区——与高端生活杂志并排摆放。这不是广告投放，而是一种默契的品牌认同。与钜星的合作远不止于杂志投放：品牌团队深入了解了澳门贵宾服务的运营哲学——每位客人不是一个账号，而是一段需要细心经营的关系。
+              </p>
+              <p>
+                站在澳门旅游塔顶的那一刻，恐惧与兴奋交织。纵身一跃之后，每位参与者都真正理解了品牌精神的含义：看似不可能的事，迈出第一步之后，一点都不难。新加坡F1赛道体验同样如此——品牌为VIP客户安排了在实际F1街道赛道上驾驶的机会，那条穿越滨海湾的传奇赛道，平日只有顶级车手才能驰骋。
+              </p>
+              {{ else }}
+              <p>
+                In invitation-only Macau VIP lounges, the brand magazine sat beside premium lifestyle publications — not advertising, but a quiet signal of belonging. Working with Juxing taught the team something deeper: in Macau-style hospitality, every guest is a relationship, not an account number.
+              </p>
+              <p>
+                Standing atop Macau Tower, fear and excitement merge into one. After the jump, every participant understood the brand spirit firsthand: what seems impossible becomes simple once you commit. The Singapore F1 experience followed suit — VIP guests drove the actual Marina Bay street circuit, a track normally reserved for the world's elite.
+              </p>
+              {{ end }}
+            </div>
+            <div>
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                这些活动背后是一种独特的品牌哲学：与其告诉客户品牌有多好，不如让他们亲身体验不可能。体验式营销不是噱头，而是品牌与客户之间最深层的信任建设。当一个品牌愿意带你跳下233米的高空，你们之间的关系就超越了普通的商业往来。
+              </p>
+              <p>
+                这种从线上到线下的联动模式，在当时的行业中独树一帜。多数品牌止步于屏幕上的横幅广告，而富易堂选择走出屏幕，用真实的体验建立无法复制的品牌记忆。这也奠定了品牌后来将澳门贵宾服务DNA融入线上服务的基础。
+              </p>
+              {{ else }}
+              <p>
+                The philosophy is simple: don't tell people how good you are — let them feel it. When a brand takes you 233 meters up and says "jump," the trust that follows is different from anything a banner ad can create.
+              </p>
+              <p>
+                At a time when most competitors stopped at screen ads, FYT stepped into the real world. These experiences did more than build memories — they became the blueprint for bringing Macau's concierge-level service into the digital space.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+      </div>{{/* /track */}}
+
+      {{/* Controls */}}
+      <div class="scroll-controls">
+        <button class="scroll-prev" aria-label="Previous">‹</button>
+        <div class="scroll-dots"></div>
+        <button class="scroll-next" aria-label="Next">›</button>
       </div>
     </div>
   </div>

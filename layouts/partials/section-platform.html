@@ -1,7 +1,7 @@
-{{/* ===== Platform — 1 page: Text + Images collage ===== */}}
+{{/* ===== Platform — PPT slides: in-house dev, product lineup, payments ===== */}}
 <section id="platform" data-section="7" class="page section-dark section-border-top">
   <div class="page-inner">
-    {{/* Section header */}}
+    {{/* Section header — static */}}
     <div class="relative mb-4 reveal">
       <span class="vertical-label">{{ i18n "section_platform" }}</span>
       <div class="gold-line mb-4"></div>
@@ -11,38 +11,86 @@
       </h2>
     </div>
 
-    {{/* Magazine layout: text left + images right */}}
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 reveal">
-      <div class="md:col-span-7">
-        {{ if eq .Language.Lang "zh" }}
-        <p class="drop-cap">
-          与行业内众多依赖第三方平台和白标方案的竞争者不同，富易堂的整套系统均为自主研发——从平台基础架构、前端应用到后端系统，端到端全部自建。
-        </p>
-        <p>
-          四大体育平台各具所长：小金体育承袭188BET的底蕴，Pinnacle以尖锐赔率闻名全球，InPlay Matrix专精实时滚球，Panda Group提供差异化选择。独创福利「富贵保」更是100%投注保险——赢了全拿，输了保额隔天返还。
-        </p>
-        <p>
-          七大支付通道覆盖USDT、支付宝、微信、数字人民币等，确保每位贵宾都能以最便捷、最私密的方式完成交易。
-        </p>
-        {{ else }}
-        <p class="drop-cap">
-          Unlike competitors who rely on third-party platforms and white-label solutions, FYT's entire system is built in-house — from infrastructure and front-end to back-end, end-to-end.
-        </p>
-        <p>
-          Four specialized sportsbooks bring distinct strengths: XJ carries 188BET's legacy, Pinnacle is renowned for sharp lines, InPlay Matrix specializes in live betting, Panda Group offers differentiated markets. The proprietary "Fortune Insurance" provides 100% sports betting insurance — win and keep it all, lose and the insured amount returns next day.
-        </p>
-        <p>
-          Seven payment channels — USDT, Alipay, WeChat Pay, e-CNY, and more — ensure every VIP transacts with speed, convenience, and discretion.
-        </p>
-        {{ end }}
-      </div>
+    {{/* Scroll feed — PPT slides */}}
+    <div class="scroll-feed reveal" data-scroll-interval="8000">
+      <div class="scroll-feed-track">
 
-      {{/* Right: images stacked */}}
-      <div class="md:col-span-5">
-        <figure class="artifact" style="max-height: 30vh;">
-          <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else }}Fortune Insurance{{ end }}" loading="lazy">
-        </figure>
-        <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 独创福利{{ else }}Fortune Insurance · Proprietary{{ end }}</span>
+        {{/* Slide 1: In-house development + sportsbook depth */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p class="drop-cap">
+                会员的数据安全和使用体验，是平台最不能妥协的底线。富易堂全套系统自主研发——前端、后端、基础架构，端到端自建。不借第三方壳，不用白标方案。代码在自己手里，会员的信息才真正安全。
+              </p>
+              <p>
+                自研的另一个好处：想做什么功能就能做。富贵保就是最好的例子——100%投注保险，赢了全拿，输了保额隔天返还。市面上没有第二家能做到，因为这需要从底层开始设计。四大体育平台同样如此：小金体育（188BET底蕴）、Pinnacle（全球最利赔率）、InPlay Matrix（滚球专家）、PM体育——一站比全，不用到处跑。
+              </p>
+              {{ else }}
+              <p class="drop-cap">
+                Your data security and experience are non-negotiable. FYT's entire system is built in-house — front-end, back-end, infrastructure, end to end. No third-party shells, no white-label shortcuts. When the code is ours, your information stays safe.
+              </p>
+              <p>
+                In-house development also means we build what members actually need. Fortune Insurance is the proof — 100% betting insurance where you keep your winnings, and losses are returned the next day. No one else offers this because it requires ground-up engineering. Four sportsbooks under one roof: XJ (188BET legacy), Pinnacle (sharpest global odds), InPlay Matrix (live-betting specialists), and PM Sports — compare everything in one place.
+              </p>
+              {{ end }}
+            </div>
+            <div class="md:col-span-5">
+              <figure class="artifact" style="max-height: 25vh;">
+                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else }}Fortune Insurance{{ end }}" loading="lazy">
+              </figure>
+              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 独创福利{{ else }}Fortune Insurance · Proprietary{{ end }}</span>
+            </div>
+          </div>
+        </div>
+
+        {{/* Slide 2: Full product lineup + payment channels */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                体育之外，想玩什么都有。真人荷官（AG、BBIN、BG）、老虎机（PG、Microgaming、Pragmatic）、电竞、棋牌（开元、GM）、彩票、捕鱼——全品类一站到齐，不用在不同平台之间来回切换。
+              </p>
+              <p>
+                对VIP会员来说，这意味着所有娱乐都在一个账户、一个APP里完成。充值、下注、提款，一气呵成。这背后是自主研发团队的全栈能力——别家要排队等外部供应商的功能，我们自己说上就上。
+              </p>
+              {{ else }}
+              <p>
+                Beyond sports, everything is here. Live dealers (AG, BBIN, BG), slots (PG, Microgaming, Pragmatic), eSports, card games (Kaiyuan, GM), lottery, and fish hunter — all under one roof, no switching between platforms.
+              </p>
+              <p>
+                For VIP members, this means one account, one app, everything covered. Deposit, bet, withdraw — all seamless. Behind this is a full-stack in-house team that ships features on its own schedule, while competitors wait in line for third-party vendors.
+              </p>
+              {{ end }}
+            </div>
+            <div class="md:col-span-5">
+              <figure class="artifact" style="height: 25vh;">
+                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" style="object-fit: contain;">
+              </figure>
+              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}FYTBET · 桌面平台{{ else }}FYTBET · Desktop{{ end }}</span>
+            </div>
+          </div>
+          <div class="mt-3">
+            {{ if eq .Language.Lang "zh" }}
+            <p>
+              出入金方面，七大通道随你选：USDT快捷私密、支付宝微信秒到、数字人民币（e-CNY）紧跟国策、购宝EBpay灵活便捷、银行转账稳妥可靠。怎么方便怎么来，平台不设限。
+            </p>
+            {{ else }}
+            <p>
+              Seven payment channels, your choice: USDT for speed and privacy, Alipay and WeChat Pay for instant mobile transactions, e-CNY for China's digital currency, GBPay and EBpay for flexibility, and bank transfer for the traditional route. However you prefer to move funds, the platform accommodates.
+            </p>
+            {{ end }}
+          </div>
+        </div>
+
+      </div>{{/* /track */}}
+
+      {{/* Controls */}}
+      <div class="scroll-controls">
+        <button class="scroll-prev" aria-label="Previous">‹</button>
+        <div class="scroll-dots"></div>
+        <button class="scroll-next" aria-label="Next">›</button>
       </div>
     </div>
   </div>

@@ -1,64 +1,103 @@
-{{/* ===== Charity — 1 page ===== */}}
+{{/* ===== Charity — PPT slides: rural donations, charity soccer ===== */}}
 <section id="charity" data-section="6" class="page section-gradient section-border-top">
   <div class="page-inner">
-    {{/* Section header */}}
+    {{/* Section header — static */}}
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_charity" }}</span>
-      <div class="gold-line mb-3"></div>
-      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}公益{{ else }}Giving Back{{ end }}</p>
+      <div class="gold-line mb-2"></div>
+      <p class="heading-sub mb-1">{{ if eq .Language.Lang "zh" }}公益{{ else }}Giving Back{{ end }}</p>
       <h2 class="heading-display">
         {{ if eq .Language.Lang "zh" }}<span class="text-gold">把爱</span>传出去{{ else }}<span class="text-gold">Spread</span> the Love{{ end }}
       </h2>
     </div>
 
-    {{/* Hero video — autoplay on section focus */}}
-    <div class="reveal mb-3">
-      <div class="auto-video-section mx-auto" style="max-height: 28vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
-        <video loop playsinline controls class="w-full h-full object-cover">
-          <source src="/video/charity-soccer.mp4" type="video/mp4">
-        </video>
-      </div>
-      <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
-    </div>
+    {{/* Scroll feed — PPT slides */}}
+    <div class="scroll-feed reveal" data-scroll-interval="8000">
+      <div class="scroll-feed-track">
 
-    {{/* Text */}}
-    <div class="reveal">
-      {{ if eq .Language.Lang "zh" }}
-      <p class="drop-cap">
-        那些被遗忘的孩子——这份纪实报告的标题，也是富易堂公益行动的起点。团队深入中国偏远山区，为贫困学校捐赠资金，为家庭送去食用油、大米和生活物资。穿着印有「把爱传出去」的慈善T恤，翻山越岭，将书包、足球、蜡笔和文具亲手交到孩子们手中。
-      </p>
-      <p>
-        2015年5月2日，诚十杯粤鄂足球慈善赛在广东省人民体育场举行。诚十集团与富易堂联合赞助，33位福利院的孩子对阵11名退役国脚——一场温暖人心的33对11表演赛。广州电视台全程报道。
-      </p>
-      {{ else }}
-      <p class="drop-cap">
-        "The Forgotten Children" — this documentary report's title was also the starting point of FYT's charitable mission. The team traveled deep into rural China, donating funds to schools, delivering cooking oil, rice, and daily necessities to families in need.
-      </p>
-      <p>
-        On May 2, 2015, the Chengshi Cup charity soccer match was held at Guangdong Provincial People's Stadium. Co-sponsored by Chengshi Group and FYT, 33 children from welfare homes played against 11 veteran national football players — broadcast on Guangzhou television.
-      </p>
-      {{ end }}
-    </div>
+        {{/* Slide 1: Rural China donations */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p class="drop-cap">
+                「那些被遗忘的孩子」——这份纪实报告的标题，也是富易堂公益行动的起点。团队深入中国偏远山区，为贫困学校捐赠资金，为家庭送去食用油、大米和生活物资。穿着印有「把爱传出去」的慈善T恤，翻山越岭，将书包、足球、蜡笔和文具亲手交到孩子们手中。
+              </p>
+              <p>
+                这不是远距离的捐款汇款，而是亲力亲为的行动。团队走进偏远农村，走过泥泞小路，来到那些很少有外人到访的家庭。载满四川特产天府之花食用油和大米的面包车，是品牌对社会承诺的具象表达。孩子们收到崭新的书包和文具时的笑容，是任何商业回报都无法替代的收获。
+              </p>
+              {{ else }}
+              <p class="drop-cap">
+                "The Forgotten Children" — this documentary report's title was also the starting point of FYT's charitable mission. The team traveled deep into rural China, donating funds to schools, delivering cooking oil, rice, and daily necessities to families in need. Wearing charity t-shirts printed with "Spread the Love," they crossed mountains to hand school bags, footballs, crayons, and stationery directly to children.
+              </p>
+              <p>
+                This was not remote donation — it was hands-on action. The team walked into remote villages, along muddy paths, to homes that rarely see outside visitors. Vans loaded with Sichuan specialty cooking oil and rice were tangible expressions of the brand's social commitment. The smiles on children's faces when receiving new school bags and stationery are a return no commercial success can replace.
+              </p>
+              {{ end }}
+            </div>
+            <div class="md:col-span-5">
+              <div class="grid grid-cols-2 gap-2">
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else }}Charity T-shirt{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural donations{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}物资运送{{ else }}Supply van{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}孩子们{{ else }}Children{{ end }}" loading="lazy">
+                </figure>
+              </div>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠 · 把爱传出去{{ else }}Rural Donations · Spread the Love{{ end }}</span>
+            </div>
+          </div>
+        </div>
 
-    {{/* Bottom row: t-shirt + hero photo + distribution */}}
-    <div class="grid grid-cols-3 gap-3 reveal mt-3">
-      <div>
-        <figure class="artifact" style="max-height: 11vh;">
-          <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else }}Charity T-shirt{{ end }}" loading="lazy">
-        </figure>
-        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}把爱传出去{{ else }}Spread the Love{{ end }}</span>
-      </div>
-      <div>
-        <figure class="artifact" style="max-height: 11vh;">
-          <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural donations{{ end }}" loading="lazy">
-        </figure>
-        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural China{{ end }}</span>
-      </div>
-      <div>
-        <figure class="artifact" style="max-height: 11vh;">
-          <img src="/images/charity-distribute.webp" alt="{{ if eq .Language.Lang "zh" }}物资发放{{ else }}Distribution{{ end }}" loading="lazy">
-        </figure>
-        <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}物资发放{{ else }}Distribution{{ end }}</span>
+        {{/* Slide 2: Charity soccer match */}}
+        <div class="scroll-block">
+          <div class="mb-2">
+            <div class="auto-video-section mx-auto" style="max-height: 30vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
+              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" class="w-full h-full object-cover">
+                <source src="/video/charity-soccer.mp4" type="video/mp4">
+              </video>
+            </div>
+            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                2015年5月2日，诚十杯粤鄂足球慈善赛在广东省人民体育场举行。诚十集团与富易堂联合赞助，广东明星足球俱乐部主办。这场比赛的最大亮点，是一场温暖人心的33对11表演赛——33位来自广州市社会福利院的孩子对阵11名退役国脚。
+              </p>
+              {{ else }}
+              <p>
+                On May 2, 2015, the Chengshi Cup Guangdong-Hubei charity soccer match was held at Guangdong Provincial People's Stadium. Co-sponsored by Chengshi Group and FYT, organized by Guangdong Celebrity Football Club. The highlight: a heartwarming 33-vs-11 exhibition match — 33 children from Guangzhou Social Welfare Institute against 11 veteran national football players.
+              </p>
+              {{ end }}
+            </div>
+            <div>
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                广东队退役国脚包括曲楚良、胡志军（1994赛季最佳射手）、谢育新、王惠良等，湖北队包括林强、殷立华、陈方平等名将。广州电视台全程报道，赞助商捐赠设备和资金。所有善款用于广州市社会福利院孤残儿童的教育援助。这场高规格的慈善赛事，将品牌与体育精神、名人文化和社会公益紧密联系在一起。
+              </p>
+              {{ else }}
+              <p>
+                Guangdong veterans included Qu Chuliang, Hu Zhijun (1994 season top scorer), Xie Yuxin, and Wang Huiliang. Hubei's roster featured Lin Qiang, Yin Lihua, and Chen Fangping. The match was broadcast on Guangzhou television. All proceeds benefited educational assistance for orphaned and disabled children at the welfare institute. This high-profile charity event tied the brand to sportsmanship, celebrity culture, and philanthropy.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+      </div>{{/* /track */}}
+
+      {{/* Controls */}}
+      <div class="scroll-controls">
+        <button class="scroll-prev" aria-label="Previous">‹</button>
+        <div class="scroll-dots"></div>
+        <button class="scroll-next" aria-label="Next">›</button>
       </div>
     </div>
   </div>

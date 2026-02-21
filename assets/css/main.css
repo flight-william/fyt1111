@@ -613,3 +613,142 @@ img[loading="lazy"] { background: var(--fyt-dark); }
   border-radius: 12px;
   box-shadow: 0 15px 50px rgba(0,0,0,0.5);
 }
+
+/* ===== Scroll Feed — Fixed-height carousel (no layout shift between slides) ===== */
+
+/* Pages with scroll-feed: stretch layout so feed fills remaining space */
+.page:has(.scroll-feed) {
+  align-items: stretch;
+}
+
+.page:has(.scroll-feed) .page-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-feed {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 1;
+  min-height: 0;
+}
+
+.scroll-feed-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.scroll-block {
+  flex: 0 0 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding-bottom: 2rem; /* space for controls overlay */
+}
+
+/* Controls — pinned at bottom of scroll-feed */
+.scroll-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.scroll-feed:hover .scroll-controls,
+.scroll-feed.scroll-paused .scroll-controls {
+  opacity: 1;
+}
+
+.scroll-prev,
+.scroll-next {
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  color: var(--fyt-gold);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.scroll-prev:hover,
+.scroll-next:hover {
+  border-color: var(--fyt-gold);
+  background: rgba(201, 168, 76, 0.2);
+}
+
+/* Dots */
+.scroll-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.scroll-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.4);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.scroll-dot:hover {
+  background: rgba(201, 168, 76, 0.7);
+}
+
+.scroll-dot.active {
+  background: var(--fyt-gold);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.5);
+  transform: scale(1.4);
+}
+
+/* Paused indicator */
+.scroll-feed.scroll-paused {
+  cursor: default;
+}
+
+.scroll-feed.scroll-paused::after {
+  content: '';
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  width: 10px;
+  height: 12px;
+  border-left: 3px solid var(--fyt-gold);
+  border-right: 3px solid var(--fyt-gold);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Progress bar within feed */
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--fyt-gold);
+  opacity: 0.5;
+  transition: width linear;
+  z-index: 6;
+}
+
+.scroll-feed.scroll-paused .scroll-progress {
+  opacity: 0;
+}

@@ -1,7 +1,7 @@
-{{/* ===== Origin — 1 page: Header + Hero + Text + Pull Quote ===== */}}
+{{/* ===== Origin — PPT slides: founding, licensing, forum era ===== */}}
 <section id="origin" data-section="1" class="page section-gradient-up section-border-top">
   <div class="page-inner">
-    {{/* Section header */}}
+    {{/* Section header — static */}}
     <div class="relative mb-4 reveal">
       <span class="vertical-label">{{ i18n "section_origin" }}</span>
       <div class="gold-line mb-4"></div>
@@ -14,52 +14,109 @@
       </p>
     </div>
 
-    {{/* Magazine layout: hero left + text right */}}
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 reveal">
-      {{/* Hero banner */}}
-      <div class="md:col-span-5">
-        <figure class="artifact" style="max-height: 25vh;">
-          <img src="/images/hero-banner-classic.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂经典横幅{{ else }}Classic FYT hero banner{{ end }}" loading="lazy">
-        </figure>
-        <span class="artifact-caption block mt-1">{{ i18n "from_archives" }} · 2014</span>
-      </div>
-      {{/* Text column */}}
-      <div class="md:col-span-7">
-        {{ if eq .Language.Lang "zh" }}
-        <p class="drop-cap">
-          富易堂诞生于2011年11月11日上午11时11分11秒——被称为「世纪光棍节」的历史时刻。这个百年一遇的日期，成为品牌基因中不可磨灭的印记。
-        </p>
-        <p>
-          创立之初，隶属于Cube集团旗下，与业界知名品牌188BET同属一家。Cube持有马恩岛及菲律宾PAGCOR双重牌照，为品牌运营奠定了合规基础。PrestigeIM更持有FCLRC互动博彩牌照至2024年，三地监管资质完整覆盖。
-        </p>
-        {{ else }}
-        <p class="drop-cap">
-          FYT was born at 11:11:11 AM on November 11, 2011 — a once-in-a-century moment known as "Century Singles' Day." This extraordinary timestamp became an indelible mark in the brand's DNA.
-        </p>
-        <p>
-          Founded under the Cube group alongside the renowned 188BET brand, FYT inherited licenses from the Isle of Man and PAGCOR. PrestigeIM held an FCLRC interactive gaming license through 2024 — establishing regulatory presence across three jurisdictions.
-        </p>
-        {{ end }}
-      </div>
-    </div>
+    {{/* Scroll feed — PPT slides */}}
+    <div class="scroll-feed reveal" data-scroll-interval="8000">
+      <div class="scroll-feed-track">
 
-    {{/* Second text block + pull quote */}}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal mt-4">
-      <div>
-        {{ if eq .Language.Lang "zh" }}
-        <p>
-          在中文论坛的黄金时代，富易堂活跃于天朝论坛、华人论坛、海燕论坛、博人论坛和万博论坛，与社区建立了深厚的草根联系。品牌同样经历了蜕变：从富易堂 Riche88 到 FYTBET——传承不断，面貌常新。
-        </p>
-        {{ else }}
-        <p>
-          During the golden era of Chinese forums, FYT built a grassroots presence across Tianchao, Huaren, Haiyan, Boren, and Wanbo forums. The brand identity evolved: from 富易堂 Riche88 to FYTBET — heritage preserved, expression renewed.
-        </p>
-        {{ end }}
-      </div>
-      <div>
-        <div class="pull-quote">
-          {{ if eq .Language.Lang "zh" }}要赢？一点都不难！{{ else }}Want to win? It's not hard at all!{{ end }}
+        {{/* Slide 1: Hero banner + founding story */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <figure class="artifact" style="height: 20vh;">
+                <img src="/images/hero-banner-classic.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂经典横幅{{ else }}Classic FYT hero banner{{ end }}" loading="lazy" style="object-fit: contain;">
+              </figure>
+              <span class="artifact-caption block mt-1">{{ i18n "from_archives" }} · 2014</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p class="drop-cap">
+                富易堂诞生于2011年11月11日上午11时11分11秒——被称为「世纪光棍节」的历史时刻。这个百年一遇的日期，成为品牌基因中不可磨灭的印记。
+              </p>
+              <p>
+                创立之初，隶属于Cube集团旗下，与业界知名品牌188BET同属一家。Cube持有马恩岛及菲律宾PAGCOR双重牌照，为品牌运营奠定了合规基础。Prestige IOM更持有FCLRC互动博彩牌照至2024年，三地监管资质完整覆盖。
+              </p>
+              {{ else }}
+              <p class="drop-cap">
+                FYT launched at 11:11:11 AM on November 11, 2011 — the once-in-a-century "Century Singles' Day." A timestamp you don't forget, and neither did the brand.
+              </p>
+              <p>
+                Born under the Cube group alongside 188BET, FYT started with Isle of Man and PAGCOR licenses from day one. Prestige IOM added an FCLRC interactive gaming license through 2024 — three jurisdictions of regulatory coverage before most competitors had one.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="pull-quote">
+              {{ if eq .Language.Lang "zh" }}要赢？一点都不难！{{ else }}Want to win? It's not hard at all!{{ end }}
+            </div>
+          </div>
         </div>
+
+        {{/* Slide 2: Cube/188BET lineage + licensing depth */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <figure class="artifact" style="height: 20vh;">
+                <img src="/images/website-v1-full.jpg" alt="{{ if eq .Language.Lang "zh" }}富易堂初版网站 · Cube集团{{ else }}Original Riche88 website · Cube group{{ end }}" loading="lazy" style="object-fit: contain;">
+              </figure>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}初版平台 · Cube集团{{ else }}Original Platform · Cube Group{{ end }}</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                Cube集团是亚洲博彩行业深耕多年的集团公司，旗下最广为人知的品牌是188BET——一个在体育投注平台领域享有盛誉的名字。与188BET同属一家，意味着富易堂从第一天起就继承了成熟的运营经验与行业资源。
+              </p>
+              <p>
+                合规是信任的基石。马恩岛牌照在全球博彩监管中以严格和公信力著称；PAGCOR覆盖亚太市场的合规要求；FCLRC牌照提供菲律宾经济特区内的额外监管覆盖。三地资质在当时的行业中并不多见，为品牌注入了深厚的制度信用。
+              </p>
+              {{ else }}
+              <p>
+                Cube was a heavyweight in Asian gaming, and 188BET was its flagship — a name any serious sports bettor recognizes. Sharing that lineage gave FYT battle-tested operations and deep industry resources from the start.
+              </p>
+              <p>
+                Trust starts with compliance. Isle of Man — globally recognized for strict standards. PAGCOR — Asia-Pacific coverage. FCLRC — Philippine economic zone regulatory reach. Three jurisdictions before most competitors had sorted out one. That kind of foundation doesn't get built overnight.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+        {{/* Slide 3: Forum era + brand evolution */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <figure class="artifact" style="height: 20vh;">
+                <img src="/images/hero-banner-riche88.jpg" alt="{{ if eq .Language.Lang "zh" }}阿富 · 要赢一点都不难{{ else }}Ah Fu · Want to win?{{ end }}" loading="lazy" style="object-fit: contain;">
+              </figure>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}论坛时代 · 要赢？一点都不难！{{ else }}Forum Era · It's Not Hard at All!{{ end }}</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                在中文论坛的黄金时代，富易堂活跃于天朝论坛、玩博论坛、华人论坛、贝博论坛和海燕论坛，以口碑和真实互动建立信任。信任，是靠群体的口碑一点一点累积起来的。
+              </p>
+              <p>
+                品牌同样经历了蜕变：从富易堂 Riche88 到 FYTBET——传承不断，面貌常新。标语也从「要赢？一点都不难！」演变为「让博彩成为娱乐」，反映了品牌从竞技取向到娱乐优先的成熟转变。十余年来，变的是表达方式，不变的是服务承诺。
+              </p>
+              {{ else }}
+              <p>
+                When Chinese forums were the internet, FYT was there — Tianchao, Wanbo, Huaren, Betboy, Haiyan. Not buying banner ads, but joining conversations, responding to feedback, running community events. Trust earned the old-fashioned way.
+              </p>
+              <p>
+                The brand evolved from 富易堂 Riche88 to FYTBET. The tagline went from "Want to win? It's not hard at all!" to "Where betting becomes entertainment" — a shift from pure competition to a broader vision. Fifteen years on, the look has changed; the commitment to members hasn't.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+      </div>{{/* /track */}}
+
+      {{/* Controls */}}
+      <div class="scroll-controls">
+        <button class="scroll-prev" aria-label="Previous">‹</button>
+        <div class="scroll-dots"></div>
+        <button class="scroll-next" aria-label="Next">›</button>
       </div>
     </div>
   </div>

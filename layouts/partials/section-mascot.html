@@ -1,7 +1,7 @@
-{{/* ===== 认识阿富 — 1 page: Just Ah Fu + stickers ===== */}}
+{{/* ===== Mascot — PPT slides: design story, merchandise + stickers ===== */}}
 <section id="mascot" data-section="3" class="page section-gradient section-border-top">
   <div class="page-inner">
-    {{/* Section header */}}
+    {{/* Section header — static */}}
     <div class="relative mb-4 reveal">
       <span class="vertical-label">{{ i18n "section_mascot" }}</span>
       <div class="gold-line mb-4"></div>
@@ -11,41 +11,92 @@
       </h2>
     </div>
 
-    {{/* Mascot hero + intro text */}}
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal">
-      <div class="md:col-span-3 flex justify-center">
-        <figure class="relative" style="max-height: 25vh;">
-          <img src="/images/afu-hero.webp" alt="{{ if eq .Language.Lang "zh" }}阿富{{ else }}Ah Fu{{ end }}" loading="lazy" class="afu-hero h-full w-auto mx-auto drop-shadow-[0_12px_25px_rgba(0,0,0,0.5)]">
-        </figure>
-      </div>
-      <div class="md:col-span-9">
-        {{ if eq .Language.Lang "zh" }}
-        <p class="drop-cap">
-          阿富诞生于2015年。头顶标志性棕色卷发、穿着红色背带裤、胸口绣着「富」字——这个俏皮的卡通男孩，是富易堂最温暖的代言人。每一个表情都是一种态度，每一个姿态都是品牌性格的延伸。
-        </p>
-        <p>
-          阿富不仅活在屏幕上。他曾亲临粤鄂明星慈善足球赛，与来宾互动。一套完整的社交表情贴纸，让阿富走进玩家的日常对话，成为品牌最生动的代言人。
-        </p>
-        {{ else }}
-        <p class="drop-cap">
-          Ah Fu was born in 2015. With his signature brown swirl hairstyle, red suspenders, and the character "富" on his shirt, this spirited mascot became the warmest ambassador of the FYT brand. Every expression carries an attitude; every pose is an extension of the brand's character.
-        </p>
-        <p>
-          Ah Fu lives beyond the screen. He appeared at the Guangdong-Hubei Charity Soccer Match, engaging with guests in person. A full set of social stickers brought Ah Fu into everyday conversations — the brand's most vivid ambassador.
-        </p>
-        {{ end }}
-      </div>
-    </div>
+    {{/* Scroll feed — PPT slides */}}
+    <div class="scroll-feed reveal" data-scroll-interval="7000">
+      <div class="scroll-feed-track">
 
-    {{/* Sticker collage */}}
-    <div class="reveal mt-3">
-      <div class="sticker-collage">
-        <img src="/images/stickers/afu-1.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 0;">
-        <img src="/images/stickers/afu-2.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 1;">
-        <img src="/images/stickers/afu-3.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 2;">
-        <img src="/images/stickers/afu-4.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 3;">
-        <img src="/images/stickers/afu-5.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 4;">
-        <img src="/images/stickers/afu-6.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 5;">
+        {{/* Slide 1: Mascot hero + intro + stickers */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3 flex justify-center">
+              <figure class="relative" style="max-height: 25vh;">
+                <img src="/images/afu-hero.webp" alt="{{ if eq .Language.Lang "zh" }}阿富{{ else }}Ah Fu{{ end }}" loading="lazy" class="afu-hero h-full w-auto mx-auto drop-shadow-[0_12px_25px_rgba(0,0,0,0.5)]">
+              </figure>
+            </div>
+            <div class="md:col-span-9">
+              {{ if eq .Language.Lang "zh" }}
+              <p class="drop-cap">
+                阿富诞生于2015年。头顶标志性棕色卷发、穿着红色背带裤、胸口绣着「富」字——这个俏皮的卡通男孩，从此成为富易堂独有的品牌印记。每一个表情都是一种态度，每一个姿态都带着品牌对会员的那份用心。
+              </p>
+              <p>
+                阿富不只活在屏幕上。他曾亲临粤鄂明星慈善足球赛现场，与到场贵宾近距离互动。一套专属的社交表情贴纸，让阿富走进会员的私人社交圈，成为圈内人才懂的默契符号。
+              </p>
+              {{ else }}
+              <p class="drop-cap">
+                Ah Fu arrived in 2015 — brown swirl hair, red suspenders, the character "富" on his chest. Part mascot, part brand signature. If you know Ah Fu, you know FYT.
+              </p>
+              <p>
+                He's shown up at VIP events, charity matches, and in the social sticker sets that members use daily. Not a corporate mascot — more like an inside joke that only the community gets.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="sticker-collage">
+              <img src="/images/stickers/afu-1.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 0;">
+              <img src="/images/stickers/afu-2.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 1;">
+              <img src="/images/stickers/afu-3.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 2;">
+              <img src="/images/stickers/afu-4.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 3;">
+              <img src="/images/stickers/afu-5.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 4;">
+              <img src="/images/stickers/afu-6.webp" alt="阿富" loading="lazy" class="sticker-item" style="--delay: 5;">
+            </div>
+          </div>
+        </div>
+
+        {{/* Slide 2: Design iterations + anniversary mugs + merchandise */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <div class="grid grid-cols-3 gap-2">
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/mug-origin.webp" alt="{{ if eq .Language.Lang "zh" }}起源杯{{ else }}Origin mug{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/mug-growth.webp" alt="{{ if eq .Language.Lang "zh" }}成长杯{{ else }}Growth mug{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/mug-maturity.webp" alt="{{ if eq .Language.Lang "zh" }}成熟杯{{ else }}Maturity mug{{ end }}" loading="lazy">
+                </figure>
+              </div>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}十周年纪念马克杯系列{{ else }}Anniversary Mug Collection{{ end }}</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                设计团队历经40余版反复打磨，从初稿到定稿，每一个表情、每一个姿态都经过仔细推敲。「没在怕」「Call Me」「BUSY」「BYE」「X TALK」——每套贴纸都精准捕捉了一种生活态度，在会员的社交圈里自然流转。
+              </p>
+              <p>
+                最具收藏价值的是十周年纪念马克杯系列——一套十只（编号0至9），每只杯子都以连环画风格讲述阿富的成长故事：从2015年破壳而出，到一年年攀上新高度。每逢农历新年，平台还会推出生肖限定的黄金阿富摆件——金马、金羊、金猴……年年不同，只赠VIP。加上金扑克牌、名酒、表带、烟灰缸等限量礼品，每一件都是只送不卖的会员专属收藏，也是平台对每一位老会员最实在的心意。
+              </p>
+              {{ else }}
+              <p>
+                Over 40 design iterations went into getting every expression right. "No Fear," "Call Me," "BUSY," "BYE," "X TALK" — stickers that members actually use, spreading through VIP circles organically.
+              </p>
+              <p>
+                The standout collectible is the anniversary mug series — 10 pieces (0 through 9), each a comic-strip chapter of Ah Fu's story since 2015. Every Lunar New Year brings a zodiac golden Ah Fu figurine — Golden Horse, Golden Goat, Golden Monkey — a new edition annually, for VIPs only. Gold-plated playing cards, premium spirits, watch bands, ashtrays — none of it for sale. These are gifts reserved for the members who matter most.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+      </div>{{/* /track */}}
+
+      {{/* Controls */}}
+      <div class="scroll-controls">
+        <button class="scroll-prev" aria-label="Previous">‹</button>
+        <div class="scroll-dots"></div>
+        <button class="scroll-next" aria-label="Next">›</button>
       </div>
     </div>
   </div>

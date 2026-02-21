@@ -1,7 +1,7 @@
-{{/* ===== VIP — 1 page ===== */}}
+{{/* ===== VIP — PPT slides: philosophy, sportsbook, payments ===== */}}
 <section id="vip" data-section="5" class="page section-dark section-border-top">
   <div class="page-inner">
-    {{/* Section header */}}
+    {{/* Section header — static */}}
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_vip" }}</span>
       <div class="gold-line mb-3"></div>
@@ -11,50 +11,120 @@
       </h2>
     </div>
 
-    {{/* Layout: left images + right text */}}
-    <div class="reveal" style="display: flex; gap: 1.5rem; align-items: flex-start;">
-      {{/* Left: Haig Club card + poker cards */}}
-      <div style="flex: 0 0 40%; display: flex; flex-direction: column; gap: 0.5rem;">
-        <figure class="artifact" style="max-height: 18vh;">
-          <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy">
-        </figure>
-        <div style="display: flex; gap: 0.5rem;">
-          <figure class="artifact artifact-tilted" style="max-height: 12vh; flex: 1;">
-            <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy">
-          </figure>
-          <figure class="artifact artifact-tilted-r" style="max-height: 12vh; flex: 1;">
-            <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy">
-          </figure>
-        </div>
-        <span class="artifact-caption block">{{ if eq .Language.Lang "zh" }}金箔定制 · RICHE88{{ else }}Gold Foil · RICHE88{{ end }}</span>
-      </div>
+    {{/* Scroll feed — PPT slides */}}
+    <div class="scroll-feed reveal" data-scroll-interval="8000">
+      <div class="scroll-feed-track">
 
-      {{/* Right: motto + text */}}
-      <div style="flex: 1; min-width: 0;">
-        <div class="mb-3">
-          <div class="pull-quote text-lg md:text-xl tracking-[0.15em]">
-            小大由之 · 富在知足
+        {{/* Slide 1: VIP philosophy + Haig Club gifting */}}
+        <div class="scroll-block">
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="flex: 0 0 40%; display: flex; flex-direction: column; gap: 0.5rem;">
+              <figure class="artifact" style="max-height: 18vh;">
+                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy">
+              </figure>
+              <div style="display: flex; gap: 0.5rem;">
+                <figure class="artifact artifact-tilted" style="max-height: 12vh; flex: 1;">
+                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact artifact-tilted-r" style="max-height: 12vh; flex: 1;">
+                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy">
+                </figure>
+              </div>
+              <span class="artifact-caption block">{{ if eq .Language.Lang "zh" }}金箔定制 · RICHE88{{ else }}Gold Foil · RICHE88{{ end }}</span>
+            </div>
+            <div style="flex: 1; min-width: 0;">
+              <div class="mb-3">
+                <div class="pull-quote text-lg md:text-xl tracking-[0.15em]">
+                  小大由之 · 富在知足
+                </div>
+                <p class="text-center text-fyt-muted text-xs mt-1 opacity-60">
+                  {{ if eq .Language.Lang "zh" }}「无论大小，真正的富足在于知足常乐」{{ else }}"In all things great and small, true wealth lies in contentment"{{ end }}
+                </p>
+              </div>
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                贵宾之道，始于澳门。富易堂与澳门贵宾厅集团钜星的合作，将线下贵宾服务的精髓注入品牌血脉。从Macau Tower的极限蹦极，到新加坡F1赛道的速度与激情——以「一点都不难」的精神，让每位贵宾亲身体验不可能。
+              </p>
+              <p>
+                在VIP礼遇方面，富易堂曾携手世界名酒Haig Club，以限量40年单一谷物苏格兰威士忌搭配手工吹制水晶酒瓶，作为新年贺礼。这份心意不是账号式的对待，而是以诚待客的信念——如今延续到数字空间。
+              </p>
+              {{ else }}
+              <p>
+                The VIP way started in Macau. Working alongside Juxing's concierge team taught FYT what real hospitality looks like — and that DNA now runs through everything the platform does, online and off.
+              </p>
+              <p>
+                For New Year, VIP members received a limited edition Haig Club 40-year single grain Scotch in a handblown crystal decanter. Not a promotion — a gesture. The kind of care that treats every member as a guest, not a number.
+              </p>
+              {{ end }}
+            </div>
           </div>
-          <p class="text-center text-fyt-muted text-xs mt-1 opacity-60">
-            {{ if eq .Language.Lang "zh" }}「无论大小，真正的富足在于知足常乐」{{ else }}"In all things great and small, true wealth lies in contentment"{{ end }}
-          </p>
         </div>
 
-        {{ if eq .Language.Lang "zh" }}
-        <p>
-          贵宾之道，始于澳门。富易堂与澳门贵宾厅集团钜星的合作，将线下贵宾服务的精髓注入品牌血脉。从Macau Tower的极限蹦极，到新加坡F1赛道的速度与激情——以「一点都不难」的精神，让每位贵宾亲身体验不可能。
-        </p>
-        <p>
-          在VIP礼遇方面，富易堂曾携手世界名酒Haig Club，以限量40年单一谷物苏格兰威士忌搭配手工吹制水晶酒瓶，作为新年贺礼。这份心意不是账号式的对待，而是以诚待客的信念——如今延续到数字空间。
-        </p>
-        {{ else }}
-        <p>
-          The VIP way begins in Macau. FYT's partnership with Juxing, a Macau-based VIP concierge group, infused the essence of landed casino hospitality into the brand's DNA. From the Macau Tower bungy jump to driving the Singapore F1 street circuit — each experience embodies "It's not hard at all."
-        </p>
-        <p>
-          FYT partnered with Haig Club to present VIP customers with a limited edition 40-year single grain Scotch whisky in a handblown crystal decanter. This level of care — treating guests as valued individuals, not account numbers — now extends into the digital space.
-        </p>
-        {{ end }}
+        {{/* Slide 2: Sportsbook depth — 4 providers */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <figure class="artifact" style="max-height: 25vh;">
+                <img src="/images/sportsbook-banner.webp" alt="{{ if eq .Language.Lang "zh" }}体育投注平台{{ else }}Sportsbook platform{{ end }}" loading="lazy">
+              </figure>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}多体育平台 · VIP体育{{ else }}Multi-Sportsbook · VIP Sports{{ end }}</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                作为专注体育投注平台的品牌，富易堂提供四大体育平台，各具所长。小金体育（XJ）承袭188BET的底蕴与专业，是平台上最具传承意义的体育产品。Pinnacle以尖锐赔率和高限额闻名全球，深受专业玩家青睐。InPlay Matrix专精实时滚球市场，提供最丰富的赛中投注选择。PM体育（Panda Group）则以差异化的赛事覆盖和独特盘口提供额外选择。
+              </p>
+              <p>
+                四大体育平台汇聚一站，意味着贵宾客户可以在同一平台内，针对不同赛事和投注风格，选择最优赔率和最专业的市场。这种在线体育竞猜的广度和深度，在行业内极为罕见。少有平台能在一个屋檐下提供如此多元化的专业体育选择。
+              </p>
+              {{ else }}
+              <p>
+                Four sportsbooks, each best-in-class at what they do. XJ carries 188BET's proven legacy. Pinnacle delivers the sharpest odds globally, favored by serious bettors. InPlay Matrix owns the live in-play space. PM Sports rounds it out with unique markets and coverage.
+              </p>
+              <p>
+                The result: VIP members compare odds across four specialist books without leaving the platform. Find the best line for every match, every market. This depth of choice under one roof is rare — most platforms offer one sportsbook and call it a day.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+        {{/* Slide 3: Fortune Insurance + payment channels */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <figure class="artifact" style="max-height: 25vh;">
+                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else }}Fortune Insurance{{ end }}" loading="lazy">
+              </figure>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 投注保险{{ else }}Fortune Insurance{{ end }}</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                独创福利「富贵保」是100%体育保险产品——赢了全拿，输了保额隔天返还。这不是简单的返水或优惠券，而是一种真正的投注保险机制，体现了平台自主研发的创新能力和对客户利益的重视。在行业内，如此大胆的产品设计极为少见。
+              </p>
+              <p>
+                七大支付通道覆盖不同偏好：USDT加密货币提供快速、无国界、注重隐私的选择；支付宝和微信支付覆盖中国主流移动支付；数字人民币（e-CNY）支持国家最新数字货币；购宝和EBpay第三方平台提供额外灵活性；银行转账满足传统需求。每位贵宾都能以最便捷、最私密的方式完成交易。
+              </p>
+              {{ else }}
+              <p>
+                Fortune Insurance (富贵保) is unlike anything else in the industry: 100% betting insurance. Win and keep the full payout. Lose and the insured amount comes back the next day. Not a rebate, not a coupon — actual insurance. Only possible because the platform is built from scratch in-house.
+              </p>
+              <p>
+                Seven payment channels fit any preference: USDT for speed and privacy, Alipay and WeChat Pay for instant mobile, e-CNY for China's digital currency, GBPay and EBpay for flexibility, bank transfer for tradition. Move funds your way, on your terms.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+      </div>{{/* /track */}}
+
+      {{/* Controls */}}
+      <div class="scroll-controls">
+        <button class="scroll-prev" aria-label="Previous">‹</button>
+        <div class="scroll-dots"></div>
+        <button class="scroll-next" aria-label="Next">›</button>
       </div>
     </div>
   </div>

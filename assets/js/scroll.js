@@ -143,16 +143,31 @@
     var current = getCurrentPageIndex();
     var handled = false;
 
+    // Check if current page has an incomplete scroll-feed
+    var currentPage = pages[current];
+    var feed = currentPage ? currentPage.querySelector('.scroll-feed') : null;
+    var feedApi = feed && feed._scrollFeed;
+
     switch (e.key) {
       case 'ArrowDown':
       case 'j':
-        goToPage(current + 1);
-        handled = true;
+        if (feedApi && !feedApi.isComplete()) {
+          feedApi.next();
+          handled = true;
+        } else {
+          goToPage(current + 1);
+          handled = true;
+        }
         break;
       case 'ArrowUp':
       case 'k':
-        goToPage(current - 1);
-        handled = true;
+        if (feedApi && feedApi.current() > 0) {
+          feedApi.prev();
+          handled = true;
+        } else {
+          goToPage(current - 1);
+          handled = true;
+        }
         break;
       case 'Home':
         goToPage(0);

@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
-  <meta name="keywords" content="富易堂,Riche88,FYTBET,FYT,fyt1111,fytbet,x88bet,富易堂官网,Riche88官网,体育竞猜,富贵保">
+  <meta name="keywords" content="富易堂,FYTBET,Riche88,FYT,188BET,富易堂官网,体育投注,在线体育竞猜,体育投注平台,富贵保,投注保险,VIP娱乐,澳门贵宾厅,Pinnacle,小金体育,USDT充值,支付宝充值,微信支付,数字人民币,自主研发平台,fytbet,fyt1111,x88bet">
+  {{/* Open Graph */}}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
+  <meta property="og:url" content="https://riche88.com/{{ if eq .Language.Lang "en" }}en/{{ end }}">
+  <meta property="og:image" content="https://riche88.com/images/logo-fytbet.webp">
+  <meta property="og:site_name" content="FYTBET">
+  <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else }}en_US{{ end }}">
+  {{/* Twitter Card */}}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
+  <meta name="twitter:image" content="https://riche88.com/images/logo-fytbet.webp">
   <link rel="canonical" href="{{ "https://riche88.com/" }}{{ if eq .Language.Lang "en" }}en/{{ end }}">
   {{ if eq .Language.Lang "zh" }}
   <link rel="alternate" hreflang="zh" href="https://riche88.com/">
@@ -77,6 +90,70 @@
     ]
   }
   </script>
+
+  {{/* Event Schema — Charity Soccer Match */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "诚十杯粤鄂足球慈善赛",
+    "alternateName": "Chengshi Cup Guangdong-Hubei Charity Soccer Match",
+    "startDate": "2015-05-02",
+    "location": {
+      "@type": "Place",
+      "name": "广东省人民体育场",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guangzhou",
+        "addressCountry": "CN"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "广东明星足球俱乐部"
+    },
+    "sponsor": [
+      { "@type": "Organization", "name": "诚十集团" },
+      { "@type": "Organization", "name": "富易堂 Riche88" }
+    ],
+    "description": "Charity match: 33 children from welfare homes vs. 11 veteran national football players. Proceeds to Guangzhou Social Welfare Institute."
+  }
+  </script>
+
+  {{/* Event Schema — Macau Tower Bungy Jump */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "富易堂五周年澳门塔蹦极",
+    "alternateName": "FYT 5th Anniversary Macau Tower Bungy Jump",
+    "startDate": "2016",
+    "location": {
+      "@type": "Place",
+      "name": "Macau Tower",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Macau",
+        "addressCountry": "MO"
+      }
+    },
+    "organizer": { "@type": "Organization", "name": "富易堂 FYTBET" },
+    "description": "VIP experiential event: customers took the 233-meter bungy jump at Macau Tower, embodying the brand spirit."
+  }
+  </script>
+
+  {{/* Product Schema — Fortune Insurance */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "富贵保",
+    "alternateName": "Fortune Insurance",
+    "description": "100% sports betting insurance — win and keep the full payout, lose and the insured amount is returned the next day.",
+    "brand": { "@type": "Brand", "name": "FYTBET" },
+    "category": "Sports Betting Insurance"
+  }
+  </script>
 </head>
 <body class="bg-fyt-black text-fyt-warm-white antialiased">
   {{/* Progress bar */}}
@@ -95,14 +172,17 @@
 
   {{/* Scripts */}}
   {{ $scrollJs := resources.Get "js/scroll.js" }}
+  {{ $feedJs := resources.Get "js/scroll-feed.js" }}
   {{ $toggleJs := resources.Get "js/toggle.js" }}
   {{ $linksJs := resources.Get "js/links.js" }}
   {{ if hugo.IsProduction }}
     {{ $scrollJs = $scrollJs | minify | fingerprint }}
+    {{ $feedJs = $feedJs | minify | fingerprint }}
     {{ $toggleJs = $toggleJs | minify | fingerprint }}
     {{ $linksJs = $linksJs | minify | fingerprint }}
   {{ end }}
   <script defer src="{{ $scrollJs.RelPermalink }}"></script>
+  <script defer src="{{ $feedJs.RelPermalink }}"></script>
   <script defer src="{{ $toggleJs.RelPermalink }}"></script>
   <script defer src="{{ $linksJs.RelPermalink }}"></script>
 </body>

@@ -2,10 +2,10 @@
   languageName = "中文"
   languageCode = "zh-CN"
   weight = 1
-  title = "富易堂 | 始于2011 — 品牌故事"
+  title = "富易堂官网 FYTBET | 始于2011 · 体育投注 · VIP娱乐平台"
 
   [zh.params]
-    description = "富易堂(Riche88/FYT)，创立于2011年11月11日。十五年深耕体育竞猜，自主研发，专注VIP服务。"
+    description = "富易堂(FYTBET/Riche88)创立于2011年，前身隶属Cube集团(188BET)。四大体育投注平台、独创富贵保100%投注保险、USDT/支付宝/微信支付/数字人民币全通道支付。自主研发，专注VIP贵宾服务。"
 
   [[zh.menus.main]]
     name = "始于 11.11.11"
@@ -46,10 +46,10 @@
   languageName = "EN"
   languageCode = "en"
   weight = 2
-  title = "FYT | Since 2011 — Brand Story"
+  title = "FYTBET Official | Since 2011 · Sports Betting · VIP Entertainment Platform"
 
   [en.params]
-    description = "FYT (Riche88/FYTBET), founded November 11, 2011. Fifteen years of sportsbook expertise, in-house development, dedicated VIP service."
+    description = "FYTBET (formerly Riche88/188BET group) founded 2011. Four sportsbooks including Pinnacle, proprietary Fortune Insurance, USDT & mobile payments. Fully in-house built platform dedicated to VIP service."
 
   [[en.menus.main]]
     name = "Origin"

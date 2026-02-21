@@ -1,7 +1,7 @@
-{{/* ===== Design Evolution — 1 page ===== */}}
+{{/* ===== Evolution — PPT slides: overview + era details ===== */}}
 <section id="evolution" data-section="4" class="page section-gradient section-border-top">
   <div class="page-inner">
-    {{/* Section header */}}
+    {{/* Section header — static */}}
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_evolution" }}</span>
       <div class="gold-line mb-3"></div>
@@ -9,42 +9,104 @@
       <h2 class="heading-display">
         {{ if eq .Language.Lang "zh" }}设计<span class="text-gold">演变</span>{{ else }}Design <span class="text-gold">Evolution</span>{{ end }}
       </h2>
-      {{ if eq .Language.Lang "zh" }}
-      <p class="mt-2 max-w-2xl text-fyt-cream opacity-60">
-        从2011年灰蓝清新的Apple风格起步，到2020年黑橙重塑品牌形象，再到全橙的大胆试验——勇于探索，不惧试错。最终回归精炼的黑橙，沉稳而有力。十五年四次蜕变，每一次都是对完美体验的不懈追求，也是团队自主研发能力的最好证明。
-      </p>
-      {{ else }}
-      <p class="mt-2 max-w-2xl text-fyt-cream opacity-60">
-        Starting with an Apple-inspired grey-blue aesthetic in 2011, through the bold black-orange rebrand of 2020, then a daring all-orange experiment — unafraid to try, unafraid to fail. The return to refined black-orange proved decisive. Four evolutions in fifteen years, each an unwavering pursuit of the perfect experience — and proof of the team's in-house capability.
-      </p>
-      {{ end }}
     </div>
 
-    {{/* 2x2 grid — centered, uniform 16:9 */}}
-    <div class="grid grid-cols-2 gap-3 reveal max-w-3xl mx-auto">
-      <div>
-        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-          <img src="/images/website-v1.webp" alt="{{ if eq .Language.Lang "zh" }}原版网站{{ else }}Original website{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+    {{/* Scroll feed — PPT slides */}}
+    <div class="scroll-feed reveal" data-scroll-interval="8000">
+      <div class="scroll-feed-track">
+
+        {{/* Slide 1: Overview + 2x2 image grid */}}
+        <div class="scroll-block">
+          {{ if eq .Language.Lang "zh" }}
+          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
+            十五年，四次蜕变。每一次改版的背后，都是为了让会员的体验更顺手、更舒适。从灰蓝的初版到黑橙的重塑，再到全橙的大胆尝试——最终回归精炼的黑橙，沉稳而有力。不追风，不跟潮，只做让会员用着最顺的那一版。
+          </p>
+          {{ else }}
+          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
+            Fifteen years, four redesigns — each one driven by the same question: how do we make the experience better for our members? From the original grey-blue to bold black-orange, then an all-orange experiment — ultimately returning to refined black-orange. No chasing trends. Just relentless refinement for the people who use it every day.
+          </p>
+          {{ end }}
+          <div class="grid grid-cols-2 gap-3 max-w-3xl mx-auto">
+            <div>
+              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+                <img src="/images/website-v1.webp" alt="{{ if eq .Language.Lang "zh" }}原版网站{{ else }}Original website{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+              </div>
+              <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}灰蓝 · 2011{{ else }}Grey-Blue · 2011{{ end }}</span>
+            </div>
+            <div>
+              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+                <img src="/images/website-rebrand.webp" alt="{{ if eq .Language.Lang "zh" }}品牌重塑{{ else }}Rebrand{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+              </div>
+              <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}黑橙 · 2020{{ else }}Black-Orange · 2020{{ end }}</span>
+            </div>
+            <div>
+              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+                <img src="/images/app-2026-web1.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
+              </div>
+              <span class="artifact-caption block mt-1 text-[10px]">2026</span>
+            </div>
+            <div>
+              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
+                <img src="/images/app-2026-web2.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
+              </div>
+              <span class="artifact-caption block mt-1 text-[10px]">2026</span>
+            </div>
+          </div>
         </div>
-        <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}灰蓝 · 2011{{ else }}Grey-Blue · 2011{{ end }}</span>
-      </div>
-      <div>
-        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-          <img src="/images/website-rebrand.webp" alt="{{ if eq .Language.Lang "zh" }}品牌重塑{{ else }}Rebrand{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+
+        {{/* Slide 2: Era-by-era detail with app screenshots */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <div class="grid grid-cols-2 gap-2">
+                <figure class="artifact" style="max-height: 18vh;">
+                  <img src="/images/app-orange.webp" alt="{{ if eq .Language.Lang "zh" }}全橙试验{{ else }}All-orange experiment{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 18vh;">
+                  <img src="/images/app-2026-mobile.png" alt="{{ if eq .Language.Lang "zh" }}2026手机应用{{ else }}2026 Mobile App{{ end }}" loading="lazy" style="object-fit: contain;">
+                </figure>
+              </div>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}全橙试验 → 精炼回归{{ else }}All-Orange → Refined Return{{ end }}</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                <strong class="text-gold-light">灰蓝时代（2011）</strong>——以「富易堂 RICHE88」之名启航，简约清新，为会员提供当时最流畅的投注界面。
+              </p>
+              <p>
+                <strong class="text-gold-light">黑橙重塑（2020）</strong>——正式更名FYTBET，视觉更醒目，操作更直觉。疫情期间主动发布「你我同心抗疫」声明，与会员共度时艰。
+              </p>
+              <p>
+                <strong class="text-gold-light">全橙试验（2021）</strong>——App v3.0大胆突破。自主研发的优势在这里体现得淋漓尽致：从想法到上线，无需等待任何外部供应商。
+              </p>
+              <p>
+                <strong class="text-gold-light">精炼回归（2026）</strong>——App v4.1搭载每日签到、好友推荐、幸运红包、VIP俱乐部等专属功能。每一次升级，都是听取会员反馈后的实际行动。
+              </p>
+              {{ else }}
+              <p>
+                <strong class="text-gold-light">Grey-Blue Era (2011)</strong> — Launched as "富易堂 RICHE88" with a clean, minimal interface designed for smooth betting.
+              </p>
+              <p>
+                <strong class="text-gold-light">Black-Orange Rebrand (2020)</strong> — Became FYTBET with bolder visuals and more intuitive navigation. During the pandemic, the brand stood with its members through a public social responsibility statement.
+              </p>
+              <p>
+                <strong class="text-gold-light">All-Orange Experiment (2021)</strong> — App v3.0 pushed boundaries. The advantage of in-house development was clear: idea to launch with zero external dependency.
+              </p>
+              <p>
+                <strong class="text-gold-light">Refined Return (2026)</strong> — App v4.1 with daily check-in rewards, referral bonuses, lucky red envelopes, and VIP club perks. Every upgrade is a direct response to member feedback.
+              </p>
+              {{ end }}
+            </div>
+          </div>
         </div>
-        <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}黑橙 · 2020{{ else }}Black-Orange · 2020{{ end }}</span>
-      </div>
-      <div>
-        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-          <img src="/images/app-2026-web1.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
-        </div>
-        <span class="artifact-caption block mt-1 text-[10px]">2026</span>
-      </div>
-      <div>
-        <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-          <img src="/images/app-2026-web2.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
-        </div>
-        <span class="artifact-caption block mt-1 text-[10px]">2026</span>
+
+      </div>{{/* /track */}}
+
+      {{/* Controls */}}
+      <div class="scroll-controls">
+        <button class="scroll-prev" aria-label="Previous">‹</button>
+        <div class="scroll-dots"></div>
+        <button class="scroll-next" aria-label="Next">›</button>
       </div>
     </div>
   </div>
