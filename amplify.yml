@@ -1,0 +1,10 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - cd fyt-amplified && hugo --minify
+  artifacts:
+    baseDirectory: fyt-amplified/public
+    files:
+      - '**/*'
