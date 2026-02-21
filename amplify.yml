@@ -5,11 +5,11 @@ frontend:
       commands:
         - wget -q https://github.com/gohugoio/hugo/releases/download/v0.156.0/hugo_extended_0.156.0_Linux-64bit.tar.gz
         - tar -xf hugo_extended_0.156.0_Linux-64bit.tar.gz
-        - mv hugo /usr/local/bin/
-        - hugo version
+        - chmod +x hugo
+        - ./hugo version
     build:
       commands:
-        - cd fyt-amplified && hugo --minify
+        - cd fyt-amplified && ../hugo --minify
   artifacts:
     baseDirectory: fyt-amplified/public
     files:
