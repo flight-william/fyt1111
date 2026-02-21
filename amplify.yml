@@ -6,11 +6,11 @@ frontend:
         - wget -q https://github.com/gohugoio/hugo/releases/download/v0.156.0/hugo_extended_0.156.0_Linux-64bit.tar.gz
         - tar -xf hugo_extended_0.156.0_Linux-64bit.tar.gz
         - chmod +x hugo
-        - cd fyt-amplified && npm install
+        - npm install
     build:
       commands:
-        - $CODEBUILD_SRC_DIR/hugo --minify -s $CODEBUILD_SRC_DIR/fyt-amplified
+        - ./hugo --minify
   artifacts:
-    baseDirectory: fyt-amplified/public
+    baseDirectory: public
     files:
       - '**/*'

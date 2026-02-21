@@ -1,1 +1,6 @@
 material/
+node_modules/
+public/
+resources/
+.hugo_build.lock
+hugo_extended_*.tar.gz
