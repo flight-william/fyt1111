@@ -8,7 +8,7 @@
       <p class="heading-sub mb-2">{{ i18n "label_tech" }}</p>
       <h2 class="heading-display">
         <a href="{{ "technology" | relLangURL }}">
-        {{ if eq .Language.Lang "zh" }}自研 · <span class="text-gold">自建</span>{{ else if eq .Language.Lang "vi" }}Tự phát triển · <span class="text-gold">Nội bộ</span>{{ else if eq .Language.Lang "th" }}สร้างด้วย <span class="text-gold">มือเรา</span>{{ else if eq .Language.Lang "id" }}<span class="text-gold">Dibangun</span> Mandiri{{ else }}<span class="text-gold">Built</span>, Not Bought{{ end }}
+        {{ if eq .Language.Lang "zh" }}自研 · <span class="text-gold">自建</span>{{ else if eq .Language.Lang "yue" }}<span class="text-gold">自己嘢</span> · 自己起{{ else if eq .Language.Lang "vi" }}Tự phát triển · <span class="text-gold">Nội bộ</span>{{ else if eq .Language.Lang "th" }}สร้างด้วย <span class="text-gold">มือเรา</span>{{ else if eq .Language.Lang "id" }}<span class="text-gold">Dibangun</span> Mandiri{{ else }}<span class="text-gold">Built</span>, Not Bought{{ end }}
         </a>
       </h2>
     </div>
@@ -67,14 +67,14 @@
             </div>
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else if eq .Language.Lang "vi" }}Fortune Insurance{{ else if eq .Language.Lang "th" }}Fortune Insurance{{ else if eq .Language.Lang "id" }}Fortune Insurance{{ else }}Fortune Insurance{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
+                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else if eq .Language.Lang "yue" }}富貴保{{ else if eq .Language.Lang "vi" }}Fortune Insurance{{ else if eq .Language.Lang "th" }}Fortune Insurance{{ else if eq .Language.Lang "id" }}Fortune Insurance{{ else }}Fortune Insurance{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
               </figure>
-              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 独创福利{{ else if eq .Language.Lang "vi" }}Fortune Insurance · Đặc quyền độc quyền{{ else if eq .Language.Lang "th" }}Fortune Insurance · เอกสิทธิ์เฉพาะเรา{{ else if eq .Language.Lang "id" }}Fortune Insurance · Keunggulan Eksklusif{{ else }}Fortune Insurance · Proprietary{{ end }}</span>
+              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 独创福利{{ else if eq .Language.Lang "yue" }}富貴保 · 獨家福利{{ else if eq .Language.Lang "vi" }}Fortune Insurance · Đặc quyền độc quyền{{ else if eq .Language.Lang "th" }}Fortune Insurance · เอกสิทธิ์เฉพาะเรา{{ else if eq .Language.Lang "id" }}Fortune Insurance · Keunggulan Eksklusif{{ else }}Fortune Insurance · Proprietary{{ end }}</span>
             </div>
           </div>
           <div class="mt-3">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}代码在自己手里，你的数据才只属于你。{{ else if eq .Language.Lang "vi" }}Khi mã nguồn trong tay chúng tôi, dữ liệu của bạn mới thực sự thuộc về bạn.{{ else if eq .Language.Lang "th" }}เมื่อโค้ดอยู่ในมือเรา ข้อมูลของคุณจึงเป็นของคุณอย่างแท้จริง{{ else if eq .Language.Lang "id" }}Ketika kode ada di tangan kami, data Anda benar-benar milik Anda.{{ else }}The ultimate security is the protection you never notice — every line of code is a moat we built for you.{{ end }}
+              {{ if eq .Language.Lang "zh" }}代码在自己手里，你的数据才只属于你。{{ else if eq .Language.Lang "yue" }}代碼喺自己手入面，你嘅數據先至真正淨係屬於你。{{ else if eq .Language.Lang "vi" }}Khi mã nguồn trong tay chúng tôi, dữ liệu của bạn mới thực sự thuộc về bạn.{{ else if eq .Language.Lang "th" }}เมื่อโค้ดอยู่ในมือเรา ข้อมูลของคุณจึงเป็นของคุณอย่างแท้จริง{{ else if eq .Language.Lang "id" }}Ketika kode ada di tangan kami, data Anda benar-benar milik Anda.{{ else }}The ultimate security is the protection you never notice — every line of code is a moat we built for you.{{ end }}
             </div>
           </div>
         </div>
@@ -111,6 +111,13 @@
               <p>
                 Deposit, taruhan, penarikan — semua berjalan mulus dalam satu alur.
               </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p>
+                體育以外，乜都有齊。真人荷官、老虎機、電競、棋牌、彩票、捕魚 —— 一個戶口，一個 APP，唔使喺唔同平台之間周圍走。
+              </p>
+              <p>
+                充值、落注、提款，一氣呵成。
+              </p>
               {{ else }}
               <p>
                 Beyond sports, everything is here. Live dealers (AG, BBIN, BG), slots (PG, Microgaming, Pragmatic), eSports, card games (Kaiyuan, GM), lottery, and fish hunter — all under one roof, no switching between platforms.
@@ -122,9 +129,9 @@
             </div>
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else if eq .Language.Lang "vi" }}Nền tảng FYTBET{{ else if eq .Language.Lang "th" }}แพลตฟอร์ม FYTBET{{ else if eq .Language.Lang "id" }}Platform FYTBET{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
+                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else if eq .Language.Lang "yue" }}FYTBET 桌面平台{{ else if eq .Language.Lang "vi" }}Nền tảng FYTBET{{ else if eq .Language.Lang "th" }}แพลตฟอร์ม FYTBET{{ else if eq .Language.Lang "id" }}Platform FYTBET{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
               </figure>
-              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}FYTBET · 桌面平台{{ else if eq .Language.Lang "vi" }}FYTBET · Nền tảng máy tính{{ else if eq .Language.Lang "th" }}FYTBET · แพลตฟอร์มเดสก์ท็อป{{ else if eq .Language.Lang "id" }}FYTBET · Platform Desktop{{ else }}FYTBET · Desktop{{ end }}</span>
+              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}FYTBET · 桌面平台{{ else if eq .Language.Lang "yue" }}FYTBET · 桌面平台{{ else if eq .Language.Lang "vi" }}FYTBET · Nền tảng máy tính{{ else if eq .Language.Lang "th" }}FYTBET · แพลตฟอร์มเดสก์ท็อป{{ else if eq .Language.Lang "id" }}FYTBET · Platform Desktop{{ else }}FYTBET · Desktop{{ end }}</span>
             </div>
           </div>
           <div class="mt-3">
@@ -143,6 +150,10 @@
             {{ else if eq .Language.Lang "id" }}
             <p>
               Tujuh jalur transaksi: USDT yang cepat dan privat, Alipay/WeChat instan, Yuan digital yang terdepan, GBPay/EBpay yang fleksibel, dan transfer bank yang stabil. Gunakan metode yang paling Anda sukai, platform siap mendukung semuanya.
+            </p>
+            {{ else if eq .Language.Lang "yue" }}
+            <p>
+              出入金七條路：USDT 快又私密，支付寶微信即到，數字人民幣行喺最前，購寶 EBpay 靈活，銀行轉賬穩陣。你慣用邊種就用邊種，平台唔會替你揀。
             </p>
             {{ else }}
             <p>

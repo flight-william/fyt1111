@@ -15,7 +15,7 @@ faqs:
   - q: "Metode pembayaran apa saja yang didukung?"
     a: "Platform mendukung **7 jalur pembayaran**: USDT (mata uang kripto), Alipay, WeChat Pay, Yuan Digital (e-CNY), GBPay, EBpay, dan transfer bank. Dari pembayaran mobile utama hingga mata uang digital terdepan, selalu ada pilihan yang sesuai untuk Anda, dengan proses cepat dan privat."
   - q: "Apa saja hak istimewa eksklusif bagi pelanggan VIP?"
-    a: "Hadiah dari tahun ke tahun meliputi: Rượu whisky Scotch 40 tahun Haig Club edisi terbatas (dalam botol kristal buatan tangan), koleksi figur orisinal Marvel, patung Ah Fu lapis emas shio, kartu remi lapis emas, tali jam tangan brand, dll. Setiap barang hanya diberikan dan tidak dijual, menunjukkan ketulusan brand."
+    a: "Hadiah dari tahun ke tahun meliputi: Whisky Scotch Haig Club edisi terbatas (David Beckham sebagai brand ambassador), koleksi figur orisinal Marvel, patung Ah Fu lapis emas shio, kartu remi lapis emas, tali jam tangan brand, dll. Setiap barang hanya diberikan dan tidak dijual, menunjukkan ketulusan brand."
   - q: "Apa itu Absensi Harian dan Angpao Keberuntungan?"
     a: "**Absensi Harian** adalah manfaat harian Klub VIP, akumulasi absensi untuk mendapatkan hadiah. **Angpao Keberuntungan** mingguan bisa mencapai 1.888 Yuan, dipadukan dengan program referensi Teman Berbagi PLUS dan kejutan gacha, memungkinkan anggota VIP terus merasakan perhatian platform dalam penggunaan sehari-hari."
   - q: "Mengapa memilih FYT?"
@@ -71,7 +71,7 @@ Bagi anggota VIP, Fortune Insurance tidak hanya mengubah hasil menang kalah dari
 
 Hak istimewa FYT bagi anggota VIP tidak pernah menggunakan logika hadiah promosi massal.
 
-Saat musim Tahun Baru, anggota VIP menerima sebotol **Rượu whisky Scotch single grain Haig Club edisi terbatas 40 tahun**, dalam botol kristal buatan tangan, disertai kartu ucapan brand dengan tulisan **「小大由之 富在知足」** (Kepuasan adalah kekayaan sejati). Haig Club adalah brand wiski kelas dunia yang diwakili oleh David Beckham, dan wiski berusia 40 tahun itu sendiri sudah merupakan barang koleksi tingkat tinggi. Ini bukan sekadar hadiah festival biasa — pesan yang disampaikannya adalah: Posisi Anda di hati kami layak mendapatkan tingkat ini.
+Saat musim Tahun Baru, anggota VIP menerima sebotol **Haig Club Scotch whisky edisi terbatas** — brand yang diwakili oleh David Beckham, disertai kartu ucapan brand dengan tulisan **「小大由之 富在知足」**. Memilih wiski apa yang diberikan, tergantung siapa yang duduk di hadapan Anda.
 
 Seri koleksi juga digarap dengan sangat serius. **Figur koleksi Dragon lisensi resmi Marvel** — Thor, Iron Man, Captain America, Hulk — dibagikan secara terbatas, ditukar berdasarkan tingkat aktivitas. Setiap Tahun Baru Imlek, ada juga **pajangan emas Ah Fu edisi terbatas shio** — Kuda Emas, Kambing Emas, Monyet Emas — setiap tahun berbeda, hanya untuk VIP. Dipadukan dengan kartu remi lapis emas, tali jam tangan brand, mug peringatan, setiap barang dipilih dengan cermat dan hanya diberikan, tidak dijual.
 
@@ -94,3 +94,15 @@ FYT menghubungkan 7 jalur pembayaran, mencakup semua pilihan utama dari bank tra
 - **Transfer Bank** — Jalur bank tradisional, stabil dan andal.
 
 Ketujuh jalur ini berjalan secara paralel, anggota tidak perlu menyesuaikan diri dengan platform — platform yang akan menyesuaikan dengan kebiasaan anggota. Baik Anda lebih menyukai anonimitas mata uang kripto, kemudahan Alipay/WeChat, atau ingin mencoba jalur Yuan Digital yang baru ini, setor dan tarik dana dapat diselesaikan dengan cara yang paling Anda kenal.
+
+---
+
+## Apa Itu Juxing? DNA Ruang VIP Macau dalam FYT
+
+DNA layanan VIP FYT dapat ditelusuri ke satu sumber: kemitraan brand dengan **Juxing Group (钜星)** di Macau.
+
+Juxing adalah operator ruang VIP yang berbasis di Macau, dengan pengalaman bertahun-tahun dalam penerimaan dan pelayanan tamu bernilai tinggi. Melalui kerja sama ini, FYT menyerap serangkaian standar keramahtamahan yang ditempa di ruang VIP fisik: bukan dengan mengandalkan dekorasi mewah, tetapi dengan **memahami kebutuhan setiap tamu secara tepat dan merespons melampaui ekspektasi mereka**.
+
+Standar-standar ini kemudian dikodekan ke dalam logika operasional brand — mulai dari cara tim layanan pelanggan merespons, hingga detail desain program penghargaan, hingga kriteria prioritas fitur produk. Acara-acara eksperiensial seperti bungy jump di Macau Tower dan mengemudi di sirkuit F1 Singapura, semuanya tumbuh dari filosofi ruang VIP yang sama: ciptakan momen bagi tamu yang tidak bisa direplikasi di tempat lain.
+
+Ruang VIP fisik memiliki batas geografis, tetapi standar ketelitian yang diwakilinya tidak. Standar itu kini hidup dalam setiap keputusan produk dan detail layanan di seluruh platform FYT.

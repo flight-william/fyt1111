@@ -8,7 +8,7 @@
       <p class="heading-sub mb-1">{{ i18n "label_temperature" }}</p>
       <h2 class="heading-display">
         <a href="{{ "charity" | relLangURL }}">
-        {{ if eq .Language.Lang "zh" }}<span class="text-gold">把爱</span>传出去{{ else if eq .Language.Lang "vi" }}Lan tỏa <span class="text-gold">Yêu thương</span>{{ else if eq .Language.Lang "th" }}ส่งต่อ <span class="text-gold">ความรัก</span>{{ else if eq .Language.Lang "id" }}<span class="text-gold">Berbagi</span> Kasih{{ else }}<span class="text-gold">Spread</span> the Love{{ end }}
+        {{ if eq .Language.Lang "zh" }}<span class="text-gold">把爱</span>传出去{{ else if eq .Language.Lang "vi" }}Lan tỏa <span class="text-gold">Yêu thương</span>{{ else if eq .Language.Lang "th" }}ส่งต่อ <span class="text-gold">ความรัก</span>{{ else if eq .Language.Lang "id" }}<span class="text-gold">Berbagi</span> Kasih{{ else if eq .Language.Lang "yue" }}<span class="text-gold">將愛</span>傳出去{{ else }}<span class="text-gold">Spread</span> the Love{{ end }}
         </a>
       </h2>
     </div>
@@ -25,7 +25,7 @@
                 <source data-src="/video/charity-soccer.mp4" type="video/mp4">
               </video>
             </div>
-            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else if eq .Language.Lang "vi" }}Chengshi Cup · Bóng đá Từ thiện{{ else if eq .Language.Lang "th" }}Chengshi Cup · ฟุตบอลการกุศล{{ else if eq .Language.Lang "id" }}Chengshi Cup · Sepak Bola Amal{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
+            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else if eq .Language.Lang "vi" }}Chengshi Cup · Bóng đá Từ thiện{{ else if eq .Language.Lang "th" }}Chengshi Cup · ฟุตบอลการกุศล{{ else if eq .Language.Lang "id" }}Chengshi Cup · Sepak Bola Amal{{ else if eq .Language.Lang "yue" }}誠十杯 · 粵鄂明星慈善波{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -44,6 +44,10 @@
               {{ else if eq .Language.Lang "id" }}
               <p>
                 2 Mei 2015, Stadion Rakyat Provinsi Guangdong. Pertandingan sepak bola amal Chengshi Cup dimulai dengan FYT sebagai co-sponsor. Momen paling mengharukan: 33 anak dari panti sosial berhadapan dengan 11 mantan pemain timnas — bukan pertandingan, melainkan bentuk kasih sayang tulus dari orang dewasa kepada anak-anak.
+              </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p>
+                2015 年 5 月 2 號，廣東省人民體育場。誠十杯粵鄂慈善波開波，誠十集團同富易堂聯合贊助。最感動嗰幕：33 個來自廣州社會福利院嘅細路，對住 11 位退役國腳——唔係比賽，係大人對細路最溫柔嘅陪伴。
               </p>
               {{ else }}
               <p>
@@ -68,6 +72,10 @@
               <p>
                 Legenda timnas seperti Qu Chuliang dan Hu Zhijun menyimpan gelar mereka untuk bermain bersama anak-anak. Disiarkan langsung di TV Guangzhou, seluruh dana digunakan untuk bantuan pendidikan anak yatim dan penyandang disabilitas. Ada hal-hal yang lebih berharga dari sekadar memenangkan pertandingan.
               </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p>
+                曲楚良、胡志軍、謝育新、林強、殷立華……呢啲曾經馳騁國家隊嘅名字，嗰日得一個身份：陪細路踢波嘅人。廣州電視台全程直播，善款全部用喺福利院孤殘兒童嘅教育。有啲嘢，比贏波更值得全力以赴。
+              </p>
               {{ else }}
               <p>
                 National stars like Qu Chuliang and Hu Zhijun (1994 top scorer) set aside their titles to play. Broadcast on Guangzhou TV, all proceeds benefited educational assistance for orphaned and disabled children. Some things are worth more than winning.
@@ -77,7 +85,7 @@
           </div>
           <div class="mt-2">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}有些事，比赢球更值得全力以赴。{{ else if eq .Language.Lang "vi" }}Trong cuộc đời, có những điều còn đáng để dốc sức hơn cả việc thắng một trận bóng.{{ else if eq .Language.Lang "th" }}บางสิ่งบางอย่าง... มีค่ามากกว่าชัยชนะในสนามฟุตบอล{{ else if eq .Language.Lang "id" }}Ada hal-hal yang lebih layak diperjuangkan daripada sekadar memenangkan pertandingan.{{ else }}Beyond the game, we find purpose in sharing the same sun with the children the world forgot.{{ end }}
+              {{ if eq .Language.Lang "zh" }}有些事，比赢球更值得全力以赴。{{ else if eq .Language.Lang "vi" }}Trong cuộc đời, có những điều còn đáng để dốc sức hơn cả việc thắng một trận bóng.{{ else if eq .Language.Lang "th" }}บางสิ่งบางอย่าง... มีค่ามากกว่าชัยชนะในสนามฟุตบอล{{ else if eq .Language.Lang "id" }}Ada hal-hal yang lebih layak diperjuangkan daripada sekadar memenangkan pertandingan.{{ else if eq .Language.Lang "yue" }}有啲嘢，比贏波更值得全力去做。{{ else }}Beyond the game, we find purpose in sharing the same sun with the children the world forgot.{{ end }}
             </div>
           </div>
         </div>
@@ -114,6 +122,13 @@
               <p>
                 Bukan sekadar transfer dana. Ini adalah perjalanan melalui jalan berlumpur, memasuki rumah-rumah yang jarang dikunjungi orang luar. Beras dan minyak goreng di dalam mobil membawa bobot sebuah janji. Senyum anak-anak saat menerima tas sekolah baru terasa ringan, namun nilainya melampaui segala pencapaian bisnis.
               </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p class="drop-cap">
+                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">「嗰啲被遺忘嘅細路」</a>——一份紀實報告嘅名，亦係出發嘅理由。團隊著住印住「將愛傳出去」嘅 T 恤，裝滿成車食油同白米，揸入中國最偏遠嘅山村。書包、足球、蠟筆、文具，每一樣都親手遞到細路手上。
+              </p>
+              <p>
+                唔係匯筆款就算。係行泥路，入去好少有外人到過嘅屋企。架麵包車上嘅天府之花食油同白米，沉甸甸，係承諾嘅重量。細路接過新書包嗰陣笑，好輕，但比任何生意上嘅收穫都值。
+              </p>
               {{ else }}
               <p class="drop-cap">
                 <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">"The Forgotten Children"</a> — this documentary report's title was also the starting point of FYT's charitable mission. The team traveled deep into rural China, donating funds to schools, delivering cooking oil, rice, and daily necessities to families in need. Wearing charity t-shirts printed with "Spread the Love," they crossed mountains to hand school bags, footballs, crayons, and stationery directly to children.
@@ -126,21 +141,21 @@
             <div class="md:col-span-5">
               <div class="flex gap-2 mb-2 justify-center">
                 <figure>
-                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else if eq .Language.Lang "vi" }}Áo từ thiện{{ else if eq .Language.Lang "th" }}เสื้อการกุศล{{ else if eq .Language.Lang "id" }}Kaos Amal{{ else }}Charity T-shirt{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
+                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else if eq .Language.Lang "vi" }}Áo từ thiện{{ else if eq .Language.Lang "th" }}เสื้อการกุศล{{ else if eq .Language.Lang "id" }}Kaos Amal{{ else if eq .Language.Lang "yue" }}慈善 T 恤{{ else }}Charity T-shirt{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
                 </figure>
                 <figure>
-                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else if eq .Language.Lang "vi" }}Quyên góp nông thôn{{ else if eq .Language.Lang "th" }}บริจาคชนบท{{ else if eq .Language.Lang "id" }}Donasi Pedesaan{{ else }}Rural donations{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
+                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else if eq .Language.Lang "vi" }}Quyên góp nông thôn{{ else if eq .Language.Lang "th" }}บริจาคชนบท{{ else if eq .Language.Lang "id" }}Donasi Pedesaan{{ else if eq .Language.Lang "yue" }}山區捐贈{{ else }}Rural donations{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
                 </figure>
               </div>
               <div class="flex gap-2 justify-center">
                 <figure>
-                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}志愿者证{{ else if eq .Language.Lang "vi" }}Thẻ tình nguyện{{ else if eq .Language.Lang "th" }}บัตรอาสาสมัคร{{ else if eq .Language.Lang "id" }}Kartu Sukarelawan{{ else }}Volunteer badge{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
+                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}志愿者证{{ else if eq .Language.Lang "vi" }}Thẻ tình nguyện{{ else if eq .Language.Lang "th" }}บัตรอาสาสมัคร{{ else if eq .Language.Lang "id" }}Kartu Sukarelawan{{ else if eq .Language.Lang "yue" }}義工證{{ else }}Volunteer badge{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
                 </figure>
                 <figure>
-                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}孩子们{{ else if eq .Language.Lang "vi" }}Các em nhỏ{{ else if eq .Language.Lang "th" }}เด็กๆ{{ else if eq .Language.Lang "id" }}Anak-anak{{ else }}Children{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
+                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}孩子们{{ else if eq .Language.Lang "vi" }}Các em nhỏ{{ else if eq .Language.Lang "th" }}เด็กๆ{{ else if eq .Language.Lang "id" }}Anak-anak{{ else if eq .Language.Lang "yue" }}細路仔{{ else }}Children{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
                 </figure>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠 · 把爱传出去{{ else if eq .Language.Lang "vi" }}Quyên góp Nông thôn · Lan tỏa Yêu thương{{ else if eq .Language.Lang "th" }}บริจาคชนบท · ส่งต่อความรัก{{ else if eq .Language.Lang "id" }}Donasi Pedesaan · Berbagi Kasih{{ else }}Rural Donations · Spread the Love{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠 · 把爱传出去{{ else if eq .Language.Lang "vi" }}Quyên góp Nông thôn · Lan tỏa Yêu thương{{ else if eq .Language.Lang "th" }}บริจาคชนบท · ส่งต่อความรัก{{ else if eq .Language.Lang "id" }}Donasi Pedesaan · Berbagi Kasih{{ else if eq .Language.Lang "yue" }}山區捐贈 · 將愛傳出去{{ else }}Rural Donations · Spread the Love{{ end }}</span>
             </div>
           </div>
         </div>

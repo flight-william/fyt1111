@@ -19,6 +19,18 @@
 
     <span class="text-fyt-subtle/30 text-[10px]">—</span>
 
+    {{/* YUE */}}
+    {{ if eq $currentLang "yue" }}
+      <span class="active">粵</span>
+    {{ else }}
+      {{ $yueLink := "" }}
+      {{ range .AllTranslations }}{{ if eq .Language.Lang "yue" }}{{ $yueLink = .RelPermalink }}{{ end }}{{ end }}
+      {{ if not $yueLink }}{{ $yueLink = "/yue/" }}{{ end }}
+      <a href="{{ $yueLink }}" data-lang-toggle="yue">粵</a>
+    {{ end }}
+
+    <span class="text-fyt-subtle/30 text-[10px]">—</span>
+
     {{/* EN */}}
     {{ if eq $currentLang "en" }}
       <span class="active">EN</span>
@@ -63,18 +75,6 @@
       {{ range .AllTranslations }}{{ if eq .Language.Lang "id" }}{{ $idLink = .RelPermalink }}{{ end }}{{ end }}
       {{ if not $idLink }}{{ $idLink = "/id/" }}{{ end }}
       <a href="{{ $idLink }}" data-lang-toggle="id">ID</a>
-    {{ end }}
-
-    <span class="text-fyt-subtle/30 text-[10px]">—</span>
-
-    {{/* YUE */}}
-    {{ if eq $currentLang "yue" }}
-      <span class="active">粵</span>
-    {{ else }}
-      {{ $yueLink := "" }}
-      {{ range .AllTranslations }}{{ if eq .Language.Lang "yue" }}{{ $yueLink = .RelPermalink }}{{ end }}{{ end }}
-      {{ if not $yueLink }}{{ $yueLink = "/yue/" }}{{ end }}
-      <a href="{{ $yueLink }}" data-lang-toggle="yue">粵</a>
     {{ end }}
   </div>
 </nav>

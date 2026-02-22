@@ -79,3 +79,17 @@ Sebagai penampilan publik pertamanya secara resmi, Ah Fu berinteraksi hangat den
 Pada hari yang sama, kaos amal yang menampilkan gambar Ah Fu juga muncul di lokasi acara. Ah Fu di kaos tersebut berdiri bersama dua orang anak, dengan empat karakter Mandarin di dadanya — **"Berbagi Kasih"**. Kaos ini kemudian menjadi simbol visual ikonik untuk kegiatan amal brand, menghubungkan citra Ah Fu dengan tanggung jawab sosial secara erat.
 
 Dari layar digital ke lapangan nyata, dari stiker sosial ke kaos amal — Ah Fu membuktikan bahwa ia bukan sekadar karakter di atas kertas desain. Ia adalah jiwa brand yang hidup.
+
+---
+
+## Mengapa FYT Membutuhkan Maskot? Makna Brand dari Ah Fu
+
+Di industri yang kepercayaan adalah mata uang paling berharga, membangun brand harus melampaui komunikasi fungsional. Data, lisensi, margin odds — ini adalah alat persuasi rasional. Namun yang benar-benar membuat sebuah brand **disukai**, **diingat**, dan **dirasakan** sering kali datang dari sesuatu yang lebih lembut.
+
+Itulah peran yang dimainkan Ah Fu.
+
+Ia memberikan FYT sesuatu yang tidak bisa disediakan oleh infrastruktur teknis atau sertifikasi regulasi: **wajah yang memiliki ekspresi, karakter yang memiliki kepribadian, kehadiran yang memiliki kehangatan**. Ketika anggota mengirim stiker Ah Fu, mereka tidak sekadar mengirim gambar, tetapi menunjukkan ikatan alami dengan brand. Ketika VIP mengoleksi seri mug peringatan, yang mereka simpan bukan sekadar barang, melainkan kenangan bersama dengan platform.
+
+Sejak menetas dari telurnya pada tahun 2015, Ah Fu telah menemani FYT melalui setiap babak penting — dari rebranding Riche88 ke FYTBET, evolusi identitas visual, inisiatif amal, hingga inovasi produk. Ia adalah jangkar visual yang paling stabil dan penghubung emosional yang paling hangat bagi brand.
+
+Dalam diri Ah Fu, Anda tidak melihat strategi pemasaran, tetapi sebuah brand yang berkata kepada penggunanya: **Kami mengingat Anda, dan berharap Anda juga mengingat kami.**

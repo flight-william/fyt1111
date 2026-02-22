@@ -8,7 +8,7 @@
       <p class="heading-sub mb-2">{{ i18n "label_companion" }}</p>
       <h2 class="heading-display">
         <a href="{{ "mascot" | relLangURL }}">
-        {{ if eq .Language.Lang "zh" }}认识<span class="text-gold">阿富</span>{{ else if eq .Language.Lang "vi" }}Gặp gỡ <span class="text-gold">Ah Fu</span>{{ else if eq .Language.Lang "th" }}รู้จักกับ <span class="text-gold">Ah Fu</span>{{ else if eq .Language.Lang "id" }}Kenali <span class="text-gold">Ah Fu</span>{{ else }}Meet <span class="text-gold">Ah Fu</span>{{ end }}
+        {{ if eq .Language.Lang "zh" }}认识<span class="text-gold">阿富</span>{{ else if eq .Language.Lang "vi" }}Gặp gỡ <span class="text-gold">Ah Fu</span>{{ else if eq .Language.Lang "th" }}รู้จักกับ <span class="text-gold">Ah Fu</span>{{ else if eq .Language.Lang "id" }}Kenali <span class="text-gold">Ah Fu</span>{{ else if eq .Language.Lang "yue" }}識下 <span class="text-gold">阿富</span>{{ else }}Meet <span class="text-gold">Ah Fu</span>{{ end }}
         </a>
       </h2>
     </div>
@@ -22,7 +22,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
             <div class="md:col-span-3 flex justify-center">
               <figure class="relative" style="max-height: 25vh;">
-                <img src="/images/afu-hero.webp" alt="{{ if eq .Language.Lang "zh" }}阿富{{ else }}Ah Fu{{ end }}" loading="lazy" class="afu-hero h-full w-auto mx-auto drop-shadow-[0_12px_25px_rgba(0,0,0,0.5)]">
+                <img src="/images/afu-hero.webp" alt="{{ if eq .Language.Lang "zh" }}阿富{{ else if eq .Language.Lang "vi" }}Ah Fu{{ else if eq .Language.Lang "th" }}Ah Fu{{ else if eq .Language.Lang "id" }}Ah Fu{{ else if eq .Language.Lang "yue" }}阿富{{ else }}Ah Fu{{ end }}" loading="lazy" class="afu-hero h-full w-auto mx-auto drop-shadow-[0_12px_25px_rgba(0,0,0,0.5)]">
               </figure>
             </div>
             <div class="md:col-span-9">
@@ -54,6 +54,13 @@
               <p>
                 Ah Fu hadir di lapangan amal dan stiker chat anggota. Bagi yang mengenalnya, tak perlu penjelasan — ia adalah kesepahaman komunitas ini.
               </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p class="drop-cap">
+                2015 年，阿富嚟咗。啡色捲髮、紅色背帶褲、胸口一個「富」字——呢個鬼馬嘅卡通仔，由嗰陣開始就成為富易堂自己嘅招牌符號。
+              </p>
+              <p>
+                阿富唔淨係活喺螢幕上面。佢出現喺慈善波嘅現場，出現喺老友嘅 Chat 貼圖入面。識阿富嘅人唔使多解釋——佢係圈內人先明嘅嗰種默契。
+              </p>
               {{ else }}
               <p class="drop-cap">
                 Ah Fu arrived in 2015 — brown swirl hair, red suspenders, the character "富" on his chest. Part mascot, part brand signature. If you know Ah Fu, you know FYT.
@@ -76,7 +83,7 @@
           </div>
           <div class="mt-3">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}表情包会过时，阿富不会。{{ else if eq .Language.Lang "vi" }}Thời gian có thể thay đổi, nhưng người cùng bạn chứng kiến những đỉnh cao vẫn luôn ở đó.{{ else if eq .Language.Lang "th" }}กาลเวลาจะเปลี่ยนไป แต่ผู้ที่ยืนเคียงข้างคุณในทุกช่วงเวลาสำคัญจะยังคงอยู่ตรงนี้เสมอ{{ else if eq .Language.Lang "id" }}Waktu mungkin berubah, namun sosok yang menemani Anda menyaksikan setiap puncak kejayaan akan selalu ada di sini.{{ else }}Times change, but the one who stood by you at every peak remains by your side.{{ end }}
+              {{ if eq .Language.Lang "zh" }}表情包会过时，阿富不会。{{ else if eq .Language.Lang "vi" }}Thời gian có thể thay đổi, nhưng người cùng bạn chứng kiến những đỉnh cao vẫn luôn ở đó.{{ else if eq .Language.Lang "th" }}กาลเวลาจะเปลี่ยนไป แต่ผู้ที่ยืนเคียงข้างคุณในทุกช่วงเวลาสำคัญจะยังคงอยู่ตรงนี้เสมอ{{ else if eq .Language.Lang "id" }}Waktu mungkin berubah, namun sosok yang menemani Anda menyaksikan setiap puncak kejayaan akan selalu ada di sini.{{ else if eq .Language.Lang "yue" }}貼圖會過時，阿富唔會。{{ else }}Times change, but the one who stood by you at every peak remains by your side.{{ end }}
             </div>
           </div>
         </div>
@@ -87,16 +94,16 @@
             <div class="md:col-span-5">
               <div class="grid grid-cols-3 gap-2">
                 <figure class="artifact" style="max-height: 12vh;">
-                  <img src="/images/mug-origin.webp" alt="{{ if eq .Language.Lang "zh" }}起源杯{{ else }}Origin mug{{ end }}" loading="lazy">
+                  <img src="/images/mug-origin.webp" alt="{{ if eq .Language.Lang "zh" }}起源杯{{ else if eq .Language.Lang "vi" }}Cốc khởi nguồn{{ else if eq .Language.Lang "th" }}แก้วมัคต้นกำเนิด{{ else if eq .Language.Lang "id" }}Mug asal-usul{{ else if eq .Language.Lang "yue" }}起源杯{{ else }}Origin mug{{ end }}" loading="lazy">
                 </figure>
                 <figure class="artifact" style="max-height: 12vh;">
-                  <img src="/images/mug-growth.webp" alt="{{ if eq .Language.Lang "zh" }}成长杯{{ else }}Growth mug{{ end }}" loading="lazy">
+                  <img src="/images/mug-growth.webp" alt="{{ if eq .Language.Lang "zh" }}成长杯{{ else if eq .Language.Lang "vi" }}Cốc trưởng thành{{ else if eq .Language.Lang "th" }}แก้วมัคเติบโต{{ else if eq .Language.Lang "id" }}Mug pertumbuhan{{ else if eq .Language.Lang "yue" }}成長杯{{ else }}Growth mug{{ end }}" loading="lazy">
                 </figure>
                 <figure class="artifact" style="max-height: 12vh;">
-                  <img src="/images/mug-maturity.webp" alt="{{ if eq .Language.Lang "zh" }}成熟杯{{ else }}Maturity mug{{ end }}" loading="lazy">
+                  <img src="/images/mug-maturity.webp" alt="{{ if eq .Language.Lang "zh" }}成熟杯{{ else if eq .Language.Lang "vi" }}Cốc trưởng thành{{ else if eq .Language.Lang "th" }}แก้วมัคความสำเร็จ{{ else if eq .Language.Lang "id" }}Mug kedewasaan{{ else if eq .Language.Lang "yue" }}成熟杯{{ else }}Maturity mug{{ end }}" loading="lazy">
                 </figure>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}十周年纪念马克杯系列{{ else if eq .Language.Lang "vi" }}Bộ sưu tập cốc kỷ niệm 10 năm{{ else if eq .Language.Lang "th" }}ชุดแก้วมัคที่ระลึกครบรอบ 10 ปี{{ else if eq .Language.Lang "id" }}Koleksi Mug Anniversary{{ else }}Anniversary Mug Collection{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}十周年纪念马克杯系列{{ else if eq .Language.Lang "vi" }}Bộ sưu tập cốc kỷ niệm 10 năm{{ else if eq .Language.Lang "th" }}ชุดแก้วมัคที่ระลึกครบรอบ 10 ปี{{ else if eq .Language.Lang "id" }}Koleksi Mug Anniversary{{ else if eq .Language.Lang "yue" }}十週年紀念馬克杯系列{{ else }}Anniversary Mug Collection{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
@@ -127,6 +134,13 @@
               <p>
                 Koleksi unggulan adalah seri mug anniversary 10 buah yang menceritakan kisah pertumbuhan Ah Fu. Setiap Tahun Baru Imlek menghadirkan figur emas zodiak edisi terbatas — hanya untuk VIP. Kartu remi lapis emas, minuman premium, dan tali jam tangan — hadiah eksklusif yang tidak dijual untuk umum.
               </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p>
+                四十幾版反覆打磨，每個表情、每個動作都唔求其。「沒在怕」「Call Me」「BUSY」「BYE」「X TALK」——啲貼圖唔使推廣，喺老友嘅朋友圈入面自己就傳開晒。
+              </p>
+              <p>
+                週年紀念馬克杯，一套十隻，連環畫風格講阿富由破殼到成長嘅故事。每年新年仲有生肖限定金像——金馬、金羊、金猴，年年唔同，淨係送畀 VIP。金箔撲克、名酒、錶帶、煙灰缸，件件限量，只送唔賣。外面買唔到嘅嘢，先至值得收藏。
+              </p>
               {{ else }}
               <p>
                 Over 40 design iterations went into every expression. "No Fear," "Call Me," "BUSY," "BYE," "X TALK" — stickers that members use daily, spreading through VIP circles organically.
@@ -144,7 +158,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center">
             <div class="md:col-span-5 flex justify-center">
               <figure>
-                <img src="/images/afu-comic.webp" alt="{{ if eq .Language.Lang "zh" }}阿富漫画连载{{ else if eq .Language.Lang "vi" }}Truyện tranh Ah Fu{{ else if eq .Language.Lang "th" }}การ์ตูน Ah Fu{{ else if eq .Language.Lang "id" }}Komik Ah Fu{{ else }}Ah Fu comic strip{{ end }}" loading="lazy" class="rounded-sm" style="max-height: 35vh; width: auto;">
+                <img src="/images/afu-comic.webp" alt="{{ if eq .Language.Lang "zh" }}阿富漫画连载{{ else if eq .Language.Lang "vi" }}Truyện tranh Ah Fu{{ else if eq .Language.Lang "th" }}การ์ตูน Ah Fu{{ else if eq .Language.Lang "id" }}Komik Ah Fu{{ else if eq .Language.Lang "yue" }}阿富漫畫連載{{ else }}Ah Fu comic strip{{ end }}" loading="lazy" class="rounded-sm" style="max-height: 35vh; width: auto;">
               </figure>
             </div>
             <div class="md:col-span-7">
@@ -163,6 +177,10 @@
               {{ else if eq .Language.Lang "id" }}
               <p>
                 Selain stiker dan koleksi, tim desain membuat seri komik untuk Ah Fu — cerita harian Ah Fu dan temannya di lapangan, menangkap ikatan antara brand dan olahraga dengan gaya yang ceria. Logo RICHE88 muncul secara alami di setiap panel, bukan sebagai iklan, melainkan sebagai bagian dari dunia Ah Fu.
+              </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p>
+                設計團隊仲幫阿富畫咗漫畫——佢同好友喺球場上面嘅日常，幾筆就勾出品牌同體育之間嗰種天然嘅親近感。RICHE88 嘅 Logo 長喺畫面入面，係阿富世界嘅一部分。
               </p>
               {{ else }}
               <p>

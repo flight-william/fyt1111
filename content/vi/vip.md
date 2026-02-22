@@ -15,7 +15,7 @@ faqs:
   - q: "Hỗ trợ những phương thức thanh toán nào?"
     a: "Nền tảng hỗ trợ **7 kênh thanh toán**: USDT (tiền điện tử), Alipay, WeChat Pay, Nhân dân tệ kỹ thuật số (e-CNY), GBPay, EBpay và Chuyển khoản ngân hàng. Từ các ví điện tử phổ biến đến tiền số tiên phong, luôn có lựa chọn phù hợp với bạn, đảm bảo nhanh chóng và riêng tư."
   - q: "Khách hàng VIP có những đặc quyền độc quyền nào?"
-    a: "Các quà tặng qua các năm bao gồm: Rượu whisky Scotch 40 năm Haig Club bản giới hạn (đựng trong bình pha lê thủ công), bộ sưu tập mô hình Marvel chính hãng, tượng Ah Fu mạ vàng theo con giáp, bài mạ vàng, dây đeo đồng hồ thương hiệu, v.v. Mỗi món quà đều chỉ tặng không bán, thể hiện sự tận tâm."
+    a: "Các quà tặng qua các năm bao gồm: Whisky Scotch Haig Club phiên bản giới hạn (Beckham đại diện), bộ sưu tập mô hình Marvel chính hãng, tượng Ah Fu mạ vàng theo con giáp, bài mạ vàng, dây đeo đồng hồ thương hiệu, v.v. Mỗi món quà đều chỉ tặng không bán, thể hiện sự tận tâm."
   - q: "Điểm danh hàng ngày và Hồng bao may mắn là gì?"
     a: "**Điểm danh hàng ngày** là phúc lợi thường nhật của Câu lạc bộ VIP, tích lũy điểm danh để nhận thưởng. **Hồng bao may mắn** có thể nhận lên đến 1888 tệ mỗi tuần, kết hợp với chương trình giới thiệu bạn bè PLUS và vòng quay may mắn, giúp hội viên VIP liên tục cảm nhận được sự quan tâm của nền tảng."
   - q: "Tại sao nên chọn FYT?"
@@ -71,7 +71,7 @@ Cơ chế rất đơn giản: Sau khi chọn kích hoạt bảo hiểm, nếu c�
 
 Đặc quyền dành cho hội viên VIP của FYT chưa bao giờ theo logic quà tặng khuyến mãi đại trà.
 
-Vào dịp năm mới, các khách VIP nhận được một chai **rượu Scotch whisky đơn hạt 40 năm Haig Club phiên bản giới hạn**, đựng trong bình pha lê thổi thủ công, kèm theo thiệp chúc mừng của thương hiệu với dòng chữ **「Tiểu Đại Do Chi · Phú Tại Tri Túc」** (Mọi việc lớn nhỏ đều tự tại, sự giàu có nằm ở sự biết đủ). Haig Club là thương hiệu rượu whisky đẳng cấp thế giới do David Beckham đại diện, và rượu 40 năm bản thân nó đã là một món đồ sưu tầm cấp độ cao. Đây không phải là một món quà lễ tết thông thường — thông điệp nó truyền tải là: Vị thế của bạn trong lòng chúng tôi xứng tầm với đẳng cấp này.
+Vào dịp năm mới, các khách VIP nhận được một chai **Haig Club Scotch whisky phiên bản giới hạn** — thương hiệu do David Beckham đại diện, kèm theo thiệp chúc mừng của thương hiệu với dòng chữ **「小大由之 富在知足」**. Chọn loại rượu nào để tặng, phụ thuộc vào người đang ngồi đối diện bạn.
 
 Các bộ sưu tập cũng được đầu tư tương đương. **Mô hình Marvel chính hãng từ Dragon** — Thor, Iron Man, Captain America, Hulk — phát hành giới hạn, đổi bằng mức độ hoạt động. Mỗi dịp Tết, còn có các **tượng Ah Fu mạ vàng theo con giáp** — Ngựa vàng, Cừu vàng, Khỉ vàng — mỗi năm một khác, chỉ dành tặng khách VIP. Đi kèm còn có bài mạ vàng, dây đeo đồng hồ, cốc kỷ niệm, mỗi món đồ đều được tuyển chọn kỹ lưỡng, chỉ tặng không bán.
 
@@ -94,3 +94,15 @@ FYT kết nối 7 kênh thanh toán, bao gồm từ ngân hàng truyền thống
 - **Chuyển khoản ngân hàng** — Kênh ngân hàng truyền thống, ổn định và đáng tin cậy.
 
 7 kênh này vận hành song song, hội viên không cần phải chiều theo nền tảng — nền tảng sẽ tự thích ứng với thói quen của hội viên. Cho dù bạn thích tính ẩn danh của tiền điện tử, hay sự tiện lợi của Alipay/WeChat, hoặc muốn trải nghiệm con đường Nhân dân tệ số mới mẻ này, việc nạp và rút tiền đều có thể hoàn thành theo cách bạn quen thuộc nhất.
+
+---
+
+## Juxing là gì? DNA phòng VIP Macau trong FYT
+
+DNA dịch vụ VIP của FYT có thể truy ngược về một nguồn gốc: mối quan hệ hợp tác với **tập đoàn Juxing (钜星)** tại Macau.
+
+Juxing là nhà điều hành phòng VIP tại Macau, có nhiều năm kinh nghiệm sâu trong việc tiếp đón và phục vụ khách hàng cao cấp. Qua sự hợp tác này, FYT đã tiếp thu một bộ tiêu chuẩn đãi khách được rèn giũa trong các phòng VIP thực tế: không phải dựa vào trang trí xa hoa, mà dựa vào **sự nắm bắt chính xác nhu cầu của từng vị khách và phản hồi vượt ngoài kỳ vọng**.
+
+Những tiêu chuẩn này sau đó đã được ghi vào logic vận hành của thương hiệu — từ cách đội ngũ chăm sóc khách hàng phản hồi, đến cách thiết kế hệ thống đặc quyền, đến tiêu chí ưu tiên tính năng sản phẩm. Các sự kiện trải nghiệm như nhảy bungy tháp Macau hay lái xe trên đường đua F1 Singapore, đều sinh ra từ cùng một triết lý phòng VIP: tạo ra cho khách những khoảnh khắc không thể tái tạo ở nơi khác.
+
+Phòng VIP thực tế có giới hạn địa lý, nhưng sự tinh tế mà nó đại diện thì không. Tiêu chuẩn đó giờ đây sống trong mọi quyết định sản phẩm và chi tiết dịch vụ của FYT.

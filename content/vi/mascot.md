@@ -79,3 +79,17 @@ Là lần đầu tiên xuất hiện chính thức trước công chúng, Ah Fu 
 Cùng ngày hôm đó, những chiếc áo thun từ thiện in hình Ah Fu cũng xuất hiện tại sự kiện. Ah Fu trên áo đứng cùng hai đứa trẻ, trước ngực in bốn chữ — **"Lan tỏa yêu thương"**. Chiếc áo này sau đó đã trở thành biểu tượng hình ảnh đặc trưng cho các hoạt động từ thiện của thương hiệu, gắn kết hình ảnh của Ah Fu với trách nhiệm xã hội.
 
 Từ màn hình kỹ thuật số đến sân cỏ thực tế, từ nhãn dán xã hội đến áo thun từ thiện — Ah Fu đã chứng minh rằng cậu không chỉ là một nhân vật trên bản thiết kế. Cậu là linh hồn sống động của thương hiệu.
+
+---
+
+## Tại sao FYT cần một linh vật? Ý nghĩa thương hiệu của Ah Fu
+
+Trong một ngành mà niềm tin là đồng tiền quý giá nhất, việc xây dựng thương hiệu cần vượt ra ngoài giao tiếp chức năng. Dữ liệu, giấy phép, tỷ lệ cược — đó là những công cụ thuyết phục lý trí. Nhưng điều thực sự khiến một thương hiệu được **yêu thích**, được **ghi nhớ** và được **đồng cảm**, thường đến từ những thứ mềm mại hơn.
+
+Ah Fu đảm nhận chính xác vai trò đó.
+
+Cậu mang đến cho FYT một **gương mặt có biểu cảm, một cá tính có thái độ, một sự hiện diện có hơi ấm**. Khi hội viên gửi nhãn dán Ah Fu, họ không chỉ truyền tải một hình ảnh, mà còn thể hiện sự đồng cảm tự nhiên với thương hiệu. Khi VIP sưu tầm bộ cốc kỷ niệm, họ không chỉ sở hữu một món đồ, mà đang gìn giữ ký ức chung với nền tảng.
+
+Từ khi chào đời năm 2015 đến nay, Ah Fu đã đồng hành cùng FYT qua mọi cột mốc quan trọng — từ đổi thương hiệu Riche88 sang FYTBET, qua các giai đoạn tiến hóa hình ảnh, đến các hoạt động từ thiện và đổi mới sản phẩm. Cậu là điểm neo hình ảnh ổn định nhất, và cũng là sợi dây cảm xúc ấm áp nhất của thương hiệu.
+
+Qua Ah Fu, bạn thấy không chỉ là một chiến lược tiếp thị, mà là một thương hiệu đang nói với người dùng: **Chúng tôi nhớ bạn, và hy vọng bạn cũng nhớ chúng tôi.**

@@ -8,7 +8,7 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "name": {{ if eq .Language.Lang "zh" }}"富易堂"{{ else if eq .Language.Lang "vi" }}"FYTBET VN"{{ else if eq .Language.Lang "th" }}"FYTBET TH"{{ else if eq .Language.Lang "id" }}"FYTBET ID"{{ else }}"FYTBET"{{ end }},
+        "name": {{ if eq .Language.Lang "zh" }}"富易堂"{{ else if eq .Language.Lang "yue" }}"富易堂"{{ else if eq .Language.Lang "vi" }}"FYTBET VN"{{ else if eq .Language.Lang "th" }}"FYTBET TH"{{ else if eq .Language.Lang "id" }}"FYTBET ID"{{ else }}"FYTBET"{{ end }},
         "item": {{ .Site.Home.Permalink | jsonify }}
       },
       {
@@ -64,57 +64,57 @@
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/afu-hero.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富主视觉——手举RICHE88三角旗帜"{{ else }}"Ah Fu Hero Image — Holding RICHE88 Pennant Flag"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"富易堂品牌吉祥物阿富的标志性主视觉，手持RICHE88三角旗帜，配经典口号「要赢？一点都不难！」"{{ else }}"FYTBET brand mascot Ah Fu in signature hero pose, holding a RICHE88 pennant flag alongside the classic tagline."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富主视觉——手举RICHE88三角旗帜"{{ else if eq .Language.Lang "yue" }}"阿富主視覺——手揸 RICHE88 三角旗"{{ else }}"Ah Fu Hero Image — Holding RICHE88 Pennant Flag"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"富易堂品牌吉祥物阿富的标志性主视觉，手持RICHE88三角旗帜，配经典口号「要赢？一点都不难！」"{{ else if eq .Language.Lang "yue" }}"富易堂品牌吉祥物阿富嘅標誌性主視覺，手揸 RICHE88 三角旗，配經典口號「要贏？一啲都唔難！」"{{ else }}"FYTBET brand mascot Ah Fu in signature hero pose, holding a RICHE88 pennant flag alongside the classic tagline."{{ end }}
     },
     {
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/afu-comic.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富周年纪念连环画"{{ else }}"Ah Fu Anniversary Comic Strip"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"十周年纪念马克杯系列连环画，讲述阿富从2015年破壳到逐年成长的完整故事"{{ else }}"Anniversary mug series comic strip telling Ah Fu's growth story from hatching in 2015 through the years."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富周年纪念连环画"{{ else if eq .Language.Lang "yue" }}"阿富周年紀念連環畫"{{ else }}"Ah Fu Anniversary Comic Strip"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"十周年纪念马克杯系列连环画，讲述阿富从2015年破壳到逐年成长的完整故事"{{ else if eq .Language.Lang "yue" }}"十周年紀念馬克杯系列連環畫，講阿富由 2015 年破殼到逐年成長嘅完整故事"{{ else }}"Anniversary mug series comic strip telling Ah Fu's growth story from hatching in 2015 through the years."{{ end }}
     },
     {
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-1.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——没在怕"{{ else }}"Ah Fu Sticker — No Fear"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"阿富表情贴纸「没在怕」，展现自信无畏的品牌态度"{{ else }}"Ah Fu expression sticker 'No Fear', showing the brand's confident and fearless attitude."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——没在怕"{{ else if eq .Language.Lang "yue" }}"阿富貼紙——冇在怕"{{ else }}"Ah Fu Sticker — No Fear"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富表情贴纸「没在怕」，展现自信无畏的品牌态度"{{ else if eq .Language.Lang "yue" }}"阿富表情貼紙「冇在怕」，展現自信無畏嘅品牌態度"{{ else }}"Ah Fu expression sticker 'No Fear', showing the brand's confident and fearless attitude."{{ end }}
     },
     {
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-2.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——RICHE"{{ else }}"Ah Fu Sticker — RICHE"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"阿富RICHE品牌表情贴纸"{{ else }}"Ah Fu RICHE brand expression sticker."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——RICHE"{{ else if eq .Language.Lang "yue" }}"阿富貼紙——RICHE"{{ else }}"Ah Fu Sticker — RICHE"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富RICHE品牌表情贴纸"{{ else if eq .Language.Lang "yue" }}"阿富 RICHE 品牌表情貼紙"{{ else }}"Ah Fu RICHE brand expression sticker."{{ end }}
     },
     {
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-3.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——要等多久"{{ else }}"Ah Fu Sticker — How Long to Wait"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"阿富「要等多久」表情贴纸，俏皮催促的日常表达"{{ else }}"Ah Fu 'How Long to Wait' sticker, a playful everyday expression."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——要等多久"{{ else if eq .Language.Lang "yue" }}"阿富貼紙——要等幾耐"{{ else }}"Ah Fu Sticker — How Long to Wait"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富「要等多久」表情贴纸，俏皮催促的日常表达"{{ else if eq .Language.Lang "yue" }}"阿富「要等幾耐」表情貼紙，鬼馬催促嘅日常表達"{{ else }}"Ah Fu 'How Long to Wait' sticker, a playful everyday expression."{{ end }}
     },
     {
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-4.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——X TALK"{{ else }}"Ah Fu Sticker — X TALK"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"阿富「X TALK」表情贴纸，表示不想说话的趣味态度"{{ else }}"Ah Fu 'X TALK' sticker, a playful way of saying 'no comment'."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——X TALK"{{ else if eq .Language.Lang "yue" }}"阿富貼紙——X TALK"{{ else }}"Ah Fu Sticker — X TALK"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富「X TALK」表情贴纸，表示不想说话的趣味态度"{{ else if eq .Language.Lang "yue" }}"阿富「X TALK」表情貼紙，表示唔想講嘢嘅趣味態度"{{ else }}"Ah Fu 'X TALK' sticker, a playful way of saying 'no comment'."{{ end }}
     },
     {
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-5.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——OK"{{ else }}"Ah Fu Sticker — OK"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"阿富OK手势表情贴纸，传递积极肯定"{{ else }}"Ah Fu OK gesture sticker, conveying positive affirmation."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——OK"{{ else if eq .Language.Lang "yue" }}"阿富貼紙——OK"{{ else }}"Ah Fu Sticker — OK"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富OK手势表情贴纸，传递积极肯定"{{ else if eq .Language.Lang "yue" }}"阿富 OK 手勢表情貼紙，傳遞積極肯定"{{ else }}"Ah Fu OK gesture sticker, conveying positive affirmation."{{ end }}
     },
     {
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-6.webp",
-      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——GO"{{ else }}"Ah Fu Sticker — GO"{{ end }},
-      "description": {{ if eq .Language.Lang "zh" }}"阿富GO表情贴纸，充满行动力的品牌表达"{{ else }}"Ah Fu GO sticker, an action-oriented brand expression."{{ end }}
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——GO"{{ else if eq .Language.Lang "yue" }}"阿富貼紙——GO"{{ else }}"Ah Fu Sticker — GO"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富GO表情贴纸，充满行动力的品牌表达"{{ else if eq .Language.Lang "yue" }}"阿富 GO 表情貼紙，充滿行動力嘅品牌表達"{{ else }}"Ah Fu GO sticker, an action-oriented brand expression."{{ end }}
     }
   ]
   </script>

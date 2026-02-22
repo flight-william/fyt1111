@@ -8,7 +8,7 @@
       <p class="heading-sub mb-2">{{ i18n "label_perks" }}</p>
       <h2 class="heading-display">
         <a href="{{ "vip" | relLangURL }}">
-        {{ if eq .Language.Lang "zh" }}<span class="text-gold">贵宾</span>之道{{ else if eq .Language.Lang "vi" }}Trải nghiệm <span class="text-gold">VIP</span>{{ else if eq .Language.Lang "th" }}วิถีแห่ง <span class="text-gold">VIP</span>{{ else if eq .Language.Lang "id" }}Cara <span class="text-gold">VIP</span>{{ else }}The <span class="text-gold">VIP</span> Way{{ end }}
+        {{ if eq .Language.Lang "zh" }}<span class="text-gold">贵宾</span>之道{{ else if eq .Language.Lang "vi" }}Trải nghiệm <span class="text-gold">VIP</span>{{ else if eq .Language.Lang "th" }}วิถีแห่ง <span class="text-gold">VIP</span>{{ else if eq .Language.Lang "id" }}Cara <span class="text-gold">VIP</span>{{ else if eq .Language.Lang "yue" }}<span class="text-gold">VIP</span> 之道{{ else }}The <span class="text-gold">VIP</span> Way{{ end }}
         </a>
       </h2>
     </div>
@@ -22,14 +22,14 @@
           <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-start">
             <div class="w-full md:w-2/5 md:flex-shrink-0">
               <figure>
-                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else if eq .Language.Lang "vi" }}Thiệp VIP Năm Mới Haig Club{{ else if eq .Language.Lang "th" }}การ์ดปีใหม่ VIP Haig Club{{ else if eq .Language.Lang "id" }}Kartu Tahun Baru VIP Haig Club{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 30vh; width: auto;">
+                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else if eq .Language.Lang "vi" }}Thiệp VIP Năm Mới Haig Club{{ else if eq .Language.Lang "th" }}การ์ดปีใหม่ VIP Haig Club{{ else if eq .Language.Lang "id" }}Kartu Tahun Baru VIP Haig Club{{ else if eq .Language.Lang "yue" }}Haig Club 貴賓新年賀卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 30vh; width: auto;">
               </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Haig Club · 限量威士忌{{ else if eq .Language.Lang "vi" }}Haig Club · Phiên bản Giới hạn{{ else if eq .Language.Lang "th" }}Haig Club · รุ่นจำกัด{{ else if eq .Language.Lang "id" }}Haig Club · Edisi Terbatas{{ else }}Haig Club · Limited Edition{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Haig Club · 限量威士忌{{ else if eq .Language.Lang "vi" }}Haig Club · Phiên bản Giới hạn{{ else if eq .Language.Lang "th" }}Haig Club · รุ่นจำกัด{{ else if eq .Language.Lang "id" }}Haig Club · Edisi Terbatas{{ else if eq .Language.Lang "yue" }}Haig Club · 限量威士忌{{ else }}Haig Club · Limited Edition{{ end }}</span>
             </div>
             <div class="min-w-0">
               <div class="mb-3">
                 <div class="pull-quote text-lg md:text-xl tracking-[0.15em]">
-                  {{ if eq .Language.Lang "zh" }}小大由之 · 富在知足 —— 真正的奢华，往往是不动声色的。{{ else if eq .Language.Lang "vi" }}Tiểu Đại Do Chi · Phú Tại Tri Túc —— Sự xa hoa thực sự thường nằm trong tĩnh lặng.{{ else if eq .Language.Lang "th" }}ความพอใจคือความมั่งคั่งที่แท้จริง —— ความหรูหราที่แท้จริง มักถูกพบในความเงียบสงบ{{ else if eq .Language.Lang "id" }}Kepuasan adalah kekayaan sejati — kemewahan yang sesungguhnya sering ditemukan dalam keheningan.{{ else }}Contentment is the ultimate wealth — for true luxury is often found in silence.{{ end }}
+                  {{ if eq .Language.Lang "zh" }}小大由之 · 富在知足 —— 真正的奢华，往往是不动声色的。{{ else if eq .Language.Lang "vi" }}Tiểu Đại Do Chi · Phú Tại Tri Túc —— Sự xa hoa thực sự thường nằm trong tĩnh lặng.{{ else if eq .Language.Lang "th" }}ความพอใจคือความมั่งคั่งที่แท้จริง —— ความหรูหราที่แท้จริง มักถูกพบในความเงียบสงบ{{ else if eq .Language.Lang "id" }}Kepuasan adalah kekayaan sejati — kemewahan yang sesungguhnya sering ditemukan dalam keheningan.{{ else if eq .Language.Lang "yue" }}小大由之 · 富在知足 —— 真正嘅矜貴，從來都係靜靜雞嘅。{{ else }}Contentment is the ultimate wealth — for true luxury is often found in silence.{{ end }}
                 </div>
               </div>
               {{ if eq .Language.Lang "zh" }}
@@ -60,6 +60,13 @@
               <p>
                 Untuk Tahun Baru, anggota VIP menerima Haig Club Scotch whisky edisi terbatas — brand yang didukung Beckham. Pilihan hadiah mencerminkan bagaimana brand memandang para tamunya.
               </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p>
+                貴賓之道，講到尾就係眼光——睇得出邊個值得被認真對待。十五年淨係做一件事：將最好嘅留畀最識貨嘅人。
+              </p>
+              <p>
+                新年禮係一支 Haig Club 限量蘇格蘭威士忌——Beckham 代言嗰隻。揀咩酒，睇嘅係對面坐住咩人。
+              </p>
               {{ else }}
               <p>
                 The VIP way started in Macau. Working alongside Juxing's concierge team taught FYT what real hospitality looks like — and that DNA now runs through everything the platform does, online and off.
@@ -76,19 +83,19 @@
         <div class="scroll-block">
           <div class="flex flex-wrap justify-center gap-3 mb-2">
             <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+              <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Thor{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ธอร์{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Thor{{ else if eq .Language.Lang "yue" }}雷神 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
             <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+              <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Iron Man{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ไอรอนแมน{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Iron Man{{ else if eq .Language.Lang "yue" }}鐵甲奇俠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
             <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+              <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Captain America{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon กัปตันอเมริกา{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Captain America{{ else if eq .Language.Lang "yue" }}美國隊長 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
             <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+              <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Hulk{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ฮัลค์{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Hulk{{ else if eq .Language.Lang "yue" }}綠巨人 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
           </div>
-          <span class="artifact-caption block mb-2 text-center">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else if eq .Language.Lang "vi" }}Bộ sưu tập Marvel · Dành riêng cho hội viên{{ else if eq .Language.Lang "th" }}Marvel Collector Series · สำหรับสมาชิกเท่านั้น{{ else if eq .Language.Lang "id" }}Seri Kolektor Marvel · Khusus Anggota{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
+          <span class="artifact-caption block mb-2 text-center">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else if eq .Language.Lang "vi" }}Bộ sưu tập Marvel · Dành riêng cho hội viên{{ else if eq .Language.Lang "th" }}Marvel Collector Series · สำหรับสมาชิกเท่านั้น{{ else if eq .Language.Lang "id" }}Seri Kolektor Marvel · Khusus Anggota{{ else if eq .Language.Lang "yue" }}Marvel 珍藏系列 · 會員專屬{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
           {{ if eq .Language.Lang "zh" }}
           <p>
             礼物的心思不止一种。Marvel珍藏系列——雷神、钢铁侠、美国队长、绿巨人，Dragon正版授权，限量发放，凭打码量兑换。摆在书架上的手办，比任何促销短信都有温度。
@@ -117,6 +124,13 @@
           <p>
             Dari whisky edisi terbatas hingga figur Marvel, kartu remi lapis emas hingga mug anniversary — setiap hadiah dikurasi, bukan diproduksi massal. Ini bukan promosi. Ini adalah pemahaman diam-diam antara brand dan orang-orang yang mempercayainya.
           </p>
+          {{ else if eq .Language.Lang "yue" }}
+          <p>
+            禮物嘅心思唔止一種。Marvel 珍藏系列——雷神、鐵甲奇俠、美國隊長、綠巨人，Dragon 正版授權，限量派發，憑打碼量兌換。擺喺書架上嘅手辦，比任何推廣短信都有溫度。
+          </p>
+          <p>
+            由 Haig Club 威士忌到 Marvel 手辦，由金箔啤牌到阿富紀念杯——樣樣揀過，樣樣限量。十五年年年送，靠嘅係品牌同老友之間嘅默契。
+          </p>
           {{ else }}
           <p>
             VIP gifting went beyond Haig Club. FYT offered active members a Marvel hero collector series — officially licensed Dragon models of Thor, Iron Man, Captain America, and Hulk. Each figure was limited edition, earned through turnover milestones. A thank you that sits on your shelf, not in your spam folder.
@@ -133,13 +147,13 @@
             <div class="md:col-span-5">
               <div style="display: flex; gap: 0.5rem; justify-content: center;">
                 <figure class="artifact-tilted">
-                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else if eq .Language.Lang "vi" }}Joker tùy chỉnh{{ else if eq .Language.Lang "th" }}โจ๊กเกอร์สั่งทำพิเศษ{{ else if eq .Language.Lang "id" }}Joker kustom{{ else if eq .Language.Lang "yue" }}自訂鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
                 </figure>
                 <figure class="artifact-tilted-r">
-                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else if eq .Language.Lang "vi" }}Mặt sau thẻ bài{{ else if eq .Language.Lang "th" }}ด้านหลังไพ่{{ else if eq .Language.Lang "id" }}Bagian belakang kartu{{ else if eq .Language.Lang "yue" }}自訂牌背{{ else }}Card back{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
                 </figure>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}金箔扑克 · 只赠不卖{{ else if eq .Language.Lang "vi" }}Bài mạ vàng · Chỉ tặng không bán{{ else if eq .Language.Lang "th" }}ไพ่เคลือบทอง · สำหรับมอบให้เท่านั้น{{ else if eq .Language.Lang "id" }}Kartu Remi Lapis Emas · Hanya untuk Hadiah{{ else }}Gold Foil Poker · Gift Only{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}金箔扑克 · 只赠不卖{{ else if eq .Language.Lang "vi" }}Bài mạ vàng · Chỉ tặng không bán{{ else if eq .Language.Lang "th" }}ไพ่เคลือบทอง · สำหรับมอบให้เท่านั้น{{ else if eq .Language.Lang "id" }}Kartu Remi Lapis Emas · Hanya untuk Hadiah{{ else if eq .Language.Lang "yue" }}金箔啤牌 · 只送唔賣{{ else }}Gold Foil Poker · Gift Only{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
@@ -169,6 +183,13 @@
               </p>
               <p>
                 VIP Club online pun tetap aktif: absensi harian, angpao keberuntungan, referensi teman, hingga kejutan gacha. Bentuknya mungkin berubah, namun komitmen untuk selalu mengutamakan anggota tidak pernah berubah.
+              </p>
+              {{ else if eq .Language.Lang "yue" }}
+              <p>
+                每年新年，一尊生肖限定嘅黃金阿富——金馬、金羊、金猴，年年唔同，只送 VIP。金箔啤牌、名酒、訂製錶帶，樣樣只送唔賣——買唔到嘅嘢，先叫做禮物。
+              </p>
+              <p>
+                線上 VIP 俱樂部一樣冇停過：每日簽到、幸運紅包、好友推薦、扭蛋驚喜。形式變咗，將會員放喺心上呢件事，從來冇變過。
               </p>
               {{ else }}
               <p>

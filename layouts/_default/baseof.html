@@ -14,7 +14,7 @@
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="https://riche88.com/images/logo-fytbet.webp">
   <meta property="og:site_name" content="FYTBET">
-  <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else if eq .Language.Lang "vi" }}vi_VN{{ else if eq .Language.Lang "th" }}th_TH{{ else if eq .Language.Lang "id" }}id_ID{{ else }}en_US{{ end }}">
+  <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else if eq .Language.Lang "yue" }}yue_HK{{ else if eq .Language.Lang "vi" }}vi_VN{{ else if eq .Language.Lang "th" }}th_TH{{ else if eq .Language.Lang "id" }}id_ID{{ else }}en_US{{ end }}">
   {{/* Twitter Card */}}
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ .Title }}">
@@ -93,7 +93,7 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "availableLanguage": ["Chinese", "English", "Vietnamese", "Thai", "Indonesian"]
+      "availableLanguage": ["Chinese", "Cantonese", "English", "Vietnamese", "Thai", "Indonesian"]
     },
     "sameAs": [
       "https://fytbet.com",
@@ -112,7 +112,7 @@
     "name": "富易堂 FYTBET",
     "alternateName": ["Riche88", "FYT官网", "FYTBET Official"],
     "url": "https://riche88.com",
-    "inLanguage": ["zh-CN", "en", "vi", "th", "id"],
+    "inLanguage": ["zh-CN", "yue", "en", "vi", "th", "id"],
     "publisher": {
       "@type": "Organization",
       "name": "富易堂",

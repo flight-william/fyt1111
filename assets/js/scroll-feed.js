@@ -27,6 +27,8 @@
     var inView = false;
     var complete = false;
     var feedHeight = 0;
+    var wheelEnabled = false;
+    var wheelEnableTimer;
 
     // Create dot indicators
     if (dotsContainer) {
@@ -117,8 +119,17 @@
           if (entry.isIntersecting) {
             inView = true;
             resetFeed();
+            // Disable wheel until scroll-snap settles to prevent slide jump
+            wheelEnabled = false;
+            clearTimeout(wheelEnableTimer);
+            wheelCooldowns.delete(feed);
+            wheelEnableTimer = setTimeout(function () {
+              wheelEnabled = true;
+            }, 600);
           } else {
             inView = false;
+            wheelEnabled = false;
+            clearTimeout(wheelEnableTimer);
           }
         });
       }, { threshold: 0.3 });
@@ -129,6 +140,8 @@
     var parentSection = feed.closest('.page');
     if (parentSection) {
       parentSection.addEventListener('wheel', function (e) {
+        if (!wheelEnabled || !inView) return;
+
         var now = Date.now();
         var lastWheel = wheelCooldowns.get(feed) || 0;
         if (now - lastWheel < 800) return;
