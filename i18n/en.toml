@@ -1,3 +1,6 @@
+[h1_title]
+other = "FYTBET (富易堂) — VIP Sports Betting Platform Since 2011"
+
 [nav_brand]
 other = "FYT"
 
@@ -43,8 +46,35 @@ other = "Play video"
 [from_archives]
 other = "From the archives"
 
-[lang_toggle_zh]
-other = "中"
+[enter_platform]
+other = "Enter Platform →"
 
-[lang_toggle_en]
-other = "EN"
+[back_to_story]
+other = "← Back to Full Story"
+
+[faq]
+other = "FAQ"
+
+[continue_reading]
+other = "Continue Reading"
+
+[label_origin]
+other = "Origin"
+
+[label_experience]
+other = "Experience"
+
+[label_companion]
+other = "Companion"
+
+[label_evolution]
+other = "Evolution"
+
+[label_perks]
+other = "Experience"
+
+[label_temperature]
+other = "Giving Back"
+
+[label_tech]
+other = "Technology"

@@ -159,10 +159,9 @@
       var deltaY = touchStartY - e.changedTouches[0].clientY;
       var deltaX = touchStartX - e.changedTouches[0].clientX;
 
+      // Only horizontal swipes navigate slides; vertical swipes pass through to page scroll
       if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 40) {
         if (deltaX > 0) { next(); } else { prev(); }
-      } else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 40) {
-        if (deltaY > 0) { next(); } else { prev(); }
       }
     }, { passive: true });
 

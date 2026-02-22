@@ -15,7 +15,7 @@ faqs:
   - q: "What payment methods are supported?"
     a: "FYT supports **seven payment channels**: USDT (cryptocurrency), Alipay, WeChat Pay, Digital Yuan (e-CNY), GBPay, EBpay, and bank transfer. The range covers everything from mainstream Chinese mobile payments to cutting-edge digital currency, ensuring fast, convenient, and discreet transactions."
   - q: "What exclusive perks do VIP customers receive?"
-    a: "Past VIP gifts include a limited-edition **Haig Club 40-year single grain Scotch whisky** in a handblown crystal decanter, officially licensed **Marvel Dragon collector figurines**, annual zodiac golden Ah Fu figurines, custom gold-foil playing cards, branded watch bands, and more. Every item is curated and gifted exclusively — never sold."
+    a: "Past VIP gifts include a limited-edition **Haig Club Scotch whisky** (Beckham-endorsed), officially licensed **Marvel Dragon collector figurines**, annual zodiac golden Ah Fu figurines, custom gold-foil playing cards, branded watch bands, and more. Every item is curated and gifted exclusively — never sold."
   - q: "What are Daily Check-in and Lucky Red Envelope?"
     a: "**Daily Check-in** is a VIP Club benefit that rewards consistent engagement with cumulative bonuses. **Lucky Red Envelope** offers weekly prizes up to 1,888, alongside the Friend Share PLUS referral program and gacha surprises — ensuring VIP members feel valued in their everyday platform experience."
   - q: "How does FYT differ from other platforms?"
@@ -71,7 +71,7 @@ For the VIP member, Fortune Insurance changes more than the outcome of a single 
 
 FYT's approach to VIP gifting has never followed the logic of promotional giveaways.
 
-When the New Year arrived, VIP members received a bottle of **Haig Club limited-edition 40-year single grain Scotch whisky**, presented in a handblown crystal decanter. The accompanying card carried the brand motto: **"In all things great and small, true wealth lies in contentment"** (小大由之 富在知足). Haig Club is a world-class whisky brand endorsed by David Beckham, and a 40-year expression is a collector's item in its own right. This was not a holiday promotion. It was a message: the weight you carry in our regard matches the weight of what we send.
+When the New Year arrived, VIP members received a bottle of **Haig Club limited-edition Scotch whisky** — the David Beckham-endorsed brand — with a card carrying the brand motto: **"In all things great and small, true wealth lies in contentment"** (小大由之 富在知足). The choice of gift says everything about how the brand sees its guests.
 
 The collectible program carried the same philosophy. **Marvel officially licensed Dragon collector figurines** — Thor, Iron Man, Captain America, Hulk — were issued in limited quantities, earned through active engagement milestones. Each Lunar New Year brought a **zodiac-edition golden Ah Fu figurine** — Golden Horse, Golden Goat, Golden Monkey — a new edition every year, reserved exclusively for VIP members. Custom gold-foil playing cards, branded watch bands, anniversary mugs — each piece was selected with intention and given freely, never sold.
 

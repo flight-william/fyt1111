@@ -25,19 +25,19 @@
           </p>
           {{ else if eq .Language.Lang "vi" }}
           <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            15 năm, 5 diện mạo. Xám xanh, Đỏ vàng, Đen cam, Toàn cam, và cuối cùng trở lại với Đen cam tinh tế — vững chãi và đầy nội lực. Không chạy theo xu hướng, chúng tôi chỉ tạo ra phiên bản giúp quý khách sử dụng thuận tiện nhất.
+            15 năm, 5 diện mạo. Xám xanh, Đỏ vàng, Đen cam, Toàn cam, rồi trở lại Đen cam tinh tế — vững chãi và mạnh mẽ. Không theo xu hướng, chỉ làm phiên bản tốt nhất cho bạn.
           </p>
           {{ else if eq .Language.Lang "th" }}
           <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            ตลอด 15 ปี กับ 5 รูปโฉมที่เปลี่ยนไป ตั้งแต่เทา-ฟ้า, แดง-ทอง, ดำ-ส้ม, สีส้มล้วน และสุดท้ายกลับสู่ดำ-ส้มที่ประณีต — สุขุมแต่ทรงพลัง เราไม่วิ่งตามเทรนด์ แต่เราทำเวอร์ชันที่ตอบโจทย์การใช้งานของคุณที่สุด
+            15 ปี 5 รูปโฉม เทา-ฟ้า, แดง-ทอง, ดำ-ส้ม, ส้มล้วน แล้วกลับสู่ดำ-ส้มที่ประณีต — สุขุมแต่ทรงพลัง ไม่วิ่งตามเทรนด์ แค่ทำเวอร์ชันที่ดีที่สุดให้คุณ
           </p>
           {{ else if eq .Language.Lang "id" }}
           <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            Lima belas tahun, lima desain ulang. Abu-biru, merah-emas, hitam-oranye, serba oranye, dan akhirnya kembali ke hitam-oranye yang terpoles — tenang namun kuat. Kami tidak mengikuti tren, kami hanya membuat versi yang paling nyaman Anda gunakan.
+            15 tahun, 5 wajah. Abu-biru, merah-emas, hitam-oranye, serba oranye, lalu kembali ke hitam-oranye terpoles — tenang namun kuat. Tanpa ikut tren, hanya versi terbaik untuk Anda.
           </p>
           {{ else }}
           <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            Fifteen years, five redesigns — each one driven by the same question: how do we make the experience better for our members? From the original grey-blue to a rich red-gold era, then bold black-orange, an all-orange experiment — ultimately returning to refined black-orange. No chasing trends. Just relentless refinement for the people who use it every day.
+            Fifteen years, five faces. Grey-blue, red-gold, black-orange, all-orange — then back to refined black-orange: bold yet grounded. No trend-chasing, just making it better for you.
           </p>
           {{ end }}
           <div class="max-w-3xl mx-auto">
@@ -96,7 +96,7 @@
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}全橙试验 → 精炼回归{{ else if eq .Language.Lang "vi" }}Thử nghiệm toàn cam → Tinh tế trở lại{{ else if eq .Language.Lang "th" }}การทดลองสีส้มล้วน → กลับสู่ความประณีต{{ else if eq .Language.Lang "id" }}Eksperimen Serba Oranye → Kembali Terpoles{{ else }}All-Orange → Refined Return{{ end }}</span>
             </div>
             <div class="md:col-span-7">
-              {{ if eq .Language.Lang "zh" }}
+              {{ if eq $.Language.Lang "zh" }}
               <div class="mb-3">
                 <h3 class="text-gold-light inline text-base font-bold">灰蓝时代（2011）</h3><span>——以「富易堂 RICHE88」之名启航，简约清新，为会员提供当时最流畅的投注界面。</span>
               </div>
@@ -112,7 +112,7 @@
               <div class="mb-3">
                 <h3 class="text-gold-light inline text-base font-bold">精炼至今（2026）</h3><span>——App v4.1，每日签到、幸运红包、好友推荐、VIP俱乐部。每个新功能，都是会员说了算。</span>
               </div>
-              {{ else if eq .Language.Lang "vi" }}
+              {{ else if eq $.Language.Lang "vi" }}
               <div class="mb-2">
                 <h3 class="text-gold-light inline text-sm font-bold">Kỷ nguyên Xám xanh (2011)</h3><span class="text-xs"> — Khởi hành với tên gọi "Riche88", tối giản và thanh lịch, mang lại giao diện mượt mà nhất thời bấy giờ.</span>
               </div>
@@ -128,7 +128,7 @@
               <div class="mb-2">
                 <h3 class="text-gold-light inline text-sm font-bold">Tinh tế hiện tại (2026)</h3><span class="text-xs"> — App v4.1, từ điểm danh đến hồng bao may mắn. Mỗi tính năng mới đều do hội viên quyết định.</span>
               </div>
-              {{ else if eq .Language.Lang "th" }}
+              {{ else if eq $.Language.Lang "th" }}
               <div class="mb-2">
                 <h3 class="text-gold-light inline text-sm font-bold">ยุคเทา-ฟ้า (2011)</h3><span class="text-xs"> — เปิดตัวในชื่อ "Riche88" ด้วยอินเทอร์เฟซที่สะอาดตาและมินิมอล เพื่อการใช้งานที่ลื่นไหลที่สุดในยุคนั้น</span>
               </div>
@@ -144,7 +144,7 @@
               <div class="mb-2">
                 <h3 class="text-gold-light inline text-sm font-bold">ความประณีต (2026)</h3><span class="text-xs"> — App v4.1 พร้อมฟีเจอร์ที่ตอบโจทย์สมาชิกที่สุด ทุกการอัปเดตมาจากเสียงสะท้อนของคุณเสมอ</span>
               </div>
-              {{ else if eq .Language.Lang "id" }}
+              {{ else if eq $.Language.Lang "id" }}
               <div class="mb-2">
                 <h3 class="text-gold-light inline text-sm font-bold">Era Abu-Biru (2011)</h3><span class="text-xs"> — Diluncurkan sebagai "Riche88" dengan antarmuka bersih dan minimalis untuk kenyamanan bertaruh.</span>
               </div>
@@ -159,6 +159,22 @@
               </div>
               <div class="mb-2">
                 <h3 class="text-gold-light inline text-sm font-bold">Desain Terpoles (2026)</h3><span class="text-xs"> — App v4.1 dengan hadiah harian hingga angpao. Setiap peningkatan adalah respons terhadap feedback anggota.</span>
+              </div>
+              {{ else if eq $.Language.Lang "yue" }}
+              <div class="mb-2">
+                <h3 class="text-gold-light inline text-sm font-bold">灰藍年代 (2011)</h3><span class="text-xs"> —— 以「富易堂 RICHE88」啟航，玩開 Apple 嗰種清新簡約，提供當時最爽嘅介面。</span>
+              </div>
+              <div class="mb-2">
+                <h3 class="text-gold-light inline text-sm font-bold">紅金盛世 (2015)</h3><span class="text-xs"> —— 深紅配金，係澳門鉅星合作期間嘅經典樣。貴賓廳嗰種壓場感，開始滲入手機。</span>
+              </div>
+              <div class="mb-2">
+                <h3 class="text-gold-light inline text-sm font-bold">黑橙新生 (2020)</h3><span class="text-xs"> —— 正式改名做 FYTBET，一睇就認得。疫情嗰陣寫埋「你我同心抗疫」，同老友一齊捱。</span>
+              </div>
+              <div class="mb-2">
+                <h3 class="text-gold-light inline text-sm font-bold">全橙實驗 (2021)</h3><span class="text-xs"> —— App v3.0 大膽試水。自研就係有呢個好處：諗到就做，節奏自己掌握。</span>
+              </div>
+              <div class="mb-2">
+                <h3 class="text-gold-light inline text-sm font-bold">精煉回歸 (2026)</h3><span class="text-xs"> —— App v4.1，簽到、紅包、好友分享全部齊晒。每個新功能，都係聽老友話。</span>
               </div>
               {{ else }}
               <div class="mb-3">

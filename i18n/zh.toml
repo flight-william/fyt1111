@@ -1,3 +1,6 @@
+[h1_title]
+other = "富易堂 FYTBET — 始于2011的体育投注VIP平台"
+
 [nav_brand]
 other = "富易堂"
 
@@ -43,8 +46,35 @@ other = "播放视频"
 [from_archives]
 other = "历史档案"
 
-[lang_toggle_zh]
-other = "中"
+[enter_platform]
+other = "进入平台 →"
 
-[lang_toggle_en]
-other = "EN"
+[back_to_story]
+other = "← 返回完整故事"
+
+[faq]
+other = "常见问题"
+
+[continue_reading]
+other = "延伸阅读"
+
+[label_origin]
+other = "溯源"
+
+[label_experience]
+other = "体验"
+
+[label_companion]
+other = "老友"
+
+[label_evolution]
+other = "蜕变"
+
+[label_perks]
+other = "礼遇"
+
+[label_temperature]
+other = "温度"
+
+[label_tech]
+other = "自研"

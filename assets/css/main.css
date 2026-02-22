@@ -639,6 +639,7 @@ img[loading="lazy"] { background: var(--fyt-dark); }
 .scroll-feed {
   position: relative;
   overflow: hidden;
+  overflow: clip;
   cursor: pointer;
   flex: 1;
   min-height: 0;
@@ -655,6 +656,7 @@ img[loading="lazy"] { background: var(--fyt-dark); }
   overflow: hidden;
   padding-bottom: 2rem; /* space for controls overlay */
 }
+
 
 /* Controls — pinned at bottom of scroll-feed */
 .scroll-controls {
@@ -696,6 +698,15 @@ img[loading="lazy"] { background: var(--fyt-dark); }
   font-family: 'Inter', sans-serif;
 }
 
+@media (max-width: 767px) {
+  .scroll-prev,
+  .scroll-next {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
 .scroll-prev:hover,
 .scroll-next:hover {
   border-color: var(--fyt-gold);
@@ -716,6 +727,16 @@ img[loading="lazy"] { background: var(--fyt-dark); }
   background: rgba(201, 168, 76, 0.4);
   transition: all 0.35s ease;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .scroll-dots { gap: 0.75rem; }
+  .scroll-dot {
+    width: 8px;
+    height: 8px;
+    padding: 10px;
+    background-clip: content-box;
+  }
 }
 
 .scroll-dot:hover {

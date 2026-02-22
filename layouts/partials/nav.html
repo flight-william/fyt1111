@@ -2,15 +2,79 @@
   <div class="flex items-center">
     <a href="#cover" class="scroll-top-link"><img src="/images/logo-fytbet.webp" alt="FYTBET" class="h-5 w-auto opacity-50 hover:opacity-70 transition-opacity duration-300"></a>
   </div>
-  <div class="lang-toggle flex items-center gap-3 mr-4">
-    {{ if eq .Language.Lang "zh" }}
-    <a href="/" class="active" data-lang-toggle="zh">中</a>
-    <span class="text-fyt-subtle text-xs">/</span>
-    <a href="/en/" data-lang-toggle="en">EN</a>
+  <div class="lang-toggle flex items-center gap-3 mr-4{{ if not .IsHome }} hidden{{ end }}">
+    {{ $currentLang := .Language.Lang }}
+    
+    {{/* Function-like logic to find permalink for a specific lang */}}
+    
+    {{/* ZH */}}
+    {{ if eq $currentLang "zh" }}
+      <span class="active">中</span>
     {{ else }}
-    <a href="/" data-lang-toggle="zh">中</a>
-    <span class="text-fyt-subtle text-xs">/</span>
-    <a href="/en/" class="active" data-lang-toggle="en">EN</a>
+      {{ $zhLink := "" }}
+      {{ range .AllTranslations }}{{ if eq .Language.Lang "zh" }}{{ $zhLink = .RelPermalink }}{{ end }}{{ end }}
+      {{ if not $zhLink }}{{ $zhLink = "/" }}{{ end }}
+      <a href="{{ $zhLink }}" data-lang-toggle="zh">中</a>
+    {{ end }}
+
+    <span class="text-fyt-subtle/30 text-[10px]">—</span>
+
+    {{/* EN */}}
+    {{ if eq $currentLang "en" }}
+      <span class="active">EN</span>
+    {{ else }}
+      {{ $enLink := "" }}
+      {{ range .AllTranslations }}{{ if eq .Language.Lang "en" }}{{ $enLink = .RelPermalink }}{{ end }}{{ end }}
+      {{ if not $enLink }}{{ $enLink = "/en/" }}{{ end }}
+      <a href="{{ $enLink }}" data-lang-toggle="en">EN</a>
+    {{ end }}
+
+    <span class="text-fyt-subtle/30 text-[10px]">—</span>
+
+    {{/* VN */}}
+    {{ if eq $currentLang "vi" }}
+      <span class="active">VN</span>
+    {{ else }}
+      {{ $viLink := "" }}
+      {{ range .AllTranslations }}{{ if eq .Language.Lang "vi" }}{{ $viLink = .RelPermalink }}{{ end }}{{ end }}
+      {{ if not $viLink }}{{ $viLink = "/vi/" }}{{ end }}
+      <a href="{{ $viLink }}" data-lang-toggle="vi">VN</a>
+    {{ end }}
+
+    <span class="text-fyt-subtle/30 text-[10px]">—</span>
+
+    {{/* TH */}}
+    {{ if eq $currentLang "th" }}
+      <span class="active">TH</span>
+    {{ else }}
+      {{ $thLink := "" }}
+      {{ range .AllTranslations }}{{ if eq .Language.Lang "th" }}{{ $thLink = .RelPermalink }}{{ end }}{{ end }}
+      {{ if not $thLink }}{{ $thLink = "/th/" }}{{ end }}
+      <a href="{{ $thLink }}" data-lang-toggle="th">TH</a>
+    {{ end }}
+
+    <span class="text-fyt-subtle/30 text-[10px]">—</span>
+
+    {{/* ID */}}
+    {{ if eq $currentLang "id" }}
+      <span class="active">ID</span>
+    {{ else }}
+      {{ $idLink := "" }}
+      {{ range .AllTranslations }}{{ if eq .Language.Lang "id" }}{{ $idLink = .RelPermalink }}{{ end }}{{ end }}
+      {{ if not $idLink }}{{ $idLink = "/id/" }}{{ end }}
+      <a href="{{ $idLink }}" data-lang-toggle="id">ID</a>
+    {{ end }}
+
+    <span class="text-fyt-subtle/30 text-[10px]">—</span>
+
+    {{/* YUE */}}
+    {{ if eq $currentLang "yue" }}
+      <span class="active">粵</span>
+    {{ else }}
+      {{ $yueLink := "" }}
+      {{ range .AllTranslations }}{{ if eq .Language.Lang "yue" }}{{ $yueLink = .RelPermalink }}{{ end }}{{ end }}
+      {{ if not $yueLink }}{{ $yueLink = "/yue/" }}{{ end }}
+      <a href="{{ $yueLink }}" data-lang-toggle="yue">粵</a>
     {{ end }}
   </div>
 </nav>

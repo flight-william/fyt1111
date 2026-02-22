@@ -21,33 +21,40 @@
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-7">
-              {{ if eq .Language.Lang "zh" }}
+              {{ if eq $.Language.Lang "zh" }}
               <p class="drop-cap">
                 你的数据安全和使用体验，是这里最不让步的底线。全套系统自主研发——前端、后端、基础架构，从头到尾自己写。不套壳，不贴牌。代码在自己手里，你的信息才真正只属于你。
               </p>
               <p>
                 自研还有一个好处：想到就能做。富贵保就是证明——100%投注保险，赢了照拿，输了隔天返还。四大体育引擎并行，同一场比赛四个赔率摆在你面前。
               </p>
-              {{ else if eq .Language.Lang "vi" }}
+              {{ else if eq $.Language.Lang "vi" }}
               <p class="drop-cap">
                 An toàn dữ liệu và trải nghiệm của quý khách là giới hạn không thể nhân nhượng. Toàn bộ hệ thống được tự phát triển — từ giao diện, máy chủ đến hạ tầng. Không mượn vỏ, không dán nhãn. Khi mã nguồn trong tay chúng tôi, thông tin của quý khách mới thực sự an toàn.
               </p>
               <p>
                 Tự phát triển còn có ưu điểm: Hiện thực hóa mọi ý tưởng. Fortune Insurance là minh chứng — bảo hiểm cược 100%, thắng nhận đủ, thua hoàn tiền vào ngày mai. 4 sảnh thể thao song hành, 4 tỷ lệ cược cho cùng một trận đấu ngay trước mắt quý khách.
               </p>
-              {{ else if eq .Language.Lang "th" }}
+              {{ else if eq $.Language.Lang "th" }}
               <p class="drop-cap">
                 ความปลอดภัยของข้อมูลและประสบการณ์การใช้งาน คือสิ่งที่เราให้ความสำคัญสูงสุด ระบบทั้งหมดพัฒนาขึ้นเองภายในบริษัท — ทั้งหน้าบ้าน หลังบ้าน และโครงสร้างพื้นฐาน เมื่อโค้ดอยู่ในมือเรา ข้อมูลของคุณจึงเป็นส่วนตัวและปลอดภัยอย่างแท้จริง
               </p>
               <p>
                 การพัฒนาเองยังทำให้เราสร้างสรรค์ฟีเจอร์ได้ทันที Fortune Insurance คือข้อพิสูจน์ — ประกันเดิมพัน 100% ชนะรับเต็ม แพ้คืนทุนในวันถัดไป พร้อม 4 แพลตฟอร์มกีฬาที่ให้คุณเปรียบเทียบราคาค่าน้ำได้ในที่เดียว
               </p>
-              {{ else if eq .Language.Lang "id" }}
+              {{ else if eq $.Language.Lang "id" }}
               <p class="drop-cap">
                 Keamanan data dan pengalaman pengguna adalah batas yang tidak bisa ditawar. Seluruh sistem kami dikembangkan secara internal — dari front-end, backend, hingga infrastruktur. Tidak ada pihak ketiga, tidak ada label putih. Ketika kode ada di tangan kami, informasi Anda benar-benar aman.
               </p>
               <p>
                 Pengembangan mandiri juga berarti kami bisa mewujudkan ide apapun. Fortune Insurance adalah buktinya — asuransi taruhan 100%, menang tetap untung, kalah modal kembali esok hari. Kami menghadirkan 4 mesin olahraga sekaligus agar Anda dapat membandingkan odds secara langsung.
+              </p>
+              {{ else if eq $.Language.Lang "yue" }}
+              <p class="drop-cap">
+                你嘅數據安全同埋使用體驗，係呢度絕對唔會讓步嘅底線。成套系統自主研發 —— 由前端、後台到成個架構，由頭到尾自己寫。唔套殼，唔貼牌。代碼喺自己手入面，你嘅資訊先至真正只係屬於你。
+              </p>
+              <p>
+                自研仲有一個好處：諗到就做到。富貴保就係證明 —— 100% 玩波保險，贏咗照攞，輸咗第二日退返。四大體育引擎一齊行，同一場波四個賠率擺晒喺你面前。
               </p>
               {{ else }}
               <p class="drop-cap">

@@ -1,6 +1,7 @@
 [zh]
   languageName = "中文"
   languageCode = "zh-CN"
+  contentDir = "content/zh"
   weight = 1
   title = "富易堂官网 FYTBET | 始于2011 · 体育投注 · VIP娱乐平台"
 
@@ -45,11 +46,12 @@
 [en]
   languageName = "EN"
   languageCode = "en"
+  contentDir = "content/en"
   weight = 2
   title = "FYTBET Official | Since 2011 · Sports Betting · VIP Entertainment Platform"
 
   [en.params]
-    description = "FYTBET (富易堂/Riche88/FYT) Official — riche88.com. Founded 2011, formerly under Cube group (188BET). Four sportsbooks including Pinnacle, proprietary Fortune Insurance (富贵保), USDT & mobile payments. Fully in-house built VIP platform. Domains: fytbet.com, fyt1111.com, x88.bet"
+    description = "FYTBET (富易堂/Riche88/FYT) Official — riche88.com. Founded 2011, formerly under Cube group (188BET). Four sportsbooks including Pinnacle, proprietary Fortune Insurance (富贵保), USDT & mobile payments. Fully in-house built VIP platform."
 
   [[en.menus.main]]
     name = "Origin"
@@ -83,5 +85,185 @@
 
   [[en.menus.main]]
     name = "Platform"
+    url = "#platform"
+    weight = 7
+
+[vi]
+  languageName = "VN"
+  languageCode = "vi"
+  contentDir = "content/vi"
+  weight = 3
+  title = "FYTBET Chính Thức | Từ 2011 · Cá Cược Thể Thao · Nền Tảng Giải Trí VIP"
+
+  [vi.params]
+    description = "FYTBET (富易堂/Riche88/FYT) Chính Thức — riche88.com. Thành lập 2011, tiền thân thuộc tập đoàn Cube (188BET). Bốn sảnh thể thao bao gồm Pinnacle, bảo hiểm cược Fortune Insurance (富贵保). Nền tảng VIP tự phát triển."
+
+  [[vi.menus.main]]
+    name = "Nguồn gốc"
+    url = "#origin"
+    weight = 1
+
+  [[vi.menus.main]]
+    name = "O2O"
+    url = "#o2o"
+    weight = 2
+
+  [[vi.menus.main]]
+    name = "Ah Fu"
+    url = "#mascot"
+    weight = 3
+
+  [[vi.menus.main]]
+    name = "Tiến hóa"
+    url = "#evolution"
+    weight = 4
+
+  [[vi.menus.main]]
+    name = "VIP"
+    url = "#vip"
+    weight = 5
+
+  [[vi.menus.main]]
+    name = "Từ thiện"
+    url = "#charity"
+    weight = 6
+
+  [[vi.menus.main]]
+    name = "Nền tảng"
+    url = "#platform"
+    weight = 7
+
+[th]
+  languageName = "TH"
+  languageCode = "th"
+  contentDir = "content/th"
+  weight = 4
+  title = "FYTBET อย่างเป็นทางการ | ตั้งแต่ปี 2011 · เดิมพันกีฬา · แพลตฟอร์มความบันเทิงระดับ VIP"
+
+  [th.params]
+    description = "FYTBET (富易堂/Riche88/FYT) อย่างเป็นทางการ — riche88.com ก่อตั้งปี 2011 ภายใต้เครือ Cube (188BET) มี 4 แพลตฟอร์มกีฬารวมถึง Pinnacle และประกันการเดิมพัน Fortune Insurance (富贵保) พัฒนาโดยทีมงานภายในเพื่อระดับ VIP"
+
+  [[th.menus.main]]
+    name = "ต้นกำเนิด"
+    url = "#origin"
+    weight = 1
+
+  [[th.menus.main]]
+    name = "O2O"
+    url = "#o2o"
+    weight = 2
+
+  [[th.menus.main]]
+    name = "Ah Fu"
+    url = "#mascot"
+    weight = 3
+
+  [[th.menus.main]]
+    name = "วิวัฒนาการ"
+    url = "#evolution"
+    weight = 4
+
+  [[th.menus.main]]
+    name = "VIP"
+    url = "#vip"
+    weight = 5
+
+  [[th.menus.main]]
+    name = "การกุศล"
+    url = "#charity"
+    weight = 6
+
+  [[th.menus.main]]
+    name = "เทคโนโลยี"
+    url = "#platform"
+    weight = 7
+
+[id]
+  languageName = "ID"
+  languageCode = "id"
+  contentDir = "content/id"
+  weight = 5
+  title = "FYTBET Resmi | Sejak 2011 · Taruhan Olahraga · Platform Hiburan VIP"
+
+  [id.params]
+    description = "FYTBET (富易堂/Riche88/FYT) Resmi — riche88.com. Didirikan 2011, sebelumnya di bawah grup Cube (188BET). Empat sportsbook termasuk Pinnacle, asuransi taruhan Fortune Insurance (富贵保). Platform VIP yang dibangun secara internal."
+
+  [[id.menus.main]]
+    name = "Asal Usul"
+    url = "#origin"
+    weight = 1
+
+  [[id.menus.main]]
+    name = "O2O"
+    url = "#o2o"
+    weight = 2
+
+  [[id.menus.main]]
+    name = "Ah Fu"
+    url = "#mascot"
+    weight = 3
+
+  [[id.menus.main]]
+    name = "Evolusi"
+    url = "#evolution"
+    weight = 4
+
+  [[id.menus.main]]
+    name = "VIP"
+    url = "#vip"
+    weight = 5
+
+  [[id.menus.main]]
+    name = "Amal"
+    url = "#charity"
+    weight = 6
+
+  [[id.menus.main]]
+    name = "Teknologi"
+    url = "#platform"
+    weight = 7
+
+[yue]
+  languageName = "粵"
+  languageCode = "yue"
+  contentDir = "content/yue"
+  weight = 6
+  title = "富易堂官網 FYTBET | 2011年開始 · 玩波玩馬 · VIP 專家"
+
+  [yue.params]
+    description = "富易堂 (FYTBET/Riche88/FYT) 官網 riche88.com — 2011年11月11號開名，以前係 Cube 集團 (188BET) 班底。四大體育平台、獨創富貴保、USDT 提款快。由頭到尾自己研發，專門服侍 VIP 貴賓。"
+
+  [[yue.menus.main]]
+    name = "由 11.11.11 開始"
+    url = "#origin"
+    weight = 1
+
+  [[yue.menus.main]]
+    name = "線上玩到線下"
+    url = "#o2o"
+    weight = 2
+
+  [[yue.menus.main]]
+    name = "識下阿富"
+    url = "#mascot"
+    weight = 3
+
+  [[yue.menus.main]]
+    name = "樣貌演變"
+    url = "#evolution"
+    weight = 4
+
+  [[yue.menus.main]]
+    name = "貴賓之道"
+    url = "#vip"
+    weight = 5
+
+  [[yue.menus.main]]
+    name = "將愛傳出去"
+    url = "#charity"
+    weight = 6
+
+  [[yue.menus.main]]
+    name = "自己嘢 · 自己起"
     url = "#platform"
     weight = 7

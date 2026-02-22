@@ -382,19 +382,19 @@
     <div class="max-w-screen-md mx-auto">
       {{/* Nav — horizontal with separators */}}
       <nav class="flex flex-wrap justify-center items-center mb-10 text-[11px] tracking-[0.25em] uppercase">
-        {{ with .Site.GetPage (print .Language.Lang "/origin") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_origin" }}</a>{{ end }}
+        {{ with .Site.GetPage "/origin" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_origin" }}</a>{{ end }}
         <span class="text-fyt-muted/15 mx-4">·</span>
-        {{ with .Site.GetPage (print .Language.Lang "/experience") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_experience" }}</a>{{ end }}
+        {{ with .Site.GetPage "/experience" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_experience" }}</a>{{ end }}
         <span class="text-fyt-muted/15 mx-4">·</span>
-        {{ with .Site.GetPage (print .Language.Lang "/mascot") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_companion" }}</a>{{ end }}
+        {{ with .Site.GetPage "/mascot" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_companion" }}</a>{{ end }}
         <span class="text-fyt-muted/15 mx-4">·</span>
-        {{ with .Site.GetPage (print .Language.Lang "/evolution") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_evolution" }}</a>{{ end }}
+        {{ with .Site.GetPage "/evolution" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_evolution" }}</a>{{ end }}
         <span class="text-fyt-muted/15 mx-4">·</span>
-        {{ with .Site.GetPage (print .Language.Lang "/vip") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_perks" }}</a>{{ end }}
+        {{ with .Site.GetPage "/vip" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_perks" }}</a>{{ end }}
         <span class="text-fyt-muted/15 mx-4">·</span>
-        {{ with .Site.GetPage (print .Language.Lang "/charity") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_temperature" }}</a>{{ end }}
+        {{ with .Site.GetPage "/charity" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_temperature" }}</a>{{ end }}
         <span class="text-fyt-muted/15 mx-4">·</span>
-        {{ with .Site.GetPage (print .Language.Lang "/technology") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_tech" }}</a>{{ end }}
+        {{ with .Site.GetPage "/technology" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_tech" }}</a>{{ end }}
       </nav>
       {{/* Separator — hairline */}}
       <div class="w-12 h-px bg-fyt-muted/20 mx-auto mb-6"></div>
