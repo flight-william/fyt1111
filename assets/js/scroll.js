@@ -77,7 +77,7 @@
   // ===== Lazy-load Videos: load src when 1 section away, play when visible =====
   var autoVideos = document.querySelectorAll('.auto-video-section video');
   if (autoVideos.length && 'IntersectionObserver' in window) {
-    // Preload observer — triggers when video is ~100vh away (1 section ahead)
+    // Preload observer — triggers when video enters viewport (yields bandwidth to fonts/images first)
     var preloadObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -86,6 +86,7 @@
           if (source) {
             source.setAttribute('src', source.getAttribute('data-src'));
             source.removeAttribute('data-src');
+            video.preload = 'auto';
             video.load();
           }
           // Seek to data-start time once metadata is ready
@@ -98,7 +99,7 @@
           preloadObs.unobserve(video);
         }
       });
-    }, { rootMargin: '100% 0px' });
+    }, { rootMargin: '0px' });
 
     // Reset to data-start on loop
     autoVideos.forEach(function (v) {
@@ -116,7 +117,8 @@
     var videoObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.play();
+          var p = entry.target.play();
+          if (p) p.catch(function () {});
         } else {
           entry.target.pause();
         }

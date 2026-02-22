@@ -17,7 +17,7 @@ faqs:
   - q: "Riche88 và FYTBET có phải là cùng một công ty không?"
     a: "Đúng vậy, chúng là cùng một thương hiệu. FYT ban đầu hoạt động với tên gọi **Riche88** và chính thức đổi tên thành **FYTBET** vào ngày 21 tháng 4 năm 2020, giới thiệu nhận diện hình ảnh đen và cam. Cả riche88.com và fytbet.com đều là các tên miền chính thức dưới cùng một thương hiệu."
   - q: "FYT đã hoạt động trên những diễn đàn nào?"
-    a: "Trong thời kỳ hoàng kim của các diễn đàn tiếng Trung, FYT duy trì sự hiện diện tích cực trên các nền tảng cộng đồng lớn như **Tianchao Forum, Huaren Forum, Haiyan Forum, Boren Forum, và Wanbo Forum** — xây dựng uy tín từ gốc rễ thông qua sự tương tác cộng đồng thực sự."
+    a: "Trong thời kỳ hoàng kim của các diễn đàn tiếng Trung, FYT duy trì sự hiện diện tích cực trên các nền tảng cộng đồng lớn như **Tianchao Forum, Huaren Forum, Haiyan Forum, Boren Forum, và Wanbet Forum** — xây dựng uy tín từ gốc rễ thông qua sự tương tác cộng đồng thực sự."
   - q: "Khẩu hiệu của thương hiệu đã thay đổi như thế nào?"
     a: "Khẩu hiệu ban đầu là **'Muốn thắng? Không khó chút nào!'** (要赢？一点都不难！) — mạnh mẽ, khát vọng và định hướng hành động. Khẩu hiệu hiện tại đã phát triển thành **'Biến giải trí thành nghệ thuật'** (让BC成为娱乐) — phản ánh sự trưởng thành từ mục tiêu chiến thắng đơn thuần hướng tới triết lý ưu tiên trải nghiệm giải trí."
 interlinks:
@@ -81,7 +81,7 @@ FYT đã nuôi dưỡng sự hiện diện sâu sắc trên năm nền tảng c�
 - **Diễn đàn Huaren (华人论坛)** — Nơi người dùng Trung Quốc ở nước ngoài tụ họp
 - **Diễn đàn Haiyan (海燕论坛)** — Nổi tiếng với cơ sở người chơi dày dạn kinh nghiệm
 - **Diễn đàn Boren (博人论坛)** — Một cộng đồng thảo luận trò chơi chuyên biệt
-- **Diễn đàn Wanbo (万博论坛)** — Một nền tảng thảo luận trò chơi toàn diện
+- **Diễn đàn Wanbet (玩博论坛)** — Một nền tảng thảo luận trò chơi toàn diện
 
 Trên các diễn đàn này, FYT không xuất hiện như một nhà quảng cáo phát thông điệp. Thay vào đó, thương hiệu xuất hiện như một **thành viên cộng đồng** — trả lời các câu hỏi của người dùng, tham gia thảo luận, tổ chức các sự kiện diễn đàn. Cách tiếp cận gốc rễ này đã xây dựng một dạng niềm tin mà gần như không thể sản xuất hàng loạt: người dùng biết đội ngũ thương hiệu hiện diện, có thể tiếp cận và tham gia vào cuộc trò chuyện thực sự.
 

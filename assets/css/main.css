@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* ===== Design Tokens ===== */
 :root {
@@ -130,8 +128,9 @@ img {
   float: left;
   font-size: 4.5em;
   line-height: 0.75;
-  padding-right: 0.08em;
+  padding-right: 0.12em;
   margin-top: 0.05em;
+  margin-bottom: 0.05em;
   color: var(--fyt-gold);
   font-weight: 700;
   font-family: 'Noto Serif SC', serif;
@@ -258,16 +257,26 @@ img {
 }
 
 /* ===== VIP Section — responsive image sizing ===== */
-.vip-hero { max-height: 30vh; width: auto; }
+.vip-hero { max-height: 45cqh; width: auto; display: block; margin: 0 auto; }
 .vip-figure { flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0; }
-.vip-figure-img { max-height: 20vh; width: auto; }
-.vip-card-img { max-height: 20vh; width: auto; }
+.vip-figure-img { max-height: 30cqh; width: auto; }
+.vip-card-img { max-height: 30cqh; width: auto; }
 
 @media (max-width: 767px) {
-  .vip-hero { max-height: 40vh; }
+  .vip-hero { max-height: 35cqh; }
   .vip-figure { max-width: none; flex-shrink: 0; }
-  .vip-figure-img { max-height: 28vh; }
-  .vip-card-img { max-height: 28vh; }
+  .vip-figure-img { max-height: 35cqh; }
+  .vip-card-img { max-height: 35cqh; }
+}
+
+/* ===== Mascot Section — mug images ===== */
+.mug-figure { max-height: 18cqh; }
+
+@media (max-width: 767px) {
+  .mug-grid { grid-template-columns: 1fr; }
+  .mug-figure { max-height: none; }
+  .mug-figure:nth-child(n+2) { display: none; }
+  .mug-figure img { height: auto; }
 }
 
 /* ===== Sticker Collage ===== */
@@ -286,6 +295,7 @@ img {
     gap: 0.5rem;
     max-width: 280px;
   }
+  .sticker-item:nth-child(n+4) { display: none; }
 }
 
 .sticker-item {
@@ -305,6 +315,9 @@ img {
   background: rgba(255,255,255,0.1);
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
+
+.afu-hero-figure { max-height: 38cqh; }
+@media (max-width: 767px) { .afu-hero-figure { max-height: 30cqh; } }
 
 .afu-hero {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -678,7 +691,7 @@ img[loading="lazy"] { background: var(--fyt-dark); }
   box-shadow: 0 15px 50px rgba(0,0,0,0.5);
 }
 
-/* ===== Scroll Feed — Fixed-height carousel (no layout shift between slides) ===== */
+/* ===== Scroll Feed — Box-layout carousel ===== */
 
 /* Pages with scroll-feed: stretch layout so feed fills remaining space */
 .page:has(.scroll-feed) {
@@ -688,44 +701,70 @@ img[loading="lazy"] { background: var(--fyt-dark); }
 .page:has(.scroll-feed) .page-inner {
   display: flex;
   flex-direction: column;
-}
-
-.scroll-feed {
-  position: relative;
-  overflow: hidden;
-  overflow: clip;
-  cursor: pointer;
-  flex: 1;
+  height: 100%;
   min-height: 0;
 }
 
+/* Feed: flex column — track fills space, controls flow below */
+.scroll-feed {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Track fills remaining height (minus controls) */
 .scroll-feed-track {
   display: flex;
+  flex: 1;
+  min-height: 0;
   transition: transform 0.6s ease;
 }
 
+/* Each slide is a content box — images use cqh to scale with the box */
 .scroll-block {
   flex: 0 0 100%;
   min-width: 0;
   overflow: hidden;
-  padding-bottom: 2rem; /* space for controls overlay */
+  padding: 2% 4%;
+  container-type: size;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Main content fills available space; footer (pull-quote) stays at bottom */
+.slide-main { flex: 1; min-height: 0; overflow: hidden; }
+.slide-footer { flex-shrink: 0; padding-top: 0.5rem; padding-bottom: 0.5rem; }
 
-/* Controls — pinned at bottom of scroll-feed */
+/* Image sizing relative to slide box */
+.slide-img-xs  { max-height: 18cqh; width: auto; }
+.slide-img-sm  { max-height: 22cqh; width: auto; }
+.slide-img-md  { max-height: 35cqh; width: auto; }
+.slide-img-lg  { max-height: 45cqh; width: auto; }
+.slide-video   { max-height: 45cqh; max-width: 700px; overflow: hidden; border-radius: 3px; }
+.slide-thumb   { aspect-ratio: 16/9; max-height: 22cqh; overflow: hidden; }
+
+@media (max-width: 767px) {
+  .scroll-block { padding: 3% 3%; }
+  .slide-img-md  { max-height: 25cqh; }
+  .slide-img-lg  { max-height: 35cqh; }
+  .slide-video   { max-height: 35cqh; }
+}
+
+/* Controls — flow-based, outside the content box margin */
 .scroll-controls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0 0.5rem;
   opacity: 0.8;
   transition: opacity 0.3s ease;
   z-index: 5;
+  flex-shrink: 0;
 }
 
 .scroll-feed:hover .scroll-controls,

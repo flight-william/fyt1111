@@ -17,7 +17,7 @@ faqs:
   - q: "Are Riche88 and FYTBET the same company?"
     a: "Yes, they are the same brand. FYT originally operated as **Riche88** and officially rebranded to **FYTBET** on April 21, 2020, introducing the black-and-orange visual identity. Both riche88.com and fytbet.com are official domains under the same brand."
   - q: "Which forums was FYT active on?"
-    a: "During the peak era of Chinese-language forums, FYT maintained an active presence on **Tianchao Forum (天朝论坛), Huaren Forum (华人论坛), Haiyan Forum (海燕论坛), Boren Forum (博人论坛), and Wanbo Forum (万博论坛)** — building grassroots credibility through genuine community engagement."
+    a: "During the peak era of Chinese-language forums, FYT maintained an active presence on **Tianchao Forum (天朝论坛), Huaren Forum (华人论坛), Haiyan Forum (海燕论坛), Boren Forum (博人论坛), and Wanbet Forum (玩博论坛)** — building grassroots credibility through genuine community engagement."
   - q: "How has the brand tagline evolved?"
     a: "The original tagline was **'Want to win? It's not hard at all!'** (要赢？一点都不难！) — bold, aspirational, and action-oriented. The current tagline has evolved to **'Make BC entertainment'** (让BC成为娱乐) — reflecting a maturation from competitive winning toward an entertainment-first philosophy."
 interlinks:
@@ -81,7 +81,7 @@ FYT cultivated a deep presence across five major community platforms:
 - **Huaren Forum (华人论坛)** — Where overseas Chinese users gathered
 - **Haiyan Forum (海燕论坛)** — Known for its seasoned player base
 - **Boren Forum (博人论坛)** — A specialized gaming discussion community
-- **Wanbo Forum (万博论坛)** — A comprehensive gaming discussion platform
+- **Wanbet Forum (玩博论坛)** — A comprehensive gaming discussion platform
 
 On these forums, FYT did not appear as an advertiser broadcasting messages. Instead, the brand showed up as a **community participant** — answering user questions, joining discussions, organizing forum events. This grassroots approach built a form of trust that is nearly impossible to manufacture: users knew the brand team was present, accessible, and engaged in real conversation.
 

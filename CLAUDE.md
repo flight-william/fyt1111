@@ -184,7 +184,7 @@ During the peak era of Chinese forums, the company was actively present on major
 - **华人论坛** (Huaren Forum)
 - **海燕论坛** (Haiyan Forum)
 - **博人论坛** (Boren Forum)
-- **万博论坛** (Wanbo Forum)
+- **玩博论坛** (Wanbet Forum)
 
 This established the brand's grassroots credibility and deep connection with the Chinese-speaking online community.
 

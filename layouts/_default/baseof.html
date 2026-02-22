@@ -41,9 +41,13 @@
     <link rel="stylesheet" href="{{ $processed.RelPermalink }}">
   {{ end }}
 
-  {{/* Self-hosted fonts — Noto Serif SC (unicode-range subsets) + Inter */}}
-  <link rel="preload" href="/fonts/noto-serif-sc.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/fonts/noto-serif-sc.css"></noscript>
+  {{/* Preload above-the-fold images + critical font */}}
+  <link rel="preload" href="/fonts/noto-serif-sc-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/images/logo-fytbet.webp" as="image">
+  <link rel="preload" href="/images/logo-heritage-light.webp" as="image">
+
+  {{/* Self-hosted fonts — Noto Serif SC (custom subset) + Inter */}}
+  <link rel="stylesheet" href="/fonts/noto-serif-sc.css">
   <style>
     @font-face {
       font-family: 'Inter';

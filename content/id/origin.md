@@ -17,7 +17,7 @@ faqs:
   - q: "Apakah Riche88 dan FYTBET adalah perusahaan yang sama?"
     a: "Ya, mereka adalah brand yang sama. FYT awalnya beroperasi sebagai **Riche88** dan secara resmi berganti nama menjadi **FYTBET** pada 21 April 2020, memperkenalkan identitas visual hitam-dan-oranye. Baik riche88.com maupun fytbet.com adalah domain resmi di bawah brand yang sama."
   - q: "Di forum mana saja FYT aktif?"
-    a: "Selama era puncak forum berbahasa Mandarin, FYT mempertahankan kehadiran aktif di lima platform komunitas utama: **Forum Tianchao, Forum Huaren, Forum Haiyan, Forum Boren, dan Forum Wanbo** — membangun kredibilitas akar rumput melalui keterlibatan komunitas yang tulus."
+    a: "Selama era puncak forum berbahasa Mandarin, FYT mempertahankan kehadiran aktif di lima platform komunitas utama: **Forum Tianchao, Forum Huaren, Forum Haiyan, Forum Boren, dan Forum Wanbet** — membangun kredibilitas akar rumput melalui keterlibatan komunitas yang tulus."
   - q: "Bagaimana evolusi slogan brand?"
     a: "Slogan aslinya adalah **'Ingin menang? Tidak sulit sama sekali!'** (要赢？一点都不难！) — berani, aspirasional, dan berorientasi aksi. Slogan saat ini telah berevolusi menjadi **'Dimana Taruhan Menjadi Hiburan'** (让BC成为娱乐) — mencerminkan kedewasaan dari fokus pada kemenangan menuju filosofi pengalaman hiburan sebagai prioritas."
 interlinks:
@@ -81,7 +81,7 @@ FYT memupuk kehadiran mendalam di lima platform komunitas utama:
 - **Forum Huaren (华人论坛)** — Tempat pengguna Tionghoa perantauan berkumpul.
 - **Forum Haiyan (海燕论坛)** — Dikenal karena basis pemainnya yang berpengalaman.
 - **Forum Boren (博人论坛)** — Komunitas diskusi game khusus.
-- **Forum Wanbo (万博论坛)** — Platform diskusi game yang komprehensif.
+- **Forum Wanbet (玩博论坛)** — Platform diskusi game yang komprehensif.
 
 Di forum-forum ini, FYT tidak muncul sebagai pengiklan yang menyiarkan pesan. Sebaliknya, brand tersebut muncul sebagai **partisipan komunitas** — menjawab pertanyaan pengguna, bergabung dalam diskusi, menyelenggarakan acara forum. Pendekatan akar rumput ini membangun bentuk kepercayaan yang hampir tidak mungkin diproduksi secara massal: pengguna tahu tim brand hadir, dapat diakses, dan terlibat dalam percakapan nyata.
 
