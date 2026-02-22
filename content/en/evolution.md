@@ -28,7 +28,7 @@ interlinks:
     title: "Fully In-House Built · Self-Developed Platform · Tech Moat"
 ---
 
-## Design Is Brand: The Logic Behind Fifteen Years of Visual Evolution
+## How Many Design Changes Has FYT Gone Through? Five Visual Iterations in Fifteen Years
 
 A platform's interface design is the most honest expression of everything it stands for. The colors, layouts, and interactions that greet members each day tell a story no advertisement can replicate.
 
@@ -36,7 +36,7 @@ From 2011 to today, FYT has undergone five major visual transformations. None we
 
 ---
 
-## The Grey-Blue Era (2011): A Quiet Beginning
+## What Did the Original FYT Website Look Like? The 2011 Grey-Blue Era
 
 FYT's first face was a study in restraint.
 
@@ -48,7 +48,7 @@ The clean aesthetic also reflected a practical reality. In 2011, the platform's 
 
 ---
 
-## The Red-Gold Era (2015): The VIP Lounge Aesthetic
+## When Did the Red-Gold Look Appear? The 2015 Macau Juxing Partnership Era
 
 As the brand deepened its partnership with Macau's **Juxing International** (钜星), FYT's visual language underwent its first significant transformation.
 
@@ -60,7 +60,7 @@ The Red-Gold era marked the first time FYT's visual design explicitly projected 
 
 ---
 
-## The Black-Orange Rebrand (2020): FYTBET Emerges
+## When Did the FYTBET Rebrand Happen? April 21, 2020 — Black-Orange Arrives
 
 On April 21, 2020, the brand completed the most significant visual transformation in its history. **Riche88** officially became **FYTBET**.
 
@@ -74,7 +74,7 @@ Time has validated the black-orange choice. The color system is distinctive enou
 
 ---
 
-## The All-Orange Experiment (2021): A Bold Detour
+## Why Did FYT Switch Back from All-Orange? The 2021 App v3.0 Experiment
 
 A successful design system can become a comfortable cage. FYTBET's development team chose to test the boundaries.
 
@@ -88,7 +88,7 @@ The all-orange era ultimately became an important footnote in the brand's design
 
 ---
 
-## The Refined Return (2026): Maturity in Balance
+## What Is the Current App Version? The v4.1 Refined Black-Orange Design
 
 The all-orange experiment taught the team something that no theoretical design review could: the precise relationship between brand expression and daily usability.
 
@@ -107,7 +107,7 @@ Each of these features occupies a considered place within the refined visual hie
 
 ---
 
-## The Constant Beneath the Changes
+## What Drives Every FYT Redesign? The Member Experience Comes First
 
 Five transformations. Grey-blue, red-gold, black-orange, all-orange, refined black-orange. On the surface, a story of shifting palettes. Beneath it, something more fundamental — a brand repeatedly asking itself the same question: **what matters most?**
 

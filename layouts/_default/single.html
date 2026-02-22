@@ -1,4 +1,143 @@
 {{ define "main" }}
+  {{/* BreadcrumbList JSON-LD */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": {{ if eq .Language.Lang "zh" }}"富易堂"{{ else }}"FYTBET"{{ end }},
+        "item": {{ .Site.Home.Permalink | jsonify }}
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ .Title | jsonify }},
+        "item": {{ .Permalink | jsonify }}
+      }
+    ]
+  }
+  </script>
+
+  {{/* Article JSON-LD */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ .Title | jsonify }},
+    "description": {{ .Description | jsonify }},
+    "datePublished": "{{ with .Date }}{{ .Format "2006-01-02" }}{{ else }}2011-11-11{{ end }}",
+    "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+    "author": {
+      "@type": "Organization",
+      "name": "FYTBET",
+      "url": "https://fytbet.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FYTBET",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.BaseURL }}images/logo-fytbet.png"
+      }
+    },
+    "inLanguage": "{{ .Language.LanguageCode }}",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": {{ .Site.Title | jsonify }},
+      "url": {{ .Site.Home.Permalink | jsonify }}
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ .Permalink | jsonify }}
+    }
+  }
+  </script>
+
+  {{/* ImageObject JSON-LD — mascot pages only */}}
+  {{ if eq .Params.translationKey "mascot" }}
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/afu-hero.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富主视觉——手举RICHE88三角旗帜"{{ else }}"Ah Fu Hero Image — Holding RICHE88 Pennant Flag"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"富易堂品牌吉祥物阿富的标志性主视觉，手持RICHE88三角旗帜，配经典口号「要赢？一点都不难！」"{{ else }}"FYTBET brand mascot Ah Fu in signature hero pose, holding a RICHE88 pennant flag alongside the classic tagline."{{ end }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/afu-comic.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富周年纪念连环画"{{ else }}"Ah Fu Anniversary Comic Strip"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"十周年纪念马克杯系列连环画，讲述阿富从2015年破壳到逐年成长的完整故事"{{ else }}"Anniversary mug series comic strip telling Ah Fu's growth story from hatching in 2015 through the years."{{ end }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-1.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——没在怕"{{ else }}"Ah Fu Sticker — No Fear"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富表情贴纸「没在怕」，展现自信无畏的品牌态度"{{ else }}"Ah Fu expression sticker 'No Fear', showing the brand's confident and fearless attitude."{{ end }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-2.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——RICHE"{{ else }}"Ah Fu Sticker — RICHE"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富RICHE品牌表情贴纸"{{ else }}"Ah Fu RICHE brand expression sticker."{{ end }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-3.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——要等多久"{{ else }}"Ah Fu Sticker — How Long to Wait"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富「要等多久」表情贴纸，俏皮催促的日常表达"{{ else }}"Ah Fu 'How Long to Wait' sticker, a playful everyday expression."{{ end }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-4.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——X TALK"{{ else }}"Ah Fu Sticker — X TALK"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富「X TALK」表情贴纸，表示不想说话的趣味态度"{{ else }}"Ah Fu 'X TALK' sticker, a playful way of saying 'no comment'."{{ end }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-5.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——OK"{{ else }}"Ah Fu Sticker — OK"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富OK手势表情贴纸，传递积极肯定"{{ else }}"Ah Fu OK gesture sticker, conveying positive affirmation."{{ end }}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/stickers/afu-6.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富贴纸——GO"{{ else }}"Ah Fu Sticker — GO"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富GO表情贴纸，充满行动力的品牌表达"{{ else }}"Ah Fu GO sticker, an action-oriented brand expression."{{ end }}
+    }
+  ]
+  </script>
+  {{ end }}
+
+  {{/* Product JSON-LD — Fortune Insurance on VIP and Technology pages */}}
+  {{ if or (eq .Params.translationKey "vip") (eq .Params.translationKey "technology") }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ if eq .Language.Lang "zh" }}"富贵保 — 100%体育投注保险"{{ else }}"Fortune Insurance (富贵保) — 100% Sports Betting Insurance"{{ end }},
+    "description": {{ if eq .Language.Lang "zh" }}"富易堂独创的100%体育投注保险产品。赢了照常收益，输了次日全额返还保额。完全自主研发，行业独创。"{{ else }}"FYTBET's proprietary 100% sports betting insurance. Win and keep the full profit; lose and the insured amount is returned the next day. Fully in-house developed, a market first."{{ end }},
+    "brand": {
+      "@type": "Brand",
+      "name": "FYTBET"
+    },
+    "url": "{{ .Site.BaseURL }}{{ .Language.Lang }}/vip/",
+    "category": {{ if eq .Language.Lang "zh" }}"体育投注保险"{{ else }}"Sports Betting Insurance"{{ end }}
+  }
+  </script>
+  {{ end }}
+
   {{/* Render section partial as visual anchor */}}
   {{ with .Params.section_partial }}
     {{ partial . $ }}

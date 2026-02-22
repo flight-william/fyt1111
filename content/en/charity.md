@@ -28,7 +28,7 @@ interlinks:
     title: "Macau Tower Bungy Jump · Singapore F1 — Experiential Brand Events"
 ---
 
-## The Chengshi Cup: A Match with No Losers
+## What Is the Chengshi Cup? The 2015 Guangdong-Hubei Charity Soccer Match
 
 On May 2, 2015, the floodlights came on at Guangdong Provincial People's Stadium in Guangzhou. But this was not a league fixture. There was no title at stake, no relegation battle to fight. This was a match designed so that nobody could lose.
 
@@ -40,7 +40,7 @@ Guangzhou television broadcast the match in full. What the cameras captured went
 
 ---
 
-## Veterans and Welfare Children: When Titles No Longer Matter
+## Which Veteran Players Participated? The 33-vs-11 Heartwarming Exhibition
 
 The retired national players who walked onto the field that day were, each one, a recognized figure in Chinese football history.
 
@@ -52,7 +52,7 @@ The event drew significant media attention, with Guangzhou television stations p
 
 ---
 
-## Into the Mountains: Hands-On, Not Hands-Off
+## What Rural Donations Has FYT Made? Hands-On Charity in Remote China
 
 If the Chengshi Cup was a charitable act performed under stadium lights, then the rural donation trips were something fundamentally different — no cameras, no broadcast, just muddy roads and mountains that never seemed to end.
 
@@ -64,7 +64,7 @@ These trips produced no sponsor banners, no media follow-ups. And perhaps that i
 
 ---
 
-## The Forgotten Children: A Record, Not a Report
+## What Is "The Forgotten Children"? A Documentary Report of Charitable Action
 
 The team documented these experiences in a report they titled "The Forgotten Children" (那些被遗忘的孩子).
 
@@ -74,7 +74,7 @@ It is not a public relations document. It is an archive of action — each page 
 
 ---
 
-## Spread the Love: Action as Philosophy
+## What Does "Spread the Love" Mean? FYT's Charitable Philosophy
 
 Five Chinese characters — 把爱传出去 — were printed on the team's charity t-shirts. Over time, they became something more than a slogan. They became an operating principle.
 

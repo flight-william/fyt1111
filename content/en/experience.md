@@ -28,7 +28,7 @@ interlinks:
     title: "Chengshi Cup Charity Soccer · Rural Donations · Spread the Love"
 ---
 
-## Beyond the Screen: Where Experiential Marketing Begins
+## What Offline Events Has FYT Organized? From Screen to Real World
 
 In this industry, most brands exist entirely within pixels — banner ads, pop-up promotions, social media campaigns. FYT recognized early on that what truly moves VIP customers is not found on screens. It is found in a real handshake, a real heartbeat, a real shared experience.
 
@@ -38,7 +38,7 @@ Not by renting a billboard or slapping a logo on a sponsored event — but by pl
 
 ---
 
-## Macau Tower, 233 Meters: Turning a Tagline into Freefall
+## What Was the Macau Tower Bungy Jump? The 233-Meter 5th Anniversary Challenge
 
 In 2016, FYT celebrated its fifth anniversary. The celebration was not a gala dinner or an awards ceremony. It was an invitation: come with us, and jump from 233 meters.
 
@@ -52,7 +52,7 @@ There is a particular kind of trust that forms between people who have jumped fr
 
 ---
 
-## Singapore F1 Street Circuit: Accelerating Through a Legendary Track
+## What Is the Singapore F1 Circuit Experience? VIP Driving on Marina Bay
 
 If Macau Tower tested the courage to leap, the Singapore F1 experience tested a different kind of nerve — the ability to stay composed at speed.
 
@@ -64,7 +64,7 @@ Hands on the steering wheel, engine note rising, legendary corners unfolding one
 
 ---
 
-## The Juxing Partnership: The Shortest Path from Online to VIP Lounge
+## What Is Juxing? FYT's Bridge from Online Brand to Macau VIP Lounge
 
 Experiential events are the brand's most visible moments outside the screen. But the partnership with Juxing, Macau's VIP concierge group, represents the quieter, deeper work.
 
@@ -76,7 +76,7 @@ The significance of the Juxing partnership extends far beyond brand exposure. It
 
 ---
 
-## The Philosophy of Experience: Trust Is Not Declared — It Is Felt
+## How Does the Brand Tagline Connect to These Events? Trust Built Through Experience
 
 Looking back at these events, the surface layer shows bungy jumps, race circuits, and VIP lounge partnerships. Beneath that surface, all three are different expressions of the same conviction: **trust is built through shared experience**.
 

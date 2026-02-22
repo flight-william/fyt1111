@@ -1,6 +1,6 @@
 ---
 title: "FYT Origin Story | Founded 11.11.11 · Cube Group · 188BET Heritage"
-description: "FYTBET (富易堂/Riche88) brand history — founded at 11:11:11 AM on November 11, 2011. Under Cube group (188BET) with Isle of Man, PAGCOR, and FCLRC licenses. From forum era to modern rebrand."
+description: "FYTBET (富易堂/Riche88) brand history — founded at 11:11:11 AM on November 11, 2011. Under Cube group (188BET) with Isle of Man and PAGCOR dual licenses. From forum era to modern rebrand."
 section_partial: "section-origin.html"
 translationKey: "origin"
 faqs:
@@ -13,7 +13,7 @@ faqs:
   - q: "What is the relationship between FYT and 188BET?"
     a: "Both operated under the **Cube group**, an international gaming operator holding Isle of Man and PAGCOR licenses. 188BET was Cube's flagship brand. FYT inherited Cube's battle-tested operations, technology infrastructure, and industry expertise from day one."
   - q: "What licenses does FYT hold?"
-    a: "The Cube group held dual licenses from the **Isle of Man** (one of the world's strictest gaming regulators) and **PAGCOR** (Philippines). Additionally, PrestigeIM held an **FCLRC (First Cagayan)** interactive gaming license from 2016-2017, providing three-jurisdiction regulatory coverage."
+    a: "The Cube group held dual licenses from the **Isle of Man** (one of the world's strictest gaming regulators) and **PAGCOR** (Philippines), providing two-jurisdiction regulatory coverage."
   - q: "Are Riche88 and FYTBET the same company?"
     a: "Yes, they are the same brand. FYT originally operated as **Riche88** and officially rebranded to **FYTBET** on April 21, 2020, introducing the black-and-orange visual identity. Both riche88.com and fytbet.com are official domains under the same brand."
   - q: "Which forums was FYT active on?"
@@ -32,7 +32,7 @@ interlinks:
     title: "From Grey-Blue to Black-Orange — the FYT Visual Identity Journey"
 ---
 
-## Century Singles' Day: A Once-in-a-Lifetime Beginning
+## When Was FYT Founded? The 11.11.11 Century Singles' Day Origin
 
 November 11, 2011. Six elevens converging into a single moment — 11/11/11 at 11:11:11 AM. The Chinese internet christened it **Century Singles' Day** (世纪光棍节), a numerical alignment that occurs precisely once every hundred years. At that exact instant, **FYT** was born.
 
@@ -40,7 +40,7 @@ The choice was deliberate. The founding team understood that in the age of digit
 
 ---
 
-## The Cube Group: Standing on the Shoulders of Giants
+## What Is the Relationship Between FYT and 188BET? The Cube Group Lineage
 
 FYT was never a scrappy startup finding its footing. From day one, it carried the full weight of an established international gaming operation.
 
@@ -56,7 +56,7 @@ This heritage allowed FYT to bypass the trial-and-error phase that most new bran
 
 ---
 
-## Three-Jurisdiction Licensing: The Compliance Moat
+## What Licenses Does FYT Hold? Isle of Man + PAGCOR Dual Regulation
 
 In an industry where trust is the fundamental currency, regulatory credentials form the bedrock of brand credibility.
 
@@ -65,13 +65,13 @@ The Cube group held two heavyweight licenses:
 - **Isle of Man** — One of the world's most rigorous gaming regulatory frameworks, with standards covering financial transparency, technical security, anti-money laundering compliance, and player protection
 - **PAGCOR (Philippines)** — The Asia-Pacific region's primary gaming regulator, covering both online and land-based operations
 
-Additionally, **PrestigeIM** held an interactive gaming license from **FCLRC (First Cagayan Leisure and Resort Corporation)**, valid from 2016 to 2017. Three distinct regulatory jurisdictions, each with its own oversight mechanisms, created a layered compliance architecture.
+Two distinct regulatory jurisdictions, each with its own oversight mechanisms, created a layered compliance architecture.
 
 This was not merely paperwork — it represented multiple tiers of protection for player funds, operational transparency, and dispute resolution mechanisms.
 
 ---
 
-## The Forum Era: Trust Built from the Ground Up
+## Which Forums Was FYT Active On? The Grassroots Community Era
 
 Before social media dominated digital communication, the heart of the Chinese-language gaming community beat in **forums**.
 
@@ -89,7 +89,7 @@ The forum era has passed, but the reputation foundation it established remains a
 
 ---
 
-## Brand Transformation: From Riche88 to FYTBET
+## Are Riche88 and FYTBET the Same Brand? The 2020 Rebrand Explained
 
 In its early years, the brand operated as **Riche88** (富易堂). "Riche" drew from the French word for wealth, paired with "88" — a number that symbolizes fortune and prosperity in Chinese culture. The name precisely conveyed the brand's DNA: **wealth, luck, and refinement**.
 
@@ -105,7 +105,7 @@ The three letters "FYT" preserve the pinyin abbreviation of 富易堂, while "BE
 
 ---
 
-## Tagline Evolution: From Challenge to Entertainment
+## How Has the FYT Tagline Changed? From "Not Hard at All" to "Make BC Entertainment"
 
 A brand's tagline is its philosophy distilled into a single breath. The evolution of FYT's tagline traces the brand's intellectual maturation.
 

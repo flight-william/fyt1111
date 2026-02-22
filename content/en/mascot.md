@@ -28,7 +28,7 @@ interlinks:
     title: "Chengshi Cup Charity Soccer · Rural Donations · Spread the Love"
 ---
 
-## The Birth of Ah Fu: Giving the Brand a Face
+## Who Is Ah Fu? The FYT Brand Mascot Born in 2015
 
 By 2015, FYT had been running for four years. The platform was growing steadily, the user base was expanding, and the product suite was maturing. But the brand still lacked something — a face that could be recognized at a glance, a personality that users could connect with beyond the interface.
 
@@ -42,7 +42,7 @@ In the brand's signature hero image, Ah Fu stands holding a RICHE88 pennant flag
 
 ---
 
-## 40+ Sticker Expressions: A Brand That Lives in Conversation
+## How Many Ah Fu Stickers Are There? 40+ Social Expressions Explained
 
 What transformed Ah Fu from a brand mascot into a genuine cultural shorthand among users was not his design alone. It was the **sticker set**.
 
@@ -56,7 +56,7 @@ The stickers also served a subtler purpose: they kept the brand present in daily
 
 ---
 
-## Merchandise: A Collection That Money Cannot Buy
+## What Ah Fu Merchandise Exists? VIP-Exclusive Collectibles
 
 Ah Fu's presence extends well beyond the digital screen. Through a carefully curated line of physical merchandise, the mascot has found his way into the everyday lives of VIP members.
 
@@ -70,7 +70,7 @@ This approach to merchandise reflects a broader philosophy. In a market saturate
 
 ---
 
-## Live Appearances: From Screen to Stadium
+## What Events Has Ah Fu Appeared At? From Chengshi Cup to Charity T-Shirts
 
 May 2, 2015. Guangzhou. **Guangdong Provincial People's Stadium**.
 
@@ -86,7 +86,7 @@ The Chengshi Cup appearance established a precedent. Ah Fu was not going to be a
 
 ---
 
-## The Brand Meaning of a Mascot: A Name Card with a Heartbeat
+## Why Does FYT Have a Mascot? The Brand Significance of Ah Fu
 
 In an industry where trust is the most valuable currency, brand-building must reach beyond functional communication. Data, licensing credentials, odds margins — these are the tools of rational persuasion, and they are necessary. But the thing that makes a brand **liked**, **remembered**, and **identified with** often comes from something softer.
 
