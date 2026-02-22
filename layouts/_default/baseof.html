@@ -42,7 +42,8 @@
   {{ end }}
 
   {{/* Self-hosted fonts — Noto Serif SC (unicode-range subsets) + Inter */}}
-  <link rel="stylesheet" href="/fonts/noto-serif-sc.css">
+  <link rel="preload" href="/fonts/noto-serif-sc.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/fonts/noto-serif-sc.css"></noscript>
   <style>
     @font-face {
       font-family: 'Inter';
@@ -406,23 +407,18 @@
   {{/* Image protection */}}
   <script>document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO')e.preventDefault()});document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()})</script>
 
-  {{/* Scripts */}}
-  {{ $scrollJs := resources.Get "js/scroll.js" }}
-  {{ $feedJs := resources.Get "js/scroll-feed.js" }}
-  {{ $toggleJs := resources.Get "js/toggle.js" }}
-  {{ $linksJs := resources.Get "js/links.js" }}
-  {{ $articleToggleJs := resources.Get "js/article-toggle.js" }}
+  {{/* Scripts — concatenated into single bundle */}}
+  {{ $bundle := slice
+    (resources.Get "js/scroll.js")
+    (resources.Get "js/scroll-feed.js")
+    (resources.Get "js/toggle.js")
+    (resources.Get "js/links.js")
+    (resources.Get "js/article-toggle.js")
+    | resources.Concat "js/bundle.js"
+  }}
   {{ if hugo.IsProduction }}
-    {{ $scrollJs = $scrollJs | minify | fingerprint }}
-    {{ $feedJs = $feedJs | minify | fingerprint }}
-    {{ $toggleJs = $toggleJs | minify | fingerprint }}
-    {{ $linksJs = $linksJs | minify | fingerprint }}
-    {{ $articleToggleJs = $articleToggleJs | minify | fingerprint }}
+    {{ $bundle = $bundle | minify | fingerprint }}
   {{ end }}
-  <script defer src="{{ $scrollJs.RelPermalink }}"></script>
-  <script defer src="{{ $feedJs.RelPermalink }}"></script>
-  <script defer src="{{ $toggleJs.RelPermalink }}"></script>
-  <script defer src="{{ $linksJs.RelPermalink }}"></script>
-  <script defer src="{{ $articleToggleJs.RelPermalink }}"></script>
+  <script defer src="{{ $bundle.RelPermalink }}"></script>
 </body>
 </html>
