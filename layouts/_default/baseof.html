@@ -12,14 +12,14 @@
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="https://riche88.com/images/logo-fytbet.webp">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/logo-fytbet.webp">
   <meta property="og:site_name" content="FYTBET">
   <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else if eq .Language.Lang "yue" }}yue_HK{{ else if eq .Language.Lang "vi" }}vi_VN{{ else if eq .Language.Lang "th" }}th_TH{{ else if eq .Language.Lang "id" }}id_ID{{ else }}en_US{{ end }}">
   {{/* Twitter Card */}}
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
-  <meta name="twitter:image" content="https://riche88.com/images/logo-fytbet.webp">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo-fytbet.webp">
   <link rel="canonical" href="{{ .Permalink }}">
   {{/* Dynamic hreflang — works for homepage and section pages */}}
   {{ if .IsTranslated }}
@@ -81,9 +81,9 @@
     "@type": "Organization",
     "name": "富易堂",
     "alternateName": ["Riche88", "FYT", "FYTBET", "富易堂官网"],
-    "url": "https://riche88.com",
+    "url": "{{ .Site.BaseURL }}",
     "foundingDate": "2011-11-11",
-    "logo": "https://riche88.com/images/logo-fytbet.webp",
+    "logo": "{{ .Site.BaseURL }}images/logo-fytbet.webp",
     "slogan": "让博彩成为娱乐",
     "knowsAbout": ["Sports Betting", "Online Entertainment", "VIP Gaming", "体育投注", "在线娱乐"],
     "areaServed": [
@@ -111,12 +111,12 @@
     "@type": "WebSite",
     "name": "富易堂 FYTBET",
     "alternateName": ["Riche88", "FYT官网", "FYTBET Official"],
-    "url": "https://riche88.com",
+    "url": "{{ .Site.BaseURL }}",
     "inLanguage": ["zh-CN", "yue", "en", "vi", "th", "id"],
     "publisher": {
       "@type": "Organization",
       "name": "富易堂",
-      "url": "https://riche88.com"
+      "url": "{{ .Site.BaseURL }}"
     }
   }
   </script>
@@ -309,8 +309,8 @@
     "@type": "VideoObject",
     "name": "富易堂五周年澳门塔蹦极 FYT 5th Anniversary Macau Tower Bungy Jump",
     "description": "FYT VIP guests take the iconic 233-meter bungy jump at Macau Tower for the brand's 5th anniversary — embodying the tagline 'It's not hard at all.'",
-    "contentUrl": "https://riche88.com/video/macau-tower.mp4",
-    "thumbnailUrl": "https://riche88.com/images/macau-print.webp",
+    "contentUrl": "{{ .Site.BaseURL }}video/macau-tower.mp4",
+    "thumbnailUrl": "{{ .Site.BaseURL }}images/macau-print.webp",
     "uploadDate": "2016-11-11",
     "duration": "PT3M",
     "inLanguage": "zh"
@@ -324,8 +324,8 @@
     "@type": "VideoObject",
     "name": "诚十杯粤鄂明星慈善足球赛 Chengshi Cup Charity Soccer",
     "description": "Broadcast footage of the 2015 Chengshi Cup charity soccer match at Guangdong Provincial People's Stadium. 33 welfare children vs 11 veteran national football players.",
-    "contentUrl": "https://riche88.com/video/charity-soccer.mp4",
-    "thumbnailUrl": "https://riche88.com/images/charity-hero.webp",
+    "contentUrl": "{{ .Site.BaseURL }}video/charity-soccer.mp4",
+    "thumbnailUrl": "{{ .Site.BaseURL }}images/charity-hero.webp",
     "uploadDate": "2015-05-02",
     "duration": "PT5M",
     "inLanguage": "zh"
