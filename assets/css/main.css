@@ -165,8 +165,8 @@ img {
   font-size: clamp(1.2rem, 2.2vw, 1.8rem);
   font-weight: 300;
   color: var(--fyt-gold-light);
-  padding: 1.5rem 0;
-  margin: 1rem 0;
+  padding: clamp(0.5rem, 1.5cqh, 1.25rem) 0;
+  margin: 0;
   border-top: 1px solid var(--fyt-subtle);
   border-bottom: 1px solid var(--fyt-subtle);
   line-height: 1.6;
@@ -263,10 +263,10 @@ img {
 .vip-card-img { max-height: 30cqh; width: auto; }
 
 @media (max-width: 767px) {
-  .vip-hero { max-height: 35cqh; }
+  .vip-hero { max-height: 30cqh; }
   .vip-figure { max-width: none; flex-shrink: 0; }
-  .vip-figure-img { max-height: 35cqh; }
-  .vip-card-img { max-height: 35cqh; }
+  .vip-figure-img { max-height: 20cqh; }
+  .vip-card-img { max-height: 25cqh; }
 }
 
 /* ===== Mascot Section — mug images ===== */
@@ -317,7 +317,7 @@ img {
 }
 
 .afu-hero-figure { max-height: 38cqh; }
-@media (max-width: 767px) { .afu-hero-figure { max-height: 30cqh; } }
+@media (max-width: 767px) { .afu-hero-figure { max-height: 22cqh; } }
 
 .afu-hero {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -728,16 +728,21 @@ img[loading="lazy"] { background: var(--fyt-dark); }
 .scroll-block {
   flex: 0 0 100%;
   min-width: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE/Edge */
   padding: 2% 4%;
   container-type: size;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
+.scroll-block::-webkit-scrollbar { display: none; }
 
-/* Main content fills available space; footer (pull-quote) stays at bottom */
-.slide-main { flex: 1; min-height: 0; overflow: hidden; }
-.slide-footer { flex-shrink: 0; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+/* Main content + footer (pull-quote) stay close together, centered in slide */
+.slide-main { flex: none; min-height: 0; overflow: hidden; }
+.slide-footer { flex-shrink: 0; margin-top: clamp(0.25rem, 1.5cqh, 1rem); }
 
 /* Image sizing relative to slide box */
 .slide-img-xs  { max-height: 18cqh; width: auto; }
@@ -760,7 +765,7 @@ img[loading="lazy"] { background: var(--fyt-dark); }
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.75rem 0 0.5rem;
+  padding: clamp(0.35rem, 1vw, 0.75rem) 0 clamp(0.25rem, 0.8vw, 0.5rem);
   opacity: 0.8;
   transition: opacity 0.3s ease;
   z-index: 5;
