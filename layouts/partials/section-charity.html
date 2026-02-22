@@ -5,10 +5,10 @@
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_charity" }}</span>
       <div class="gold-line mb-2"></div>
-      <p class="heading-sub mb-1">{{ if eq .Language.Lang "zh" }}温度{{ else }}Giving Back{{ end }}</p>
+      <p class="heading-sub mb-1">{{ i18n "label_temperature" }}</p>
       <h2 class="heading-display">
-        <a href="/{{ .Language.Lang }}/charity/">
-        {{ if eq .Language.Lang "zh" }}<span class="text-gold">把爱</span>传出去{{ else }}<span class="text-gold">Spread</span> the Love{{ end }}
+        <a href="{{ "charity" | relLangURL }}">
+        {{ if eq .Language.Lang "zh" }}<span class="text-gold">把爱</span>传出去{{ else if eq .Language.Lang "vi" }}Lan tỏa <span class="text-gold">Yêu thương</span>{{ else if eq .Language.Lang "th" }}ส่งต่อ <span class="text-gold">ความรัก</span>{{ else if eq .Language.Lang "id" }}<span class="text-gold">Berbagi</span> Kasih{{ else }}<span class="text-gold">Spread</span> the Love{{ end }}
         </a>
       </h2>
     </div>
@@ -20,12 +20,12 @@
         {{/* Slide 1: Charity soccer match */}}
         <div class="scroll-block">
           <div class="mb-2">
-            <div class="auto-video-section mx-auto" style="max-height: 30vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
+            <div class="auto-video-section mx-auto" style="max-height: 25vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
               <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="/video/charity-soccer-poster.jpg" class="w-full h-full object-cover">
                 <source data-src="/video/charity-soccer.mp4" type="video/mp4">
               </video>
             </div>
-            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
+            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else if eq .Language.Lang "vi" }}Chengshi Cup · Bóng đá Từ thiện{{ else if eq .Language.Lang "th" }}Chengshi Cup · ฟุตบอลการกุศล{{ else if eq .Language.Lang "id" }}Chengshi Cup · Sepak Bola Amal{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -33,9 +33,21 @@
               <p>
                 2015年5月2日，广东省人民体育场。诚十杯粤鄂慈善足球赛开赛，诚十集团与富易堂联合赞助。最动人的一幕：33个来自广州社会福利院的孩子，对阵11位退役国脚——不是比赛，是大人们对孩子最温柔的陪伴。
               </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Ngày 2 tháng 5 năm 2015, Sân vận động Nhân dân tỉnh Quảng Đông. Giải bóng đá từ thiện Chengshi Cup khởi tranh với sự đồng tài trợ của FYT. Khoảnh khắc xúc động nhất: 33 trẻ em từ viện phúc lợi đối đầu 11 cựu tuyển thủ quốc gia — không phải một trận đấu, mà là sự sẻ chia ấm áp của người lớn dành cho các em.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                วันที่ 2 พฤษภาคม 2015 ณ สนามกีฬามณฑลกวางตุ้ง การแข่งขันฟุตบอลการกุศล Chengshi Cup เริ่มต้นขึ้นด้วยการสนับสนุนจาก FYT วินาทีที่น่าประทับใจที่สุดคือ เด็กๆ 33 คนจากสถานสงเคราะห์ลงสนามพบกับอดีตนักเตะทีมชาติ 11 คน นี่ไม่ใช่แค่เกมกีฬา แต่คือความอบอุ่นที่ส่งต่อให้เด็กๆ
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                2 Mei 2015, Stadion Rakyat Provinsi Guangdong. Pertandingan sepak bola amal Chengshi Cup dimulai dengan FYT sebagai co-sponsor. Momen paling mengharukan: 33 anak dari panti sosial berhadapan dengan 11 mantan pemain timnas — bukan pertandingan, melainkan bentuk kasih sayang tulus dari orang dewasa kepada anak-anak.
+              </p>
               {{ else }}
               <p>
-                On May 2, 2015, the Chengshi Cup Guangdong-Hubei charity soccer match was held at Guangdong Provincial People's Stadium. Co-sponsored by Chengshi Group and FYT, organized by Guangdong Celebrity Football Club. The highlight: a heartwarming 33-vs-11 exhibition match — 33 children from Guangzhou Social Welfare Institute against 11 veteran national football players.
+                May 2, 2015, Guangdong Provincial People's Stadium. The Chengshi Cup charity match, co-sponsored by FYT. The highlight: a heartwarming 33-vs-11 match — 33 children from Guangzhou Social Welfare Institute against 11 veteran national players.
               </p>
               {{ end }}
             </div>
@@ -44,16 +56,28 @@
               <p>
                 曲楚良、胡志军、谢育新、林强、殷立华……这些曾经驰骋国家队的名字，那天只有一个身份：陪孩子踢球的人。广州电视台全程直播，所有善款用于福利院孤残儿童的教育援助。有些事，比赢球更值得全力以赴。
               </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Qu Chuliang, Hu Zhijun, Xie Yuxin... những cái tên huyền thoại của đội tuyển quốc gia ngày ấy chỉ có một vai trò: những người bạn chơi bóng cùng trẻ thơ. Toàn bộ quỹ thu được đã dành cho việc hỗ trợ giáo dục trẻ em mồ côi. Có những việc còn đáng để dốc sức hơn cả chiến thắng.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                นักเตะระดับตำนานทีมชาติอย่าง ฉวี่ ฉู่เหลียง และ หู จื้อจวิน ต่างวางเกียรติยศไว้ข้างหลังเพื่อร่วมเล่นกับเด็กๆ รายได้ทั้งหมดมอบให้เป็นทุนการศึกษาแก่เด็กกำพร้าและเด็กพิการในสถานสงเคราะห์ เพราะบางสิ่งมีค่ามากกว่าชัยชนะในการแข่งขัน
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Legenda timnas seperti Qu Chuliang dan Hu Zhijun menyimpan gelar mereka untuk bermain bersama anak-anak. Disiarkan langsung di TV Guangzhou, seluruh dana digunakan untuk bantuan pendidikan anak yatim dan penyandang disabilitas. Ada hal-hal yang lebih berharga dari sekadar memenangkan pertandingan.
+              </p>
               {{ else }}
               <p>
-                Guangdong veterans included Qu Chuliang, Hu Zhijun (1994 season top scorer), Xie Yuxin, and Wang Huiliang. Hubei's roster featured Lin Qiang, Yin Lihua, and Chen Fangping. The match was broadcast on Guangzhou television. All proceeds benefited educational assistance for orphaned and disabled children at the welfare institute. This high-profile charity event tied the brand to sportsmanship, celebrity culture, and philanthropy.
+                National stars like Qu Chuliang and Hu Zhijun (1994 top scorer) set aside their titles to play. Broadcast on Guangzhou TV, all proceeds benefited educational assistance for orphaned and disabled children. Some things are worth more than winning.
               </p>
               {{ end }}
             </div>
           </div>
-          <div class="mt-3">
+          <div class="mt-2">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}在博弈之外，我们更愿与那些被遗忘的孩子，分享同一片阳光。{{ else }}Beyond the game, we find our purpose in sharing the same sun with the children the world forgot.{{ end }}
+              {{ if eq .Language.Lang "zh" }}有些事，比赢球更值得全力以赴。{{ else if eq .Language.Lang "vi" }}Trong cuộc đời, có những điều còn đáng để dốc sức hơn cả việc thắng một trận bóng.{{ else if eq .Language.Lang "th" }}บางสิ่งบางอย่าง... มีค่ามากกว่าชัยชนะในสนามฟุตบอล{{ else if eq .Language.Lang "id" }}Ada hal-hal yang lebih layak diperjuangkan daripada sekadar memenangkan pertandingan.{{ else }}Beyond the game, we find purpose in sharing the same sun with the children the world forgot.{{ end }}
             </div>
           </div>
         </div>
@@ -69,6 +93,27 @@
               <p>
                 不是汇一笔款就算了。是走泥巴路，进很少有外人到过的家门。面包车上的天府之花食用油和大米，沉甸甸的，是承诺的重量。孩子接过新书包时的笑，很轻，却比所有商业上的收获都值。
               </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p class="drop-cap">
+                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">"Những đứa trẻ bị lãng quên"</a> — tên một bản báo cáo, cũng là lý do để chúng tôi khởi hành. Đội ngũ mặc áo thun "Lan tỏa yêu thương", chất đầy gạo và dầu ăn, tiến vào những bản làng xa xôi nhất. Từng chiếc cặp sách, bút màu đều được trao tận tay các em.
+              </p>
+              <p>
+                Không chỉ là gửi một khoản tiền. Đó là hành trình trên những con đường bùn lầy, là sự hiện diện trực tiếp. Gạo và dầu ăn trên xe mang nặng sức nặng của lời hứa. Nụ cười của trẻ thơ khi nhận quà tuy nhẹ nhàng nhưng giá trị hơn mọi thành công thương mại.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p class="drop-cap">
+                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">"เด็กที่ถูกลืม"</a> — คือชื่อของรายงานสารคดีและเป็นเหตุผลในการเดินทางของเรา ทีมงานสวมเสื้อยืด "ส่งต่อความรัก" ขนข้าวสารและน้ำมันพืชขับเข้าไปยังหมู่บ้านที่ห่างไกลที่สุด กระเป๋านักเรียนและเครื่องเขียนทุกชิ้นถูกส่งมอบถึงมือเด็กๆ โดยตรง
+              </p>
+              <p>
+                ไม่ใช่เพียงการโอนเงินบริจาค แต่คือการเดินบนถนนที่เต็มไปด้วยโคลนเพื่อเข้าถึงบ้านที่ต้องการความช่วยเหลือจริงๆ รอยยิ้มบนหน้าของเด็กๆ เมื่อได้รับกระเป๋าใบใหม่ มีค่ามากกว่าความสำเร็จทางธุรกิจใดๆ ที่เราเคยได้รับมา
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p class="drop-cap">
+                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">"Anak-Anak yang Terlupakan"</a> — nama laporan dokumenter, sekaligus alasan untuk kami berangkat. Tim mengenakan kaos "Berbagi Kasih", memuat penuh beras dan minyak goreng, berkendara ke desa-desa paling terpencil. Tas sekolah, bola sepak, krayon, dan perlengkapan sekolah lainnya diserahkan langsung ke tangan anak-anak.
+              </p>
+              <p>
+                Bukan sekadar transfer dana. Ini adalah perjalanan melalui jalan berlumpur, memasuki rumah-rumah yang jarang dikunjungi orang luar. Beras dan minyak goreng di dalam mobil membawa bobot sebuah janji. Senyum anak-anak saat menerima tas sekolah baru terasa ringan, namun nilainya melampaui segala pencapaian bisnis.
+              </p>
               {{ else }}
               <p class="drop-cap">
                 <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">"The Forgotten Children"</a> — this documentary report's title was also the starting point of FYT's charitable mission. The team traveled deep into rural China, donating funds to schools, delivering cooking oil, rice, and daily necessities to families in need. Wearing charity t-shirts printed with "Spread the Love," they crossed mountains to hand school bags, footballs, crayons, and stationery directly to children.
@@ -81,21 +126,21 @@
             <div class="md:col-span-5">
               <div class="flex gap-2 mb-2 justify-center">
                 <figure>
-                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else }}Charity T-shirt{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
+                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else if eq .Language.Lang "vi" }}Áo từ thiện{{ else if eq .Language.Lang "th" }}เสื้อการกุศล{{ else if eq .Language.Lang "id" }}Kaos Amal{{ else }}Charity T-shirt{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
                 </figure>
                 <figure>
-                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural donations{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
+                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else if eq .Language.Lang "vi" }}Quyên góp nông thôn{{ else if eq .Language.Lang "th" }}บริจาคชนบท{{ else if eq .Language.Lang "id" }}Donasi Pedesaan{{ else }}Rural donations{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
                 </figure>
               </div>
               <div class="flex gap-2 justify-center">
                 <figure>
-                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}志愿者证{{ else }}Volunteer badge{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
+                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}志愿者证{{ else if eq .Language.Lang "vi" }}Thẻ tình nguyện{{ else if eq .Language.Lang "th" }}บัตรอาสาสมัคร{{ else if eq .Language.Lang "id" }}Kartu Sukarelawan{{ else }}Volunteer badge{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
                 </figure>
                 <figure>
-                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}孩子们{{ else }}Children{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
+                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}孩子们{{ else if eq .Language.Lang "vi" }}Các em nhỏ{{ else if eq .Language.Lang "th" }}เด็กๆ{{ else if eq .Language.Lang "id" }}Anak-anak{{ else }}Children{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
                 </figure>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠 · 把爱传出去{{ else }}Rural Donations · Spread the Love{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠 · 把爱传出去{{ else if eq .Language.Lang "vi" }}Quyên góp Nông thôn · Lan tỏa Yêu thương{{ else if eq .Language.Lang "th" }}บริจาคชนบท · ส่งต่อความรัก{{ else if eq .Language.Lang "id" }}Donasi Pedesaan · Berbagi Kasih{{ else }}Rural Donations · Spread the Love{{ end }}</span>
             </div>
           </div>
         </div>

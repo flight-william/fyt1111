@@ -5,10 +5,10 @@
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_o2o" }}</span>
       <div class="gold-line mb-2"></div>
-      <p class="heading-sub mb-1">{{ if eq .Language.Lang "zh" }}体验{{ else }}Experience{{ end }}</p>
+      <p class="heading-sub mb-1">{{ i18n "label_experience" }}</p>
       <h2 class="heading-display">
-        <a href="/{{ .Language.Lang }}/experience/">
-        {{ if eq .Language.Lang "zh" }}线上到<span class="text-gold">线下</span>{{ else }}Online to <span class="text-gold">Offline</span>{{ end }}
+        <a href="{{ "experience" | relLangURL }}">
+        {{ if eq .Language.Lang "zh" }}线上到<span class="text-gold">线下</span>{{ else if eq .Language.Lang "vi" }}Trực tuyến & <span class="text-gold">Thực tế</span>{{ else if eq .Language.Lang "th" }}จากมาเก๊า <span class="text-gold">สู่ออนไลน์</span>{{ else if eq .Language.Lang "id" }}Online ke <span class="text-gold">Offline</span>{{ else }}Online to <span class="text-gold">Offline</span>{{ end }}
         </a>
       </h2>
     </div>
@@ -25,16 +25,36 @@
                 <source data-src="/video/macau-tower.mp4" type="video/mp4">
               </video>
             </div>
-            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}五周年 · 澳门塔蹦极{{ else }}5th Anniversary · Macau Tower{{ end }}</span>
+            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}五周年 · 澳门塔蹦极{{ else if eq .Language.Lang "vi" }}Kỷ niệm 5 năm · Tháp Macau{{ else if eq .Language.Lang "th" }}ครบรอบ 5 ปี · มาเก๊าทาวเวอร์{{ else if eq .Language.Lang "id" }}Ulang Tahun ke-5 · Macau Tower{{ else }}5th Anniversary · Macau Tower{{ end }}</span>
           </div>
-          <div style="display: flex; gap: 1rem; align-items: flex-start;">
-            <div style="flex: 1; min-width: 0;">
+          <div>
               {{ if eq .Language.Lang "zh" }}
               <p class="drop-cap">
                 富易堂从不止步于屏幕。与澳门钜星集团的合作，将品牌杂志铺进了各大赌场VIP贵宾厅——线上到线下，走的是最短的那条路。
               </p>
               <p>
                 五周年，品牌带着贵宾站上澳门旅游塔，233米，纵身一跳——「一点都不难」从口号变成了肾上腺素。新加坡F1赛道同理：敢踩油门的人，不担心终点在哪。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p class="drop-cap">
+                FYT không bao giờ chỉ dừng lại ở màn hình. Quan hệ đối tác với tập đoàn Juxing Macau đã đưa tạp chí thương hiệu vào các phòng VIP sòng bạc lớn — rút ngắn khoảng cách từ trực tuyến đến thực tế.
+              </p>
+              <p>
+                Kỷ niệm 5 năm, thương hiệu đưa khách VIP đứng trên Tháp Macau, từ độ cao 233m, thực hiện cú nhảy bungy — "Không khó chút nào" đã chuyển từ khẩu hiệu thành cảm giác adrenaline mạnh mẽ.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p class="drop-cap">
+                FYT ไม่เคยหยุดอยู่เพียงแค่หน้าจอ ความร่วมมือกับ Juxing Group ในมาเก๊า ทำให้เราได้นำนิตยสารแบรนด์เข้าสู่เลาจน์ VIP ในคาสิโนชั้นนำ — นี่คือเส้นทางลัดจากโลกออนไลน์สู่โลกจริงอย่างสมบูรณ์แบบ
+              </p>
+              <p>
+                ในโอกาสครบรอบ 5 ปี เราพาแขก VIP ไปยังมาเก๊าทาวเวอร์ที่ความสูง 233 เมตร เพื่อพิสูจน์ว่า "ไม่ใช่เรื่องยากเลย" ด้วยการกระโดดบันจี้จัมพ์ที่น่าจดจำที่สุด
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p class="drop-cap">
+                FYT tidak pernah hanya diam di balik layar. Kemitraan dengan Juxing Group di Macau membawa majalah brand kami ke lounge VIP kasino terkemuka — ini adalah jalan pintas dari dunia online ke dunia nyata yang sempurna.
+              </p>
+              <p>
+                Pada ulang tahun ke-5, kami membawa tamu VIP ke Macau Tower pada ketinggian 233 meter untuk membuktikan bahwa "tidak sulit sama sekali" dengan bungy jump yang tak terlupakan.
               </p>
               {{ else }}
               <p class="drop-cap">
@@ -44,18 +64,19 @@
                 For the 5th anniversary, VIP guests were taken to Macau Tower for the 233-meter bungy jump — turning a tagline into a 10-second freefall. The Singapore F1 street circuit drive carried the same message: step up, and winning follows.
               </p>
               {{ end }}
-            </div>
-            <div style="flex: 0 0 220px;">
-              <figure style="max-height: 12vh; overflow: hidden;">
-                <img src="/images/macau-print.webp" alt="{{ if eq .Language.Lang "zh" }}澳门贵宾厅杂志{{ else }}Macau VIP lounge magazine{{ end }}" loading="lazy" class="w-full h-auto rounded-sm">
-              </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}澳门贵宾厅 · 杂志{{ else }}Macau VIP Lounge{{ end }}</span>
-            </div>
           </div>
         </div>
 
         {{/* Slide 2: Deeper partnership philosophy + experiential marketing */}}
         <div class="scroll-block">
+          <div class="flex justify-center mb-3">
+            <div style="max-width: 220px;">
+              <figure style="margin: 0;">
+                <img src="/images/macau-print.webp" alt="{{ if eq .Language.Lang "zh" }}澳门贵宾厅杂志{{ else if eq .Language.Lang "vi" }}Tạp chí phòng VIP Macau{{ else if eq .Language.Lang "th" }}นิตยสาร VIP มาเก๊า{{ else if eq .Language.Lang "id" }}Majalah Lounge VIP Macau{{ else }}Macau VIP lounge magazine{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 18vh; width: auto;">
+              </figure>
+              <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}澳门贵宾厅 · 杂志{{ else if eq .Language.Lang "vi" }}Macau VIP Lounge · Tạp chí{{ else if eq .Language.Lang "th" }}เลาจน์ VIP มาเก๊า · นิตยสาร{{ else if eq .Language.Lang "id" }}Lounge VIP Macau · Majalah{{ else }}Macau VIP Lounge{{ end }}</span>
+            </div>
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               {{ if eq .Language.Lang "zh" }}
@@ -64,6 +85,27 @@
               </p>
               <p>
                 站在塔顶那一刻，恐惧和兴奋其实是同一种东西。跳下去之后，所有人都明白了：看起来不可能的事，迈出第一步就不难了。新加坡F1赛道体验也一样——穿越滨海湾的那条传奇赛道，平日只属于顶级车手，那天属于我们的会员。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Trong các phòng VIP đặc quyền, tạp chí thương hiệu đặt cạnh những ấn phẩm thượng lưu. Không phô trương, sự hiện diện tinh tế dành cho những người sành sỏi. Bài học lớn nhất từ Juxing: trong dịch vụ VIP thực thụ, mỗi vị khách là một mối quan hệ, không phải một số tài khoản.
+              </p>
+              <p>
+                Đứng trên đỉnh tháp, sợ hãi và hưng phấn thực chất là một. Sau cú nhảy, ai cũng hiểu: những điều tưởng chừng không thể sẽ trở nên khả thi khi ta dám thực hiện bước đi đầu tiên. Trải nghiệm F1 Singapore cũng vậy — cung đường huyền thoại vốn chỉ dành cho tay đua chuyên nghiệp, ngày hôm ấy thuộc về các hội viên của chúng tôi.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                ในเลาจน์ VIP ที่จำกัดเฉพาะผู้ได้รับเชิญ นิตยสารของแบรนด์ถูกวางคู่กับนิตยสารไลฟ์สไตล์ระดับหรูโดยไม่มีการโฆษณาที่ฟุ่มเฟือย ความร่วมมือกับ Juxing สอนให้เรารู้ว่า: ในการบริการระดับ VIP ที่แท้จริง แขกทุกคนคือสายสัมพันธ์ที่สำคัญ ไม่ใช่เพียงหมายเลขบัญชี
+              </p>
+              <p>
+                เมื่อยืนอยู่บนยอดหอคอย ความกลัวและความตื่นเต้นคือสิ่งเดียวกัน แต่เมื่อกระโดดลงไปแล้วทุกคนจะเข้าใจว่า: สิ่งที่ดูเหมือนจะเป็นไปไม่ได้ จะกลายเป็นเรื่องง่ายเมื่อคุณก้าวเท้าแรกออกไป เช่นเดียวกับสนาม F1 สิงคโปร์ที่ปกติสงวนไว้สำหรับนักขับระดับโลก แต่วันนั้นมันเป็นของสมาชิกของเรา
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Di lounge VIP khusus undangan, majalah brand ditempatkan bersanding dengan publikasi gaya hidup premium. Tanpa gembar-gembor, kehadiran yang halus untuk mereka yang memahami. Pelajaran terbesar dari Juxing: dalam pelayanan VIP sejati, setiap tamu adalah sebuah hubungan, bukan sekadar nomor akun.
+              </p>
+              <p>
+                Berdiri di puncak menara, rasa takut dan kegembiraan sejatinya adalah satu. Setelah melompat, semua orang memahami: hal yang tampak mustahil menjadi mudah ketika Anda berani mengambil langkah pertama. Pengalaman F1 Singapura juga serupa — sirkuit jalan legendaris yang biasanya hanya untuk pembalap dunia, hari itu milik anggota kami.
               </p>
               {{ else }}
               <p>
@@ -82,6 +124,27 @@
               <p>
                 当屏幕上的横幅广告还是行业主流时，富易堂已经走了出去。这些体验后来成了品牌最值钱的东西——把澳门贵宾厅的待客之道搬进数字世界的起点。
               </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Nói ngàn lời "chúng tôi rất tốt" không bằng một lần để quý khách tự trải nghiệm. Sự tin tưởng giữa những người đã cùng nhau thực hiện cú nhảy 233m là thứ mà ngân sách quảng cáo không bao giờ mua được.
+              </p>
+              <p>
+                Khi quảng cáo biểu ngữ vẫn là xu hướng, FYT đã bước ra thế giới thực. Những trải nghiệm này là tài sản quý báu nhất — mỏ neo để đưa tiêu chuẩn phòng VIP Macau vào không gian số.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                การบอกว่า "เราดีแค่ไหน" นับพันครั้ง ไม่เท่ากับการให้คุณได้สัมผัสด้วยตนเอง ความไว้วางใจระหว่างคนที่เคยกระโดดจากความสูง 233 เมตรมาด้วยกัน คือสิ่งที่งบประมาณโฆษณาไม่สามารถสร้างขึ้นได้
+              </p>
+              <p>
+                ในยุคที่โฆษณาแบนเนอร์ยังเป็นกระแสหลัก FYT ได้ก้าวออกสู่โลกจริงแล้ว ประสบการณ์เหล่านี้กลายเป็นสินทรัพย์ที่มีค่าที่สุด และเป็นจุดเริ่มต้นของการนำวิถีการต้อนรับระดับมาเก๊าเข้าสู่โลกดิจิทัล
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Mengatakan seribu kali "kami sangat baik" tidak sebanding dengan satu kali membiarkan Anda merasakannya sendiri. Kepercayaan yang terbentuk setelah bersama-sama melompat dari ketinggian 233 meter bukanlah sesuatu yang bisa dibeli dengan anggaran iklan.
+              </p>
+              <p>
+                Ketika iklan banner masih mendominasi industri, FYT sudah melangkah ke dunia nyata. Pengalaman-pengalaman ini menjadi aset brand yang paling berharga — titik awal untuk membawa standar layanan VIP Macau ke ruang digital.
+              </p>
               {{ else }}
               <p>
                 The philosophy is simple: don't tell people how good you are — let them feel it. When a brand takes you 233 meters up and says "jump," the trust that follows is different from anything a banner ad can create.
@@ -94,7 +157,7 @@
           </div>
           <div class="mt-3">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}从新口岸的喧嚣到指尖的宁静，那份讲究的待客之道，从未改变。{{ else }}From the energy of Macau's NAPE to the serenity of your screen, the art of hospitality remains unchanged.{{ end }}
+              {{ if eq .Language.Lang "zh" }}贵宾厅有边界，待客之道没有。{{ else if eq .Language.Lang "vi" }}Phòng VIP có ranh giới, nhưng sự hiếu khách thì không.{{ else if eq .Language.Lang "th" }}เลาจน์ VIP มีขอบเขต แต่ศิลปะการต้อนรับนั้นไร้ขีดจำกัด{{ else if eq .Language.Lang "id" }}Lounge VIP memiliki batas, namun seni keramahtamahan tidak mengenal batas.{{ else }}From the energy of Macau's NAPE to the serenity of your screen, the art of hospitality remains unchanged.{{ end }}
             </div>
           </div>
         </div>

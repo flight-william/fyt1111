@@ -14,7 +14,7 @@
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="https://riche88.com/images/logo-fytbet.webp">
   <meta property="og:site_name" content="FYTBET">
-  <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else }}en_US{{ end }}">
+  <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else if eq .Language.Lang "vi" }}vi_VN{{ else if eq .Language.Lang "th" }}th_TH{{ else if eq .Language.Lang "id" }}id_ID{{ else }}en_US{{ end }}">
   {{/* Twitter Card */}}
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ .Title }}">
@@ -93,7 +93,7 @@
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "availableLanguage": ["Chinese", "English"]
+      "availableLanguage": ["Chinese", "English", "Vietnamese", "Thai", "Indonesian"]
     },
     "sameAs": [
       "https://fytbet.com",
@@ -112,7 +112,7 @@
     "name": "富易堂 FYTBET",
     "alternateName": ["Riche88", "FYT官网", "FYTBET Official"],
     "url": "https://riche88.com",
-    "inLanguage": ["zh-CN", "en"],
+    "inLanguage": ["zh-CN", "en", "vi", "th", "id"],
     "publisher": {
       "@type": "Organization",
       "name": "富易堂",
@@ -378,18 +378,28 @@
   </main>
 
   {{/* Footer */}}
-  <footer class="py-6 px-6 border-t border-fyt-subtle/30" style="min-height: auto; height: auto; scroll-snap-align: end;">
-    <div class="max-w-screen-lg mx-auto">
-      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] tracking-[0.2em] uppercase text-fyt-muted">
-        <a href="/{{ .Language.Lang }}/origin/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}溯源{{ else }}Origin{{ end }}</a>
-        <a href="/{{ .Language.Lang }}/experience/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}体验{{ else }}Experience{{ end }}</a>
-        <a href="/{{ .Language.Lang }}/mascot/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}阿富{{ else }}Ah Fu{{ end }}</a>
-        <a href="/{{ .Language.Lang }}/evolution/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}演变{{ else }}Evolution{{ end }}</a>
-        <a href="/{{ .Language.Lang }}/vip/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}贵宾{{ else }}VIP{{ end }}</a>
-        <a href="/{{ .Language.Lang }}/charity/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}公益{{ else }}Charity{{ end }}</a>
-        <a href="/{{ .Language.Lang }}/technology/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}技术{{ else }}Technology{{ end }}</a>
+  <footer class="px-6 pt-12 pb-8" style="min-height: auto; height: auto; scroll-snap-align: end;">
+    <div class="max-w-screen-md mx-auto">
+      {{/* Nav — horizontal with separators */}}
+      <nav class="flex flex-wrap justify-center items-center mb-10 text-[11px] tracking-[0.25em] uppercase">
+        {{ with .Site.GetPage (print .Language.Lang "/origin") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_origin" }}</a>{{ end }}
+        <span class="text-fyt-muted/15 mx-4">·</span>
+        {{ with .Site.GetPage (print .Language.Lang "/experience") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_experience" }}</a>{{ end }}
+        <span class="text-fyt-muted/15 mx-4">·</span>
+        {{ with .Site.GetPage (print .Language.Lang "/mascot") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_companion" }}</a>{{ end }}
+        <span class="text-fyt-muted/15 mx-4">·</span>
+        {{ with .Site.GetPage (print .Language.Lang "/evolution") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_evolution" }}</a>{{ end }}
+        <span class="text-fyt-muted/15 mx-4">·</span>
+        {{ with .Site.GetPage (print .Language.Lang "/vip") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_perks" }}</a>{{ end }}
+        <span class="text-fyt-muted/15 mx-4">·</span>
+        {{ with .Site.GetPage (print .Language.Lang "/charity") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_temperature" }}</a>{{ end }}
+        <span class="text-fyt-muted/15 mx-4">·</span>
+        {{ with .Site.GetPage (print .Language.Lang "/technology") }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_tech" }}</a>{{ end }}
       </nav>
-      <p class="text-center text-fyt-muted/40 text-[10px] mt-3 tracking-widest">© 2011–2026 FYTBET</p>
+      {{/* Separator — hairline */}}
+      <div class="w-12 h-px bg-fyt-muted/20 mx-auto mb-6"></div>
+      {{/* Copyright — whisper quiet */}}
+      <p class="text-center text-fyt-muted/25 text-[10px] tracking-[0.3em]">© 2011–2026 FYTBET</p>
     </div>
   </footer>
 

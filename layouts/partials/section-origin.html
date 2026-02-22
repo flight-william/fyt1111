@@ -5,10 +5,10 @@
     <div class="relative mb-4 reveal">
       <span class="vertical-label">{{ i18n "section_origin" }}</span>
       <div class="gold-line mb-4"></div>
-      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}溯源{{ else }}Origin{{ end }}</p>
+      <p class="heading-sub mb-2">{{ i18n "label_origin" }}</p>
       <h2 class="heading-display">
-        <a href="/{{ .Language.Lang }}/origin/">
-        {{ if eq .Language.Lang "zh" }}始于 <span class="text-gold">11.11.11</span>{{ else }}Since <span class="text-gold">11.11.11</span>{{ end }}
+        <a href="{{ "origin" | relLangURL }}">
+        {{ if eq $.Language.Lang "zh" }}始于 <span class="text-gold">11.11.11</span>{{ else if eq $.Language.Lang "vi" }}Từ <span class="text-gold">11.11.11</span>{{ else if eq $.Language.Lang "th" }}ตั้งแต่ <span class="text-gold">11.11.11</span>{{ else if eq $.Language.Lang "id" }}Sejak <span class="text-gold">11.11.11</span>{{ else }}Since <span class="text-gold">11.11.11</span>{{ end }}
         </a>
       </h2>
       <p class="mt-2 font-sans text-xs tracking-[0.5em] text-fyt-muted opacity-40">
@@ -25,7 +25,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/hero-banner-classic.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂经典横幅{{ else }}Classic FYT hero banner{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
+                <img src="/images/hero-banner-classic.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂经典横幅{{ else if eq .Language.Lang "vi" }}Banner FYT kinh điển{{ else if eq .Language.Lang "th" }}แบนเนอร์คลาสสิก FYT{{ else if eq .Language.Lang "id" }}Banner Klasik FYT{{ else }}Classic FYT hero banner{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
               </figure>
               <span class="artifact-caption block mt-1">{{ i18n "from_archives" }} · 2014</span>
             </div>
@@ -36,6 +36,27 @@
               </p>
               <p>
                 创立之初，隶属Cube集团旗下，与188BET同属一家。Cube持有马恩岛及菲律宾PAGCOR双重牌照，合规基础从第一天就打下了。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p class="drop-cap">
+                FYT ra đời vào lúc 11:11:11 sáng ngày 11 tháng 11 năm 2011 — thời điểm được gọi là "Ngày lễ độc thân thế kỷ". Cột mốc trăm năm có một này đã trở thành dấu ấn không thể phai mờ trong DNA của thương hiệu.
+              </p>
+              <p>
+                Ngay từ khi thành lập, FYT thuộc tập đoàn Cube, cùng một mái nhà với 188BET. Với giấy phép kép từ Đảo Man và PAGCOR, nền tảng tuân thủ đã được đặt vững chắc từ ngày đầu tiên.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p class="drop-cap">
+                FYT เปิดตัวเมื่อเวลา 11:11:11 น. ของวันที่ 11 พฤศจิกายน 2011 — ซึ่งเป็น "วันคนโสดแห่งศตวรรษ" ช่วงเวลาที่เกิดขึ้นเพียงครั้งเดียวในรอบร้อยปีนี้ ได้กลายเป็นเครื่องหมายที่ฝังลึกอยู่ใน DNA ของแบรนด์
+              </p>
+              <p>
+                ก่อตั้งภายใต้เครือ Cube Group เช่นเดียวกับ 188BET โดย FYT เริ่มต้นด้วยใบอนุญาตแบบคู่จาก Isle of Man และ PAGCOR รากฐานด้านการปฏิบัติตามกฎระเบียบจึงถูกวางไว้อย่างมั่นคงตั้งแต่วันแรก
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p class="drop-cap">
+                FYT diluncurkan pada pukul 11:11:11 pagi pada 11 November 2011 — "Hari Jomblo Abad Ini" yang hanya terjadi sekali dalam seratus tahun. Tanggal yang tak terlupakan ini telah menjadi tanda yang tak terhapuskan dalam DNA brand.
+              </p>
+              <p>
+                Lahir di bawah grup Cube bersama 188BET, FYT memulai dengan lisensi ganda dari Isle of Man dan PAGCOR sejak hari pertama. Landasan kepatuhan diletakkan bahkan sebelum pintu dibuka.
               </p>
               {{ else }}
               <p class="drop-cap">
@@ -49,7 +70,7 @@
           </div>
           <div class="mt-3">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}11.11.11 —— 一个世纪只会出现一次的重逢，也是我们约定的起点。{{ else }}11.11.11 — A numerical alignment that happens once a century, and the moment our promise began.{{ end }}
+              {{ if eq .Language.Lang "zh" }}11.11.11 —— 一个世纪只会出现一次的重逢，也是我们约定的起点。{{ else if eq .Language.Lang "vi" }}11.11.11 —— Một sự trùng hợp thế kỷ, và là khởi đầu cho lời hứa của chúng tôi.{{ else if eq .Language.Lang "th" }}11.11.11 — การบรรจบกันของตัวเลขที่เกิดขึ้นเพียงครั้งเดียวในรอบศตวรรษ และเป็นจุดเริ่มต้นของคำสัญญาของเรา{{ else if eq .Language.Lang "id" }}11.11.11 — Keselarasan angka yang hanya terjadi sekali dalam seabad, dan momen dimana janji kami dimulai.{{ else }}11.11.11 — A numerical alignment that happens once a century, and the moment our promise began.{{ end }}
             </div>
           </div>
         </div>
@@ -59,9 +80,9 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/website-v1-full.jpg" alt="{{ if eq .Language.Lang "zh" }}富易堂初版网站 · Cube集团{{ else }}Original Riche88 website · Cube group{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
+                <img src="/images/website-v1-full.jpg" alt="{{ if eq .Language.Lang "zh" }}富易堂初版网站 · Cube集团{{ else if eq .Language.Lang "vi" }}Nền tảng đầu tiên · Tập đoàn Cube{{ else if eq .Language.Lang "th" }}แพลตฟอร์มแรก · Cube Group{{ else if eq .Language.Lang "id" }}Situs web Riche88 asli · grup Cube{{ else }}Original Riche88 website · Cube group{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
               </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}初版平台 · Cube集团{{ else }}Original Platform · Cube Group{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}初版平台 · Cube集团{{ else if eq .Language.Lang "vi" }}Nền tảng đầu tiên · Tập đoàn Cube{{ else if eq .Language.Lang "th" }}แพลตฟอร์มแรก · Cube Group{{ else if eq .Language.Lang "id" }}Platform Asli · Grup Cube{{ else }}Original Platform · Cube Group{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
@@ -70,6 +91,27 @@
               </p>
               <p>
                 信任始于合规。马恩岛——全球公认的严格标准；<a href="/docs/fclrc-license.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">PAGCOR</a>——亚太市场的监管背书。双重资质在当年的行业里并不多见。制度信用这件事，急不来，也装不出来。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Tập đoàn Cube đã thâm nhập sâu vào thị trường giải trí Châu Á trong nhiều tahun, với thương hiệu nổi tiếng nhất là 188BET. Cùng một nguồn cội với 188BET, FYT ngay từ ngày đầu đã đứng trên một hệ thống vận hành trưởng thành.
+              </p>
+              <p>
+                Niềm tin bắt đầu từ sự tuân thủ. Đảo Man — tiêu chuẩn nghiêm ngặt được toàn cầu công nhận; <a href="/docs/fclrc-license.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">PAGCOR</a> — sự bảo chứng quản lý tại thị trường Châu Á - Thái Bình Dương. Chứng chỉ kép là điều hiếm thấy trong ngành vào thời điểm đó.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                Cube Group คร่ำหวอดในวงการเกมเอเชียมาหลายปี โดยมีชื่อที่โด่งดังที่สุดคือ 188BET เมื่อมาจากต้นกำเนิดเดียวกัน FYT จึงยืนอยู่บนระบบการดำเนินงานที่สมบูรณ์แบบตั้งแต่วันแรก
+              </p>
+              <p>
+                ความไว้วางใจเริ่มจากการปฏิบัติตามกฎระเบียบ Isle of Man — มาตรฐานเข้มงวดที่ทั่วโลกยอมรับ; <a href="/docs/fclrc-license.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">PAGCOR</a> — การรับรองจากหน่วยงานกำกับดูแลในเอเชียแปซิฟิก การถือใบอนุญาตคู่เป็นสิ่งที่หาได้ยากในอุตสาหกรรมยุคนั้น
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Cube adalah pemain besar dalam game Asia, dan 188BET adalah unggulannya — nama yang dikenali oleh setiap petaruh olahraga serius. Berbagi warisan itu memberi FYT operasional yang teruji dan sumber daya industri yang mendalam sejak awal.
+              </p>
+              <p>
+                Kepercayaan dimulai dengan kepatuhan. Isle of Man — diakui secara global untuk standar yang ketat. <a href="/docs/fclrc-license.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">PAGCOR</a> — cakupan regulasi Asia-Pasifik. Lisensi ganda bukanlah hal yang umum di tahun-tahun awal tersebut. Fondasi seperti itu tidak dibangun dalam semalam.
               </p>
               {{ else }}
               <p>
@@ -88,17 +130,38 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/forum-football-banner.gif" alt="{{ if eq .Language.Lang "zh" }}论坛时代广告横幅 · 我为足球而醉{{ else }}Forum-era banner · Passionate about football{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
+                <img src="/images/forum-football-banner.gif" alt="{{ if eq .Language.Lang "zh" }}论坛时代广告横幅 · 我为足球而醉{{ else if eq .Language.Lang "vi" }}Banner diễn đàn · Đam mê bóng đá{{ else if eq .Language.Lang "th" }}แบนเนอร์ยุคฟอรัม · หลงใหลในฟุตบอล{{ else if eq .Language.Lang "id" }}Banner Era Forum · Bergairah untuk Sepak Bola{{ else }}Forum-era banner · Passionate about football{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
               </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}论坛时代 · 我为足球而醉{{ else }}Forum Era · Passionate About Football{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}论坛时代 · 我为足球而醉{{ else if eq .Language.Lang "vi" }}Kỷ nguyên diễn đàn · Đam mê bóng đá{{ else if eq .Language.Lang "th" }}ยุคฟอรัม · หลงใหลในฟุตบอล{{ else if eq .Language.Lang "id" }}Era Forum · Bergairah untuk Sepak Bola{{ else }}Forum Era · Passionate About Football{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p>
-                中文论坛的黄金年代，富易堂泡在天朝、玩博、华人、贝博、海燕五大论坛里。不是投广告，是跟人聊天、回反馈、搞活动。口碑这东西，从来都是一帖一帖攒出来的。
+                中文论坛的黄金年代，富易堂泡在天朝、玩博、华人、贝博、海燕五大论坛里。没花一分广告费，全靠聊天、回帖、搞活动。口碑这东西，从来都是一帖一帖攒出来的。
               </p>
               <p>
-                品牌也在长大。富易堂 Riche88 变成了 FYTBET，口号从「要赢？一点都不难！」变成「让博彩成为娱乐」——从争胜到松弛，是十五年沉淀后的底气。名字在变，面孔在变，对会员的那份心没动过。
+                品牌也在长大。富易堂 Riche88 变成了 FYTBET，口号从「要赢？一点都不难！」变成「让博彩成为娱乐」——从争胜到松弛，十五年沉淀出来的松弛。名字在变，面孔在变，对会员的那份心没动过。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Trong thời hoàng kim của các diễn đàn, FYT đã hiện diện sâu sắc tại các cộng đồng lớn. Không tốn một đồng quảng cáo, tất cả dựa vào việc trò chuyện, phản hồi và tổ chức sự kiện. Uy tín luôn được tích lũy từ những tương tác chân thực nhất.
+              </p>
+              <p>
+                Thương hiệu cũng dần trưởng thành. Riche88 đã trở thành FYTBET, khẩu hiệu từ "Muốn thắng? Không khó chút nào!" chuyển thành "Biến giải trí thành nghệ thuật" — một sự chuyển mình sau 15 năm lắng đọng. Tên gọi thay đổi, diện mạo đổi thay, nhưng tâm huyết dành cho hội viên vẫn vẹn nguyên.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                ในยุคทองของฟอรัมภาษาจีน FYT มีส่วนร่วมในชุมชนหลักๆ มากมาย โดยไม่ต้องเสียค่าโฆษณาแม้แต่หยวนเดียว แต่เน้นที่การพูดคุย ตอบกระทู้ และจัดกิจกรรม ชื่อเสียงและความเชื่อมั่นถูกสร้างขึ้นทีละโพสต์จากการมีส่วนร่วมอย่างจริงจัง
+              </p>
+              <p>
+                แบรนด์มีการเติบโตขึ้นเช่นกัน จาก Riche88 สู่ FYTBET และสโลแกนจาก "อยากชนะ? ไม่ใช่เรื่องยากเลย!" เป็น "ให้การเดิมพันคือความบันเทิง" — เป็นความสุขุมที่ตกตะกอนมาตลอด 15 ปี แม้ชื่อและภาพลักษณ์จะเปลี่ยนไป แต่ความใส่ใจที่มีให้สมาชิกยังคงเหมือนเดิม
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Di masa keemasan forum berbahasa Mandarin, FYT hadir aktif di komunitas-komunitas utama. Tanpa mengeluarkan sepeser pun untuk iklan, semua dibangun melalui percakapan, balasan, dan penyelenggaraan acara. Reputasi dibangun secara organik, satu postingan demi satu postingan.
+              </p>
+              <p>
+                Brand pun bertumbuh. Dari Riche88 menjadi FYTBET, slogan dari "Mau menang? Tidak sulit sama sekali!" berubah menjadi "Dimana Taruhan Menjadi Hiburan" — sebuah kedewasaan yang terbentuk selama 15 tahun. Nama dan tampilan berubah, namun komitmen kepada anggota tetap utuh.
               </p>
               {{ else }}
               <p>

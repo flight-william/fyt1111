@@ -5,10 +5,10 @@
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_vip" }}</span>
       <div class="gold-line mb-3"></div>
-      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}礼遇{{ else }}Experience{{ end }}</p>
+      <p class="heading-sub mb-2">{{ i18n "label_perks" }}</p>
       <h2 class="heading-display">
-        <a href="/{{ .Language.Lang }}/vip/">
-        {{ if eq .Language.Lang "zh" }}<span class="text-gold">贵宾</span>之道{{ else }}The <span class="text-gold">VIP</span> Way{{ end }}
+        <a href="{{ "vip" | relLangURL }}">
+        {{ if eq .Language.Lang "zh" }}<span class="text-gold">贵宾</span>之道{{ else if eq .Language.Lang "vi" }}Trải nghiệm <span class="text-gold">VIP</span>{{ else if eq .Language.Lang "th" }}วิถีแห่ง <span class="text-gold">VIP</span>{{ else if eq .Language.Lang "id" }}Cara <span class="text-gold">VIP</span>{{ else }}The <span class="text-gold">VIP</span> Way{{ end }}
         </a>
       </h2>
     </div>
@@ -19,97 +19,103 @@
 
         {{/* Slide 1: VIP philosophy + Haig Club gifting */}}
         <div class="scroll-block">
-          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
-            <div style="flex: 0 0 40%;">
+          <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-start">
+            <div class="w-full md:w-2/5 md:flex-shrink-0">
               <figure>
-                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 30vh; width: auto;">
+                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else if eq .Language.Lang "vi" }}Thiệp VIP Năm Mới Haig Club{{ else if eq .Language.Lang "th" }}การ์ดปีใหม่ VIP Haig Club{{ else if eq .Language.Lang "id" }}Kartu Tahun Baru VIP Haig Club{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 30vh; width: auto;">
               </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Haig Club · 40年限量威士忌{{ else }}Haig Club · 40-Year Limited Edition{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Haig Club · 限量威士忌{{ else if eq .Language.Lang "vi" }}Haig Club · Phiên bản Giới hạn{{ else if eq .Language.Lang "th" }}Haig Club · รุ่นจำกัด{{ else if eq .Language.Lang "id" }}Haig Club · Edisi Terbatas{{ else }}Haig Club · Limited Edition{{ end }}</span>
             </div>
-            <div style="flex: 1; min-width: 0;">
+            <div class="min-w-0">
               <div class="mb-3">
                 <div class="pull-quote text-lg md:text-xl tracking-[0.15em]">
-                  {{ if eq .Language.Lang "zh" }}小大由之 · 富在知足 —— 真正的奢华，往往是不动声色的。{{ else }}Contentment is the ultimate wealth — for true luxury is often found in silence.{{ end }}
+                  {{ if eq .Language.Lang "zh" }}小大由之 · 富在知足 —— 真正的奢华，往往是不动声色的。{{ else if eq .Language.Lang "vi" }}Tiểu Đại Do Chi · Phú Tại Tri Túc —— Sự xa hoa thực sự thường nằm trong tĩnh lặng.{{ else if eq .Language.Lang "th" }}ความพอใจคือความมั่งคั่งที่แท้จริง —— ความหรูหราที่แท้จริง มักถูกพบในความเงียบสงบ{{ else if eq .Language.Lang "id" }}Kepuasan adalah kekayaan sejati — kemewahan yang sesungguhnya sering ditemukan dalam keheningan.{{ else }}Contentment is the ultimate wealth — for true luxury is often found in silence.{{ end }}
                 </div>
               </div>
               {{ if eq .Language.Lang "zh" }}
               <p>
-                贵宾之道，从澳门开始。与钜星集团的合作，把贵宾厅里那套待客的讲究，写进了品牌的骨子里。233米蹦极、F1赛道——不只是活动，是和每位贵宾之间一次真正的交心。
+                贵宾之道，说到底是一种眼光——看得出谁值得被认真对待。十五年只做一件事：把最好的留给最懂的人。
               </p>
               <p>
-                新年礼是一瓶Haig Club限量40年苏格兰威士忌，手工吹制水晶瓶装。送的不是酒，是一句不用说出口的话：你不是账号，是我们记挂的人。这份心意，如今搬到了线上，分量没变。
+                新年礼是一瓶Haig Club限量苏格兰威士忌——Beckham代言的牌子。选什么酒，看的是对面坐着什么人。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Trải nghiệm VIP, suy cho cùng là một tầm nhìn — nhận ra ai xứng đáng được đối đãi chân thành. 15 năm chỉ làm một việc: dành những gì tốt nhất cho những người am hiểu nhất.
+              </p>
+              <p>
+                Quà năm mới là chai Haig Club Scotch Whisky bản giới hạn — thương hiệu do Beckham đại diện. Chọn loại rượu nào, thể hiện sự trân trọng dành cho người nhận nấy.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                วิถีแห่ง VIP คือวิสัยทัศน์ที่รู้ว่าใครควรได้รับการดูแลอย่างจริงใจ ตลอด 15 ปี เรามุ่งมั่นในสิ่งเดียวคือ การมอบสิ่งที่ดีที่สุดให้กับผู้ที่รู้จริงที่สุด
+              </p>
+              <p>
+                ของขวัญปีใหม่คือวิสกี้ Haig Club รุ่นจำกัด ซึ่งมีเดวิด เบ็คแฮม เป็นพรีเซนเตอร์ การเลือกของขวัญที่ประณีตสะท้อนถึงระดับของแขกผู้มีเกียรติที่เราดูแล
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Cara VIP dimulai di Macau. Bekerja bersama tim concierge Juxing mengajarkan FYT arti keramahtamahan sejati — dan DNA itu kini mengalir dalam segala hal yang dilakukan platform, baik online maupun offline.
+              </p>
+              <p>
+                Untuk Tahun Baru, anggota VIP menerima Haig Club Scotch whisky edisi terbatas — brand yang didukung Beckham. Pilihan hadiah mencerminkan bagaimana brand memandang para tamunya.
               </p>
               {{ else }}
               <p>
                 The VIP way started in Macau. Working alongside Juxing's concierge team taught FYT what real hospitality looks like — and that DNA now runs through everything the platform does, online and off.
               </p>
               <p>
-                For New Year, VIP members received a limited edition Haig Club 40-year single grain Scotch in a handblown crystal decanter. Not a promotion — a gesture. The kind of care that treats every member as a guest, not a number.
+                For New Year, VIP members received a limited edition Haig Club Scotch whisky — the Beckham-endorsed brand. The choice of gift says everything about how the brand sees its guests.
               </p>
               {{ end }}
             </div>
           </div>
         </div>
 
-        {{/* Slide 2: Experiential events — Macau Tower + Singapore F1 */}}
+        {{/* Slide 2: Marvel collector figures — VIP gifting */}}
         <div class="scroll-block">
-          <div class="mb-2">
-            <div class="auto-video-section mx-auto" style="max-height: 30vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
-              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="/video/singapore-f1-poster.jpg" class="w-full h-full object-cover">
-                <source data-src="/video/singapore-f1.mp4" type="video/mp4">
-              </video>
-            </div>
-            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}勇者无惧 · 新加坡F1赛道体验{{ else }}No Fear · Singapore F1 Circuit Experience{{ end }}</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              {{ if eq .Language.Lang "zh" }}
-              <p>
-                「一点都不难」——说容易，做到是另一回事。五周年，贵宾们站上澳门塔233米高空，纵身一跃，口号变成了记忆。敢跳，就赢了。
-              </p>
-              {{ else }}
-              <p>
-                "Want to win? It's not hard at all!" — not just a slogan, but a real challenge for VIP guests. For the 5th anniversary, members were taken to the top of Macau Tower for the 233-meter bungy jump. If you dare, you win.
-              </p>
-              {{ end }}
-            </div>
-            <div>
-              {{ if eq .Language.Lang "zh" }}
-              <p>
-                新加坡F1夜间赛道，滨海湾的灯光在引擎声里飞速后退。这不是促销活动——是富易堂的待客方式：让你亲手把不可能变成可能。
-              </p>
-              {{ else }}
-              <p>
-                The Singapore F1 street circuit experience was equally unforgettable — VIP guests drove the actual Marina Bay circuit, feeling the thrill of F1-level speed under city lights. These aren't standard promotions. They're experiences only FYT would create: making the impossible feel effortless.
-              </p>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-
-        {{/* Slide 3: Marvel collector figures — VIP gifting */}}
-        <div class="scroll-block">
-          <div class="flex justify-center gap-3 mb-2">
-            <figure>
-              <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+          <div class="flex flex-wrap justify-center gap-3 mb-2">
+            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
+              <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
-            <figure>
-              <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
+              <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
-            <figure>
-              <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
+              <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
-            <figure>
-              <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
+              <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
             </figure>
           </div>
-          <span class="artifact-caption block mb-2 text-center">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
+          <span class="artifact-caption block mb-2 text-center">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else if eq .Language.Lang "vi" }}Bộ sưu tập Marvel · Dành riêng cho hội viên{{ else if eq .Language.Lang "th" }}Marvel Collector Series · สำหรับสมาชิกเท่านั้น{{ else if eq .Language.Lang "id" }}Seri Kolektor Marvel · Khusus Anggota{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
           {{ if eq .Language.Lang "zh" }}
           <p>
             礼物的心思不止一种。Marvel珍藏系列——雷神、钢铁侠、美国队长、绿巨人，Dragon正版授权，限量发放，凭打码量兑换。摆在书架上的手办，比任何促销短信都有温度。
           </p>
           <p>
-            从40年威士忌到Marvel手办，从金箔扑克到阿富纪念杯——每一件都是挑过的，不是批量生产的赠品。背后不是营销预算在说话，是品牌和老会员之间多年的默契。
+            从Haig Club威士忌到Marvel手办，从金箔扑克到阿富纪念杯——件件挑过，件件限量。十五年年年送，凭的是品牌和老会员之间的默契。
+          </p>
+          {{ else if eq .Language.Lang "vi" }}
+          <p>
+            Quà tặng luôn mang theo tâm ý. Bộ sưu tập Marvel — Thor, Iron Man, Captain America, Hulk — bản quyền từ Dragon, phát hành giới hạn. Một mô hình trên kệ sách luôn mang lại hơi ấm hơn bất kỳ tin nhắn quảng cáo nào.
+          </p>
+          <p>
+            Từ rượu Haig Club đến mô hình Marvel, từ bài mạ vàng đến cốc kỷ niệm — mỗi món đồ đều được tuyển chọn kỹ lưỡng. Suốt 15 năm, sự tri ân này dựa trên niềm tin giữa thương hiệu và các hội viên lâu năm.
+          </p>
+          {{ else if eq .Language.Lang "th" }}
+          <p>
+            ความใส่ใจในของขวัญมีหลากหลายรูปแบบ ชุดสะสม Marvel — Thor, Iron Man, Captain America, Hulk ลิขสิทธิ์แท้จาก Dragon มอบให้สมาชิกเป็นพิเศษ ของสะสมบนชั้นวางสื่อถึงความผูกพันได้ดีกว่าข้อความโฆษณาใดๆ
+          </p>
+          <p>
+            ตั้งแต่วิสกี้ Haig Club ไปจนถึงโมเดล Marvel และไพ่เคลือบทอง ทุกชิ้นผ่านการคัดสรรและเป็นรุ่นจำกัด ตลอด 15 ปีเรามอบสิ่งเหล่านี้ด้วยความเข้าใจและความสัมพันธ์ที่แน่นแฟ้นกับสมาชิกเก่าแก่ของเรา
+          </p>
+          {{ else if eq .Language.Lang "id" }}
+          <p>
+            Hadiah VIP melampaui Haig Club. FYT menawarkan seri kolektor pahlawan Marvel kepada anggota aktif — model Dragon berlisensi resmi dari Thor, Iron Man, Captain America, dan Hulk. Setiap figur edisi terbatas, diperoleh melalui pencapaian turnover. Ucapan terima kasih yang dipajang di rak buku Anda, bukan di folder spam.
+          </p>
+          <p>
+            Dari whisky edisi terbatas hingga figur Marvel, kartu remi lapis emas hingga mug anniversary — setiap hadiah dikurasi, bukan diproduksi massal. Ini bukan promosi. Ini adalah pemahaman diam-diam antara brand dan orang-orang yang mempercayainya.
           </p>
           {{ else }}
           <p>
@@ -121,7 +127,7 @@
           {{ end }}
         </div>
 
-        {{/* Slide 4: VIP exclusive gifting & perks */}}
+        {{/* Slide 3: VIP exclusive gifting & perks */}}
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
@@ -133,15 +139,36 @@
                   <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
                 </figure>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}金箔扑克 · 只赠不卖{{ else }}Gold Foil Poker · Gift Only{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}金箔扑克 · 只赠不卖{{ else if eq .Language.Lang "vi" }}Bài mạ vàng · Chỉ tặng không bán{{ else if eq .Language.Lang "th" }}ไพ่เคลือบทอง · สำหรับมอบให้เท่านั้น{{ else if eq .Language.Lang "id" }}Kartu Remi Lapis Emas · Hanya untuk Hadiah{{ else }}Gold Foil Poker · Gift Only{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p>
-                每年春节，一尊生肖限定的黄金阿富——金马、金羊、金猴，年年不同，只赠VIP。金箔扑克、名酒、定制表带，件件只送不卖。不是赠品，是平台记得你的方式。
+                每年春节，一尊生肖限定的黄金阿富——金马、金羊、金猴，年年不同，只赠VIP。金箔扑克、名酒、定制表带，件件只送不卖。件件只送不卖——买不到的东西，才配叫礼物。
               </p>
               <p>
-                线上的VIP俱乐部延续着同样的讲究：每日签到、幸运红包、好友推荐、扭蛋惊喜。形式变了，那份把会员放在心上的习惯，没变。
+                线上VIP俱乐部也没闲着：每日签到、幸运红包、好友推荐、扭蛋惊喜。形式变了，把会员放在心上这件事，没变。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Mỗi dịp Tết, một bức tượng Ah Fu vàng bản giới hạn theo con giáp được gửi trao. Những vật phẩm như bài mạ vàng hay dây đeo đồng hồ đều là hàng "chỉ tặng không bán" — vì những thứ không thể mua được mới xứng đáng là món quà thực sự.
+              </p>
+              <p>
+                Câu lạc bộ VIP trực tuyến vẫn luôn sôi động: điểm danh hàng ngày, hồng bao may mắn, giới thiệu bạn bè. Hình thức có thể thay đổi, nhưng sự trân trọng dành cho hội viên thì không bao giờ đổi thay.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                ทุกตรุษจีน รูปปั้นทองคำ Ah Fu รุ่นจำกัดตามปีนักษัตรจะถูกมอบให้สมาชิก VIP ไพ่เคลือบทองและสายนาฬิกาสั่งทำพิเศษ ล้วนเป็นของที่หาซื้อไม่ได้ เพราะของที่ประเมินค่าไม่ได้เท่านั้นที่คู่ควรกับการเป็นของขวัญ
+              </p>
+              <p>
+                VIP Club ออนไลน์ยังคงมอบสิ่งดีๆ อย่างต่อเนื่อง ทั้งการเช็คอินรายวัน อั่งเปานำโชค และการแนะนำเพื่อน แม้รูปแบบจะเปลี่ยนไป แต่ความใส่ใจที่แบรนด์มีให้สมาชิกยังคงเหมือนเดิมไม่เปลี่ยนแปลง
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Setiap Tahun Baru Imlek, patung emas Ah Fu edisi terbatas shio — Kuda Emas, Kambing Emas, Monyet Emas — dibagikan khusus untuk VIP. Kartu remi lapis emas, minuman premium, tali jam tangan kustom, semuanya hanya diberikan dan tidak dijual. Sesuatu yang tidak bisa dibeli adalah hadiah yang sesungguhnya.
+              </p>
+              <p>
+                VIP Club online pun tetap aktif: absensi harian, angpao keberuntungan, referensi teman, hingga kejutan gacha. Bentuknya mungkin berubah, namun komitmen untuk selalu mengutamakan anggota tidak pernah berubah.
               </p>
               {{ else }}
               <p>

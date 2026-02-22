@@ -5,10 +5,10 @@
     <div class="relative mb-4 reveal">
       <span class="vertical-label">{{ i18n "section_platform" }}</span>
       <div class="gold-line mb-4"></div>
-      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}底气{{ else }}Technology{{ end }}</p>
+      <p class="heading-sub mb-2">{{ i18n "label_tech" }}</p>
       <h2 class="heading-display">
-        <a href="/{{ .Language.Lang }}/technology/">
-        {{ if eq .Language.Lang "zh" }}自研 · <span class="text-gold">自建</span>{{ else }}<span class="text-gold">Built</span>, Not Bought{{ end }}
+        <a href="{{ "technology" | relLangURL }}">
+        {{ if eq .Language.Lang "zh" }}自研 · <span class="text-gold">自建</span>{{ else if eq .Language.Lang "vi" }}Tự phát triển · <span class="text-gold">Nội bộ</span>{{ else if eq .Language.Lang "th" }}สร้างด้วย <span class="text-gold">มือเรา</span>{{ else if eq .Language.Lang "id" }}<span class="text-gold">Dibangun</span> Mandiri{{ else }}<span class="text-gold">Built</span>, Not Bought{{ end }}
         </a>
       </h2>
     </div>
@@ -26,7 +26,28 @@
                 你的数据安全和使用体验，是这里最不让步的底线。全套系统自主研发——前端、后端、基础架构，从头到尾自己写。不套壳，不贴牌。代码在自己手里，你的信息才真正只属于你。
               </p>
               <p>
-                自研还有一个好处：想到就能做。富贵保就是证明——100%投注保险，赢了照拿，输了隔天返还。这东西必须从底层开始造，没有捷径。四大体育平台一站聚齐：小金体育（188BET底蕴）、Pinnacle（全球最锐赔率）、InPlay Matrix（滚球专家）、PM体育——比完再下注，不用到处跑。
+                自研还有一个好处：想到就能做。富贵保就是证明——100%投注保险，赢了照拿，输了隔天返还。四大体育引擎并行，同一场比赛四个赔率摆在你面前。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p class="drop-cap">
+                An toàn dữ liệu và trải nghiệm của quý khách là giới hạn không thể nhân nhượng. Toàn bộ hệ thống được tự phát triển — từ giao diện, máy chủ đến hạ tầng. Không mượn vỏ, không dán nhãn. Khi mã nguồn trong tay chúng tôi, thông tin của quý khách mới thực sự an toàn.
+              </p>
+              <p>
+                Tự phát triển còn có ưu điểm: Hiện thực hóa mọi ý tưởng. Fortune Insurance là minh chứng — bảo hiểm cược 100%, thắng nhận đủ, thua hoàn tiền vào ngày mai. 4 sảnh thể thao song hành, 4 tỷ lệ cược cho cùng một trận đấu ngay trước mắt quý khách.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p class="drop-cap">
+                ความปลอดภัยของข้อมูลและประสบการณ์การใช้งาน คือสิ่งที่เราให้ความสำคัญสูงสุด ระบบทั้งหมดพัฒนาขึ้นเองภายในบริษัท — ทั้งหน้าบ้าน หลังบ้าน และโครงสร้างพื้นฐาน เมื่อโค้ดอยู่ในมือเรา ข้อมูลของคุณจึงเป็นส่วนตัวและปลอดภัยอย่างแท้จริง
+              </p>
+              <p>
+                การพัฒนาเองยังทำให้เราสร้างสรรค์ฟีเจอร์ได้ทันที Fortune Insurance คือข้อพิสูจน์ — ประกันเดิมพัน 100% ชนะรับเต็ม แพ้คืนทุนในวันถัดไป พร้อม 4 แพลตฟอร์มกีฬาที่ให้คุณเปรียบเทียบราคาค่าน้ำได้ในที่เดียว
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p class="drop-cap">
+                Keamanan data dan pengalaman pengguna adalah batas yang tidak bisa ditawar. Seluruh sistem kami dikembangkan secara internal — dari front-end, backend, hingga infrastruktur. Tidak ada pihak ketiga, tidak ada label putih. Ketika kode ada di tangan kami, informasi Anda benar-benar aman.
+              </p>
+              <p>
+                Pengembangan mandiri juga berarti kami bisa mewujudkan ide apapun. Fortune Insurance adalah buktinya — asuransi taruhan 100%, menang tetap untung, kalah modal kembali esok hari. Kami menghadirkan 4 mesin olahraga sekaligus agar Anda dapat membandingkan odds secara langsung.
               </p>
               {{ else }}
               <p class="drop-cap">
@@ -39,14 +60,14 @@
             </div>
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else }}Fortune Insurance{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
+                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else if eq .Language.Lang "vi" }}Fortune Insurance{{ else if eq .Language.Lang "th" }}Fortune Insurance{{ else if eq .Language.Lang "id" }}Fortune Insurance{{ else }}Fortune Insurance{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
               </figure>
-              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 独创福利{{ else }}Fortune Insurance · Proprietary{{ end }}</span>
+              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 独创福利{{ else if eq .Language.Lang "vi" }}Fortune Insurance · Đặc quyền độc quyền{{ else if eq .Language.Lang "th" }}Fortune Insurance · เอกสิทธิ์เฉพาะเรา{{ else if eq .Language.Lang "id" }}Fortune Insurance · Keunggulan Eksklusif{{ else }}Fortune Insurance · Proprietary{{ end }}</span>
             </div>
           </div>
           <div class="mt-3">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}最顶级的安全是不动声色的守护 —— 每一行代码，都是我们亲手筑起的护城河。{{ else }}The ultimate security is the protection you never notice — every line of code is a moat we built for you.{{ end }}
+              {{ if eq .Language.Lang "zh" }}代码在自己手里，你的数据才只属于你。{{ else if eq .Language.Lang "vi" }}Khi mã nguồn trong tay chúng tôi, dữ liệu của bạn mới thực sự thuộc về bạn.{{ else if eq .Language.Lang "th" }}เมื่อโค้ดอยู่ในมือเรา ข้อมูลของคุณจึงเป็นของคุณอย่างแท้จริง{{ else if eq .Language.Lang "id" }}Ketika kode ada di tangan kami, data Anda benar-benar milik Anda.{{ else }}The ultimate security is the protection you never notice — every line of code is a moat we built for you.{{ end }}
             </div>
           </div>
         </div>
@@ -60,7 +81,28 @@
                 体育之外，一站全有。真人荷官、老虎机、电竞、棋牌、彩票、捕鱼——一个账户，一个APP，不用在不同平台之间来回折腾。
               </p>
               <p>
-                充值、下注、提款，一气呵成。这背后是全栈自研团队的底气——想到的功能，说上就上，节奏自己定。
+                充值、下注、提款，一气呵成。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Ngoài thể thao, tất cả hội tụ tại một điểm. Sòng bạc trực tiếp, nổ hũ, eSports, game bài, xổ số, bắn cá — chỉ một tài khoản, một ứng dụng, không cần chuyển đổi phức tạp giữa các nền tảng.
+              </p>
+              <p>
+                Nạp tiền, đặt cược, rút tiền — tất cả diễn ra mượt mà trong một quy trình duy nhất.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                นอกเหนือจากกีฬา เรามีบริการครบวงจรในที่เดียว ทั้งคาสิโนสด สล็อต อีสปอร์ต เกมไพ่ หวย และเกมยิงปลา — เพียงบัญชีเดียว แอปเดียว ไม่ต้องโยกเงินหรือสลับแพลตฟอร์มให้วุ่นวาย
+              </p>
+              <p>
+                ฝาก เดิมพัน ถอน ครบจบในที่เดียวอย่างราบรื่นที่สุด
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Di luar olahraga, semua tersedia di sini. Live casino, slot, eSports, permainan kartu, lotere, dan fish hunter — satu akun, satu aplikasi, tanpa perlu berpindah-pindah platform.
+              </p>
+              <p>
+                Deposit, taruhan, penarikan — semua berjalan mulus dalam satu alur.
               </p>
               {{ else }}
               <p>
@@ -73,15 +115,27 @@
             </div>
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
+                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else if eq .Language.Lang "vi" }}Nền tảng FYTBET{{ else if eq .Language.Lang "th" }}แพลตฟอร์ม FYTBET{{ else if eq .Language.Lang "id" }}Platform FYTBET{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
               </figure>
-              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}FYTBET · 桌面平台{{ else }}FYTBET · Desktop{{ end }}</span>
+              <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}FYTBET · 桌面平台{{ else if eq .Language.Lang "vi" }}FYTBET · Nền tảng máy tính{{ else if eq .Language.Lang "th" }}FYTBET · แพลตฟอร์มเดสก์ท็อป{{ else if eq .Language.Lang "id" }}FYTBET · Platform Desktop{{ else }}FYTBET · Desktop{{ end }}</span>
             </div>
           </div>
           <div class="mt-3">
             {{ if eq .Language.Lang "zh" }}
             <p>
               出入金七条路：USDT快且私密，支付宝微信秒到，数字人民币紧跟前沿，购宝EBpay灵活，银行转账稳妥。你习惯哪种就用哪种，平台不替你选。
+            </p>
+            {{ else if eq .Language.Lang "vi" }}
+            <p>
+              7 kênh nạp rút: USDT nhanh chóng và riêng tư, Alipay/WeChat nhận ngay tức thì, Nhân dân tệ số tiên phong, GBPay/EBpay linh hoạt, chuyển khoản ngân hàng ổn định. Quý khách hãy chọn phương thức quen thuộc nhất, chúng tôi luôn sẵn sàng hỗ trợ.
+            </p>
+            {{ else if eq .Language.Lang "th" }}
+            <p>
+              7 ช่องทางธุรกรรม: USDT รวดเร็วและเป็นส่วนตัว, Alipay/WeChat ปรับยอดทันที, ดิจิทัลหยวนที่ทันสมัย, GBPay/EBpay ที่ยืดหยุ่น และการโอนเงินธนาคารที่มั่นคง เลือกใช้ตามความถนัดของคุณ เราพร้อมรองรับทุกรูปแบบ
+            </p>
+            {{ else if eq .Language.Lang "id" }}
+            <p>
+              Tujuh jalur transaksi: USDT yang cepat dan privat, Alipay/WeChat instan, Yuan digital yang terdepan, GBPay/EBpay yang fleksibel, dan transfer bank yang stabil. Gunakan metode yang paling Anda sukai, platform siap mendukung semuanya.
             </p>
             {{ else }}
             <p>

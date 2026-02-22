@@ -5,10 +5,10 @@
     <div class="relative mb-4 reveal">
       <span class="vertical-label">{{ i18n "section_mascot" }}</span>
       <div class="gold-line mb-4"></div>
-      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}匠心{{ else }}Craft{{ end }}</p>
+      <p class="heading-sub mb-2">{{ i18n "label_companion" }}</p>
       <h2 class="heading-display">
-        <a href="/{{ .Language.Lang }}/mascot/">
-        {{ if eq .Language.Lang "zh" }}认识<span class="text-gold">阿富</span>{{ else }}Meet <span class="text-gold">Ah Fu</span>{{ end }}
+        <a href="{{ "mascot" | relLangURL }}">
+        {{ if eq .Language.Lang "zh" }}认识<span class="text-gold">阿富</span>{{ else if eq .Language.Lang "vi" }}Gặp gỡ <span class="text-gold">Ah Fu</span>{{ else if eq .Language.Lang "th" }}รู้จักกับ <span class="text-gold">Ah Fu</span>{{ else if eq .Language.Lang "id" }}Kenali <span class="text-gold">Ah Fu</span>{{ else }}Meet <span class="text-gold">Ah Fu</span>{{ end }}
         </a>
       </h2>
     </div>
@@ -33,6 +33,27 @@
               <p>
                 阿富不只活在屏幕上。他出现在慈善足球赛的现场，出现在会员的聊天表情包里。认识阿富的人不需要多解释——他是圈里人才懂的那个默契。
               </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p class="drop-cap">
+                Năm 2015, Ah Fu đã xuất hiện. Mái tóc xoăn màu nâu, quần yếm đỏ, chữ "Phú" trước ngực — cậu bé hoạt hình tinh nghịch này từ đó đã trở thành biểu tượng thương hiệu của riêng FYT.
+              </p>
+              <p>
+                Ah Fu không chỉ sống trên màn hình. Cậu xuất hiện tại sân bóng từ thiện, trong các bộ nhãn dán trò chuyện của hội viên. Với những người đã biết Ah Fu, mọi lời giải thích đều thừa thãi.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p class="drop-cap">
+                ในปี 2015 Ah Fu ได้ถือกำเนิดขึ้น ผมลอนสีน้ำตาล กางเกงเอี๊ยมสีแดง และตัวอักษร "ฟู่" ที่หน้าอก — เด็กชายตัวการ์ตูนสุดทะเล้นคนนี้ ได้กลายเป็นสัญลักษณ์ประจำแบรนด์ของ FYT ตั้งแต่นั้นมา
+              </p>
+              <p>
+                Ah Fu ไม่ได้มีตัวตนอยู่เพียงแค่บนหน้าจอเท่านั้น เขาปรากฏตัวในงานฟุตบอลการกุศล และในสติกเกอร์ที่สมาชิกใช้ส่งถึงกัน สำหรับคนที่รู้จัก Ah Fu อยู่แล้ว เขาคือความเข้าใจที่รู้กันโดยไม่ต้องอธิบาย
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p class="drop-cap">
+                Tahun 2015, Ah Fu lahir. Rambut ikal cokelat, celana merah, dan karakter "Fu" di dadanya — anak laki-laki kartun yang ceria ini sejak saat itu menjadi simbol brand resmi FYT.
+              </p>
+              <p>
+                Ah Fu tidak hanya hidup di layar. Ia hadir di lapangan sepak bola amal, dan dalam set stiker chat para anggota. Bagi mereka yang mengenal Ah Fu, tidak perlu penjelasan lebih lanjut — ia adalah kesepahaman yang hanya dimengerti oleh komunitas ini.
+              </p>
               {{ else }}
               <p class="drop-cap">
                 Ah Fu arrived in 2015 — brown swirl hair, red suspenders, the character "富" on his chest. Part mascot, part brand signature. If you know Ah Fu, you know FYT.
@@ -55,7 +76,7 @@
           </div>
           <div class="mt-3">
             <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}岁月在变，那个陪你一起见证巅峰的人，始终没变。{{ else }}Times change, but the one who stood by you at every peak remains by your side.{{ end }}
+              {{ if eq .Language.Lang "zh" }}表情包会过时，阿富不会。{{ else if eq .Language.Lang "vi" }}Thời gian có thể thay đổi, nhưng người cùng bạn chứng kiến những đỉnh cao vẫn luôn ở đó.{{ else if eq .Language.Lang "th" }}กาลเวลาจะเปลี่ยนไป แต่ผู้ที่ยืนเคียงข้างคุณในทุกช่วงเวลาสำคัญจะยังคงอยู่ตรงนี้เสมอ{{ else if eq .Language.Lang "id" }}Waktu mungkin berubah, namun sosok yang menemani Anda menyaksikan setiap puncak kejayaan akan selalu ada di sini.{{ else }}Times change, but the one who stood by you at every peak remains by your side.{{ end }}
             </div>
           </div>
         </div>
@@ -65,17 +86,17 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
               <div class="grid grid-cols-3 gap-2">
-                <figure class="artifact" style="max-height: 14vh;">
+                <figure class="artifact" style="max-height: 12vh;">
                   <img src="/images/mug-origin.webp" alt="{{ if eq .Language.Lang "zh" }}起源杯{{ else }}Origin mug{{ end }}" loading="lazy">
                 </figure>
-                <figure class="artifact" style="max-height: 14vh;">
+                <figure class="artifact" style="max-height: 12vh;">
                   <img src="/images/mug-growth.webp" alt="{{ if eq .Language.Lang "zh" }}成长杯{{ else }}Growth mug{{ end }}" loading="lazy">
                 </figure>
-                <figure class="artifact" style="max-height: 14vh;">
+                <figure class="artifact" style="max-height: 12vh;">
                   <img src="/images/mug-maturity.webp" alt="{{ if eq .Language.Lang "zh" }}成熟杯{{ else }}Maturity mug{{ end }}" loading="lazy">
                 </figure>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}十周年纪念马克杯系列{{ else }}Anniversary Mug Collection{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}十周年纪念马克杯系列{{ else if eq .Language.Lang "vi" }}Bộ sưu tập cốc kỷ niệm 10 năm{{ else if eq .Language.Lang "th" }}ชุดแก้วมัคที่ระลึกครบรอบ 10 ปี{{ else if eq .Language.Lang "id" }}Koleksi Mug Anniversary{{ else }}Anniversary Mug Collection{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
@@ -83,14 +104,35 @@
                 40多版反复打磨，每个表情、每个姿态都不将就。「没在怕」「Call Me」「BUSY」「BYE」「X TALK」——贴纸不用推广，在会员的朋友圈里自己就传开了。
               </p>
               <p>
-                周年纪念马克杯，一套十只，连环画风格讲阿富从破壳到成长的故事。每年春节还有生肖限定金像——金马、金羊、金猴，年年不同，只赠VIP。金箔扑克、名酒、表带、烟灰缸，件件限量，只送不卖。不是赠品，是平台记得你的方式。
+                周年纪念马克杯，一套十只，连环画风格讲阿富从破壳到成长的故事。每年春节还有生肖限定金像——金马、金羊、金猴，年年不同，只赠VIP。金箔扑克、名酒、表带、烟灰缸，件件限量，只送不卖。你在外面买不到的东西，才值得收藏。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Hơn 40 bản thiết kế được mài giũa, mỗi biểu cảm, mỗi tư thế đều không hề qua loa. Những nhãn dán như "Không sợ hãi", "Call Me" tự lan tỏa trong cộng đồng hội viên mà không cần quảng bá.
+              </p>
+              <p>
+                Bộ cốc kỷ niệm gồm 10 chiếc kể về sự trưởng thành của Ah Fu. Mỗi dịp Tết còn có tượng vàng con giáp giới hạn chỉ tặng VIP. Những vật phẩm như bài mạ vàng, dây đeo đồng hồ đều là hàng giới hạn, chỉ tặng không bán. Những thứ không thể mua được mới thực sự đáng trân trọng.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                การออกแบบกว่า 40 รูปแบบที่ผ่านการขัดเกลา ทุกอารมณ์และท่าทางล้วนมีความหมาย สติกเกอร์อย่าง "ไม่กลัวอยู่แล้ว", "Call Me" แพร่กระจายไปในหมู่สมาชิกอย่างรวดเร็วโดยไม่ต้องมีการโฆษณา
+              </p>
+              <p>
+                ชุดแก้วมัคที่ระลึก 10 ใบ เล่าเรื่องราวการเติบโตของ Ah Fu นอกจากนี้ยังมีรูปปั้นทองคำนักษัตรมอบให้ VIP เท่านั้น ไพ่เคลือบทอง สายนาฬิกา และของสะสมอื่นๆ ล้วนเป็นรุ่นจำกัดและไม่มีวางจำหน่าย สิ่งที่คุณหาซื้อไม่ได้จากที่อื่น คือสิ่งที่ควรค่าแก่การสะสม
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Lebih dari 40 iterasi desain untuk setiap ekspresi. "Tidak Takut", "Call Me", "BUSY", "BYE", "X TALK" — stiker yang digunakan anggota setiap hari, menyebar secara organik di kalangan VIP.
+              </p>
+              <p>
+                Koleksi unggulan adalah seri mug anniversary 10 buah yang menceritakan kisah pertumbuhan Ah Fu. Setiap Tahun Baru Imlek menghadirkan figur emas zodiak edisi terbatas — hanya untuk VIP. Kartu remi lapis emas, minuman premium, dan tali jam tangan — hadiah eksklusif yang tidak dijual untuk umum.
               </p>
               {{ else }}
               <p>
-                Over 40 design iterations went into getting every expression right. "No Fear," "Call Me," "BUSY," "BYE," "X TALK" — stickers that members actually use, spreading through VIP circles organically.
+                Over 40 design iterations went into every expression. "No Fear," "Call Me," "BUSY," "BYE," "X TALK" — stickers that members use daily, spreading through VIP circles organically.
               </p>
               <p>
-                The standout collectible is the anniversary mug series — 10 pieces (0 through 9), each a comic-strip chapter of Ah Fu's story since 2015. Every Lunar New Year brings a zodiac golden Ah Fu figurine — Golden Horse, Golden Goat, Golden Monkey — a new edition annually, for VIPs only. Gold-plated playing cards, premium spirits, watch bands, ashtrays — none of it for sale. These are gifts reserved for the members who matter most.
+                The standout collectible is the 10-piece anniversary mug series, telling Ah Fu's growth story. Every Lunar New Year brings a limited zodiac golden figurine — Golden Horse, Golden Goat, Golden Monkey — annually updated for VIPs only. Gold-plated cards, spirits, and watch bands — these are gifts reserved for the members who matter most.
               </p>
               {{ end }}
             </div>
@@ -102,13 +144,25 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center">
             <div class="md:col-span-5 flex justify-center">
               <figure>
-                <img src="/images/afu-comic.webp" alt="{{ if eq .Language.Lang "zh" }}阿富漫画连载{{ else }}Ah Fu comic strip{{ end }}" loading="lazy" class="rounded-sm" style="max-height: 35vh; width: auto;">
+                <img src="/images/afu-comic.webp" alt="{{ if eq .Language.Lang "zh" }}阿富漫画连载{{ else if eq .Language.Lang "vi" }}Truyện tranh Ah Fu{{ else if eq .Language.Lang "th" }}การ์ตูน Ah Fu{{ else if eq .Language.Lang "id" }}Komik Ah Fu{{ else }}Ah Fu comic strip{{ end }}" loading="lazy" class="rounded-sm" style="max-height: 35vh; width: auto;">
               </figure>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p>
                 设计团队还给阿富画了漫画——他和好友在球场上的日常，几笔勾出品牌和体育之间那种天然的亲近。RICHE88 的 logo 长在画面里，是阿富世界的一部分。
+              </p>
+              {{ else if eq .Language.Lang "vi" }}
+              <p>
+                Đội ngũ thiết kế còn vẽ truyện tranh cho Ah Fu — những câu chuyện thường ngày của cậu và bạn bè trên sân cỏ, phác họa nên sự gần gũi tự nhiên giữa thương hiệu và thể thao. Logo RICHE88 xuất hiện tự nhiên trong từng khung hình, như một phần trong thế giới của Ah Fu.
+              </p>
+              {{ else if eq .Language.Lang "th" }}
+              <p>
+                ทีมออกแบบยังได้สร้างสรรค์การ์ตูนสำหรับ Ah Fu — เรื่องราวประจำวันของเขากับเพื่อนในสนามกีฬา ซึ่งสะท้อนถึงความผูกพันที่แน่นแฟ้นระหว่างแบรนด์และกีฬา โลโก้ RICHE88 ปรากฏอยู่ในฉากอย่างเป็นธรรมชาติ เป็นส่วนหนึ่งของโลกของ Ah Fu
+              </p>
+              {{ else if eq .Language.Lang "id" }}
+              <p>
+                Selain stiker dan koleksi, tim desain membuat seri komik untuk Ah Fu — cerita harian Ah Fu dan temannya di lapangan, menangkap ikatan antara brand dan olahraga dengan gaya yang ceria. Logo RICHE88 muncul secara alami di setiap panel, bukan sebagai iklan, melainkan sebagai bagian dari dunia Ah Fu.
               </p>
               {{ else }}
               <p>
