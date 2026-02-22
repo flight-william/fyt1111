@@ -22,7 +22,7 @@
           <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-start">
             <div class="w-full md:w-2/5 md:flex-shrink-0">
               <figure>
-                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else if eq .Language.Lang "vi" }}Thiệp VIP Năm Mới Haig Club{{ else if eq .Language.Lang "th" }}การ์ดปีใหม่ VIP Haig Club{{ else if eq .Language.Lang "id" }}Kartu Tahun Baru VIP Haig Club{{ else if eq .Language.Lang "yue" }}Haig Club 貴賓新年賀卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 30vh; width: auto;">
+                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else if eq .Language.Lang "vi" }}Thiệp VIP Năm Mới Haig Club{{ else if eq .Language.Lang "th" }}การ์ดปีใหม่ VIP Haig Club{{ else if eq .Language.Lang "id" }}Kartu Tahun Baru VIP Haig Club{{ else if eq .Language.Lang "yue" }}Haig Club 貴賓新年賀卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy" class="vip-hero h-auto rounded-sm">
               </figure>
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Haig Club · 限量威士忌{{ else if eq .Language.Lang "vi" }}Haig Club · Phiên bản Giới hạn{{ else if eq .Language.Lang "th" }}Haig Club · รุ่นจำกัด{{ else if eq .Language.Lang "id" }}Haig Club · Edisi Terbatas{{ else if eq .Language.Lang "yue" }}Haig Club · 限量威士忌{{ else }}Haig Club · Limited Edition{{ end }}</span>
             </div>
@@ -82,17 +82,17 @@
         {{/* Slide 2: Marvel collector figures — VIP gifting */}}
         <div class="scroll-block">
           <div class="flex flex-wrap justify-center gap-3 mb-2">
-            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Thor{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ธอร์{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Thor{{ else if eq .Language.Lang "yue" }}雷神 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+            <figure class="vip-figure">
+              <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Thor{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ธอร์{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Thor{{ else if eq .Language.Lang "yue" }}雷神 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy" class="vip-figure-img h-auto rounded-sm">
             </figure>
-            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Iron Man{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ไอรอนแมน{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Iron Man{{ else if eq .Language.Lang "yue" }}鐵甲奇俠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+            <figure class="vip-figure">
+              <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Iron Man{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ไอรอนแมน{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Iron Man{{ else if eq .Language.Lang "yue" }}鐵甲奇俠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy" class="vip-figure-img h-auto rounded-sm">
             </figure>
-            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Captain America{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon กัปตันอเมริกา{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Captain America{{ else if eq .Language.Lang "yue" }}美國隊長 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+            <figure class="vip-figure">
+              <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Captain America{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon กัปตันอเมริกา{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Captain America{{ else if eq .Language.Lang "yue" }}美國隊長 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy" class="vip-figure-img h-auto rounded-sm">
             </figure>
-            <figure style="flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0;">
-              <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Hulk{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ฮัลค์{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Hulk{{ else if eq .Language.Lang "yue" }}綠巨人 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: 100%;">
+            <figure class="vip-figure">
+              <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else if eq .Language.Lang "vi" }}Mô hình sưu tập Dragon Hulk{{ else if eq .Language.Lang "th" }}โมเดลสะสม Dragon ฮัลค์{{ else if eq .Language.Lang "id" }}Figur koleksi Dragon Hulk{{ else if eq .Language.Lang "yue" }}綠巨人 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy" class="vip-figure-img h-auto rounded-sm">
             </figure>
           </div>
           <span class="artifact-caption block mb-2 text-center">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else if eq .Language.Lang "vi" }}Bộ sưu tập Marvel · Dành riêng cho hội viên{{ else if eq .Language.Lang "th" }}Marvel Collector Series · สำหรับสมาชิกเท่านั้น{{ else if eq .Language.Lang "id" }}Seri Kolektor Marvel · Khusus Anggota{{ else if eq .Language.Lang "yue" }}Marvel 珍藏系列 · 會員專屬{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
@@ -147,10 +147,10 @@
             <div class="md:col-span-5">
               <div style="display: flex; gap: 0.5rem; justify-content: center;">
                 <figure class="artifact-tilted">
-                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else if eq .Language.Lang "vi" }}Joker tùy chỉnh{{ else if eq .Language.Lang "th" }}โจ๊กเกอร์สั่งทำพิเศษ{{ else if eq .Language.Lang "id" }}Joker kustom{{ else if eq .Language.Lang "yue" }}自訂鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else if eq .Language.Lang "vi" }}Joker tùy chỉnh{{ else if eq .Language.Lang "th" }}โจ๊กเกอร์สั่งทำพิเศษ{{ else if eq .Language.Lang "id" }}Joker kustom{{ else if eq .Language.Lang "yue" }}自訂鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy" class="vip-card-img h-auto rounded-sm">
                 </figure>
                 <figure class="artifact-tilted-r">
-                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else if eq .Language.Lang "vi" }}Mặt sau thẻ bài{{ else if eq .Language.Lang "th" }}ด้านหลังไพ่{{ else if eq .Language.Lang "id" }}Bagian belakang kartu{{ else if eq .Language.Lang "yue" }}自訂牌背{{ else }}Card back{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else if eq .Language.Lang "vi" }}Mặt sau thẻ bài{{ else if eq .Language.Lang "th" }}ด้านหลังไพ่{{ else if eq .Language.Lang "id" }}Bagian belakang kartu{{ else if eq .Language.Lang "yue" }}自訂牌背{{ else }}Card back{{ end }}" loading="lazy" class="vip-card-img h-auto rounded-sm">
                 </figure>
               </div>
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}金箔扑克 · 只赠不卖{{ else if eq .Language.Lang "vi" }}Bài mạ vàng · Chỉ tặng không bán{{ else if eq .Language.Lang "th" }}ไพ่เคลือบทอง · สำหรับมอบให้เท่านั้น{{ else if eq .Language.Lang "id" }}Kartu Remi Lapis Emas · Hanya untuk Hadiah{{ else if eq .Language.Lang "yue" }}金箔啤牌 · 只送唔賣{{ else }}Gold Foil Poker · Gift Only{{ end }}</span>

@@ -257,6 +257,19 @@ img {
   text-transform: uppercase;
 }
 
+/* ===== VIP Section — responsive image sizing ===== */
+.vip-hero { max-height: 30vh; width: auto; }
+.vip-figure { flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0; }
+.vip-figure-img { max-height: 20vh; width: auto; }
+.vip-card-img { max-height: 20vh; width: auto; }
+
+@media (max-width: 767px) {
+  .vip-hero { max-height: 40vh; }
+  .vip-figure { max-width: none; flex-shrink: 0; }
+  .vip-figure-img { max-height: 28vh; }
+  .vip-card-img { max-height: 28vh; }
+}
+
 /* ===== Sticker Collage ===== */
 .sticker-collage {
   display: grid;
