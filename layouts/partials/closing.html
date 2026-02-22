@@ -1,33 +1,36 @@
 {{/* ===== Closing — true reverse of cover ===== */}}
+{{/* Cover: heritage → gold-line → logo → tagline → date → scroll-hint  */}}
+{{/* Close: date → TAGLINE (hero) → logo → CTA · CS                     */}}
 <section class="cover grain">
-  <div class="relative z-10 text-center px-6 max-w-xl mx-auto">
-    {{/* CS Contact — top (reverse of scroll hint at bottom) */}}
-    <div class="reveal mb-10">
-      <a href="https://z4eju8.l9zc3vd7.com/7f6d71cb3f963d87e1dcfbjkfle-kelif962d17f14c4b96075934ce444ee6560bb1bc5e1d7fe5fd64e837c38099d0d9b" data-link="cs_link" class="cs-link inline-flex items-center gap-3" target="_blank" rel="noopener noreferrer">
-        <span>{{ i18n "cs_sublabel" }}</span>
-      </a>
-    </div>
+  <div class="relative z-10 text-center px-6 max-w-2xl mx-auto">
 
-    {{/* Founding date (reverse of cover bottom) */}}
-    <p class="reveal font-sans text-[10px] tracking-[0.6em] text-fyt-muted opacity-25 mb-8">
+    {{/* Founding date — quiet anchor at top (mirror of cover bottom) */}}
+    <p class="reveal font-sans text-[10px] tracking-[0.6em] text-fyt-muted opacity-25 mb-12 md:mb-16">
       EST. 2011.11.11
     </p>
 
-    {{/* Philosophy (reverse of tagline position) */}}
-    <p class="reveal text-fyt-cream opacity-35 text-base md:text-xl font-extralight tracking-[0.3em] leading-relaxed mb-14">
+    {{/* Tagline — hero statement: bigger, bolder presence than cover */}}
+    <p class="reveal text-fyt-cream opacity-45 text-3xl md:text-5xl font-extralight tracking-[0.12em] md:tracking-[0.18em] leading-snug mb-16 md:mb-24">
       {{ i18n "closing_philosophy" }}
     </p>
 
-    {{/* Platform CTA */}}
-    <div class="reveal mb-10">
-      <a href="https://fytbet.com/?p=14093" data-link="platform" class="inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity" target="_blank" rel="noopener noreferrer">
-        {{ if eq .Language.Lang "zh" }}进入平台 →{{ else }}Enter Platform →{{ end }}
-      </a>
+    {{/* FYTBET logo */}}
+    <div class="reveal mb-14 md:mb-20">
+      <img src="/images/logo-fytbet.webp" alt="FYTBET" class="w-44 md:w-56 mx-auto opacity-90">
     </div>
 
-    {{/* FYTBET logo — bigger than cover (cover: w-40/w-52) */}}
-    <div class="mb-6 reveal">
-      <img src="/images/logo-fytbet.webp" alt="FYTBET" class="w-48 md:w-64 mx-auto opacity-90">
+    {{/* Platform CTA + CS — grouped footer */}}
+    <div class="reveal space-y-4">
+      <div>
+        <a href="https://fytbet.com/?p=14093" data-link="platform" class="inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity" target="_blank" rel="noopener noreferrer">
+          {{ if eq .Language.Lang "zh" }}进入平台 →{{ else }}Enter Platform →{{ end }}
+        </a>
+      </div>
+      <div>
+        <a href="https://z4eju8.l9zc3vd7.com/7f6d71cb3f963d87e1dcfbjkfle-kelif962d17f14c4b96075934ce444ee6560bb1bc5e1d7fe5fd64e837c38099d0d9b" data-link="cs_link" class="cs-link inline-flex items-center gap-3 justify-center" target="_blank" rel="noopener noreferrer">
+          <span class="font-sans text-[11px] tracking-[0.3em] text-fyt-muted opacity-50 hover:opacity-80 transition-opacity">{{ i18n "cs_sublabel" }}</span>
+        </a>
+      </div>
     </div>
 
   </div>

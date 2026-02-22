@@ -26,7 +26,7 @@
                 你的数据安全和使用体验，是这里最不让步的底线。全套系统自主研发——前端、后端、基础架构，从头到尾自己写。不套壳，不贴牌。代码在自己手里，你的信息才真正只属于你。
               </p>
               <p>
-                自研还有一个好处：想到就能做。富贵保就是证明——100%投注保险，赢了照拿，输了隔天返还。市面上找不到第二家，因为这东西必须从底层开始造。四大体育平台一站聚齐：小金体育（188BET底蕴）、Pinnacle（全球最锐赔率）、InPlay Matrix（滚球专家）、PM体育——比完再下注，不用到处跑。
+                自研还有一个好处：想到就能做。富贵保就是证明——100%投注保险，赢了照拿，输了隔天返还。这东西必须从底层开始造，没有捷径。四大体育平台一站聚齐：小金体育（188BET底蕴）、Pinnacle（全球最锐赔率）、InPlay Matrix（滚球专家）、PM体育——比完再下注，不用到处跑。
               </p>
               {{ else }}
               <p class="drop-cap">
@@ -38,10 +38,15 @@
               {{ end }}
             </div>
             <div class="md:col-span-5">
-              <figure class="artifact" style="max-height: 25vh;">
-                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else }}Fortune Insurance{{ end }}" loading="lazy">
+              <figure>
+                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else }}Fortune Insurance{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
               </figure>
               <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 独创福利{{ else }}Fortune Insurance · Proprietary{{ end }}</span>
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="pull-quote">
+              {{ if eq .Language.Lang "zh" }}最顶级的安全是不动声色的守护 —— 每一行代码，都是我们亲手筑起的护城河。{{ else }}The ultimate security is the protection you never notice — every line of code is a moat we built for you.{{ end }}
             </div>
           </div>
         </div>
@@ -55,7 +60,7 @@
                 体育之外，一站全有。真人荷官、老虎机、电竞、棋牌、彩票、捕鱼——一个账户，一个APP，不用在不同平台之间来回折腾。
               </p>
               <p>
-                充值、下注、提款，一气呵成。这背后是全栈自研团队的底气——别家排队等外部供应商的功能，这里说上就上。
+                充值、下注、提款，一气呵成。这背后是全栈自研团队的底气——想到的功能，说上就上，节奏自己定。
               </p>
               {{ else }}
               <p>
@@ -68,7 +73,7 @@
             </div>
             <div class="md:col-span-5">
               <figure>
-                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
+                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 25vh; width: auto;">
               </figure>
               <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}FYTBET · 桌面平台{{ else }}FYTBET · Desktop{{ end }}</span>
             </div>

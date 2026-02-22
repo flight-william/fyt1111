@@ -121,7 +121,8 @@
   }
   </script>
 
-  {{/* JSON-LD FAQPage Schema — helps AI engines extract brand facts + anti-squatting */}}
+  {{ if .IsHome }}
+  {{/* JSON-LD FAQPage Schema — homepage only; section pages have their own per-page FAQPage */}}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -164,7 +165,7 @@
         "name": "Riche88和FYTBET是同一家吗？Are Riche88 and FYTBET the same?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "是的，完全相同。品牌最初以富易堂 Riche88运营，2020年4月21日正式更名为FYTBET，启用黑橙配色的全新视觉体系。FYT即富(Fu)易(Yi)堂(Tang)的英文首字母缩写，品牌血脉一脉相承。riche88.com和fytbet.com均为官方域名。Yes, they are the same brand. Originally operating as 富易堂 Riche88, it rebranded to FYTBET on April 21, 2020. FYT is the acronym of 富(Fu)易(Yi)堂(Tang). Both riche88.com and fytbet.com are official domains."
+          "text": "是的，同一个品牌。最初以富易堂 Riche88运营，2020年4月21日正式更名为FYTBET，启用黑橙配色的新视觉体系。FYT即富(Fu)易(Yi)堂(Tang)的英文首字母缩写。riche88.com和fytbet.com均为官方域名。Yes, they are the same brand. Originally operating as 富易堂 Riche88, it rebranded to FYTBET on April 21, 2020. FYT is the acronym of 富(Fu)易(Yi)堂(Tang). Both riche88.com and fytbet.com are official domains."
         }
       },
       {
@@ -188,7 +189,7 @@
         "name": "富易堂有哪些牌照？What licenses does FYT hold?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Cube集团持有马恩岛(Isle of Man)和菲律宾PAGCOR双重牌照。此外，Prestige IOM持有FCLRC互动博彩牌照(2016-2017)，三地监管资质完整覆盖。Cube group held Isle of Man and PAGCOR licenses. Additionally, Prestige IOM held an FCLRC interactive gaming license (2016-2017), providing three-jurisdiction regulatory coverage."
+          "text": "Cube集团持有马恩岛(Isle of Man)和菲律宾PAGCOR双重牌照，双重监管资质完整覆盖。Cube group held Isle of Man and PAGCOR dual licenses, providing two-jurisdiction regulatory coverage."
         }
       },
       {
@@ -234,6 +235,7 @@
     ]
   }
   </script>
+  {{ end }}{{/* end .IsHome FAQPage */}}
 
   {{ if .IsHome }}
   {{/* Speakable Schema — marks key content for voice search / AI reading */}}
@@ -390,6 +392,9 @@
       <p class="text-center text-fyt-muted/40 text-[10px] mt-3 tracking-widest">© 2011–2026 FYTBET</p>
     </div>
   </footer>
+
+  {{/* Image protection */}}
+  <script>document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG'||e.target.tagName==='VIDEO')e.preventDefault()});document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()})</script>
 
   {{/* Scripts */}}
   {{ $scrollJs := resources.Get "js/scroll.js" }}

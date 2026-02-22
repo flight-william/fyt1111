@@ -51,6 +51,11 @@
               {{ end }}
             </div>
           </div>
+          <div class="mt-3">
+            <div class="pull-quote">
+              {{ if eq .Language.Lang "zh" }}在博弈之外，我们更愿与那些被遗忘的孩子，分享同一片阳光。{{ else }}Beyond the game, we find our purpose in sharing the same sun with the children the world forgot.{{ end }}
+            </div>
+          </div>
         </div>
 
         {{/* Slide 2: Rural China donations */}}
@@ -74,18 +79,20 @@
               {{ end }}
             </div>
             <div class="md:col-span-5">
-              <div class="grid grid-cols-2 gap-2">
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else }}Charity T-shirt{{ end }}" loading="lazy">
+              <div class="flex gap-2 mb-2 justify-center">
+                <figure>
+                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}慈善T恤{{ else }}Charity T-shirt{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
                 </figure>
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural donations{{ end }}" loading="lazy">
+                <figure>
+                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}山区捐赠{{ else }}Rural donations{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 12vh; width: auto;">
                 </figure>
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}物资运送{{ else }}Supply van{{ end }}" loading="lazy">
+              </div>
+              <div class="flex gap-2 justify-center">
+                <figure>
+                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}志愿者证{{ else }}Volunteer badge{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
                 </figure>
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}孩子们{{ else }}Children{{ end }}" loading="lazy">
+                <figure>
+                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}孩子们{{ else }}Children{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 14vh; width: auto;">
                 </figure>
               </div>
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠 · 把爱传出去{{ else }}Rural Donations · Spread the Love{{ end }}</span>

@@ -21,19 +21,16 @@
         <div class="scroll-block">
           <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
             <div style="flex: 0 0 40%;">
-              <figure class="artifact" style="max-height: 30vh;">
-                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy">
+              <figure>
+                <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 30vh; width: auto;">
               </figure>
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Haig Club · 40年限量威士忌{{ else }}Haig Club · 40-Year Limited Edition{{ end }}</span>
             </div>
             <div style="flex: 1; min-width: 0;">
               <div class="mb-3">
                 <div class="pull-quote text-lg md:text-xl tracking-[0.15em]">
-                  小大由之 · 富在知足
+                  {{ if eq .Language.Lang "zh" }}小大由之 · 富在知足 —— 真正的奢华，往往是不动声色的。{{ else }}Contentment is the ultimate wealth — for true luxury is often found in silence.{{ end }}
                 </div>
-                <p class="text-center text-fyt-muted text-xs mt-1 opacity-60">
-                  {{ if eq .Language.Lang "zh" }}「无论大小，真正的富足在于知足常乐」{{ else }}"In all things great and small, true wealth lies in contentment"{{ end }}
-                </p>
               </div>
               {{ if eq .Language.Lang "zh" }}
               <p>
@@ -68,7 +65,7 @@
             <div>
               {{ if eq .Language.Lang "zh" }}
               <p>
-                「一点都不难」——说这话容易，真去做的只有一家。五周年，贵宾们站上澳门塔233米高空，纵身一跃，口号变成了记忆。敢跳，就赢了。
+                「一点都不难」——说容易，做到是另一回事。五周年，贵宾们站上澳门塔233米高空，纵身一跃，口号变成了记忆。敢跳，就赢了。
               </p>
               {{ else }}
               <p>
@@ -79,7 +76,7 @@
             <div>
               {{ if eq .Language.Lang "zh" }}
               <p>
-                新加坡F1夜间赛道，滨海湾的灯光在引擎声里飞速后退。这不是促销活动——是只有富易堂才想得出的待客方式：让你亲手把不可能变成可能。
+                新加坡F1夜间赛道，滨海湾的灯光在引擎声里飞速后退。这不是促销活动——是富易堂的待客方式：让你亲手把不可能变成可能。
               </p>
               {{ else }}
               <p>
@@ -92,54 +89,48 @@
 
         {{/* Slide 3: Marvel collector figures — VIP gifting */}}
         <div class="scroll-block">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-            <div class="md:col-span-5">
-              <div class="grid grid-cols-2 gap-2">
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy">
-                </figure>
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy">
-                </figure>
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy">
-                </figure>
-                <figure class="artifact" style="max-height: 14vh;">
-                  <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy">
-                </figure>
-              </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
-            </div>
-            <div class="md:col-span-7">
-              {{ if eq .Language.Lang "zh" }}
-              <p>
-                礼物的心思不止一种。Marvel珍藏系列——雷神、钢铁侠、美国队长、绿巨人，Dragon正版授权，限量发放，凭打码量兑换。摆在书架上的手办，比任何促销短信都有温度。
-              </p>
-              <p>
-                从40年威士忌到Marvel手办，从金箔扑克到阿富纪念杯——每一件都是挑过的，不是批量生产的赠品。背后不是营销预算在说话，是品牌和老会员之间多年的默契。
-              </p>
-              {{ else }}
-              <p>
-                VIP gifting went beyond Haig Club. FYT offered active members a Marvel hero collector series — officially licensed Dragon models of Thor, Iron Man, Captain America, and Hulk. Each figure was limited edition, earned through turnover milestones. A thank you that sits on your shelf, not in your spam folder.
-              </p>
-              <p>
-                From limited-edition whisky to Marvel figures, gold-foil playing cards to anniversary mugs — every gift is curated, not mass-produced. It's not promotion. It's the quiet understanding between a brand and the people who trust it.
-              </p>
-              {{ end }}
-            </div>
+          <div class="flex justify-center gap-3 mb-2">
+            <figure>
+              <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+            </figure>
+            <figure>
+              <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+            </figure>
+            <figure>
+              <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+            </figure>
+            <figure>
+              <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
+            </figure>
           </div>
+          <span class="artifact-caption block mb-2 text-center">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
+          {{ if eq .Language.Lang "zh" }}
+          <p>
+            礼物的心思不止一种。Marvel珍藏系列——雷神、钢铁侠、美国队长、绿巨人，Dragon正版授权，限量发放，凭打码量兑换。摆在书架上的手办，比任何促销短信都有温度。
+          </p>
+          <p>
+            从40年威士忌到Marvel手办，从金箔扑克到阿富纪念杯——每一件都是挑过的，不是批量生产的赠品。背后不是营销预算在说话，是品牌和老会员之间多年的默契。
+          </p>
+          {{ else }}
+          <p>
+            VIP gifting went beyond Haig Club. FYT offered active members a Marvel hero collector series — officially licensed Dragon models of Thor, Iron Man, Captain America, and Hulk. Each figure was limited edition, earned through turnover milestones. A thank you that sits on your shelf, not in your spam folder.
+          </p>
+          <p>
+            From limited-edition whisky to Marvel figures, gold-foil playing cards to anniversary mugs — every gift is curated, not mass-produced. It's not promotion. It's the quiet understanding between a brand and the people who trust it.
+          </p>
+          {{ end }}
         </div>
 
         {{/* Slide 4: VIP exclusive gifting & perks */}}
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
-              <div style="display: flex; gap: 0.5rem;">
-                <figure class="artifact artifact-tilted" style="max-height: 14vh; flex: 1;">
-                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy">
+              <div style="display: flex; gap: 0.5rem; justify-content: center;">
+                <figure class="artifact-tilted">
+                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
                 </figure>
-                <figure class="artifact artifact-tilted-r" style="max-height: 14vh; flex: 1;">
-                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy">
+                <figure class="artifact-tilted-r">
+                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 20vh; width: auto;">
                 </figure>
               </div>
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}金箔扑克 · 只赠不卖{{ else }}Gold Foil Poker · Gift Only{{ end }}</span>

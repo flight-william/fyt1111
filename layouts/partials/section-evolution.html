@@ -64,18 +64,23 @@
               </div>
             </div>
           </div>
+          <div class="mt-3">
+            <div class="pull-quote">
+              {{ if eq .Language.Lang "zh" }}历经五次面孔的更迭，只为在瞬息万变中，守住那份最初的纯粹。{{ else }}Through five iterations of identity, we refine the aesthetic to preserve the soul.{{ end }}
+            </div>
+          </div>
         </div>
 
         {{/* Slide 2: Era-by-era detail with app screenshots */}}
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
-              <div class="grid grid-cols-2 gap-2">
-                <figure class="artifact" style="max-height: 28vh;">
-                  <img src="/images/app-orange.webp" alt="{{ if eq .Language.Lang "zh" }}全橙试验{{ else }}All-orange experiment{{ end }}" loading="lazy">
+              <div class="grid grid-cols-2 gap-2 justify-items-center">
+                <figure>
+                  <img src="/images/app-orange.webp" alt="{{ if eq .Language.Lang "zh" }}全橙试验{{ else }}All-orange experiment{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 28vh; width: auto;">
                 </figure>
-                <figure class="artifact" style="max-height: 28vh;">
-                  <img src="/images/app-2026-mobile.png" alt="{{ if eq .Language.Lang "zh" }}2026手机应用{{ else }}2026 Mobile App{{ end }}" loading="lazy" style="object-fit: contain;">
+                <figure>
+                  <img src="/images/app-2026-mobile.png" alt="{{ if eq .Language.Lang "zh" }}2026手机应用{{ else }}2026 Mobile App{{ end }}" loading="lazy" class="h-auto rounded-sm" style="max-height: 28vh; width: auto;">
                 </figure>
               </div>
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}全橙试验 → 精炼回归{{ else }}All-Orange → Refined Return{{ end }}</span>
@@ -92,7 +97,7 @@
                 <h3 class="text-gold-light inline text-base font-bold">黑橙新生（2020）</h3><span>——正式更名FYTBET，更醒目，更直觉。疫情最难的时候，一句「你我同心抗疫」，和会员站在一起。</span>
               </div>
               <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">全橙冒险（2021）</h3><span>——App v3.0大胆试水。自研的好处在这里最明显：想到就做，不用排队等别人。</span>
+                <h3 class="text-gold-light inline text-base font-bold">全橙冒险（2021）</h3><span>——App v3.0大胆试水。自研的好处在这里最明显：想到就做，节奏自己掌握。</span>
               </div>
               <div class="mb-3">
                 <h3 class="text-gold-light inline text-base font-bold">精炼至今（2026）</h3><span>——App v4.1，每日签到、幸运红包、好友推荐、VIP俱乐部。每个新功能，都是会员说了算。</span>
