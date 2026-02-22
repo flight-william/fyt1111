@@ -7,20 +7,22 @@
       <div class="gold-line mb-2"></div>
       <p class="heading-sub mb-1">{{ if eq .Language.Lang "zh" }}体验{{ else }}Experience{{ end }}</p>
       <h2 class="heading-display">
+        <a href="/{{ .Language.Lang }}/experience/">
         {{ if eq .Language.Lang "zh" }}线上到<span class="text-gold">线下</span>{{ else }}Online to <span class="text-gold">Offline</span>{{ end }}
+        </a>
       </h2>
     </div>
 
     {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" data-scroll-interval="7000">
+    <div class="scroll-feed reveal" >
       <div class="scroll-feed-track">
 
         {{/* Slide 1: Macau Tower bungy + Juxing partnership */}}
         <div class="scroll-block">
           <div class="mb-2">
             <div class="artifact auto-video-section mx-auto" style="max-height: 32vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
-              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" class="w-full h-full object-cover">
-                <source src="/video/macau-tower.mp4" type="video/mp4">
+              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="/video/macau-tower-poster.jpg" class="w-full h-full object-cover" data-start="10">
+                <source data-src="/video/macau-tower.mp4" type="video/mp4">
               </video>
             </div>
             <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}五周年 · 澳门塔蹦极{{ else }}5th Anniversary · Macau Tower{{ end }}</span>
@@ -29,10 +31,10 @@
             <div style="flex: 1; min-width: 0;">
               {{ if eq .Language.Lang "zh" }}
               <p class="drop-cap">
-                富易堂从不止步于屏幕。与澳门贵宾厅集团钜星的深度合作，将品牌杂志铺设至澳门各大赌场的VIP贵宾厅，实现了线上到线下的真正联动。
+                富易堂从不止步于屏幕。与澳门钜星集团的合作，将品牌杂志铺进了各大赌场VIP贵宾厅——线上到线下，走的是最短的那条路。
               </p>
               <p>
-                五周年庆典，品牌带领贵宾亲赴澳门旅游塔，纵身233米的极限蹦极——将「一点都不难」的品牌精神化为肾上腺素飙升的切身体验。新加坡F1赛道的贵宾体验同样如此：敢于尝试，赢就在眼前。
+                五周年，品牌带着贵宾站上澳门旅游塔，233米，纵身一跳——「一点都不难」从口号变成了肾上腺素。新加坡F1赛道同理：敢踩油门的人，不担心终点在哪。
               </p>
               {{ else }}
               <p class="drop-cap">
@@ -58,10 +60,10 @@
             <div>
               {{ if eq .Language.Lang "zh" }}
               <p>
-                在那些只有受邀才能进入的澳门贵宾厅中，品牌杂志静静陈列在茶几和阅读区——与高端生活杂志并排摆放。这不是广告投放，而是一种默契的品牌认同。与钜星的合作远不止于杂志投放：品牌团队深入了解了澳门贵宾服务的运营哲学——每位客人不是一个账号，而是一段需要细心经营的关系。
+                受邀制的贵宾厅里，品牌杂志和高端生活刊物并排摆在茶几上。没有logo墙，没有广告位——懂的人自然会注意到。跟钜星合作最大的收获，是学会了一件事：真正的贵宾服务里，每位客人都是一段关系，不是一个账号。
               </p>
               <p>
-                站在澳门旅游塔顶的那一刻，恐惧与兴奋交织。纵身一跃之后，每位参与者都真正理解了品牌精神的含义：看似不可能的事，迈出第一步之后，一点都不难。新加坡F1赛道体验同样如此——品牌为VIP客户安排了在实际F1街道赛道上驾驶的机会，那条穿越滨海湾的传奇赛道，平日只有顶级车手才能驰骋。
+                站在塔顶那一刻，恐惧和兴奋其实是同一种东西。跳下去之后，所有人都明白了：看起来不可能的事，迈出第一步就不难了。新加坡F1赛道体验也一样——穿越滨海湾的那条传奇赛道，平日只属于顶级车手，那天属于我们的会员。
               </p>
               {{ else }}
               <p>
@@ -75,10 +77,10 @@
             <div>
               {{ if eq .Language.Lang "zh" }}
               <p>
-                这些活动背后是一种独特的品牌哲学：与其告诉客户品牌有多好，不如让他们亲身体验不可能。体验式营销不是噱头，而是品牌与客户之间最深层的信任建设。当一个品牌愿意带你跳下233米的高空，你们之间的关系就超越了普通的商业往来。
+                说一千遍「我们很好」，不如让你自己感受一次。一起从233米跳下来的人，之间的信任不是广告预算能买到的。
               </p>
               <p>
-                这种从线上到线下的联动模式，在当时的行业中独树一帜。多数品牌止步于屏幕上的横幅广告，而富易堂选择走出屏幕，用真实的体验建立无法复制的品牌记忆。这也奠定了品牌后来将澳门贵宾服务DNA融入线上服务的基础。
+                同行还在比谁的横幅广告更大的时候，富易堂已经走出了屏幕。这些体验后来成了品牌最值钱的东西——把澳门贵宾厅的待客之道搬进数字世界的起点。
               </p>
               {{ else }}
               <p>

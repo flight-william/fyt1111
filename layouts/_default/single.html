@@ -1,0 +1,78 @@
+{{ define "main" }}
+  {{/* Render section partial as visual anchor */}}
+  {{ with .Params.section_partial }}
+    {{ partial . $ }}
+  {{ end }}
+
+  {{/* Toggle chevron hint */}}
+  <div class="article-toggle-hint" aria-hidden="true">
+    <span class="toggle-chevron">&#9662;</span>
+  </div>
+
+  {{/* Extended content — collapsible, bordered */}}
+  <div class="article-extended">
+
+    {{/* Extended article content from markdown */}}
+    {{ if .Content }}
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+    {{ end }}
+
+    {{/* FAQ section — driven by front matter */}}
+    {{ with .Params.faqs }}
+    <div class="section-faq">
+      <h2 class="heading-section mb-4">{{ if eq $.Language.Lang "zh" }}常见问题{{ else }}FAQ{{ end }}</h2>
+      {{ range . }}
+      <details class="faq-item">
+        <summary>{{ .q }}</summary>
+        <div class="faq-answer">{{ .a | markdownify }}</div>
+      </details>
+      {{ end }}
+    </div>
+
+    {{/* FAQ JSON-LD schema */}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {{ range $i, $faq := . }}{{ if $i }},{{ end }}
+        {
+          "@type": "Question",
+          "name": {{ .q | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ .a | jsonify }}
+          }
+        }
+        {{ end }}
+      ]
+    }
+    </script>
+    {{ end }}
+
+    {{/* Internal cross-links */}}
+    {{ with .Params.interlinks }}
+    <div class="section-interlinks">
+      <p class="heading-sub mb-3">{{ if eq $.Language.Lang "zh" }}延伸阅读{{ else }}Continue Reading{{ end }}</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        {{ range . }}
+        <a href="/{{ $.Language.Lang }}/{{ .url }}/" class="interlink-card">
+          <span class="text-fyt-gold text-xs tracking-widest uppercase block mb-1">{{ .label }}</span>
+          <span class="text-fyt-cream text-sm">{{ .title }}</span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+  </div>{{/* end .article-extended */}}
+
+  {{/* Back to full story CTA — always visible, outside toggle */}}
+  <div class="py-8 text-center">
+    <a href="{{ .Site.Home.Permalink }}" class="inline-block px-6 py-3 text-sm tracking-widest uppercase text-fyt-gold border border-fyt-gold/30 rounded hover:bg-fyt-gold/10 transition-colors">
+      {{ if eq .Language.Lang "zh" }}← 返回完整故事{{ else }}← Back to Full Story{{ end }}
+    </a>
+  </div>
+{{ end }}

@@ -1,4 +1,4 @@
-// Inner auto-scroll PPT slides — horizontal carousel (all content in DOM for SEO)
+// Inner slide navigation — horizontal carousel (all content in DOM for SEO)
 (function () {
   'use strict';
 
@@ -11,6 +11,9 @@
     var track = feed.querySelector('.scroll-feed-track');
     if (!track) return;
 
+    // Skip wheel hijacking on section pages — let users scroll normally
+    if (document.documentElement.classList.contains('is-section-page')) return;
+
     var blocks = Array.from(track.querySelectorAll('.scroll-block'));
     var controls = feed.querySelector('.scroll-controls');
     var dotsContainer = controls ? controls.querySelector('.scroll-dots') : null;
@@ -21,19 +24,9 @@
     if (total < 2) return;
 
     var current = 0;
-    var interval = parseInt(feed.dataset.scrollInterval) || 7000;
-    var timer = null;
-    var paused = false;
     var inView = false;
     var complete = false;
-    var progressBar = null;
     var feedHeight = 0;
-
-    // Create progress bar
-    progressBar = document.createElement('div');
-    progressBar.className = 'scroll-progress';
-    progressBar.style.width = '0%';
-    feed.appendChild(progressBar);
 
     // Create dot indicators
     if (dotsContainer) {
@@ -45,7 +38,6 @@
           return function (e) {
             e.stopPropagation();
             goTo(idx);
-            pauseFeed();
           };
         })(i));
         dotsContainer.appendChild(dot);
@@ -60,23 +52,11 @@
       }
     }
 
-    // Horizontal offset: each block is 100% width of feed
-    function getOffset(index) {
-      return index * 100; // percentage-based
-    }
-
     function goTo(index) {
       if (index < 0 || index >= total || index === current) return;
-
       current = index;
-
-      // Translate track horizontally
-      var offset = getOffset(current);
-      track.style.transform = 'translateX(-' + offset + '%)';
-
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
       updateDots();
-      resetProgress();
-
       if (current === total - 1) {
         complete = true;
       }
@@ -107,118 +87,29 @@
       }
     }
 
-    function resetProgress() {
-      if (!progressBar) return;
-      progressBar.style.transition = 'none';
-      progressBar.style.width = '0%';
-      void progressBar.offsetHeight;
-      if (!paused && inView && current < total - 1) {
-        progressBar.style.transition = 'width ' + interval + 'ms linear';
-        progressBar.style.width = '100%';
-      }
-    }
-
-    function startTimer() {
-      stopTimer();
-      if (paused || !inView) return;
-
-      resetProgress();
-
-      timer = setInterval(function () {
-        if (current < total - 1) {
-          next();
-        } else {
-          // Feed complete — stop, auto-advance page after delay
-          stopTimer();
-          if (progressBar) {
-            progressBar.style.transition = 'none';
-            progressBar.style.width = '0%';
-          }
-          setTimeout(function () {
-            if (!paused && inView) {
-              autoAdvancePage();
-            }
-          }, interval);
-        }
-      }, interval);
-    }
-
-    function stopTimer() {
-      if (timer) {
-        clearInterval(timer);
-        timer = null;
-      }
-      if (progressBar) {
-        progressBar.style.transition = 'none';
-        progressBar.style.width = '0%';
-      }
-    }
-
-    function pauseFeed() {
-      paused = true;
-      feed.classList.add('scroll-paused');
-      stopTimer();
-    }
-
-    function resumeFeed() {
-      paused = false;
-      feed.classList.remove('scroll-paused');
-      if (inView) startTimer();
-    }
-
-    function togglePause() {
-      if (paused) {
-        resumeFeed();
-      } else {
-        pauseFeed();
-      }
-    }
-
     function resetFeed() {
       complete = false;
-      paused = false;
-      feed.classList.remove('scroll-paused');
       current = 0;
       track.style.transform = 'translateX(0)';
       measureAndSet();
       updateDots();
     }
 
-    function autoAdvancePage() {
-      var section = feed.closest('.page');
-      if (!section) return;
-      var nextEl = section.nextElementSibling;
-      while (nextEl && !nextEl.classList.contains('page') && !nextEl.classList.contains('cover')) {
-        nextEl = nextEl.nextElementSibling;
-      }
-      if (nextEl) {
-        nextEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-    // Click to toggle pause
-    feed.addEventListener('click', function (e) {
-      if (e.target.closest('.scroll-controls')) return;
-      togglePause();
-    });
-
     // Prev/next buttons
     if (prevBtn) {
       prevBtn.addEventListener('click', function (e) {
         e.stopPropagation();
         prev();
-        pauseFeed();
       });
     }
     if (nextBtn) {
       nextBtn.addEventListener('click', function (e) {
         e.stopPropagation();
         next();
-        pauseFeed();
       });
     }
 
-    // Visibility observer
+    // Visibility observer — reset feed when section comes into view
     if ('IntersectionObserver' in window) {
       var section = feed.closest('.page') || feed;
       var obs = new IntersectionObserver(function (entries) {
@@ -226,17 +117,15 @@
           if (entry.isIntersecting) {
             inView = true;
             resetFeed();
-            startTimer();
           } else {
             inView = false;
-            stopTimer();
           }
         });
       }, { threshold: 0.3 });
       obs.observe(section);
     }
 
-    // Wheel event gating — scroll down/up still navigates slides
+    // Wheel event — scroll navigates slides
     var parentSection = feed.closest('.page');
     if (parentSection) {
       parentSection.addEventListener('wheel', function (e) {
@@ -253,12 +142,11 @@
           } else if (e.deltaY < 0) {
             prev();
           }
-          pauseFeed();
         }
       }, { passive: false });
     }
 
-    // Touch/swipe — horizontal swipe navigates slides
+    // Touch/swipe
     var touchStartY = 0;
     var touchStartX = 0;
 
@@ -271,47 +159,32 @@
       var deltaY = touchStartY - e.changedTouches[0].clientY;
       var deltaX = touchStartX - e.changedTouches[0].clientX;
 
-      // Accept both horizontal and vertical swipes for slide navigation
       if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 40) {
-        // Horizontal swipe
-        if (deltaX > 0) {
-          next();
-        } else {
-          prev();
-        }
-        pauseFeed();
+        if (deltaX > 0) { next(); } else { prev(); }
       } else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 40) {
-        // Vertical swipe still navigates slides (for scroll-like feel)
-        if (deltaY > 0) {
-          next();
-        } else {
-          prev();
-        }
-        pauseFeed();
+        if (deltaY > 0) { next(); } else { prev(); }
       }
     }, { passive: true });
 
-    // Resize handler — recalculate fixed heights
+    // Resize handler
     var resizeTimer;
     window.addEventListener('resize', function () {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
         measureAndSet();
-        // Reposition track without animation
-        var offset = getOffset(current);
         track.style.transition = 'none';
-        track.style.transform = 'translateX(-' + offset + '%)';
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
         void track.offsetHeight;
         track.style.transition = '';
       }, 150);
     });
 
-    // Initialize — defer to ensure flex layout is computed
+    // Initialize
     requestAnimationFrame(function () {
       measureAndSet();
     });
 
-    // ResizeObserver fallback — ensures heights stay correct
+    // ResizeObserver fallback
     if ('ResizeObserver' in window) {
       var ro = new ResizeObserver(function () {
         var h = feed.clientHeight;
@@ -320,9 +193,8 @@
           for (var i = 0; i < blocks.length; i++) {
             blocks[i].style.height = h + 'px';
           }
-          var offset = getOffset(current);
           track.style.transition = 'none';
-          track.style.transform = 'translateX(-' + offset + '%)';
+          track.style.transform = 'translateX(-' + (current * 100) + '%)';
           void track.offsetHeight;
           track.style.transition = '';
         }
@@ -330,7 +202,7 @@
       ro.observe(feed);
     }
 
-    // Expose API for scroll.js integration
+    // Expose API for scroll.js keyboard integration
     feed._scrollFeed = {
       isComplete: function () { return complete; },
       next: next,

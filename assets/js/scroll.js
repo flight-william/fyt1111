@@ -74,9 +74,45 @@
     });
   });
 
-  // ===== Auto-play Videos: play when visible, pause when not =====
+  // ===== Lazy-load Videos: load src when 1 section away, play when visible =====
   var autoVideos = document.querySelectorAll('.auto-video-section video');
   if (autoVideos.length && 'IntersectionObserver' in window) {
+    // Preload observer — triggers when video is ~100vh away (1 section ahead)
+    var preloadObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var video = entry.target;
+          var source = video.querySelector('source[data-src]');
+          if (source) {
+            source.setAttribute('src', source.getAttribute('data-src'));
+            source.removeAttribute('data-src');
+            video.load();
+          }
+          // Seek to data-start time once metadata is ready
+          var startTime = parseFloat(video.getAttribute('data-start'));
+          if (startTime) {
+            video.addEventListener('loadedmetadata', function () {
+              video.currentTime = startTime;
+            }, { once: true });
+          }
+          preloadObs.unobserve(video);
+        }
+      });
+    }, { rootMargin: '100% 0px' });
+
+    // Reset to data-start on loop
+    autoVideos.forEach(function (v) {
+      var st = parseFloat(v.getAttribute('data-start'));
+      if (st) {
+        v.addEventListener('timeupdate', function () {
+          if (v.currentTime < st && !v.seeking) {
+            v.currentTime = st;
+          }
+        });
+      }
+    });
+
+    // Play/pause observer — triggers when video is visible
     var videoObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -86,10 +122,16 @@
         }
       });
     }, { threshold: 0.3 });
-    autoVideos.forEach(function (v) { videoObs.observe(v); });
+
+    autoVideos.forEach(function (v) {
+      preloadObs.observe(v);
+      videoObs.observe(v);
+    });
   }
 
   // ===== Full-Page Keyboard Navigation =====
+  var isSectionPage = document.documentElement.classList.contains('is-section-page');
+
   var pages = Array.from(document.querySelectorAll('.page, .cover'));
   var totalPages = pages.length;
   var currentPageEl = document.querySelector('.current-page');
@@ -136,53 +178,55 @@
     pages[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // Keyboard handler
-  document.addEventListener('keydown', function (e) {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+  // Keyboard handler — skip on section pages so normal scrolling works
+  if (!isSectionPage) {
+    document.addEventListener('keydown', function (e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
 
-    var current = getCurrentPageIndex();
-    var handled = false;
+      var current = getCurrentPageIndex();
+      var handled = false;
 
-    // Check if current page has an incomplete scroll-feed
-    var currentPage = pages[current];
-    var feed = currentPage ? currentPage.querySelector('.scroll-feed') : null;
-    var feedApi = feed && feed._scrollFeed;
+      // Check if current page has an incomplete scroll-feed
+      var currentPage = pages[current];
+      var feed = currentPage ? currentPage.querySelector('.scroll-feed') : null;
+      var feedApi = feed && feed._scrollFeed;
 
-    switch (e.key) {
-      case 'ArrowDown':
-      case 'j':
-        if (feedApi && !feedApi.isComplete()) {
-          feedApi.next();
+      switch (e.key) {
+        case 'ArrowDown':
+        case 'j':
+          if (feedApi && !feedApi.isComplete()) {
+            feedApi.next();
+            handled = true;
+          } else {
+            goToPage(current + 1);
+            handled = true;
+          }
+          break;
+        case 'ArrowUp':
+        case 'k':
+          if (feedApi && feedApi.current() > 0) {
+            feedApi.prev();
+            handled = true;
+          } else {
+            goToPage(current - 1);
+            handled = true;
+          }
+          break;
+        case 'Home':
+          goToPage(0);
           handled = true;
-        } else {
-          goToPage(current + 1);
+          break;
+        case 'End':
+          goToPage(totalPages - 1);
           handled = true;
-        }
-        break;
-      case 'ArrowUp':
-      case 'k':
-        if (feedApi && feedApi.current() > 0) {
-          feedApi.prev();
+          break;
+        case 'Escape':
+          goToPage(0);
           handled = true;
-        } else {
-          goToPage(current - 1);
-          handled = true;
-        }
-        break;
-      case 'Home':
-        goToPage(0);
-        handled = true;
-        break;
-      case 'End':
-        goToPage(totalPages - 1);
-        handled = true;
-        break;
-      case 'Escape':
-        goToPage(0);
-        handled = true;
-        break;
-    }
+          break;
+      }
 
-    if (handled) e.preventDefault();
-  });
+      if (handled) e.preventDefault();
+    });
+  }
 })();

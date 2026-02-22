@@ -7,49 +7,61 @@
       <div class="gold-line mb-3"></div>
       <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}蜕变{{ else }}Evolution{{ end }}</p>
       <h2 class="heading-display">
+        <a href="/{{ .Language.Lang }}/evolution/">
         {{ if eq .Language.Lang "zh" }}设计<span class="text-gold">演变</span>{{ else }}Design <span class="text-gold">Evolution</span>{{ end }}
+        </a>
       </h2>
     </div>
 
     {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" data-scroll-interval="8000">
+    <div class="scroll-feed reveal" >
       <div class="scroll-feed-track">
 
         {{/* Slide 1: Overview + 2x2 image grid */}}
         <div class="scroll-block">
           {{ if eq .Language.Lang "zh" }}
           <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            十五年，四次蜕变。每一次改版的背后，都是为了让会员的体验更顺手、更舒适。从灰蓝的初版到黑橙的重塑，再到全橙的大胆尝试——最终回归精炼的黑橙，沉稳而有力。不追风，不跟潮，只做让会员用着最顺的那一版。
+            十五年，五张面孔。灰蓝、红金、黑橙、全橙，最后回到精炼的黑橙——沉稳而有力。不追风，不跟潮，只做让你用得更顺手的那一版。
           </p>
           {{ else }}
           <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            Fifteen years, four redesigns — each one driven by the same question: how do we make the experience better for our members? From the original grey-blue to bold black-orange, then an all-orange experiment — ultimately returning to refined black-orange. No chasing trends. Just relentless refinement for the people who use it every day.
+            Fifteen years, five redesigns — each one driven by the same question: how do we make the experience better for our members? From the original grey-blue to a rich red-gold era, then bold black-orange, an all-orange experiment — ultimately returning to refined black-orange. No chasing trends. Just relentless refinement for the people who use it every day.
           </p>
           {{ end }}
-          <div class="grid grid-cols-2 gap-3 max-w-3xl mx-auto">
-            <div>
-              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-                <img src="/images/website-v1.webp" alt="{{ if eq .Language.Lang "zh" }}原版网站{{ else }}Original website{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+          <div class="max-w-3xl mx-auto">
+            <div class="grid grid-cols-3 gap-3 mb-3">
+              <div>
+                <div style="aspect-ratio: 16/9; max-height: 14vh; overflow: hidden;" class="rounded-sm">
+                  <img src="/images/website-v1.webp" alt="{{ if eq .Language.Lang "zh" }}原版网站{{ else }}Original website{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+                </div>
+                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}灰蓝 · 2011{{ else }}Grey-Blue · 2011{{ end }}</span>
               </div>
-              <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}灰蓝 · 2011{{ else }}Grey-Blue · 2011{{ end }}</span>
+              <div>
+                <div style="aspect-ratio: 16/9; max-height: 14vh; overflow: hidden;" class="rounded-sm">
+                  <img src="/images/website-red-era.jpg" alt="{{ if eq .Language.Lang "zh" }}红金时代{{ else }}Red-Gold era{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+                </div>
+                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}红金 · 2015{{ else }}Red-Gold · 2015{{ end }}</span>
+              </div>
+              <div>
+                <div style="aspect-ratio: 16/9; max-height: 14vh; overflow: hidden;" class="rounded-sm">
+                  <img src="/images/website-rebrand.webp" alt="{{ if eq .Language.Lang "zh" }}品牌重塑{{ else }}Rebrand{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+                </div>
+                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}黑橙 · 2020{{ else }}Black-Orange · 2020{{ end }}</span>
+              </div>
             </div>
-            <div>
-              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-                <img src="/images/website-rebrand.webp" alt="{{ if eq .Language.Lang "zh" }}品牌重塑{{ else }}Rebrand{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+            <div class="flex justify-center gap-3">
+              <div class="w-1/3">
+                <div style="aspect-ratio: 16/9; max-height: 14vh; overflow: hidden;" class="rounded-sm">
+                  <img src="/images/app-2026-web1.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="artifact-caption block mt-1 text-[10px]">2026</span>
               </div>
-              <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}黑橙 · 2020{{ else }}Black-Orange · 2020{{ end }}</span>
-            </div>
-            <div>
-              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-                <img src="/images/app-2026-web1.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
+              <div class="w-1/3">
+                <div style="aspect-ratio: 16/9; max-height: 14vh; overflow: hidden;" class="rounded-sm">
+                  <img src="/images/app-2026-web2.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="artifact-caption block mt-1 text-[10px]">2026</span>
               </div>
-              <span class="artifact-caption block mt-1 text-[10px]">2026</span>
-            </div>
-            <div>
-              <div style="aspect-ratio: 16/9; max-height: 18vh; overflow: hidden;" class="rounded-sm">
-                <img src="/images/app-2026-web2.webp" alt="{{ if eq .Language.Lang "zh" }}2026桌面端{{ else }}2026 Desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
-              </div>
-              <span class="artifact-caption block mt-1 text-[10px]">2026</span>
             </div>
           </div>
         </div>
@@ -59,10 +71,10 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
               <div class="grid grid-cols-2 gap-2">
-                <figure class="artifact" style="max-height: 18vh;">
+                <figure class="artifact" style="max-height: 28vh;">
                   <img src="/images/app-orange.webp" alt="{{ if eq .Language.Lang "zh" }}全橙试验{{ else }}All-orange experiment{{ end }}" loading="lazy">
                 </figure>
-                <figure class="artifact" style="max-height: 18vh;">
+                <figure class="artifact" style="max-height: 28vh;">
                   <img src="/images/app-2026-mobile.png" alt="{{ if eq .Language.Lang "zh" }}2026手机应用{{ else }}2026 Mobile App{{ end }}" loading="lazy" style="object-fit: contain;">
                 </figure>
               </div>
@@ -70,31 +82,37 @@
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
-              <p>
-                <strong class="text-gold-light">灰蓝时代（2011）</strong>——以「富易堂 RICHE88」之名启航，简约清新，为会员提供当时最流畅的投注界面。
-              </p>
-              <p>
-                <strong class="text-gold-light">黑橙重塑（2020）</strong>——正式更名FYTBET，视觉更醒目，操作更直觉。疫情期间主动发布「你我同心抗疫」声明，与会员共度时艰。
-              </p>
-              <p>
-                <strong class="text-gold-light">全橙试验（2021）</strong>——App v3.0大胆突破。自主研发的优势在这里体现得淋漓尽致：从想法到上线，无需等待任何外部供应商。
-              </p>
-              <p>
-                <strong class="text-gold-light">精炼回归（2026）</strong>——App v4.1搭载每日签到、好友推荐、幸运红包、VIP俱乐部等专属功能。每一次升级，都是听取会员反馈后的实际行动。
-              </p>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">灰蓝时代（2011）</h3><span>——以「富易堂 RICHE88」之名启航，简约清新，为会员提供当时最流畅的投注界面。</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">红金年华（2015）</h3><span>——深红配金，澳门钜星合作期间的经典形象。沉稳大气，贵宾厅的气质开始渗进屏幕。</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">黑橙新生（2020）</h3><span>——正式更名FYTBET，更醒目，更直觉。疫情最难的时候，一句「你我同心抗疫」，和会员站在一起。</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">全橙冒险（2021）</h3><span>——App v3.0大胆试水。自研的好处在这里最明显：想到就做，不用排队等别人。</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">精炼至今（2026）</h3><span>——App v4.1，每日签到、幸运红包、好友推荐、VIP俱乐部。每个新功能，都是会员说了算。</span>
+              </div>
               {{ else }}
-              <p>
-                <strong class="text-gold-light">Grey-Blue Era (2011)</strong> — Launched as "富易堂 RICHE88" with a clean, minimal interface designed for smooth betting.
-              </p>
-              <p>
-                <strong class="text-gold-light">Black-Orange Rebrand (2020)</strong> — Became FYTBET with bolder visuals and more intuitive navigation. During the pandemic, the brand stood with its members through a public social responsibility statement.
-              </p>
-              <p>
-                <strong class="text-gold-light">All-Orange Experiment (2021)</strong> — App v3.0 pushed boundaries. The advantage of in-house development was clear: idea to launch with zero external dependency.
-              </p>
-              <p>
-                <strong class="text-gold-light">Refined Return (2026)</strong> — App v4.1 with daily check-in rewards, referral bonuses, lucky red envelopes, and VIP club perks. Every upgrade is a direct response to member feedback.
-              </p>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">Grey-Blue Era (2011)</h3><span> — Launched as "富易堂 RICHE88" with a clean, minimal interface designed for smooth betting.</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">Red-Gold Era (2015)</h3><span> — Deep red with gold accents, coinciding with the Macau Juxing International partnership. A more mature, premium look that matched the VIP concierge positioning.</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">Black-Orange Rebrand (2020)</h3><span> — Became FYTBET with bolder visuals and more intuitive navigation. During the pandemic, the brand stood with its members through a public social responsibility statement.</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">All-Orange Experiment (2021)</h3><span> — App v3.0 pushed boundaries. The advantage of in-house development was clear: idea to launch with zero external dependency.</span>
+              </div>
+              <div class="mb-3">
+                <h3 class="text-gold-light inline text-base font-bold">Refined Return (2026)</h3><span> — App v4.1 with daily check-in rewards, referral bonuses, lucky red envelopes, and VIP club perks. Every upgrade is a direct response to member feedback.</span>
+              </div>
               {{ end }}
             </div>
           </div>

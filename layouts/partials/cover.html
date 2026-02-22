@@ -1,5 +1,10 @@
-<section class="cover grain">
+<section id="cover" class="cover grain" itemscope itemtype="https://schema.org/Organization">
   <div class="relative z-10 text-center px-6 max-w-xl mx-auto">
+    {{/* Semantic H1 — visually hidden, crawler-readable */}}
+    <h1 class="sr-only" itemprop="name">
+      {{ if eq .Language.Lang "zh" }}富易堂 FYTBET — 始于2011的体育投注VIP平台{{ else }}FYTBET (富易堂) — VIP Sports Betting Platform Since 2011{{ end }}
+    </h1>
+
     {{/* Heritage logo — very ghosted, contextual "where we came from" */}}
     <div class="mb-6 cover-fade-1">
       <img src="/images/logo-heritage-light.webp" alt="富易堂 RICHE88" class="w-20 md:w-24 mx-auto opacity-10">

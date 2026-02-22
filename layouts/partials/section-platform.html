@@ -5,14 +5,16 @@
     <div class="relative mb-4 reveal">
       <span class="vertical-label">{{ i18n "section_platform" }}</span>
       <div class="gold-line mb-4"></div>
-      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}技术{{ else }}Technology{{ end }}</p>
+      <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}底气{{ else }}Technology{{ end }}</p>
       <h2 class="heading-display">
+        <a href="/{{ .Language.Lang }}/technology/">
         {{ if eq .Language.Lang "zh" }}自研 · <span class="text-gold">自建</span>{{ else }}<span class="text-gold">Built</span>, Not Bought{{ end }}
+        </a>
       </h2>
     </div>
 
     {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" data-scroll-interval="8000">
+    <div class="scroll-feed reveal" >
       <div class="scroll-feed-track">
 
         {{/* Slide 1: In-house development + sportsbook depth */}}
@@ -21,10 +23,10 @@
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p class="drop-cap">
-                会员的数据安全和使用体验，是平台最不能妥协的底线。富易堂全套系统自主研发——前端、后端、基础架构，端到端自建。不借第三方壳，不用白标方案。代码在自己手里，会员的信息才真正安全。
+                你的数据安全和使用体验，是这里最不让步的底线。全套系统自主研发——前端、后端、基础架构，从头到尾自己写。不套壳，不贴牌。代码在自己手里，你的信息才真正只属于你。
               </p>
               <p>
-                自研的另一个好处：想做什么功能就能做。富贵保就是最好的例子——100%投注保险，赢了全拿，输了保额隔天返还。市面上没有第二家能做到，因为这需要从底层开始设计。四大体育平台同样如此：小金体育（188BET底蕴）、Pinnacle（全球最利赔率）、InPlay Matrix（滚球专家）、PM体育——一站比全，不用到处跑。
+                自研还有一个好处：想到就能做。富贵保就是证明——100%投注保险，赢了照拿，输了隔天返还。市面上找不到第二家，因为这东西必须从底层开始造。四大体育平台一站聚齐：小金体育（188BET底蕴）、Pinnacle（全球最锐赔率）、InPlay Matrix（滚球专家）、PM体育——比完再下注，不用到处跑。
               </p>
               {{ else }}
               <p class="drop-cap">
@@ -50,10 +52,10 @@
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p>
-                体育之外，想玩什么都有。真人荷官（AG、BBIN、BG）、老虎机（PG、Microgaming、Pragmatic）、电竞、棋牌（开元、GM）、彩票、捕鱼——全品类一站到齐，不用在不同平台之间来回切换。
+                体育之外，一站全有。真人荷官、老虎机、电竞、棋牌、彩票、捕鱼——一个账户，一个APP，不用在不同平台之间来回折腾。
               </p>
               <p>
-                对VIP会员来说，这意味着所有娱乐都在一个账户、一个APP里完成。充值、下注、提款，一气呵成。这背后是自主研发团队的全栈能力——别家要排队等外部供应商的功能，我们自己说上就上。
+                充值、下注、提款，一气呵成。这背后是全栈自研团队的底气——别家排队等外部供应商的功能，这里说上就上。
               </p>
               {{ else }}
               <p>
@@ -65,8 +67,8 @@
               {{ end }}
             </div>
             <div class="md:col-span-5">
-              <figure class="artifact" style="height: 25vh;">
-                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" style="object-fit: contain;">
+              <figure>
+                <img src="/images/fytbet-desktop-2026.png" alt="{{ if eq .Language.Lang "zh" }}FYTBET桌面平台{{ else }}FYTBET desktop platform{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
               </figure>
               <span class="artifact-caption block px-1 mt-1">{{ if eq .Language.Lang "zh" }}FYTBET · 桌面平台{{ else }}FYTBET · Desktop{{ end }}</span>
             </div>
@@ -74,7 +76,7 @@
           <div class="mt-3">
             {{ if eq .Language.Lang "zh" }}
             <p>
-              出入金方面，七大通道随你选：USDT快捷私密、支付宝微信秒到、数字人民币（e-CNY）紧跟国策、购宝EBpay灵活便捷、银行转账稳妥可靠。怎么方便怎么来，平台不设限。
+              出入金七条路：USDT快且私密，支付宝微信秒到，数字人民币紧跟前沿，购宝EBpay灵活，银行转账稳妥。你习惯哪种就用哪种，平台不替你选。
             </p>
             {{ else }}
             <p>

@@ -18,6 +18,13 @@
       {{ i18n "closing_philosophy" }}
     </p>
 
+    {{/* Platform CTA */}}
+    <div class="reveal mb-10">
+      <a href="https://fytbet.com/?p=14093" data-link="platform" class="inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity" target="_blank" rel="noopener noreferrer">
+        {{ if eq .Language.Lang "zh" }}进入平台 →{{ else }}Enter Platform →{{ end }}
+      </a>
+    </div>
+
     {{/* FYTBET logo — bigger than cover (cover: w-40/w-52) */}}
     <div class="mb-6 reveal">
       <img src="/images/logo-fytbet.webp" alt="FYTBET" class="w-48 md:w-64 mx-auto opacity-90">

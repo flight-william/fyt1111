@@ -7,30 +7,24 @@
       <div class="gold-line mb-3"></div>
       <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}礼遇{{ else }}Experience{{ end }}</p>
       <h2 class="heading-display">
+        <a href="/{{ .Language.Lang }}/vip/">
         {{ if eq .Language.Lang "zh" }}<span class="text-gold">贵宾</span>之道{{ else }}The <span class="text-gold">VIP</span> Way{{ end }}
+        </a>
       </h2>
     </div>
 
     {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" data-scroll-interval="8000">
+    <div class="scroll-feed reveal" >
       <div class="scroll-feed-track">
 
         {{/* Slide 1: VIP philosophy + Haig Club gifting */}}
         <div class="scroll-block">
           <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
-            <div style="flex: 0 0 40%; display: flex; flex-direction: column; gap: 0.5rem;">
-              <figure class="artifact" style="max-height: 18vh;">
+            <div style="flex: 0 0 40%;">
+              <figure class="artifact" style="max-height: 30vh;">
                 <img src="/images/vip-haigclub.webp" alt="{{ if eq .Language.Lang "zh" }}Haig Club贵宾新年贺卡{{ else }}Haig Club VIP New Year card{{ end }}" loading="lazy">
               </figure>
-              <div style="display: flex; gap: 0.5rem;">
-                <figure class="artifact artifact-tilted" style="max-height: 12vh; flex: 1;">
-                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy">
-                </figure>
-                <figure class="artifact artifact-tilted-r" style="max-height: 12vh; flex: 1;">
-                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy">
-                </figure>
-              </div>
-              <span class="artifact-caption block">{{ if eq .Language.Lang "zh" }}金箔定制 · RICHE88{{ else }}Gold Foil · RICHE88{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Haig Club · 40年限量威士忌{{ else }}Haig Club · 40-Year Limited Edition{{ end }}</span>
             </div>
             <div style="flex: 1; min-width: 0;">
               <div class="mb-3">
@@ -43,10 +37,10 @@
               </div>
               {{ if eq .Language.Lang "zh" }}
               <p>
-                贵宾之道，始于澳门。富易堂与澳门贵宾厅集团钜星的合作，将线下贵宾服务的精髓注入品牌血脉。从Macau Tower的极限蹦极，到新加坡F1赛道的速度与激情——以「一点都不难」的精神，让每位贵宾亲身体验不可能。
+                贵宾之道，从澳门开始。与钜星集团的合作，把贵宾厅里那套待客的讲究，写进了品牌的骨子里。233米蹦极、F1赛道——不只是活动，是和每位贵宾之间一次真正的交心。
               </p>
               <p>
-                在VIP礼遇方面，富易堂曾携手世界名酒Haig Club，以限量40年单一谷物苏格兰威士忌搭配手工吹制水晶酒瓶，作为新年贺礼。这份心意不是账号式的对待，而是以诚待客的信念——如今延续到数字空间。
+                新年礼是一瓶Haig Club限量40年苏格兰威士忌，手工吹制水晶瓶装。送的不是酒，是一句不用说出口的话：你不是账号，是我们记挂的人。这份心意，如今搬到了线上，分量没变。
               </p>
               {{ else }}
               <p>
@@ -60,58 +54,110 @@
           </div>
         </div>
 
-        {{/* Slide 2: Sportsbook depth — 4 providers */}}
+        {{/* Slide 2: Experiential events — Macau Tower + Singapore F1 */}}
         <div class="scroll-block">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-            <div class="md:col-span-5">
-              <figure class="artifact" style="max-height: 25vh;">
-                <img src="/images/sportsbook-banner.webp" alt="{{ if eq .Language.Lang "zh" }}体育投注平台{{ else }}Sportsbook platform{{ end }}" loading="lazy">
-              </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}多体育平台 · VIP体育{{ else }}Multi-Sportsbook · VIP Sports{{ end }}</span>
+          <div class="mb-2">
+            <div class="auto-video-section mx-auto" style="max-height: 30vh; max-width: 700px; overflow: hidden; border-radius: 3px;">
+              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="/video/singapore-f1-poster.jpg" class="w-full h-full object-cover">
+                <source data-src="/video/singapore-f1.mp4" type="video/mp4">
+              </video>
             </div>
-            <div class="md:col-span-7">
+            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}勇者无惧 · 新加坡F1赛道体验{{ else }}No Fear · Singapore F1 Circuit Experience{{ end }}</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
               {{ if eq .Language.Lang "zh" }}
               <p>
-                作为专注体育投注平台的品牌，富易堂提供四大体育平台，各具所长。小金体育（XJ）承袭188BET的底蕴与专业，是平台上最具传承意义的体育产品。Pinnacle以尖锐赔率和高限额闻名全球，深受专业玩家青睐。InPlay Matrix专精实时滚球市场，提供最丰富的赛中投注选择。PM体育（Panda Group）则以差异化的赛事覆盖和独特盘口提供额外选择。
-              </p>
-              <p>
-                四大体育平台汇聚一站，意味着贵宾客户可以在同一平台内，针对不同赛事和投注风格，选择最优赔率和最专业的市场。这种在线体育竞猜的广度和深度，在行业内极为罕见。少有平台能在一个屋檐下提供如此多元化的专业体育选择。
+                「一点都不难」——说这话容易，真去做的只有一家。五周年，贵宾们站上澳门塔233米高空，纵身一跃，口号变成了记忆。敢跳，就赢了。
               </p>
               {{ else }}
               <p>
-                Four sportsbooks, each best-in-class at what they do. XJ carries 188BET's proven legacy. Pinnacle delivers the sharpest odds globally, favored by serious bettors. InPlay Matrix owns the live in-play space. PM Sports rounds it out with unique markets and coverage.
+                "Want to win? It's not hard at all!" — not just a slogan, but a real challenge for VIP guests. For the 5th anniversary, members were taken to the top of Macau Tower for the 233-meter bungy jump. If you dare, you win.
               </p>
+              {{ end }}
+            </div>
+            <div>
+              {{ if eq .Language.Lang "zh" }}
               <p>
-                The result: VIP members compare odds across four specialist books without leaving the platform. Find the best line for every match, every market. This depth of choice under one roof is rare — most platforms offer one sportsbook and call it a day.
+                新加坡F1夜间赛道，滨海湾的灯光在引擎声里飞速后退。这不是促销活动——是只有富易堂才想得出的待客方式：让你亲手把不可能变成可能。
+              </p>
+              {{ else }}
+              <p>
+                The Singapore F1 street circuit experience was equally unforgettable — VIP guests drove the actual Marina Bay circuit, feeling the thrill of F1-level speed under city lights. These aren't standard promotions. They're experiences only FYT would create: making the impossible feel effortless.
               </p>
               {{ end }}
             </div>
           </div>
         </div>
 
-        {{/* Slide 3: Fortune Insurance + payment channels */}}
+        {{/* Slide 3: Marvel collector figures — VIP gifting */}}
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
-              <figure class="artifact" style="max-height: 25vh;">
-                <img src="/images/fugui-bao.webp" alt="{{ if eq .Language.Lang "zh" }}富贵保{{ else }}Fortune Insurance{{ end }}" loading="lazy">
-              </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}富贵保 · 投注保险{{ else }}Fortune Insurance{{ end }}</span>
+              <div class="grid grid-cols-2 gap-2">
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/collector-thor.jpg" alt="{{ if eq .Language.Lang "zh" }}雷神托尔 Dragon 珍藏模型{{ else }}Thor Dragon collectible figure{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/collector-ironman.jpg" alt="{{ if eq .Language.Lang "zh" }}钢铁侠 Dragon 珍藏模型{{ else }}Iron Man Dragon collectible figure{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/collector-captain.jpg" alt="{{ if eq .Language.Lang "zh" }}美国队长 Dragon 珍藏模型{{ else }}Captain America Dragon collectible figure{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact" style="max-height: 14vh;">
+                  <img src="/images/collector-hulk.jpg" alt="{{ if eq .Language.Lang "zh" }}绿巨人浩克 Dragon 珍藏模型{{ else }}Hulk Dragon collectible figure{{ end }}" loading="lazy">
+                </figure>
+              </div>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}Marvel 珍藏系列 · 会员专属{{ else }}Marvel Collector Series · Members Only{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p>
-                独创福利「富贵保」是100%体育保险产品——赢了全拿，输了保额隔天返还。这不是简单的返水或优惠券，而是一种真正的投注保险机制，体现了平台自主研发的创新能力和对客户利益的重视。在行业内，如此大胆的产品设计极为少见。
+                礼物的心思不止一种。Marvel珍藏系列——雷神、钢铁侠、美国队长、绿巨人，Dragon正版授权，限量发放，凭打码量兑换。摆在书架上的手办，比任何促销短信都有温度。
               </p>
               <p>
-                七大支付通道覆盖不同偏好：USDT加密货币提供快速、无国界、注重隐私的选择；支付宝和微信支付覆盖中国主流移动支付；数字人民币（e-CNY）支持国家最新数字货币；购宝和EBpay第三方平台提供额外灵活性；银行转账满足传统需求。每位贵宾都能以最便捷、最私密的方式完成交易。
+                从40年威士忌到Marvel手办，从金箔扑克到阿富纪念杯——每一件都是挑过的，不是批量生产的赠品。背后不是营销预算在说话，是品牌和老会员之间多年的默契。
               </p>
               {{ else }}
               <p>
-                Fortune Insurance (富贵保) is unlike anything else in the industry: 100% betting insurance. Win and keep the full payout. Lose and the insured amount comes back the next day. Not a rebate, not a coupon — actual insurance. Only possible because the platform is built from scratch in-house.
+                VIP gifting went beyond Haig Club. FYT offered active members a Marvel hero collector series — officially licensed Dragon models of Thor, Iron Man, Captain America, and Hulk. Each figure was limited edition, earned through turnover milestones. A thank you that sits on your shelf, not in your spam folder.
               </p>
               <p>
-                Seven payment channels fit any preference: USDT for speed and privacy, Alipay and WeChat Pay for instant mobile, e-CNY for China's digital currency, GBPay and EBpay for flexibility, bank transfer for tradition. Move funds your way, on your terms.
+                From limited-edition whisky to Marvel figures, gold-foil playing cards to anniversary mugs — every gift is curated, not mass-produced. It's not promotion. It's the quiet understanding between a brand and the people who trust it.
+              </p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+        {{/* Slide 4: VIP exclusive gifting & perks */}}
+        <div class="scroll-block">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            <div class="md:col-span-5">
+              <div style="display: flex; gap: 0.5rem;">
+                <figure class="artifact artifact-tilted" style="max-height: 14vh; flex: 1;">
+                  <img src="/images/poker-joker.webp" alt="{{ if eq .Language.Lang "zh" }}定制鬼牌{{ else }}Custom Joker{{ end }}" loading="lazy">
+                </figure>
+                <figure class="artifact artifact-tilted-r" style="max-height: 14vh; flex: 1;">
+                  <img src="/images/poker-back.webp" alt="{{ if eq .Language.Lang "zh" }}定制牌背{{ else }}Card back{{ end }}" loading="lazy">
+                </figure>
+              </div>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}金箔扑克 · 只赠不卖{{ else }}Gold Foil Poker · Gift Only{{ end }}</span>
+            </div>
+            <div class="md:col-span-7">
+              {{ if eq .Language.Lang "zh" }}
+              <p>
+                每年春节，一尊生肖限定的黄金阿富——金马、金羊、金猴，年年不同，只赠VIP。金箔扑克、名酒、定制表带，件件只送不卖。不是赠品，是平台记得你的方式。
+              </p>
+              <p>
+                线上的VIP俱乐部延续着同样的讲究：每日签到、幸运红包、好友推荐、扭蛋惊喜。形式变了，那份把会员放在心上的习惯，没变。
+              </p>
+              {{ else }}
+              <p>
+                Every Lunar New Year brings a zodiac golden Ah Fu figurine — Golden Horse, Golden Goat, Golden Monkey — a new edition annually, for VIPs only. Gold-foil playing cards, premium spirits, custom watch bands, branded ashtrays — none of it for sale. These are gifts reserved for the members who matter most.
+              </p>
+              <p>
+                Today's VIP Club carries on that tradition digitally: daily check-in rewards, lucky red envelopes (up to 1,888 weekly), referral bonuses through the Friend Share PLUS program, and gacha surprises. The medium changed; the care behind it hasn't.
               </p>
               {{ end }}
             </div>

@@ -7,7 +7,9 @@
       <div class="gold-line mb-4"></div>
       <p class="heading-sub mb-2">{{ if eq .Language.Lang "zh" }}溯源{{ else }}Origin{{ end }}</p>
       <h2 class="heading-display">
+        <a href="/{{ .Language.Lang }}/origin/">
         {{ if eq .Language.Lang "zh" }}始于 <span class="text-gold">11.11.11</span>{{ else }}Since <span class="text-gold">11.11.11</span>{{ end }}
+        </a>
       </h2>
       <p class="mt-2 font-sans text-xs tracking-[0.5em] text-fyt-muted opacity-40">
         2011 · 11 · 11 — 11:11:11
@@ -15,15 +17,15 @@
     </div>
 
     {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" data-scroll-interval="8000">
+    <div class="scroll-feed reveal" >
       <div class="scroll-feed-track">
 
         {{/* Slide 1: Hero banner + founding story */}}
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
-              <figure class="artifact" style="height: 20vh;">
-                <img src="/images/hero-banner-classic.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂经典横幅{{ else }}Classic FYT hero banner{{ end }}" loading="lazy" style="object-fit: contain;">
+              <figure>
+                <img src="/images/hero-banner-classic.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂经典横幅{{ else }}Classic FYT hero banner{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
               </figure>
               <span class="artifact-caption block mt-1">{{ i18n "from_archives" }} · 2014</span>
             </div>
@@ -33,7 +35,7 @@
                 富易堂诞生于2011年11月11日上午11时11分11秒——被称为「世纪光棍节」的历史时刻。这个百年一遇的日期，成为品牌基因中不可磨灭的印记。
               </p>
               <p>
-                创立之初，隶属于Cube集团旗下，与业界知名品牌188BET同属一家。Cube持有马恩岛及菲律宾PAGCOR双重牌照，为品牌运营奠定了合规基础。Prestige IOM更持有FCLRC互动博彩牌照至2024年，三地监管资质完整覆盖。
+                创立之初，隶属Cube集团旗下，与188BET同属一家。Cube持有马恩岛及菲律宾PAGCOR双重牌照，合规基础从第一天就打下了。
               </p>
               {{ else }}
               <p class="drop-cap">
@@ -56,25 +58,25 @@
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
-              <figure class="artifact" style="height: 20vh;">
-                <img src="/images/website-v1-full.jpg" alt="{{ if eq .Language.Lang "zh" }}富易堂初版网站 · Cube集团{{ else }}Original Riche88 website · Cube group{{ end }}" loading="lazy" style="object-fit: contain;">
+              <figure>
+                <img src="/images/website-v1-full.jpg" alt="{{ if eq .Language.Lang "zh" }}富易堂初版网站 · Cube集团{{ else }}Original Riche88 website · Cube group{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
               </figure>
               <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}初版平台 · Cube集团{{ else }}Original Platform · Cube Group{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p>
-                Cube集团是亚洲博彩行业深耕多年的集团公司，旗下最广为人知的品牌是188BET——一个在体育投注平台领域享有盛誉的名字。与188BET同属一家，意味着富易堂从第一天起就继承了成熟的运营经验与行业资源。
+                Cube集团深耕亚洲博彩多年，旗下最响的名字是188BET——体育投注圈里无人不晓。与188BET同出一门，富易堂从第一天就站在了成熟的运营体系之上。
               </p>
               <p>
-                合规是信任的基石。马恩岛牌照在全球博彩监管中以严格和公信力著称；PAGCOR覆盖亚太市场的合规要求；FCLRC牌照提供菲律宾经济特区内的额外监管覆盖。三地资质在当时的行业中并不多见，为品牌注入了深厚的制度信用。
+                信任始于合规。马恩岛——全球公认的严格标准；<a href="/docs/fclrc-license.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">PAGCOR</a>——亚太市场的监管背书。双重资质在当年的行业里并不多见。制度信用这件事，急不来，也装不出来。
               </p>
               {{ else }}
               <p>
                 Cube was a heavyweight in Asian gaming, and 188BET was its flagship — a name any serious sports bettor recognizes. Sharing that lineage gave FYT battle-tested operations and deep industry resources from the start.
               </p>
               <p>
-                Trust starts with compliance. Isle of Man — globally recognized for strict standards. PAGCOR — Asia-Pacific coverage. FCLRC — Philippine economic zone regulatory reach. Three jurisdictions before most competitors had sorted out one. That kind of foundation doesn't get built overnight.
+                Trust starts with compliance. Isle of Man — globally recognized for strict standards. PAGCOR — Asia-Pacific coverage. <a href="/docs/fclrc-license.pdf" target="_blank" rel="noopener" class="text-fyt-gold hover:underline">FCLRC</a> — Philippine economic zone regulatory reach. Three jurisdictions before most competitors had sorted out one. That kind of foundation doesn't get built overnight.
               </p>
               {{ end }}
             </div>
@@ -85,18 +87,18 @@
         <div class="scroll-block">
           <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             <div class="md:col-span-5">
-              <figure class="artifact" style="height: 20vh;">
-                <img src="/images/hero-banner-riche88.jpg" alt="{{ if eq .Language.Lang "zh" }}阿富 · 要赢一点都不难{{ else }}Ah Fu · Want to win?{{ end }}" loading="lazy" style="object-fit: contain;">
+              <figure>
+                <img src="/images/forum-football-banner.gif" alt="{{ if eq .Language.Lang "zh" }}论坛时代广告横幅 · 我为足球而醉{{ else }}Forum-era banner · Passionate about football{{ end }}" loading="lazy" class="w-full h-auto rounded-sm" style="max-height: 25vh;">
               </figure>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}论坛时代 · 要赢？一点都不难！{{ else }}Forum Era · It's Not Hard at All!{{ end }}</span>
+              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}论坛时代 · 我为足球而醉{{ else }}Forum Era · Passionate About Football{{ end }}</span>
             </div>
             <div class="md:col-span-7">
               {{ if eq .Language.Lang "zh" }}
               <p>
-                在中文论坛的黄金时代，富易堂活跃于天朝论坛、玩博论坛、华人论坛、贝博论坛和海燕论坛，以口碑和真实互动建立信任。信任，是靠群体的口碑一点一点累积起来的。
+                中文论坛的黄金年代，富易堂泡在天朝、玩博、华人、贝博、海燕五大论坛里。不是投广告，是跟人聊天、回反馈、搞活动。口碑这东西，从来都是一帖一帖攒出来的。
               </p>
               <p>
-                品牌同样经历了蜕变：从富易堂 Riche88 到 FYTBET——传承不断，面貌常新。标语也从「要赢？一点都不难！」演变为「让博彩成为娱乐」，反映了品牌从竞技取向到娱乐优先的成熟转变。十余年来，变的是表达方式，不变的是服务承诺。
+                品牌也在长大。富易堂 Riche88 变成了 FYTBET，口号从「要赢？一点都不难！」变成「让博彩成为娱乐」——从争胜到松弛，是十五年沉淀后的底气。名字在变，面孔在变，对会员的那份心没动过。
               </p>
               {{ else }}
               <p>

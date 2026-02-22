@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Language.Lang }}">
+<html lang="{{ .Language.Lang }}"{{ if not .IsHome }} class="is-section-page"{{ end }}>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0F0F0F">
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
   <meta name="keywords" content="富易堂,FYTBET,Riche88,FYT,188BET,富易堂官网,体育投注,在线体育竞猜,体育投注平台,富贵保,投注保险,VIP娱乐,澳门贵宾厅,Pinnacle,小金体育,USDT充值,支付宝充值,微信支付,数字人民币,自主研发平台,fytbet,fyt1111,x88bet">
@@ -10,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
-  <meta property="og:url" content="https://riche88.com/{{ if eq .Language.Lang "en" }}en/{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="https://riche88.com/images/logo-fytbet.webp">
   <meta property="og:site_name" content="FYTBET">
   <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else }}en_US{{ end }}">
@@ -19,15 +20,15 @@
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
   <meta name="twitter:image" content="https://riche88.com/images/logo-fytbet.webp">
-  <link rel="canonical" href="{{ "https://riche88.com/" }}{{ if eq .Language.Lang "en" }}en/{{ end }}">
-  {{ if eq .Language.Lang "zh" }}
-  <link rel="alternate" hreflang="zh" href="https://riche88.com/">
-  <link rel="alternate" hreflang="en" href="https://riche88.com/en/">
-  {{ else }}
-  <link rel="alternate" hreflang="en" href="https://riche88.com/en/">
-  <link rel="alternate" hreflang="zh" href="https://riche88.com/">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{/* Dynamic hreflang — works for homepage and section pages */}}
+  {{ if .IsTranslated }}
+    {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+    {{ end }}
   {{ end }}
-  <link rel="alternate" hreflang="x-default" href="https://riche88.com/">
+  <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+  <link rel="alternate" hreflang="x-default" href="{{ if eq .Language.Lang "zh" }}{{ .Permalink }}{{ else }}{{ with index .Sites 0 }}{{ .Home.Permalink }}{{ end }}{{ end }}">
 
   {{/* Tailwind CSS — built by Hugo Pipes */}}
   {{ $css := resources.Get "css/main.css" }}
@@ -79,15 +80,172 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "富易堂",
-    "alternateName": ["Riche88", "FYT", "FYTBET"],
+    "alternateName": ["Riche88", "FYT", "FYTBET", "富易堂官网"],
     "url": "https://riche88.com",
     "foundingDate": "2011-11-11",
-    "logo": "https://riche88.com/images/logo-heritage.png",
+    "logo": "https://riche88.com/images/logo-fytbet.webp",
+    "slogan": "让博彩成为娱乐",
+    "knowsAbout": ["Sports Betting", "Online Entertainment", "VIP Gaming", "体育投注", "在线娱乐"],
+    "areaServed": [
+      { "@type": "Country", "name": "China" },
+      { "@type": "Continent", "name": "Asia" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["Chinese", "English"]
+    },
     "sameAs": [
-      "https://fyt1111.com",
       "https://fytbet.com",
-      "https://x88.bet"
+      "https://fyt1111.com",
+      "https://x88.bet",
+      "https://riche88.com"
     ]
+  }
+  </script>
+
+  {{/* JSON-LD WebSite Schema — critical for brand search */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "富易堂 FYTBET",
+    "alternateName": ["Riche88", "FYT官网", "FYTBET Official"],
+    "url": "https://riche88.com",
+    "inLanguage": ["zh-CN", "en"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "富易堂",
+      "url": "https://riche88.com"
+    }
+  }
+  </script>
+
+  {{/* JSON-LD FAQPage Schema — helps AI engines extract brand facts + anti-squatting */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "富易堂是什么？What is FYT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "富易堂(FYTBET)是创立于2011年11月11日的体育投注VIP娱乐平台，FYT即富(Fu)易(Yi)堂(Tang)的英文首字母缩写。前身隶属Cube集团(188BET母公司)，2020年由Riche88更名为FYTBET。官方域名为 riche88.com、fytbet.com、fyt1111.com 和 x88.bet。FYTBET is a VIP sports betting and entertainment platform founded on November 11, 2011. FYT stands for 富(Fu)易(Yi)堂(Tang). Formerly under the Cube group (parent of 188BET), rebranded from Riche88 to FYTBET in 2020. Official domains: riche88.com, fytbet.com, fyt1111.com, x88.bet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富易堂什么时候成立的？When was FYT founded?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "富易堂成立于2011年11月11日11时11分11秒，恰逢百年一遇的世纪光棍节。FYT was founded at 11:11:11 AM on November 11, 2011 — the once-in-a-century Singles' Day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富易堂官网是哪个？What is the official FYTBET website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "富易堂官方网站为 riche88.com（品牌故事站）和 fytbet.com（主平台），其他官方域名包括 fyt1111.com 和 x88.bet。请认准官方域名，谨防仿冒。The official websites are riche88.com (brand story site) and fytbet.com (main platform), with additional domains fyt1111.com and x88.bet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富贵保是什么？What is Fortune Insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "富贵保是富易堂自主研发的100%体育投注保险产品——赢了全额到手，输了次日返还投保金额。Fortune Insurance is FYT's proprietary 100% sports betting insurance — win and keep the full payout, lose and the insured amount is returned the next day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Riche88和FYTBET是同一家吗？Are Riche88 and FYTBET the same?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的，完全相同。品牌最初以富易堂 Riche88运营，2020年4月21日正式更名为FYTBET，启用黑橙配色的全新视觉体系。FYT即富(Fu)易(Yi)堂(Tang)的英文首字母缩写，品牌血脉一脉相承。riche88.com和fytbet.com均为官方域名。Yes, they are the same brand. Originally operating as 富易堂 Riche88, it rebranded to FYTBET on April 21, 2020. FYT is the acronym of 富(Fu)易(Yi)堂(Tang). Both riche88.com and fytbet.com are official domains."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富易堂有哪些支付方式？What payment methods does FYT support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "支持USDT加密货币、支付宝、微信支付、数字人民币(e-CNY)、购宝(GBPay)、EBpay及银行转账。FYT supports USDT cryptocurrency, Alipay, WeChat Pay, e-CNY (digital yuan), GBPay, EBpay, and bank transfers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富易堂和188BET什么关系？What is the relationship between FYT and 188BET?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "富易堂与188BET同属Cube集团旗下。Cube持有马恩岛及PAGCOR牌照，188BET是其最知名品牌。富易堂从创立之初即继承了成熟的运营经验与行业资源。FYT and 188BET were both under the Cube group. Cube held Isle of Man and PAGCOR licenses, with 188BET as its flagship brand. FYT inherited battle-tested operations from day one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富易堂有哪些牌照？What licenses does FYT hold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cube集团持有马恩岛(Isle of Man)和菲律宾PAGCOR双重牌照。此外，Prestige IOM持有FCLRC互动博彩牌照(2016-2017)，三地监管资质完整覆盖。Cube group held Isle of Man and PAGCOR licenses. Additionally, Prestige IOM held an FCLRC interactive gaming license (2016-2017), providing three-jurisdiction regulatory coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "阿富是谁？Who is Ah Fu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "阿富(Ah Fu)是富易堂的品牌吉祥物，诞生于2015年。标志性棕色卷发、红色背带裤、胸口绣富字。拥有40余种表情贴纸，曾亲临诚十杯慈善足球赛现场。Ah Fu is FYTBET's brand mascot since 2015 — signature brown swirl hair, red suspenders, 富 character. 40+ sticker expressions, appeared live at the Chengshi Cup charity soccer match."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富易堂有哪些体育平台？What sportsbooks does FYT offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "四大体育平台：小金体育(XJ，承袭188BET底蕴)、Pinnacle(全球最利赔率)、InPlay Matrix(滚球专家)、PM体育(Panda Group)。Four sportsbooks: XJ Sports (188BET legacy), Pinnacle (sharpest global odds), InPlay Matrix (live-betting specialists), PM Sports (Panda Group)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "FYTBET和Riche88是同一家吗？Are FYTBET and Riche88 the same?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的。富易堂最初以Riche88为品牌名运营，2020年4月21日正式更名为FYTBET。品牌传承不断，riche88.com和fytbet.com均为官方域名。Yes. FYT originally operated as Riche88 and rebranded to FYTBET on April 21, 2020. Both riche88.com and fytbet.com are official domains."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "诚十杯是什么？What is the Chengshi Cup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "诚十杯粤鄂足球慈善赛于2015年5月2日在广州广东省人民体育场举行。诚十集团与富易堂联合赞助，33位福利院儿童对阵11名退役国脚的表演赛为最大亮点。所有善款用于广州市社会福利院孤残儿童教育援助。The Chengshi Cup was a Guangdong-Hubei charity soccer match held May 2, 2015 at Guangdong Provincial People's Stadium. Co-sponsored by Chengshi Group and FYT, featuring 33 welfare children vs 11 veteran national players. All proceeds benefited the Guangzhou Social Welfare Institute."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "富易堂的技术优势是什么？What is FYT's technology advantage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "富易堂全套系统自主研发——前端、后端、基础架构端到端自建，不依赖第三方白标方案。这使得平台能快速迭代、保障数据安全，并开发富贵保等独创产品。FYT's entire system is built in-house — front-end, back-end, and infrastructure, end-to-end. No third-party white-label dependency. This enables rapid iteration, superior data security, and proprietary innovations like Fortune Insurance."
+        }
+      }
+    ]
+  }
+  </script>
+
+  {{ if .IsHome }}
+  {{/* Speakable Schema — marks key content for voice search / AI reading */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ .Title }}",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".cover h1", "#origin", "#platform"]
+    }
   }
   </script>
 
@@ -142,6 +300,52 @@
   }
   </script>
 
+  {{/* VideoObject Schema — Macau Tower Bungy Jump */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "富易堂五周年澳门塔蹦极 FYT 5th Anniversary Macau Tower Bungy Jump",
+    "description": "FYT VIP guests take the iconic 233-meter bungy jump at Macau Tower for the brand's 5th anniversary — embodying the tagline 'It's not hard at all.'",
+    "contentUrl": "https://riche88.com/video/macau-tower.mp4",
+    "thumbnailUrl": "https://riche88.com/images/macau-print.webp",
+    "uploadDate": "2016-11-11",
+    "duration": "PT3M",
+    "inLanguage": "zh"
+  }
+  </script>
+
+  {{/* VideoObject Schema — Charity Soccer Match */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "诚十杯粤鄂明星慈善足球赛 Chengshi Cup Charity Soccer",
+    "description": "Broadcast footage of the 2015 Chengshi Cup charity soccer match at Guangdong Provincial People's Stadium. 33 welfare children vs 11 veteran national football players.",
+    "contentUrl": "https://riche88.com/video/charity-soccer.mp4",
+    "thumbnailUrl": "https://riche88.com/images/charity-hero.webp",
+    "uploadDate": "2015-05-02",
+    "duration": "PT5M",
+    "inLanguage": "zh"
+  }
+  </script>
+
+  {{/* SoftwareApplication Schema — FYT App */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FYT APP",
+    "alternateName": ["FYTBET APP", "富易堂APP"],
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "iOS, Android",
+    "softwareVersion": "4.1.13",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+    "featureList": ["Sports Betting", "Live Casino", "Daily Check-in", "Fortune Insurance", "VIP Club", "Lucky Red Envelope", "Referral Program"],
+    "author": { "@type": "Organization", "name": "FYTBET" }
+  }
+  </script>
+
   {{/* Product Schema — Fortune Insurance */}}
   <script type="application/ld+json">
   {
@@ -154,6 +358,7 @@
     "category": "Sports Betting Insurance"
   }
   </script>
+  {{ end }}{{/* end .IsHome */}}
 </head>
 <body class="bg-fyt-black text-fyt-warm-white antialiased">
   {{/* Progress bar */}}
@@ -162,28 +367,47 @@
   {{/* Navigation */}}
   {{ partial "nav.html" . }}
 
-  {{/* Section dots */}}
-  {{ partial "section-dots.html" . }}
+  {{/* Section dots — homepage only */}}
+  {{ if .IsHome }}{{ partial "section-dots.html" . }}{{ end }}
 
   {{/* Main content */}}
   <main>
     {{ block "main" . }}{{ end }}
   </main>
 
+  {{/* Footer */}}
+  <footer class="py-6 px-6 border-t border-fyt-subtle/30" style="min-height: auto; height: auto; scroll-snap-align: end;">
+    <div class="max-w-screen-lg mx-auto">
+      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] tracking-[0.2em] uppercase text-fyt-muted">
+        <a href="/{{ .Language.Lang }}/origin/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}溯源{{ else }}Origin{{ end }}</a>
+        <a href="/{{ .Language.Lang }}/experience/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}体验{{ else }}Experience{{ end }}</a>
+        <a href="/{{ .Language.Lang }}/mascot/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}阿富{{ else }}Ah Fu{{ end }}</a>
+        <a href="/{{ .Language.Lang }}/evolution/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}演变{{ else }}Evolution{{ end }}</a>
+        <a href="/{{ .Language.Lang }}/vip/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}贵宾{{ else }}VIP{{ end }}</a>
+        <a href="/{{ .Language.Lang }}/charity/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}公益{{ else }}Charity{{ end }}</a>
+        <a href="/{{ .Language.Lang }}/technology/" class="hover:text-fyt-gold transition-colors">{{ if eq .Language.Lang "zh" }}技术{{ else }}Technology{{ end }}</a>
+      </nav>
+      <p class="text-center text-fyt-muted/40 text-[10px] mt-3 tracking-widest">© 2011–2026 FYTBET</p>
+    </div>
+  </footer>
+
   {{/* Scripts */}}
   {{ $scrollJs := resources.Get "js/scroll.js" }}
   {{ $feedJs := resources.Get "js/scroll-feed.js" }}
   {{ $toggleJs := resources.Get "js/toggle.js" }}
   {{ $linksJs := resources.Get "js/links.js" }}
+  {{ $articleToggleJs := resources.Get "js/article-toggle.js" }}
   {{ if hugo.IsProduction }}
     {{ $scrollJs = $scrollJs | minify | fingerprint }}
     {{ $feedJs = $feedJs | minify | fingerprint }}
     {{ $toggleJs = $toggleJs | minify | fingerprint }}
     {{ $linksJs = $linksJs | minify | fingerprint }}
+    {{ $articleToggleJs = $articleToggleJs | minify | fingerprint }}
   {{ end }}
   <script defer src="{{ $scrollJs.RelPermalink }}"></script>
   <script defer src="{{ $feedJs.RelPermalink }}"></script>
   <script defer src="{{ $toggleJs.RelPermalink }}"></script>
   <script defer src="{{ $linksJs.RelPermalink }}"></script>
+  <script defer src="{{ $articleToggleJs.RelPermalink }}"></script>
 </body>
 </html>
