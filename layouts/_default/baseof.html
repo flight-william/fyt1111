@@ -468,17 +468,18 @@
       {{/* Separator — hairline */}}
       <div class="w-12 h-px bg-fyt-muted/20 mx-auto mb-6"></div>
 
-      {{/* Brand Ecosystem — cross-linking high-authority assets via Stealth Links (Baidu Protection) */}}
+      {{/* Brand Ecosystem — cross-linking high-authority assets */}}
       <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-4 mb-10">
-        {{/* Heritage Bridge (riche88 <-> fyt1111) */}}
+        {{/* The "Bridge" Link — dynamically shows Direct Link (Master) or Stealth Link (Mirror) */}}
         <div class="flex flex-col items-center master-only">
           <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_china_mirror" }}</span>
-          <a href="/origin/" class="stealth-link text-[11px] tracking-[0.1em] text-fyt-gold hover:text-fyt-gold-light transition-colors duration-300" 
-             data-base="{{ "https://fyt1111.com" | base64Encode }}" 
-             data-path="{{ .RelPermalink }}">fyt1111.com</a>
+          {{/* ON MASTER: Use direct <a> to pass SEO juice to the unblocked mirror */}}
+          <a href="https://fyt1111.com{{ .RelPermalink }}" class="text-[11px] tracking-[0.1em] text-fyt-gold hover:text-fyt-gold-light transition-colors duration-300">fyt1111.com</a>
         </div>
+        
         <div class="flex flex-col items-center mirror-only">
           <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_master_archive" }}</span>
+          {{/* ON MIRROR: Use stealth-link to protect against Baidu penalties while allowing user verification */}}
           <a href="/origin/" class="stealth-link text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" 
              data-base="{{ "https://riche88.com" | base64Encode }}" 
              data-path="{{ .RelPermalink }}">riche88.com</a>
@@ -487,11 +488,13 @@
         {{/* Sports Bridge (000aa / 198rch depending on environment) */}}
         <div class="flex flex-col items-center master-only">
           <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_forecasts" }}</span>
-          <a href="/technology/" class="stealth-link text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" 
-             data-base="{{ "https://000aa.com" | base64Encode }}">000aa.com</a>
+          {{/* ON MASTER: Direct link to Sports Anchor to pass juice */}}
+          <a href="https://000aa.com" class="text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" target="_blank" rel="noopener noreferrer">000aa.com</a>
         </div>
+        
         <div class="flex flex-col items-center mirror-only">
           <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_sports_node" }}</span>
+          {{/* ON MIRROR: Use stealth-link to unblocked sports mirror to protect Baidu reputation */}}
           <a href="/technology/" class="stealth-link text-[11px] tracking-[0.1em] text-fyt-gold hover:text-fyt-gold-light transition-colors duration-300" 
              data-base="{{ "https://198rch.co" | base64Encode }}">198rch.co</a>
         </div>
