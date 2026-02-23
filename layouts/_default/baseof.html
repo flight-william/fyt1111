@@ -23,7 +23,10 @@
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
   <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ .Site.BaseURL }}images/og-fytbet.png{{ end }}">
-  <link rel="canonical" href="{{ .Permalink }}">
+  
+  {{/* Hardcoded Master Canonical — Ensures all mirrors pass credit to the 15-year-old authority */}}
+  <link rel="canonical" href="https://riche88.com{{ .RelPermalink }}">
+
   {{/* Dynamic hreflang — works for homepage and section pages */}}
   {{ if .IsTranslated }}
     {{ range .Translations }}
