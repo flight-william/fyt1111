@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="cover grain">
+  <div class="relative z-10 text-center px-6 max-w-xl mx-auto">
+
+    <p class="font-sans text-[10px] tracking-[0.6em] text-fyt-muted opacity-25 mb-8">
+      404
+    </p>
+
+    <img src="/images/logo-fytbet.webp" alt="FYTBET" class="w-36 md:w-44 mx-auto opacity-80 mb-10">
+
+    <p class="text-fyt-cream opacity-50 text-lg md:text-xl font-extralight tracking-[0.1em] leading-relaxed mb-4">
+      {{ if eq .Language.Lang "zh" }}这一页，还没有写。
+      {{ else if eq .Language.Lang "yue" }}呢一頁，仲未寫。
+      {{ else if eq .Language.Lang "vi" }}Trang này chưa được viết.
+      {{ else if eq .Language.Lang "th" }}หน้านี้ยังไม่ถูกเขียน
+      {{ else if eq .Language.Lang "id" }}Halaman ini belum ditulis.
+      {{ else }}This page hasn't been written yet.
+      {{ end }}
+    </p>
+
+    <p class="text-fyt-muted opacity-30 text-sm font-light tracking-wide mb-12">
+      {{ if eq .Language.Lang "zh" }}但故事还在继续。
+      {{ else if eq .Language.Lang "yue" }}不過故事仲喺度。
+      {{ else if eq .Language.Lang "vi" }}Nhưng câu chuyện vẫn tiếp tục.
+      {{ else if eq .Language.Lang "th" }}แต่เรื่องราวยังคงดำเนินต่อไป
+      {{ else if eq .Language.Lang "id" }}Namun ceritanya masih berlanjut.
+      {{ else }}But the story continues.
+      {{ end }}
+    </p>
+
+    <a href="{{ .Site.Home.Permalink }}" class="inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity">
+      {{ if eq .Language.Lang "zh" }}返回完整故事
+      {{ else if eq .Language.Lang "yue" }}返回完整故事
+      {{ else if eq .Language.Lang "vi" }}Quay lại câu chuyện
+      {{ else if eq .Language.Lang "th" }}กลับสู่เรื่องราว
+      {{ else if eq .Language.Lang "id" }}Kembali ke cerita
+      {{ else }}BACK TO THE STORY
+      {{ end }}
+    </a>
+
+  </div>
+</section>
+{{ end }}
