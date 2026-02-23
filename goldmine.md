@@ -158,9 +158,10 @@ To handle the China GFW while maintaining PageRank, we use a two-tiered linking 
 
 ### Decision 6: The Juice vs. Visibility Trade-off (One-Way Authority)
 *   **Reasoning:** Direct outbound links to gambling or blocked domains pass "SEO Juice" (PageRank) but expose unblocked mirrors to Baidu's "Harmful Neighborhood" penalties. In the China market, user visibility (staying unblocked) is more valuable than outgoing PageRank transfer.
-*   **Implementation:**
-    *   **Vessels (Mirrors):** Use **Stealth Links** for all outbound and bridge links. This preserves the mirror's "Clean" status on Baidu/Bing at the cost of zero outgoing juice.
-    *   **Anchors (Old Domains):** Use **Direct Links** to point to the mirrors. Since these domains are already blocked, they have no risk of further penalty, allowing them to "inject" their 15-year authority into the unblocked mirrors via a "one-way street" of PageRank.
+*   **Implementation (Single-Repo "Smart Bridge"):**
+    *   **Logic:** We use runtime environment detection (`if (in .Permalink "riche88.com")`) to serve different HTML patterns from the same build.
+    *   **Master (`riche88.com`):** Serves **Direct `<a>` tags**. This allows Google to crawl the links and "inject" 15 years of PageRank into the mirrors.
+    *   **Mirrors (`fyt1111.com`, etc.):** Serve **Obfuscated Stealth Links**. Direct URLs are removed from the HTML source and replaced with Base64-encoded attributes. This ensures Baidu sees a "Clean" site with only harmless internal links, preventing association-based penalties.
 
 
 
