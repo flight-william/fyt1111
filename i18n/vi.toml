@@ -90,7 +90,97 @@ other = "Dự đoán"
 
 [label_portal]
 
+
+
 other = "Cổng vào"
+
+
+
+
+
+
+
+[label_master_archive]
+
+
+
+other = "Lưu trữ chính"
+
+
+
+
+
+
+
+[label_china_mirror]
+
+
+
+
+
+
+
+other = "Truy cập đại lục"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mirror_title_suffix]
+
+
+
+
+
+
+
+other = "Điểm truy cập chính thức"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mirror_welcome_text]
+
+
+
+
+
+
+
+other = "Chào mừng bạn đến với Điểm truy cập chính thức của FYTBET. Trang web này được FYT duy trì để cung cấp quyền truy cập ổn định vào di sản thương hiệu 11.11.11 và lối vào thành viên độc quyền của chúng tôi."
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

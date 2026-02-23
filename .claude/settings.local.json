@@ -12,7 +12,10 @@
       "Bash(echo webp not installed:*)",
       "Bash(grep pixel:*)",
       "Bash(head:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(tail:*)",
+      "Bash(python3:*)",
+      "Bash(git status:*)"
     ]
   }
 }

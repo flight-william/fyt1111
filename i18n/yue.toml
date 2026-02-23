@@ -85,5 +85,17 @@ other = "賽事預測"
 [label_portal]
 other = "官方入口"
 
+[label_master_archive]
+other = "官方歷史館"
+
+[label_china_mirror]
+other = "國內訪問點"
+
+[mirror_title_suffix]
+other = "官方訪問點"
+
+[mirror_welcome_text]
+other = "歡迎訪問富易堂官方訪問點。本站由 FYTBET 官方維護，為您提供穩定的 11.11.11 品牌故事查閱及會員專屬入駐通道。"
+
 [meta_keywords]
 other = "富易堂,FYTBET,Riche88,FYT,188BET,FYT體育,富易堂官網,玩波,玩馬,線上體育,博彩平台,富貴保,投注保險,VIP娛樂,澳門貴賓廳,Pinnacle,小金體育,USDT入錢,支付寶,微信支付,自己嘢,fytbet,fyt1111,x88bet"

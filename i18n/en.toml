@@ -90,7 +90,97 @@ other = "Forecasts"
 
 [label_portal]
 
+
+
 other = "Official Entry"
+
+
+
+
+
+
+
+[label_master_archive]
+
+
+
+other = "Master Archive"
+
+
+
+
+
+
+
+[label_china_mirror]
+
+
+
+
+
+
+
+other = "Mainland Access"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mirror_title_suffix]
+
+
+
+
+
+
+
+other = "Official Access Point"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mirror_welcome_text]
+
+
+
+
+
+
+
+other = "Welcome to the FYTBET Official Access Point. This site is maintained by FYT to provide stable access to our 11.11.11 brand heritage and exclusive member entry."
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

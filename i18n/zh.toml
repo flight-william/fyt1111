@@ -90,7 +90,97 @@ other = "赛事预测"
 
 [label_portal]
 
+
+
 other = "官方入口"
+
+
+
+
+
+
+
+[label_master_archive]
+
+
+
+other = "官方历史馆"
+
+
+
+
+
+
+
+[label_china_mirror]
+
+
+
+
+
+
+
+other = "国内访问点"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mirror_title_suffix]
+
+
+
+
+
+
+
+other = "官方访问点"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[mirror_welcome_text]
+
+
+
+
+
+
+
+other = "欢迎访问富易堂官方访问点。本站由 FYTBET 官方维护，为您提供稳定的 11.11.11 品牌故事查阅及会员专属入驻通道。"
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
