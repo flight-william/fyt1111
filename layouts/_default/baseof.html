@@ -6,20 +6,20 @@
   <meta name="theme-color" content="#0F0F0F">
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
-  <meta name="keywords" content="富易堂,FYTBET,Riche88,FYT,188BET,富易堂官网,体育投注,在线体育竞猜,体育投注平台,富贵保,投注保险,VIP娱乐,澳门贵宾厅,Pinnacle,小金体育,USDT充值,支付宝充值,微信支付,数字人民币,自主研发平台,fytbet,fyt1111,x88bet">
+  <meta name="keywords" content="{{ i18n "meta_keywords" }}">
   {{/* Open Graph */}}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ .Params.description | default .Site.Params.description }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="{{ .Site.BaseURL }}images/logo-fytbet.webp">
+  <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ .Site.BaseURL }}images/logo-fytbet.webp{{ end }}">
   <meta property="og:site_name" content="FYTBET">
   <meta property="og:locale" content="{{ if eq .Language.Lang "zh" }}zh_CN{{ else if eq .Language.Lang "yue" }}yue_HK{{ else if eq .Language.Lang "vi" }}vi_VN{{ else if eq .Language.Lang "th" }}th_TH{{ else if eq .Language.Lang "id" }}id_ID{{ else }}en_US{{ end }}">
   {{/* Twitter Card */}}
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
-  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo-fytbet.webp">
+  <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ .Site.BaseURL }}images/logo-fytbet.webp{{ end }}">
   <link rel="canonical" href="{{ .Permalink }}">
   {{/* Dynamic hreflang — works for homepage and section pages */}}
   {{ if .IsTranslated }}

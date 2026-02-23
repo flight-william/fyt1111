@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+{{ range .Site.Languages -}}
+Sitemap: {{ $.Site.BaseURL }}{{ if ne .Lang $.Site.Language.Lang }}{{ .Lang }}/{{ end }}sitemap.xml
+{{ end -}}
