@@ -28,7 +28,7 @@
       {{ end }}
     </p>
 
-    <a href="{{ .Site.Home.Permalink }}" class="inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity">
+    <a href="{{ .Site.Home.RelPermalink }}" class="inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity">
       {{ if eq .Language.Lang "zh" }}返回完整故事
       {{ else if eq .Language.Lang "yue" }}返回完整故事
       {{ else if eq .Language.Lang "vi" }}Quay lại câu chuyện

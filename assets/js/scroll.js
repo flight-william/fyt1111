@@ -134,6 +134,14 @@
   // ===== Full-Page Keyboard Navigation =====
   var isSectionPage = document.documentElement.classList.contains('is-section-page');
 
+  // Section pages: force scroll to top (prevent scroll restoration to bottom)
+  if (isSectionPage) {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    // Belt-and-suspenders: beat any async scroll restoration
+    setTimeout(function () { window.scrollTo(0, 0); }, 0);
+  }
+
   var pages = Array.from(document.querySelectorAll('.page, .cover'));
   var totalPages = pages.length;
   var currentPageEl = document.querySelector('.current-page');

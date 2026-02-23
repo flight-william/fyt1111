@@ -885,6 +885,7 @@ img[loading="lazy"] { background: var(--fyt-dark); }
 /* ===== Section Page — disable scroll-snap, normalize layout ===== */
 html.is-section-page {
   scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 html.is-section-page .page {
   height: auto;
@@ -894,6 +895,29 @@ html.is-section-page .page {
 }
 html.is-section-page .page-inner {
   padding-bottom: 3rem;
+}
+/* Hide section partial and toggle on section pages — content lives in article-extended below */
+html.is-section-page .page {
+  display: none;
+}
+html.is-section-page .article-toggle-hint {
+  display: none;
+}
+html.is-section-page .article-extended {
+  border: none;
+  overflow: visible;
+  transition: none;
+  margin-top: 0;
+}
+
+/* ===== Section Page — top breadcrumb nav ===== */
+.section-back-nav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 5rem 1.5rem 0;
+}
+@media (min-width: 768px) {
+  .section-back-nav { padding: 6rem 3rem 0; }
 }
 
 /* ===== Article Body — long-form content below the partial ===== */

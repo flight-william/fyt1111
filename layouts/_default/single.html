@@ -138,6 +138,16 @@
   </script>
   {{ end }}
 
+  {{/* Back-to-story breadcrumb at top of section page */}}
+  {{- $sectionMap := dict "origin" "origin" "experience" "o2o" "mascot" "mascot" "evolution" "evolution" "vip" "vip" "charity" "charity" "technology" "platform" -}}
+  {{- $slug := .File.ContentBaseName -}}
+  {{- $anchor := index $sectionMap $slug | default "" -}}
+  <div class="section-back-nav">
+    <a href="{{ .Site.Home.RelPermalink }}{{ with $anchor }}#{{ . }}{{ end }}" class="inline-block text-[12px] tracking-[0.3em] uppercase text-fyt-muted/40 hover:text-fyt-cream transition-colors duration-300">
+      {{ i18n "back_to_story" }}
+    </a>
+  </div>
+
   {{/* Render section partial as visual anchor */}}
   {{ with .Params.section_partial }}
     {{ partial . $ }}
@@ -212,7 +222,7 @@
     {{- $sectionMap := dict "origin" "origin" "experience" "o2o" "mascot" "mascot" "evolution" "evolution" "vip" "vip" "charity" "charity" "technology" "platform" -}}
     {{- $slug := .File.ContentBaseName -}}
     {{- $anchor := index $sectionMap $slug | default "" -}}
-    <a href="{{ .Site.Home.Permalink }}{{ with $anchor }}#{{ . }}{{ end }}" class="inline-block text-[12px] tracking-[0.3em] uppercase text-fyt-muted/40 hover:text-fyt-cream transition-colors duration-300">
+    <a href="{{ .Site.Home.RelPermalink }}{{ with $anchor }}#{{ . }}{{ end }}" class="inline-block text-[12px] tracking-[0.3em] uppercase text-fyt-muted/40 hover:text-fyt-cream transition-colors duration-300">
       {{ i18n "back_to_story" }}
     </a>
   </div>
