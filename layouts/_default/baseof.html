@@ -30,8 +30,8 @@
   <meta name="twitter:description" content="{{ .Params.description | default .Site.Params.description }}">
   <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ .Site.BaseURL }}images/og-fytbet.png{{ end }}">
   
-  {{/* Dynamic Self-Canonical — Allows both Master and Mirror to rank independently on Baidu/Bing */}}
-  <link rel="canonical" href="{{ .Permalink }}">
+  {{/* Relative Canonical — Ensures both Master and Mirror can rank independently while served from the same build */}}
+  <link rel="canonical" href="{{ .RelPermalink }}">
 
   {{/* Dynamic hreflang — works for homepage and section pages */}}
   {{ if .IsTranslated }}
@@ -410,14 +410,27 @@
   {{ end }}{{/* end .IsHome */}}
 </head>
 <body class="bg-fyt-black text-fyt-warm-white antialiased">
-  {{/* Mirror Unique Content Banner — Only shows on non-master domains for SEO uniqueness */}}
-  {{ if not (in .Permalink "riche88.com") }}
-  <div class="mirror-banner py-2 px-6 bg-fyt-gold/10 border-b border-fyt-gold/20 text-center relative z-[60]">
+  {{/* Domain Detection Script — Runtime awareness for static builds */}}
+  <script>
+    (function(){
+      var h = window.location.hostname;
+      var isMaster = h.includes('riche88.com') || h.includes('localhost') || h === '127.0.0.1';
+      document.body.classList.add(isMaster ? 'is-master' : 'is-mirror');
+      if (!isMaster) {
+        var t = document.title;
+        if (!t.includes('{{ i18n "mirror_title_suffix" }}')) {
+          document.title = t + ' | {{ i18n "mirror_title_suffix" }}';
+        }
+      }
+    })();
+  </script>
+
+  {{/* Mirror Unique Content Banner — Only shows on non-master domains via CSS */}}
+  <div class="mirror-banner mirror-only py-2 px-6 bg-fyt-gold/10 border-b border-fyt-gold/20 text-center relative z-[60]">
     <p class="text-[10px] md:text-[11px] tracking-widest text-fyt-gold-light opacity-80 leading-relaxed uppercase m-0">
       {{ i18n "mirror_welcome_text" }}
     </p>
   </div>
-  {{ end }}
 
   {{/* Progress bar */}}
   <div class="progress-bar" style="width: 0%;"></div>
@@ -457,20 +470,24 @@
 
       {{/* Brand Ecosystem — cross-linking high-authority assets */}}
       <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-4 mb-10">
-        {{/* The "Bridge" Link — dynamically shows Master Archive or Mainland Mirror */}}
-        <div class="flex flex-col items-center">
-          {{ if (in .Permalink "riche88.com") }}
-            <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_china_mirror" }}</span>
-            <a href="https://fyt1111.com{{ .RelPermalink }}" class="text-[11px] tracking-[0.1em] text-fyt-gold hover:text-fyt-gold-light transition-colors duration-300">fyt1111.com</a>
-          {{ else }}
-            <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_master_archive" }}</span>
-            <a href="https://riche88.com{{ .RelPermalink }}" class="text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" target="_blank" rel="noopener noreferrer">riche88.com</a>
-          {{ end }}
+        {{/* Heritage Bridge (riche88 <-> fyt1111) */}}
+        <div class="flex flex-col items-center master-only">
+          <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_china_mirror" }}</span>
+          <a href="https://fyt1111.com{{ .RelPermalink }}" class="text-[11px] tracking-[0.1em] text-fyt-gold hover:text-fyt-gold-light transition-colors duration-300">fyt1111.com</a>
+        </div>
+        <div class="flex flex-col items-center mirror-only">
+          <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_master_archive" }}</span>
+          <a href="https://riche88.com{{ .RelPermalink }}" class="text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" target="_blank" rel="noopener noreferrer">riche88.com</a>
         </div>
 
-        <div class="flex flex-col items-center">
-          <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_portal" }}</span>
+        {{/* Sports Bridge (000aa / 198rch depending on environment) */}}
+        <div class="flex flex-col items-center master-only">
+          <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_forecasts" }}</span>
           <a href="https://000aa.com" class="text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" target="_blank" rel="noopener noreferrer">000aa.com</a>
+        </div>
+        <div class="flex flex-col items-center mirror-only">
+          <span class="text-[9px] tracking-[0.3em] text-fyt-muted/30 uppercase mb-1">{{ i18n "label_sports_node" }}</span>
+          <a href="https://198rch.co" class="text-[11px] tracking-[0.1em] text-fyt-gold hover:text-fyt-gold-light transition-colors duration-300">198rch.co</a>
         </div>
       </div>
 

@@ -91,6 +91,9 @@ other = "官方歷史館"
 [label_china_mirror]
 other = "國內訪問點"
 
+[label_sports_node]
+other = "情報直達"
+
 [mirror_title_suffix]
 other = "官方訪問點"
 

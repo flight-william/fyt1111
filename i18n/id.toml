@@ -91,6 +91,9 @@ other = "Arsip Utama"
 [label_china_mirror]
 other = "Akses Utama"
 
+[label_sports_node]
+other = "Node Olahraga"
+
 [mirror_title_suffix]
 other = "Titik Akses Resmi"
 

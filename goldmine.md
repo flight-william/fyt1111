@@ -61,3 +61,45 @@ This is the core architecture for dominating a restricted market:
 *   **Phase 4:** Deploy the first fleet of **Vessels** and link them to the "Trust Circle."
 
 **Status:** The "Gold Mine" is ready. Your age is your edge.
+
+
+
+---
+
+
+
+## 9. Decision Log: Mirror & Linking Strategy
+
+
+
+### Decision 1: Manual Silos over Automated Spinning
+
+*   **Reasoning:** Automated content spinning (synonym swapping, color shifts) is high-risk cloaking that can trigger manual penalties from Google and Baidu.
+
+*   **Implementation:** We use **Manual Editorial Choice**. Mirrors are 100% human-readable. We achieve uniqueness through programmatic, static elements like "Mirror Banners" and "Environment-Aware Titles."
+
+
+
+### Decision 2: The "Silo Ring" Architecture
+
+To handle the China GFW while maintaining PageRank, we use a two-tiered linking strategy:
+
+1.  **Anchor Ring (Global):** `riche88.com` (15y) <-> `000aa.com` (13y). These high-authority domains endorse each other to maximize global juice.
+
+2.  **Visibility Ring (Mainland):** `fyt1111.com` (Accessible) <-> `198rch.co` (Accessible). These unblocked mirrors link to each other to keep Chinese users in a functional loop.
+
+
+
+### Decision 3: "Proof of Heritage" Bridge
+
+*   **Reasoning:** Users on a mirror domain (`fyt1111.com`) need reassurance that it is official.
+
+*   **Implementation:** Every mirror footer contains a low-key, visible link to the "Official 15-Year Archive" (`riche88.com`). Even if blocked, it acts as a "Seal of Authenticity."
+
+
+
+### Decision 4: Self-Canonical Logic
+
+*   **Reasoning:** Absolute canonicals pointing to blocked domains create "Dead Ends" for Baidu/Bing crawlers.
+
+*   **Implementation:** Every domain uses a **Relative Canonical** (`.RelPermalink`). This allows mirrors to rank independently on Baidu while the original domains rank on Google.

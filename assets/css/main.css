@@ -388,6 +388,16 @@ img {
   box-shadow: 0 1px 0 rgba(255,255,255,0.04);
 }
 
+/* ===== Domain-Aware Visibility ===== */
+.master-only, .mirror-only { display: none !important; }
+body.is-master .master-only { display: flex !important; }
+body.is-master div.master-only { display: block !important; }
+body.is-master span.master-only { display: inline !important; }
+
+body.is-mirror .mirror-only { display: flex !important; }
+body.is-mirror div.mirror-only { display: block !important; }
+body.is-mirror span.mirror-only { display: inline !important; }
+
 /* ===== Mirror Unique Banner ===== */
 .mirror-banner {
   background: rgba(201, 168, 76, 0.05);
