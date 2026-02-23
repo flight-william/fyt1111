@@ -2,6 +2,7 @@
 <html lang="{{ .Language.Lang }}"{{ if not .IsHome }} class="is-section-page"{{ end }}>
 <head>
   <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fytbet.com">
   <link rel="preconnect" href="{{ .Site.BaseURL }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -117,7 +118,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "富易堂",
-    "alternateName": ["Riche88", "FYT", "FYTBET", "富易堂官网"],
+    "alternateName": ["Riche88", "FYT", "FYTBET", "富易堂官网", "FYT体育", "FYT體育", "FYT Sports", "FYT Thể thao", "FYT Olahraga"],
     "url": "{{ .Site.BaseURL }}",
     "foundingDate": "2011-11-11",
     "logo": "{{ .Site.BaseURL }}images/logo-fytbet.webp",
@@ -435,6 +436,13 @@
       </nav>
       {{/* Separator — hairline */}}
       <div class="w-12 h-px bg-fyt-muted/20 mx-auto mb-6"></div>
+
+      {{/* Brand Ecosystem — cross-linking high-authority assets */}}
+      <div class="flex justify-center items-center gap-x-12 mb-10">
+        <a href="https://riche88.net" class="text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" target="_blank" rel="noopener noreferrer">riche88.net</a>
+        <a href="https://000aa.com" class="text-[11px] tracking-[0.1em] text-fyt-muted/50 hover:text-fyt-gold transition-colors duration-300" target="_blank" rel="noopener noreferrer">000aa.com</a>
+      </div>
+
       {{/* Copyright — whisper quiet */}}
       <p class="text-center text-fyt-muted/25 text-[10px] tracking-[0.3em]">© 2011–2026 FYTBET</p>
     </div>
