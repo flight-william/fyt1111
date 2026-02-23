@@ -19,15 +19,17 @@
       <img src="/images/logo-fytbet.webp" alt="FYTBET" class="w-44 md:w-56 mx-auto opacity-90">
     </div>
 
-    {{/* Platform CTA + CS — grouped footer */}}
+    {{/* Platform CTA + CS — grouped footer via Stealth Links */}}
     <div class="reveal space-y-4">
       <div>
-        <a href="https://fytbet.com/?p=14093" data-link="platform" class="inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity" target="_blank" rel="noopener noreferrer">
+        <a href="/technology/" class="stealth-link inline-block font-sans text-xs tracking-[0.4em] text-fyt-gold opacity-60 hover:opacity-100 transition-opacity" 
+              data-base="{{ "https://fytbet.com/?p=14093" | base64Encode }}">
           {{ i18n "enter_platform" }}
         </a>
       </div>
       <div>
-        <a href="https://z4eju8.l9zc3vd7.com/7f6d71cb3f963d87e1dcfbjkfle-kelif962d17f14c4b96075934ce444ee6560bb1bc5e1d7fe5fd64e837c38099d0d9b" data-link="cs_link" class="cs-link inline-flex items-center gap-3 justify-center" target="_blank" rel="noopener noreferrer">
+        <a href="/origin/" class="stealth-link cs-link inline-flex items-center gap-3 justify-center" 
+             data-base="{{ "https://z4eju8.l9zc3vd7.com/7f6d71cb3f963d87e1dcfbjkfle-kelif962d17f14c4b96075934ce444ee6560bb1bc5e1d7fe5fd64e837c38099d0d9b" | base64Encode }}">
           <span class="font-sans text-[11px] tracking-[0.3em] text-fyt-muted opacity-50 hover:opacity-80 transition-opacity">{{ i18n "cs_sublabel" }}</span>
         </a>
       </div>

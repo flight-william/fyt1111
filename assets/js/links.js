@@ -1,29 +1,47 @@
-// External links.json loader for anti-blocking link rotation
-(function () {
-  'use strict';
-
-  var LINKS_URL = '/links.json';
-
-  function applyLinks(data) {
-    if (!data) return;
-    document.querySelectorAll('[data-link]').forEach(function (el) {
-      var key = el.getAttribute('data-link');
-      if (data[key]) {
-        el.setAttribute('href', data[key]);
-      }
-    });
-    // Update CS icon based on type
-    if (data.cs_type) {
-      document.querySelectorAll('[data-cs-type]').forEach(function (el) {
-        el.setAttribute('data-cs-type', data.cs_type);
-      });
+/**
+ * Stealth Link Handler
+ * Protects Baidu SEO by removing direct gambling/blocked outbound links from raw HTML.
+ * URLs are Base64 encoded in data-base attribute and decoded only on user interaction.
+ */
+(function() {
+    function initStealthLinks() {
+        const stealthLinks = document.querySelectorAll('.stealth-link');
+        
+        stealthLinks.forEach(link => {
+            // Add visual pointer to signal interactivity
+            link.style.cursor = 'pointer';
+            
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const encodedBase = this.getAttribute('data-base');
+                const path = this.getAttribute('data-path') || '';
+                
+                if (encodedBase) {
+                    try {
+                        // Decode the base URL at runtime
+                        const decodedBase = atob(encodedBase);
+                        // Clean up trailing slash if path also has leading slash
+                        const base = decodedBase.endsWith('/') ? decodedBase.slice(0, -1) : decodedBase;
+                        const finalUrl = base + path;
+                        
+                        // Open in new tab with standard security protections
+                        const win = window.open(finalUrl, '_blank');
+                        if (win) {
+                            win.focus();
+                        }
+                    } catch (err) {
+                        console.error('Link decryption failed');
+                    }
+                }
+            });
+        });
     }
-  }
 
-  fetch(LINKS_URL)
-    .then(function (res) { return res.json(); })
-    .then(applyLinks)
-    .catch(function () {
-      // Fallback: hardcoded defaults remain in HTML
-    });
+    // Initialize on load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initStealthLinks);
+    } else {
+        initStealthLinks();
+    }
 })();

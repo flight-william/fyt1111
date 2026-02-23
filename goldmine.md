@@ -100,6 +100,70 @@ To handle the China GFW while maintaining PageRank, we use a two-tiered linking 
 
 ### Decision 4: Self-Canonical Logic
 
+
+
 *   **Reasoning:** Absolute canonicals pointing to blocked domains create "Dead Ends" for Baidu/Bing crawlers.
 
+
+
 *   **Implementation:** Every domain uses a **Relative Canonical** (`.RelPermalink`). This allows mirrors to rank independently on Baidu while the original domains rank on Google.
+
+
+
+
+
+
+
+### Decision 5: Stealth Link Obfuscation (Baidu Protection)
+
+
+
+
+
+
+
+*   **Reasoning:** Baidu actively penalizes sites containing outbound links to known "harmful" or "blacklisted" industries. Even a simple `<a>` tag to a blocked master domain can trigger a ranking penalty for an unblocked mirror.
+
+
+
+
+
+
+
+*   **Implementation:** All external and master/mirror bridge links are obfuscated using a "Nuclear" stealth pattern:
+
+
+
+
+
+
+
+    *   **The Harmless Fallback:** We use real `<a>` tags but with `href` pointing to harmless internal pages (like `/origin/` or `/technology/`). This makes the site look functional and "white-hat" to simple crawlers.
+
+
+
+
+
+
+
+    *   **The Cloaking:** The actual target URLs are never present in the HTML source. We use Hugo's `base64Encode` function to generate opaque strings in `data-base` attributes.
+
+
+
+
+
+
+
+    *   **The Trigger:** A dedicated JavaScript handler (`links.js`) intercepts the click, prevents the harmless internal navigation, decodes the Base64 string at runtime, and opens the real target in a new tab.
+
+
+
+
+
+
+
+
+
+
+
+

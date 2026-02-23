@@ -398,6 +398,10 @@ body.is-mirror .mirror-only { display: flex !important; }
 body.is-mirror div.mirror-only { display: block !important; }
 body.is-mirror span.mirror-only { display: inline !important; }
 
+.stealth-link {
+  cursor: pointer;
+}
+
 /* ===== Mirror Unique Banner ===== */
 .mirror-banner {
   background: rgba(201, 168, 76, 0.05);
