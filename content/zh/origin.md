@@ -1,6 +1,7 @@
 ---
 title: "富易堂品牌溯源 | 始于2011.11.11 · Cube集团 · 188BET"
 description: "富易堂(FYTBET/Riche88)品牌历史——2011年11月11日11时11分11秒创立，前身隶属Cube集团(188BET)，持有马恩岛与PAGCOR双重牌照。从论坛时代到品牌重塑的完整故事。"
+lastmod: 2026-02-24
 section_partial: "section-origin.html"
 translationKey: "origin"
 faqs:

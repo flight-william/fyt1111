@@ -1,6 +1,7 @@
 ---
 title: "富易堂線上玩到線下 | 澳門塔笨豬跳 · 新加坡 F1 · 鉅星合作伙伴"
 description: "富易堂實地體驗式營銷 —— 澳門鉅星 VIP 合作伙伴，五週年澳門塔 233 米笨豬跳，新加坡 F1 街道賽道。將牌子精神變做真切體驗。"
+lastmod: 2026-02-24
 section_partial: "section-o2o.html"
 translationKey: "experience"
 faqs:

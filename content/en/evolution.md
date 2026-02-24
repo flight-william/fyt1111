@@ -1,6 +1,7 @@
 ---
 title: "FYTBET Design Evolution | Grey-Blue 2011 → Red-Gold 2015 → Black-Orange 2020 → Refined 2026"
 description: "FYTBET (富易堂) fifteen-year design journey — five visual transformations from Riche88 grey-blue minimalism, through the Macau VIP red-gold era, FYTBET black-orange rebrand, all-orange experiment, to refined return. Complete visual identity evolution."
+lastmod: 2026-02-24
 section_partial: "section-evolution.html"
 translationKey: "evolution"
 faqs:

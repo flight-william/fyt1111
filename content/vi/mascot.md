@@ -1,6 +1,7 @@
 ---
 title: "Gặp gỡ Ah Fu | Linh vật thương hiệu FYT · Ra đời năm 2015 · Nhãn dán & Quà tặng"
 description: "Ah Fu là linh vật thương hiệu của FYT, ra đời năm 2015. Mái tóc xoăn nâu đặc trưng, quần yếm đỏ, chữ 'Phú' trước ngực. Hơn 40 nhãn dán biểu cảm, bộ sưu tập cốc kỷ niệm và quà tặng giới hạn."
+lastmod: 2026-02-24
 section_partial: "section-mascot.html"
 translationKey: "mascot"
 faqs:
@@ -28,7 +29,7 @@ interlinks:
     title: "Giải bóng đá Chengshi Cup · Quyên góp vùng sâu · Lan tỏa yêu thương"
 ---
 
-## Thời gian có thể thay đổi, nhưng người cùng bạn chứng kiến những đỉnh cao vẫn luôn ở đó.
+## Ah Fu là ai? Linh vật thương hiệu FYT ra đời năm 2015
 
 Năm 2015, FYT đã bước sang năm hoạt động thứ tư. Nền tảng phát triển ổn định, cộng đồng người dùng ngày càng lớn mạnh, nhưng thương hiệu vẫn thiếu một "gương mặt" có thể nhận ra ngay lập tức.
 
@@ -42,7 +43,7 @@ Trong hình ảnh chủ đạo của thương hiệu, Ah Fu giơ cao lá cờ ta
 
 ---
 
-## Nếu bạn đã biết Ah Fu, mọi lời giải thích đều trở nên thừa thãi.
+## Sticker Ah Fu phổ biến đến mức nào? Mật mã của người trong cuộc
 
 Điều thực sự đưa Ah Fu từ một "linh vật thương hiệu" trở thành "mật mã riêng" trong cộng đồng chính là bộ **nhãn dán biểu cảm hơn 40 mẫu**.
 
@@ -54,7 +55,7 @@ Thực tế đã chứng minh chiến lược này đúng đắn. Nhãn dán Ah 
 
 ---
 
-## Quà tặng VIP giới hạn: Những kỷ vật không thể mua bằng tiền
+## Có những sản phẩm Ah Fu nào? Bộ sưu tập VIP giới hạn, chỉ tặng không bán
 
 Ah Fu không chỉ là một nhân vật trong thế giới kỹ thuật số — cậu bước vào cuộc sống của mỗi hội viên VIP dưới dạng thực thể.
 
@@ -66,7 +67,7 @@ Những món quà này có một điểm chung: **chỉ tặng không bán**. Ch
 
 ---
 
-## Từ Chengshi Cup đến những chiếc áo thun từ thiện
+## Ah Fu đã xuất hiện ở đâu? Từ Chengshi Cup đến áo thun từ thiện
 
 Ngày 2 tháng 5 năm 2015, Quảng Châu, **Sân vận động Nhân dân tỉnh Quảng Đông**.
 

@@ -1,6 +1,7 @@
 ---
 title: "The FYTBET VIP Way | Four Sportsbooks · Fortune Insurance · Premium Service"
 description: "FYTBET VIP experience — XJ (188BET legacy), Pinnacle, InPlay Matrix, PM Sports. Proprietary Fortune Insurance (富贵保) 100% betting insurance. Seven payment channels including USDT and e-CNY. Haig Club whisky VIP gifting."
+lastmod: 2026-02-24
 section_partial: "section-vip.html"
 translationKey: "vip"
 faqs:

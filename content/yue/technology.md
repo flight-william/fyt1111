@@ -1,6 +1,7 @@
 ---
 title: "富易堂技術 | 由頭到尾自己研發 · 成套產品一站式 · 七大出入金通道"
 description: "富易堂平台由頭到尾自己起 —— 由介面、後台到成個架構。真人 (AG/BBIN/BG)、老虎機 (PG/MG/PP)、電競、棋牌、彩票、捕魚。支援 USDT、支付寶、微信支付、數字人民幣。"
+lastmod: 2026-02-24
 section_partial: "section-platform.html"
 translationKey: "technology"
 faqs:

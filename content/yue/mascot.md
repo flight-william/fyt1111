@@ -1,6 +1,7 @@
 ---
 title: "識下阿富 | 富易堂品牌吉祥物 · 2015年出世 · 貼紙同埋周邊"
 description: "阿富 (Ah Fu) 係富易堂嘅品牌吉祥物，2015年出世。標誌性啡色捲髮、紅色吊帶褲、心口有個富字。40幾款貼紙、週年紀念杯系列、限量周邊收藏。"
+lastmod: 2026-02-24
 section_partial: "section-mascot.html"
 translationKey: "mascot"
 faqs:

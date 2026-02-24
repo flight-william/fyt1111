@@ -1,6 +1,7 @@
 ---
 title: "FYT Charity | Rural China Donations · Chengshi Cup Charity Soccer · Spread the Love"
 description: "FYTBET charitable initiatives — hands-on rural China donations to schools and families. 2015 Chengshi Cup charity soccer at Guangdong Provincial People's Stadium, 33 welfare children vs 11 veteran national players. Guangzhou TV broadcast."
+lastmod: 2026-02-24
 section_partial: "section-charity.html"
 translationKey: "charity"
 faqs:

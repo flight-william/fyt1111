@@ -1,6 +1,7 @@
 ---
 title: "FYTBET Technology | Fully In-House Built · Full Product Suite · Seven Payment Channels"
 description: "FYTBET platform built entirely in-house — front-end, back-end, infrastructure. Live casino (AG/BBIN/BG), slots (PG/Microgaming/Pragmatic), eSports, card games, lottery, fish hunter. USDT, Alipay, WeChat Pay, e-CNY payments."
+lastmod: 2026-02-24
 section_partial: "section-platform.html"
 translationKey: "technology"
 faqs:

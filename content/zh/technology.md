@@ -1,6 +1,7 @@
 ---
 title: "富易堂自研自建 | 全栈自主研发 · 全品类娱乐 · 七大支付通道"
 description: "富易堂(FYTBET)全套系统自主研发——前端、后端、基础架构端到端自建。真人娱乐城(AG/BBIN/BG)、老虎机(PG/Microgaming/Pragmatic)、电竞、棋牌、彩票、捕鱼全品类覆盖。USDT/支付宝/微信/数字人民币支付。"
+lastmod: 2026-02-24
 section_partial: "section-platform.html"
 translationKey: "technology"
 faqs:

@@ -1,6 +1,7 @@
 ---
 title: "富易堂公益 | 山區物資捐贈 · 誠十杯慈善足球賽 · 將愛傳出去"
 description: "富易堂公益活動 —— 親手將物資送到山區細路同家庭手入面。2015年誠十杯粵鄂明星慈善足球賽喺東較場舉行，33個細路對陣11個退役國腳。廣州電視台直播。"
+lastmod: 2026-02-24
 section_partial: "section-charity.html"
 translationKey: "charity"
 faqs:

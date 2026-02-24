@@ -1,6 +1,7 @@
 ---
 title: "认识阿富 | 富易堂品牌吉祥物 · 2015年诞生 · 贴纸与周边"
 description: "阿富(Ah Fu)是富易堂的品牌吉祥物，诞生于2015年。标志性棕色卷发、红色背带裤、胸口富字。40+表情贴纸、周年纪念杯系列、限量周边收藏。"
+lastmod: 2026-02-24
 section_partial: "section-mascot.html"
 translationKey: "mascot"
 faqs:

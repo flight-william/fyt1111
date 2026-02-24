@@ -1,6 +1,7 @@
 ---
 title: "富易堂线上到线下 | 澳门塔蹦极 · 新加坡F1 · 钜星合作"
 description: "富易堂(FYTBET)体验式营销——与澳门钜星集团合作，五周年澳门旅游塔233米蹦极，新加坡F1街道赛道驾驶体验。将品牌精神「一点都不难」化为真实体验。"
+lastmod: 2026-02-24
 section_partial: "section-o2o.html"
 translationKey: "experience"
 faqs:

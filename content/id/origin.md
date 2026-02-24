@@ -1,6 +1,7 @@
 ---
 title: "Asal Usul Brand FYT | Didirikan 11.11.11 · Warisan Cube Group & 188BET"
 description: "Sejarah brand FYTBET (富易堂/Riche88) — didirikan pada pukul 11:11:11 pagi, 11 November 2011. Di bawah grup Cube (188BET) dengan lisensi ganda dari Isle of Man dan PAGCOR. Perjalanan dari era forum hingga saat ini."
+lastmod: 2026-02-24
 section_partial: "section-origin.html"
 translationKey: "origin"
 faqs:

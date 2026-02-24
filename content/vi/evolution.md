@@ -1,6 +1,7 @@
 ---
 title: "Sự tiến hóa thiết kế FYTBET | Xám-Xanh 2011 → Đỏ-Vàng 2015 → Đen-Cam 2020 → Tinh tế 2026"
 description: "Hành trình thiết kế mười lăm năm của FYTBET (富易堂) — năm lần chuyển đổi hình ảnh từ chủ nghĩa tối giản xám-xanh của Riche88, qua kỷ nguyên đỏ-vàng VIP Macau, tái định vị thương hiệu đen-cam FYTBET, thử nghiệm toàn cam, đến sự trở lại đầy tinh tế. Sự tiến hóa toàn diện về nhận diện hình ảnh."
+lastmod: 2026-02-24
 section_partial: "section-evolution.html"
 translationKey: "evolution"
 faqs:
@@ -36,7 +37,7 @@ Từ năm 2011 đến nay, FYT đã trải qua năm lần chuyển đổi hình 
 
 ---
 
-## Năm lần thay đổi diện mạo, một trái tim không đổi.
+## Trang web FYT ban đầu trông như thế nào? Kỷ nguyên xám-xanh 2011
 
 Gương mặt đầu tiên của FYT là một nghiên cứu về sự chừng mực.
 

@@ -1,6 +1,7 @@
 ---
 title: "富易堂貴賓之道 | VIP 專屬服侍 · 四大體育平台 · 富貴保 · 七大提款通道"
 description: "富易堂 VIP 貴賓服侍 —— 集合小金體育 (188BET)、Pinnacle、InPlay Matrix、PM 體育四大平台。獨創富貴保 100% 玩波保險。USDT、轉帳、電子支付七大通道。Haig Club 限量威士忌貴賓禮遇。"
+lastmod: 2026-02-24
 section_partial: "section-vip.html"
 translationKey: "vip"
 faqs:

@@ -1,6 +1,7 @@
 ---
 title: "Từ thiện FYT | Quyên góp vùng sâu Trung Quốc · Giải bóng đá Chengshi Cup · Lan tỏa yêu thương"
 description: "Các sáng kiến từ thiện của FYTBET — quyên góp trực tiếp cho các trường học và gia đình ở vùng sâu vùng xa Trung Quốc. Giải bóng đá từ thiện Chengshi Cup 2015 tại Sân vận động Nhân dân tỉnh Quảng Đông, 33 trẻ em viện phúc lợi đối đầu 11 cựu tuyển thủ quốc gia. Truyền hình Quảng Châu phát sóng."
+lastmod: 2026-02-24
 section_partial: "section-charity.html"
 translationKey: "charity"
 faqs:
@@ -40,7 +41,7 @@ Khoảnh khắc khiến cả sân vận động lặng đi diễn ra trong trậ
 
 ---
 
-## Trong cuộc đời, có những điều còn đáng để dốc sức hơn cả việc thắng một trận bóng.
+## Những cựu tuyển thủ nào đã tham gia Chengshi Cup? Trận đấu ấm áp 33 đối 11
 
 Những cựu tuyển thủ quốc gia đã nghỉ hưu bước ra sân ngày hôm đó đều là những nhân vật được công nhận trong lịch sử bóng đá Trung Quốc.
 

@@ -1,6 +1,7 @@
 ---
 title: "ต้นกำเนิดของ FYT | ก่อตั้งเมื่อ 11.11.11 · มรดกจากเครือ Cube และ 188BET"
 description: "ประวัติแบรนด์ FYTBET (富易堂/Riche88) — ก่อตั้งเมื่อเวลา 11:11:11 น. ของวันที่ 11 พฤศจิกายน 2011 ภายใต้เครือ Cube (188BET) พร้อมใบอนุญาตแบบคู่จาก Isle of Man และ PAGCOR จากยุคบอร์ดสนทนาสู่อัตลักษณ์ใหม่ในปัจจุบัน"
+lastmod: 2026-02-24
 section_partial: "section-origin.html"
 translationKey: "origin"
 faqs:

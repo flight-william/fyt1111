@@ -1,6 +1,7 @@
 ---
 title: "FYT Origin Story | Founded 11.11.11 · Cube Group · 188BET Heritage"
 description: "FYTBET (富易堂/Riche88) brand history — founded at 11:11:11 AM on November 11, 2011. Under Cube group (188BET) with Isle of Man and PAGCOR dual licenses. From forum era to modern rebrand."
+lastmod: 2026-02-24
 section_partial: "section-origin.html"
 translationKey: "origin"
 faqs:

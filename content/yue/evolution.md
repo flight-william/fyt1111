@@ -1,6 +1,7 @@
 ---
 title: "富易堂樣貌演變 | 2011 灰藍時代 → 2015 紅金盛世 → 2020 黑橙新生 → 2026 精煉回歸"
 description: "富易堂 (富易堂) 十五年樣貌演變 —— 由 Riche88 嗰陣 Apple 式灰藍簡約，到澳門 VIP 紅金年代，再到 FYTBET 黑橙重塑、全橙實驗，最後回歸精煉。完整記錄品牌視覺點樣變強。"
+lastmod: 2026-02-24
 section_partial: "section-evolution.html"
 translationKey: "evolution"
 faqs:

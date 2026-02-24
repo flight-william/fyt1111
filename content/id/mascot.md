@@ -1,6 +1,7 @@
 ---
 title: "Kenali Ah Fu | Maskot Brand FYT · Lahir Tahun 2015 · Stiker & Merchandise"
 description: "Ah Fu (阿富) adalah maskot brand FYT, lahir tahun 2015. Rambut ikal cokelat khas, celana merah, karakter 'Fu' di dada. 40+ stiker ekspresi, koleksi mug ulang tahun, dan koleksi edisi terbatas."
+lastmod: 2026-02-24
 section_partial: "section-mascot.html"
 translationKey: "mascot"
 faqs:
@@ -28,7 +29,7 @@ interlinks:
     title: "Sepak Bola Amal Chengshi Cup · Donasi Daerah Terpencil · Berbagi Kasih"
 ---
 
-## Waktu mungkin berubah, namun sosok yang menemani Anda menyaksikan setiap puncak kejayaan akan selalu ada di sini.
+## Siapa Ah Fu? Maskot Brand FYT yang Lahir Tahun 2015
 
 Tahun 2015, FYT telah memasuki tahun keempat operasionalnya. Platform tumbuh dengan stabil, komunitas pengguna semakin besar, namun brand masih kekurangan "wajah" yang bisa langsung dikenali.
 
@@ -42,7 +43,7 @@ Dalam citra visual utama brand, Ah Fu memegang bendera segitiga RICHE88, dipaduk
 
 ---
 
-## Jika Anda sudah mengenal Ah Fu, penjelasan tambahan tidak lagi diperlukan.
+## Seberapa Populer Stiker Ah Fu? Kode Rahasia Kalangan Dalam
 
 Apa yang benar-benar mengubah Ah Fu dari sekadar "maskot brand" menjadi "kode rahasia di antara anggota" adalah set **stiker ekspresi yang lebih dari 40 model**.
 
@@ -54,7 +55,7 @@ Bagi pengguna yang akrab dengan set stiker ini, Ah Fu tidak butuh penjelasan. Ia
 
 ---
 
-## Koleksi VIP Terbatas: Kenangan yang Tidak Bisa Dibeli dengan Uang
+## Merchandise Ah Fu Apa Saja yang Ada? Koleksi VIP Terbatas, Hanya Hadiah Tidak Dijual
 
 Ah Fu bukan hanya karakter di dunia digital — ia hadir dalam kehidupan setiap anggota VIP dalam bentuk fisik.
 
@@ -66,7 +67,7 @@ Hadiah-hadiah ini memiliki satu kesamaan: **hanya diberikan dan tidak dijual**. 
 
 ---
 
-## Dari Chengshi Cup hingga Kaos Amal
+## Di Mana Saja Ah Fu Pernah Tampil? Dari Chengshi Cup hingga Kaos Amal
 
 2 Mei 2015, Guangzhou, **Stadion Rakyat Provinsi Guangdong**.
 

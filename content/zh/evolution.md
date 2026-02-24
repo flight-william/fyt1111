@@ -1,6 +1,7 @@
 ---
 title: "富易堂设计演变 | 灰蓝2011 → 红金2015 → 黑橙2020 → 全橙2021 → 精炼2026"
 description: "富易堂(FYTBET)十五年五次设计蜕变——从Riche88灰蓝简约风，到红金贵宾厅气质，FYTBET黑橙重塑，全橙试验，再到精炼回归。App v1到v4.1的完整视觉演变记录。"
+lastmod: 2026-02-24
 section_partial: "section-evolution.html"
 translationKey: "evolution"
 faqs:

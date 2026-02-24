@@ -1,6 +1,7 @@
 ---
 title: "Evolusi Desain FYTBET | Abu-Biru 2011 → Merah-Emas 2015 → Hitam-Oranye 2020 → Terpoles 2026"
 description: "Perjalanan desain lima belas tahun FYTBET (富易堂) — lima transformasi visual dari minimalisme abu-abu-biru Riche88, melalui era merah-emas VIP Macau, rebrand hitam-oranye FYTBET, eksperimen serba oranye, hingga kembalinya desain yang terpoles. Evolusi identitas visual yang lengkap."
+lastmod: 2026-02-24
 section_partial: "section-evolution.html"
 translationKey: "evolution"
 faqs:
@@ -36,7 +37,7 @@ Dari 2011 hingga hari ini, FYT telah menjalani lima transformasi visual utama. T
 
 ---
 
-## Lima tampilan berbeda, namun satu visi yang tetap teguh.
+## Seperti Apa Tampilan Website FYT yang Pertama? Era Abu-Biru 2011
 
 Wajah pertama FYT adalah sebuah studi tentang pengendalian diri.
 

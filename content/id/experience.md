@@ -1,6 +1,7 @@
 ---
 title: "FYT Online ke Offline | Macau Tower Bungy · Singapore F1 · Kemitraan Juxing"
 description: "Pemasaran eksperiensial FYTBET — kemitraan VIP Juxing Macau, bungy jump Macau Tower 233 meter ulang tahun ke-5, sirkuit jalan raya F1 Singapura. Mengubah semangat brand menjadi pengalaman nyata."
+lastmod: 2026-02-24
 section_partial: "section-o2o.html"
 translationKey: "experience"
 faqs:
@@ -38,7 +39,7 @@ Bukan dengan menyewa papan reklame atau menempelkan logo pada acara yang dispons
 
 ---
 
-## Dari Macau ke online, standar ketelitian untuk tamu VIP tidak pernah dikompromikan.
+## Apa Itu Bungy Jump di Macau Tower? Tantangan 233 Meter Perayaan 5 Tahun
 
 Pada tahun 2016, FYT merayakan ulang tahun kelimanya. Perayaan tersebut bukanlah makan malam gala atau upacara penghargaan. Itu adalah sebuah undangan: datanglah bersama kami, dan melompatlah dari ketinggian 233 meter.
 

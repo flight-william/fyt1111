@@ -1,6 +1,7 @@
 ---
 title: "FYT Online to Offline | Macau Tower Bungy · Singapore F1 · Juxing Partnership"
 description: "FYTBET experiential marketing — Juxing Macau VIP partnership, 5th anniversary 233-meter Macau Tower bungy jump, Singapore F1 street circuit. Turning brand spirit into lived experience."
+lastmod: 2026-02-24
 section_partial: "section-o2o.html"
 translationKey: "experience"
 faqs:

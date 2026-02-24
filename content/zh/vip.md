@@ -1,6 +1,7 @@
 ---
 title: "富易堂贵宾之道 | VIP服务 · 四大体育平台 · 富贵保 · 七大支付"
 description: "富易堂VIP贵宾服务——小金体育(188BET)、Pinnacle、InPlay Matrix、PM体育四大体育平台。独创富贵保100%投注保险。USDT/支付宝/微信/数字人民币七大支付通道。Haig Club限量威士忌贵宾礼遇。"
+lastmod: 2026-02-24
 section_partial: "section-vip.html"
 translationKey: "vip"
 faqs:

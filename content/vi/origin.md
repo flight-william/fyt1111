@@ -1,6 +1,7 @@
 ---
 title: "Nguồn gốc thương hiệu FYT | Thành lập 11.11.11 · Di sản Cube Group & 188BET"
 description: "Lịch sử thương hiệu FYTBET (富易堂/Riche88) — được thành lập vào lúc 11:11:11 sáng ngày 11 tháng 11 năm 2011. Thuộc tập đoàn Cube (188BET) với giấy phép kép từ Đảo Man và PAGCOR. Hành trình từ kỷ nguyên diễn đàn đến hiện tại."
+lastmod: 2026-02-24
 section_partial: "section-origin.html"
 translationKey: "origin"
 faqs:

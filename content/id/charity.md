@@ -1,6 +1,7 @@
 ---
 title: "Amal FYT | Donasi Desa Tiongkok · Sepak Bola Amal Chengshi Cup · Berbagi Kasih"
 description: "Inisiatif amal FYTBET — donasi langsung ke sekolah dan keluarga di pedesaan terpencil Tiongkok. Sepak bola amal Chengshi Cup 2015 di Stadion Rakyat Provinsi Guangdong, 33 anak panti asuhan berhadapan dengan 11 mantan pemain nasional. Siaran TV Guangzhou."
+lastmod: 2026-02-24
 section_partial: "section-charity.html"
 translationKey: "charity"
 faqs:
@@ -40,7 +41,7 @@ Televisi Guangzhou menyiarkan pertandingan tersebut secara penuh. Apa yang ditan
 
 ---
 
-## Dalam hidup, ada hal-hal yang lebih layak diperjuangkan daripada memenangkan sebuah pertandingan sepak bola.
+## Mantan Pemain Timnas Mana Saja yang Berpartisipasi? Pertandingan Mengharukan 33 Lawan 11
 
 Mantan pemain nasional yang berjalan ke lapangan hari itu, masing-masing adalah sosok yang diakui dalam sejarah sepak bola Tiongkok.
 

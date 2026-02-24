@@ -1,6 +1,7 @@
 ---
 title: "富易堂公益 | 山区捐赠 · 诚十杯粤鄂慈善足球赛 · 把爱传出去"
 description: "富易堂公益行动——深入中国偏远山区捐赠物资，资助农村学校教育。2015年诚十杯粤鄂足球慈善赛(广东省人民体育场)，33位福利院儿童对阵11名退役国脚。广州电视台全程报道。"
+lastmod: 2026-02-24
 section_partial: "section-charity.html"
 translationKey: "charity"
 faqs:

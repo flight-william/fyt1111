@@ -1,6 +1,7 @@
 ---
 title: "Meet Ah Fu | FYT Brand Mascot · Born 2015 · Stickers & Merchandise"
 description: "Ah Fu (阿富) is FYTBET's brand mascot since 2015. Signature brown swirl hair, red suspenders, 富 character. 40+ sticker poses, anniversary mug collection, VIP-exclusive merchandise."
+lastmod: 2026-02-24
 section_partial: "section-mascot.html"
 translationKey: "mascot"
 faqs:
