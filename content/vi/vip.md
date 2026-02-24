@@ -55,13 +55,13 @@ Bốn nguồn thể thao này vận hành độc lập, tỷ lệ cược không
 
 ---
 
-## Contentment là sự giàu có tột cùng — vì sự xa hoa thực sự thường được tìm thấy trong tĩnh lặng.
+## Tri túc là sự giàu có tột cùng — vì sự xa hoa thực sự thường được tìm thấy trong tĩnh lặng.
 
 **Fortune Insurance (Phú Quý Bảo)** là sản phẩm bảo hiểm cá cược thể thao 100% độc quyền của FYT — phải được xây dựng từ tầng kiến trúc thấp nhất, từ mô hình rủi ro đến logic quyết toán.
 
 Cơ chế rất đơn giản: Sau khi chọn kích hoạt bảo hiểm, nếu cược thắng, lợi nhuận vẫn vào tài khoản như bình thường; nếu cược thua, phần tiền bảo hiểm sẽ được hoàn trả toàn bộ vào ngày hôm sau. Không phải là chiết khấu hoàn trả một phần, không phải là bù đắp bằng phiếu ưu đãi, mà là **hoàn trả tiền gốc thực tế**.
 
-Đằng sau tính năng này là năng lực công nghệ hoàn toàn tự phát triển của nền tảng. Fortune Insurance không phải là một plugin mua từ bên thứ ba, mà là sản phẩm được đội ngũ kỹ thuật của FYT xây dựng từ logic底层 đến tương tác giao diện người dùng. Sự tồn tại của nó vừa là một sự đổi mới sản phẩm, vừa là bằng chứng trực tiếp cho sức mạnh công nghệ của nền tảng.
+Đằng sau tính năng này là năng lực công nghệ hoàn toàn tự phát triển của nền tảng. Fortune Insurance không phải là một plugin mua từ bên thứ ba, mà là sản phẩm được đội ngũ kỹ thuật của FYT xây dựng từ logic tầng nền tảng đến tương tác giao diện người dùng. Sự tồn tại của nó vừa là một sự đổi mới sản phẩm, vừa là bằng chứng trực tiếp cho sức mạnh công nghệ của nền tảng.
 
 Đối với khách VIP, Fortune Insurance không chỉ thay đổi kết quả thắng thua của một ván cược, mà thay đổi toàn bộ tâm thế trải nghiệm — thêm một phần ung dung, bớt một phần lo âu.
 
