@@ -1,6 +1,7 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   {{/* Homepage — explicit entry since .Data.Pages excludes it */}}
   <url>
@@ -14,6 +15,47 @@
     <xhtml:link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
     {{ end }}
     {{ end }}
+    {{/* Homepage key brand images */}}
+    <image:image>
+      <image:loc>{{ "images/riche88-afu-hero-banner-classic.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88经典横幅 阿富吉祥物 FYTBET classic hero banner A Fu mascot</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/afu-hero.webp" | absURL }}</image:loc>
+      <image:title>富易堂品牌吉祥物阿富 FYTBET brand mascot A Fu Riche88</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/vip-gold-card-ace.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88三周年金箔扑克黑桃A FYTBET gold-plated Ace of Spades</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/fytbet-fortune-insurance-fugui-bao.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET富贵保体育保险 Fortune Insurance sports betting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/riche88-macau-vip-lounge-magazine.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88澳门贵宾厅杂志 FYT Macau VIP lounge magazine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/website-v1.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88原版网站 2011 FYT original website grey-blue era</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/website-rebrand.webp" | absURL }}</image:loc>
+      <image:title>FYTBET品牌重塑 2020 富易堂 rebrand black-orange</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/charity-tshirt.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET把爱传出去慈善T恤 Spread the Love charity</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/riche88-gold-foil-poker-joker.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88金箔扑克鬼牌 FYTBET gold-plated Joker</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/app-2026-mobile.webp" | absURL }}</image:loc>
+      <image:title>FYTBET 2026手机应用 富易堂 mobile app</image:title>
+    </image:image>
   </url>
 
   {{/* Content pages */}}
@@ -28,6 +70,127 @@
     {{ range .Translations }}
     <xhtml:link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
     {{ end }}
+    {{ end }}
+    {{/* Image entries per section */}}
+    {{ if eq (.Param "translationKey") "vip" }}
+    <image:image>
+      <image:loc>{{ "images/vip-gold-card-ace-full.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88三周年金箔扑克黑桃A FYTBET gold-plated Ace of Spades</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/vip-gold-card-joker.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88金箔扑克鬼牌 FYTBET gold-plated Joker card</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/vip-gold-card-back.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88金箔扑克牌背巴洛克设计 FYTBET gold-plated card back baroque</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/vip-haigclub.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET VIP新年贺卡 Haig Club限量威士忌 luxury whisky greeting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/riche88-gold-foil-poker-joker.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88金箔扑克鬼牌 1111王座 FYTBET anniversary Joker</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/riche88-gold-foil-poker-back.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88金箔扑克牌背 FYTBET collectible playing card</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/vip-gold-card-ace.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88金箔扑克黑桃A透明版 FYTBET gold Ace transparent</image:title>
+    </image:image>
+    {{ else if eq (.Param "translationKey") "origin" }}
+    <image:image>
+      <image:loc>{{ "images/riche88-afu-hero-banner-classic.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88经典横幅 阿富吉祥物 FYTBET hero banner A Fu mascot 2014</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/riche88-website-v1-original-2011.jpg" | absURL }}</image:loc>
+      <image:title>富易堂Riche88初版网站 Cube集团 2011 FYT original platform</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/riche88-forum-football-banner.gif" | absURL }}</image:loc>
+      <image:title>富易堂Riche88论坛时代广告横幅 我为足球而醉 FYT forum-era football banner</image:title>
+    </image:image>
+    {{ else if eq (.Param "translationKey") "experience" }}
+    <image:image>
+      <image:loc>{{ "images/riche88-macau-vip-lounge-magazine.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88澳门贵宾厅杂志 钜星合作 FYT Macau VIP lounge magazine</image:title>
+    </image:image>
+    {{ else if eq (.Param "translationKey") "technology" }}
+    <image:image>
+      <image:loc>{{ "images/fytbet-fortune-insurance-fugui-bao.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET富贵保体育100%保险 Fortune Insurance sports betting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/fytbet-desktop-2026.webp" | absURL }}</image:loc>
+      <image:title>FYTBET桌面平台 2026 富易堂 desktop platform</image:title>
+    </image:image>
+    {{ else if eq (.Param "translationKey") "charity" }}
+    <image:image>
+      <image:loc>{{ "images/charity-tshirt.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET把爱传出去慈善T恤 阿富吉祥物 Spread the Love charity</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/charity-hero.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET山区慈善捐赠 rural China charity donations</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/charity-van.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET慈善志愿者 charity volunteer rural village</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/charity-children.webp" | absURL }}</image:loc>
+      <image:title>富易堂FYTBET慈善捐赠山区孩子 charity donations rural children</image:title>
+    </image:image>
+    {{ else if eq (.Param "translationKey") "mascot" }}
+    <image:image>
+      <image:loc>{{ "images/afu-hero.webp" | absURL }}</image:loc>
+      <image:title>富易堂品牌吉祥物阿富 FYTBET brand mascot A Fu Riche88 2015</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/afu-comic.webp" | absURL }}</image:loc>
+      <image:title>富易堂RICHE88原创阿富篮球漫画 FYTBET A Fu basketball comic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/mug-origin.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88十周年阿富纪念马克杯 诞生篇 FYTBET anniversary mug origin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/mug-growth.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88十周年阿富纪念马克杯 成长篇 FYTBET anniversary mug growth</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/mug-maturity.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88十周年阿富纪念马克杯 成熟篇 FYTBET anniversary mug maturity</image:title>
+    </image:image>
+    {{ else if eq (.Param "translationKey") "evolution" }}
+    <image:image>
+      <image:loc>{{ "images/website-v1.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88原版网站 灰蓝时代 2011 FYT original website</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/evo-app-red-2015.webp" | absURL }}</image:loc>
+      <image:title>富易堂Riche88红金时代移动端 2015 FYT Red-Gold era mobile</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/website-rebrand.webp" | absURL }}</image:loc>
+      <image:title>FYTBET品牌重塑 黑橙新生 2020 富易堂 rebrand</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/evo-app-orange-2021.webp" | absURL }}</image:loc>
+      <image:title>FYTBET全橙试验 App v3.0 2021 富易堂 all-orange experiment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/evo-tablet-2025.webp" | absURL }}</image:loc>
+      <image:title>FYTBET 2025平板桌面端 富易堂 refined tablet design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>{{ "images/app-2026-mobile.webp" | absURL }}</image:loc>
+      <image:title>FYTBET 2026手机应用 富易堂 mobile app current</image:title>
+    </image:image>
     {{ end }}
   </url>
   {{ end }}

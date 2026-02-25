@@ -85,6 +85,8 @@ That same day, another piece of the Ah Fu story took physical form. Volunteers a
 
 The Chengshi Cup appearance established a precedent. Ah Fu was not going to be a mascot that existed only in pixels and merchandise catalogs. He would show up where the brand showed up — at events, in communities, and in moments that mattered beyond the bottom line.
 
+![Ah Fu mascot costume with Xiao Wei at brand event](/images/mascot-costume-event.webp)
+
 ---
 
 ## Why Does FYT Have a Mascot? The Brand Significance of Ah Fu

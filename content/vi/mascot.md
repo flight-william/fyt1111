@@ -81,6 +81,8 @@ Cùng ngày hôm đó, những chiếc áo thun từ thiện in hình Ah Fu cũn
 
 Từ màn hình kỹ thuật số đến sân cỏ thực tế, từ nhãn dán xã hội đến áo thun từ thiện — Ah Fu đã chứng minh rằng cậu không chỉ là một nhân vật trên bản thiết kế. Cậu là linh hồn sống động của thương hiệu.
 
+![Ah Fu mascot costume with Xiao Wei at brand event](/images/mascot-costume-event.webp)
+
 ---
 
 ## Tại sao FYT cần một linh vật? Ý nghĩa thương hiệu của Ah Fu

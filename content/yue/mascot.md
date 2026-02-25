@@ -81,6 +81,8 @@ interlinks:
 
 由手機螢幕到足球場，由 WhatsApp 貼紙到慈善 T-shirt —— 阿富用行動證明咗，佢唔止係一張設計圖，佢係品牌最有溫度嘅靈魂。
 
+![Ah Fu mascot costume with Xiao Wei at brand event](/images/mascot-costume-event.webp)
+
 ---
 
 ## 點解富易堂需要吉祥物？阿富嘅品牌意義

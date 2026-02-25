@@ -61,7 +61,7 @@ During this era, brand magazines were distributed across Juxing's VIP lounges in
 
 The Red-Gold era marked the first time FYT's visual design explicitly projected the quality of a concierge service rather than simply a digital platform. It was also a formative chapter in the brand's design education: learning how visual language can communicate premium positioning — not merely aesthetics, but intent.
 
-![Red-Gold era desktop](/images/website-red-era.jpg)
+![Red-Gold era desktop](/images/riche88-fytbet-website-red-gold-era.jpg)
 
 ![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
 

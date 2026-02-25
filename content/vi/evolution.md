@@ -61,7 +61,7 @@ Trong kỷ nguyên này, các tạp chí thương hiệu đã được phân ph�
 
 Kỷ nguyên Đỏ-Vàng đánh dấu lần đầu tiên thiết kế hình ảnh của FYT thể hiện rõ ràng chất lượng của một dịch vụ quản gia thay vì đơn thuần là một nền tảng kỹ thuật số. Đó cũng là một chương định hình trong quá trình giáo dục thiết kế của thương hiệu: học cách ngôn ngữ hình ảnh có thể truyền đạt định vị cao cấp — không chỉ là thẩm mỹ, mà là mục đích.
 
-![Red-Gold era desktop](/images/website-red-era.jpg)
+![Red-Gold era desktop](/images/riche88-fytbet-website-red-gold-era.jpg)
 
 ![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
 

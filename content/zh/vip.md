@@ -78,6 +78,12 @@ interlinks:
 
 这些礼物的共同特征是：你在外面买不到。它们只属于那些被平台真正记住的人。
 
+![富易堂三周年纪念金箔扑克——牌背巴洛克花纹 富易堂RICHE88](/images/vip-gold-card-back.webp)
+
+![三周年纪念金箔扑克Joker——国王手持富字 1111宝座](/images/vip-gold-card-joker.webp)
+
+![三周年纪念金箔扑克黑桃A——富字嵌入黑桃 RICHE88](/images/vip-gold-card-ace-full.webp)
+
 ---
 
 ## 富易堂支持哪些支付方式？七大通道从USDT到数字人民币

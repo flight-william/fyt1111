@@ -120,6 +120,53 @@
   </script>
   {{ end }}
 
+  {{/* ImageObject JSON-LD — VIP gold card collectibles */}}
+  {{ if eq .Params.translationKey "vip" }}
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/vip-gold-card-ace-full.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"富易堂三周年金箔扑克黑桃A——RICHE88品牌定制"{{ else if eq .Language.Lang "yue" }}"富易堂三周年金箔啤牌黑桃A——RICHE88品牌訂製"{{ else }}"FYTBET 3rd Anniversary Gold Foil Poker — Ace of Spades with RICHE88 Branding"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"富易堂(FYTBET)三周年纪念金箔扑克牌黑桃A，富字嵌入黑桃图案，底部RICHE88品牌丝带，VIP会员专属限量收藏品"{{ else if eq .Language.Lang "yue" }}"富易堂(FYTBET)三周年紀念金箔啤牌黑桃A，富字嵌入黑桃圖案，底部RICHE88品牌絲帶，VIP會員專屬限量收藏品"{{ else }}"FYTBET (富易堂) 3rd anniversary gold foil playing card, Ace of Spades with 富 character embedded in the spade design and RICHE88 ribbon. Limited edition VIP collectible."{{ end }},
+      "dateCreated": "2014",
+      "author": { "@type": "Organization", "name": "富易堂" },
+      "copyrightHolder": { "@type": "Organization", "name": "FYTBET" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/vip-gold-card-joker.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"富易堂三周年金箔扑克Joker——国王手持富字坐镇1111宝座"{{ else if eq .Language.Lang "yue" }}"富易堂三周年金箔啤牌Joker——國王手持富字坐鎮1111寶座"{{ else }}"FYTBET 3rd Anniversary Gold Foil Poker — Joker King on 1111 Throne"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"富易堂(FYTBET)三周年纪念金箔扑克牌鬼牌，国王手持富字坐于1111宝座，呼应品牌2011.11.11创立日期"{{ else if eq .Language.Lang "yue" }}"富易堂(FYTBET)三周年紀念金箔啤牌鬼牌，國王手持富字坐於1111寶座，呼應品牌2011.11.11創立日期"{{ else }}"FYTBET (富易堂) 3rd anniversary gold foil Joker card, king holding 富 character on a 1111 throne — referencing the brand's 2011.11.11 founding date."{{ end }},
+      "dateCreated": "2014",
+      "author": { "@type": "Organization", "name": "富易堂" },
+      "copyrightHolder": { "@type": "Organization", "name": "FYTBET" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/vip-gold-card-back.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"富易堂三周年金箔扑克牌背——巴洛克花纹与RICHE88"{{ else if eq .Language.Lang "yue" }}"富易堂三周年金箔啤牌牌背——巴洛克花紋與RICHE88"{{ else }}"FYTBET 3rd Anniversary Gold Foil Poker Card Back — Baroque Pattern with RICHE88"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"富易堂(FYTBET)三周年纪念金箔扑克牌背面设计，精致巴洛克花纹中央镶嵌富易堂RICHE88品牌标识"{{ else if eq .Language.Lang "yue" }}"富易堂(FYTBET)三周年紀念金箔啤牌背面設計，精緻巴洛克花紋中央鑲嵌富易堂RICHE88品牌標識"{{ else }}"FYTBET (富易堂) 3rd anniversary gold foil card back design, intricate Baroque pattern with RICHE88 branding at center."{{ end }},
+      "dateCreated": "2014",
+      "author": { "@type": "Organization", "name": "富易堂" },
+      "copyrightHolder": { "@type": "Organization", "name": "FYTBET" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "{{ .Site.BaseURL }}images/vip-haigclub.webp",
+      "name": {{ if eq .Language.Lang "zh" }}"富易堂VIP新年贺卡——Haig Club限量威士忌礼遇"{{ else if eq .Language.Lang "yue" }}"富易堂VIP新年賀卡——Haig Club限量威士忌禮遇"{{ else }}"FYTBET VIP New Year Card — Haig Club Limited Edition Whisky Gift"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"富易堂(FYTBET)VIP贵宾新年贺卡，搭配Haig Club限量苏格兰威士忌(Beckham代言)，卡面题字「小大由之 富在知足」"{{ else if eq .Language.Lang "yue" }}"富易堂(FYTBET)VIP貴賓新年賀卡，配Haig Club限量蘇格蘭威士忌(Beckham代言)，卡面題字「小大由之 富在知足」"{{ else }}"FYTBET VIP New Year greeting card paired with Haig Club limited edition Scotch whisky (Beckham-endorsed), inscribed with the brand motto."{{ end }},
+      "author": { "@type": "Organization", "name": "富易堂" },
+      "copyrightHolder": { "@type": "Organization", "name": "FYTBET" }
+    }
+  ]
+  </script>
+  {{ end }}
+
   {{/* Product JSON-LD — Fortune Insurance on VIP and Technology pages */}}
   {{ if or (eq .Params.translationKey "vip") (eq .Params.translationKey "technology") }}
   <script type="application/ld+json">

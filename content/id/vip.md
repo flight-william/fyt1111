@@ -78,6 +78,12 @@ Seri koleksi juga digarap dengan sangat serius. **Figur koleksi Dragon lisensi r
 
 Karakteristik umum dari hadiah-hadiah ini adalah: Anda tidak bisa membelinya di luar. Mereka hanya milik mereka yang benar-benar diingat oleh platform.
 
+![Gold-plated playing card back — Riche88 baroque design](/images/vip-gold-card-back.webp)
+
+![Gold-plated Joker — king on 1111 throne, third anniversary](/images/vip-gold-card-joker.webp)
+
+![Gold-plated Ace of Spades — Riche88](/images/vip-gold-card-ace-full.webp)
+
 ---
 
 ## Jalur Pembayaran apa saja yang didukung? 7 Jalur dari USDT hingga Yuan Digital

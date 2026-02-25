@@ -59,7 +59,7 @@ interlinks:
 
 红金年华标志着富易堂从一个纯线上品牌，第一次在视觉层面展露出「贵宾服务」的气质。这段经历也为后来的品牌重塑积累了宝贵的经验：如何用设计语言传递高端定位，而非仅仅追求好看。
 
-![红金时代桌面端](/images/website-red-era.jpg)
+![红金时代桌面端](/images/riche88-fytbet-website-red-gold-era.jpg)
 
 ![红金时代Riche88移动端App 大富贵888红包](/images/evo-app-red-2015.webp)
 

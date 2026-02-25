@@ -81,6 +81,8 @@ Pada hari yang sama, kaos amal yang menampilkan gambar Ah Fu juga muncul di loka
 
 Dari layar digital ke lapangan nyata, dari stiker sosial ke kaos amal — Ah Fu membuktikan bahwa ia bukan sekadar karakter di atas kertas desain. Ia adalah jiwa brand yang hidup.
 
+![Ah Fu mascot costume with Xiao Wei at brand event](/images/mascot-costume-event.webp)
+
 ---
 
 ## Mengapa FYT Membutuhkan Maskot? Makna Brand dari Ah Fu

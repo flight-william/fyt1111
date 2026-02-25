@@ -61,7 +61,7 @@ interlinks:
 
 紅金年代係富易堂第一次將「管家式服侍」滲入去設計入面。呢個亦都係品牌好重要嘅一課：學識點樣用視覺去講「尊貴」——唔止係靚，仲係有一種態度喺度。
 
-![Red-Gold era desktop](/images/website-red-era.jpg)
+![Red-Gold era desktop](/images/riche88-fytbet-website-red-gold-era.jpg)
 
 ![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
 

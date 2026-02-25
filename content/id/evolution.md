@@ -61,7 +61,7 @@ Selama era ini, majalah brand didistribusikan di seluruh lounge VIP Juxing di ka
 
 Era Merah-Emas menandai pertama kalinya desain visual FYT secara eksplisit memproyeksikan kualitas layanan concierge daripada sekadar platform digital. Itu juga merupakan bab formatif dalam pendidikan desain brand: mempelajari bagaimana bahasa visual dapat mengomunikasikan pemosisian premium — bukan sekadar estetika, tetapi niat.
 
-![Red-Gold era desktop](/images/website-red-era.jpg)
+![Red-Gold era desktop](/images/riche88-fytbet-website-red-gold-era.jpg)
 
 ![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
 

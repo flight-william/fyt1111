@@ -15,7 +15,8 @@
       "Bash(cp:*)",
       "Bash(tail:*)",
       "Bash(python3:*)",
-      "Bash(git status:*)"
+      "Bash(git status:*)",
+      "Bash(git:*)"
     ]
   }
 }

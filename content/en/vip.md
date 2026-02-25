@@ -78,6 +78,12 @@ The collectible program carried the same philosophy. **Marvel officially license
 
 What unites every item in this gifting tradition is a single quality: you cannot buy them elsewhere. They belong only to the people the platform has chosen to remember.
 
+![Gold-plated playing card back — Riche88 baroque design](/images/vip-gold-card-back.webp)
+
+![Gold-plated Joker — king on 1111 throne, third anniversary](/images/vip-gold-card-joker.webp)
+
+![Gold-plated Ace of Spades — Riche88](/images/vip-gold-card-ace-full.webp)
+
 ---
 
 ## What Payment Methods Does FYT Support? Seven Channels from USDT to e-CNY

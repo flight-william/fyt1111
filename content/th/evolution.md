@@ -61,7 +61,7 @@ interlinks:
 
 ยุคแดง-ทองนับเป็นครั้งแรกที่งานดีไซน์ของ FYT ฉายภาพคุณภาพของการเป็นบริการส่วนตัว (Concierge) อย่างชัดเจน มากกว่าที่จะเป็นเพียงแพลตฟอร์มดิจิทัล และยังเป็นบทเรียนสำคัญในการเรียนรู้ว่าภาษาสื่อสารทางภาพลักษณ์สามารถบอกเล่าถึงตำแหน่งแบรนด์ระดับพรีเมียมได้อย่างไร — ไม่ใช่เพียงความสวยงาม แต่คือความตั้งใจ
 
-![Red-Gold era desktop](/images/website-red-era.jpg)
+![Red-Gold era desktop](/images/riche88-fytbet-website-red-gold-era.jpg)
 
 ![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
 
