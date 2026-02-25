@@ -5,6 +5,7 @@ defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "section", "RSS"]
 disableHugoGeneratorInject = true
+ignoreFiles = ['goldmine\.md', 'riche88_net_redo\.md', 'nice3_plan\.md']
 
 [markup]
   [markup.goldmark]

@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - rm -f goldmine.md riche88_net_redo.md nice3_plan.md
         - wget -q https://github.com/gohugoio/hugo/releases/download/v0.156.0/hugo_extended_0.156.0_Linux-64bit.tar.gz
         - tar -xf hugo_extended_0.156.0_Linux-64bit.tar.gz
         - chmod +x hugo
