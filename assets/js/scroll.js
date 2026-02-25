@@ -131,6 +131,27 @@
     });
   }
 
+  // ===== Scroll Indicator — click to scroll, fade on leave =====
+  var scrollIndicator = document.querySelector('.scroll-indicator');
+  if (scrollIndicator) {
+    scrollIndicator.style.cursor = 'pointer';
+    scrollIndicator.addEventListener('click', function () {
+      var nextSection = document.querySelector('.page');
+      if (nextSection) nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    // Hide indicator once user scrolls past cover
+    var coverEl = document.getElementById('cover');
+    if (coverEl && 'IntersectionObserver' in window) {
+      var indicatorObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          scrollIndicator.style.opacity = entry.isIntersecting ? '' : '0';
+          scrollIndicator.style.transition = 'opacity 0.6s ease';
+        });
+      }, { threshold: 0.5 });
+      indicatorObs.observe(coverEl);
+    }
+  }
+
   // ===== Full-Page Keyboard Navigation =====
   var isSectionPage = document.documentElement.classList.contains('is-section-page');
 
@@ -186,6 +207,85 @@
     if (index < 0) index = 0;
     if (index >= totalPages) index = totalPages - 1;
     pages[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ===== Wheel / Touch — one gesture = one section =====
+  if (!isSectionPage && pages.length > 1) {
+    var scrolling = false;
+    var cooldown = 800; // ms lockout after each transition
+
+    window.addEventListener('wheel', function (e) {
+      if (scrolling) return;
+      var dir = e.deltaY > 0 ? 1 : -1;
+      var current = getCurrentPageIndex();
+
+      // At boundaries (first page up, last page down) — let native scroll handle it (footer, etc.)
+      var next = current + dir;
+      var atBoundary = (next < 0 || next >= totalPages);
+
+      // Check if current section has an incomplete scroll-feed
+      var currentPage = pages[current];
+      var feed = currentPage ? currentPage.querySelector('.scroll-feed') : null;
+      var feedApi = feed && feed._scrollFeed;
+
+      if (dir > 0 && feedApi && !feedApi.isComplete()) {
+        e.preventDefault();
+        feedApi.next();
+        scrolling = true;
+        setTimeout(function () { scrolling = false; }, cooldown);
+        return;
+      }
+      if (dir < 0 && feedApi && feedApi.current() > 0) {
+        e.preventDefault();
+        feedApi.prev();
+        scrolling = true;
+        setTimeout(function () { scrolling = false; }, cooldown);
+        return;
+      }
+
+      if (atBoundary) return; // let native scroll reach footer/top
+      e.preventDefault();
+      scrolling = true;
+      goToPage(next);
+      setTimeout(function () { scrolling = false; }, cooldown);
+    }, { passive: false });
+
+    // Touch support — swipe up/down
+    var touchStartY = 0;
+    window.addEventListener('touchstart', function (e) {
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchend', function (e) {
+      if (scrolling) return;
+      var diff = touchStartY - e.changedTouches[0].clientY;
+      if (Math.abs(diff) < 50) return; // ignore small swipes
+      var dir = diff > 0 ? 1 : -1;
+      var current = getCurrentPageIndex();
+
+      var currentPage = pages[current];
+      var feed = currentPage ? currentPage.querySelector('.scroll-feed') : null;
+      var feedApi = feed && feed._scrollFeed;
+
+      if (dir > 0 && feedApi && !feedApi.isComplete()) {
+        feedApi.next();
+        scrolling = true;
+        setTimeout(function () { scrolling = false; }, cooldown);
+        return;
+      }
+      if (dir < 0 && feedApi && feedApi.current() > 0) {
+        feedApi.prev();
+        scrolling = true;
+        setTimeout(function () { scrolling = false; }, cooldown);
+        return;
+      }
+
+      var next = current + dir;
+      if (next < 0 || next >= totalPages) return;
+      scrolling = true;
+      goToPage(next);
+      setTimeout(function () { scrolling = false; }, cooldown);
+    }, { passive: true });
   }
 
   // Keyboard handler — skip on section pages so normal scrolling works

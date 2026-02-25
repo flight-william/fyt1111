@@ -47,6 +47,8 @@ Không có gì ồn ào về thiết kế này. Đó chính xác là mục đíc
 
 Thẩm mỹ sạch sẽ cũng phản ánh một thực tế thực tế. Vào năm 2011, trọng tâm của nền tảng là cung cấp trải nghiệm cá cược mượt mà, đáng tin cậy hơn bất cứ điều gì khác. Trang trí chỉ là thứ yếu so với chức năng — một triết lý thiết kế mà nhìn lại đã định hình tông màu cho tất cả những gì diễn ra sau đó.
 
+![Grey-Blue era 2011](/images/website-v1.webp)
+
 ---
 
 ## Khi nào diện mạo Đỏ-Vàng xuất hiện? Kỷ nguyên hợp tác Juxing Macau 2015
@@ -58,6 +60,12 @@ Bảng màu xám-xanh đã nhường chỗ cho **đỏ sẫm và vàng** — m�
 Trong kỷ nguyên này, các tạp chí thương hiệu đã được phân phối khắp các phòng VIP của Juxing trong các sòng bạc lớn của Macau. Nhận diện hình ảnh của nền tảng trực tuyến cần cảm thấy liền mạch cùng với những điểm tiếp xúc vật lý này. Bảng màu đỏ-vàng được sinh ra từ sự hội tụ này — màu sắc trên màn hình sẽ mang lại cảm giác quen thuộc và nhất quán cho khách hàng khi bước vào một phòng VIP.
 
 Kỷ nguyên Đỏ-Vàng đánh dấu lần đầu tiên thiết kế hình ảnh của FYT thể hiện rõ ràng chất lượng của một dịch vụ quản gia thay vì đơn thuần là một nền tảng kỹ thuật số. Đó cũng là một chương định hình trong quá trình giáo dục thiết kế của thương hiệu: học cách ngôn ngữ hình ảnh có thể truyền đạt định vị cao cấp — không chỉ là thẩm mỹ, mà là mục đích.
+
+![Red-Gold era desktop](/images/website-red-era.jpg)
+
+![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
+
+![Gold-Orange transition mobile web](/images/evo-web-gold-2017.webp)
 
 ---
 
@@ -73,6 +81,12 @@ Thời điểm ra mắt cũng mang ý nghĩa riêng. Lần tái định vị th�
 
 Thời gian đã xác thực lựa chọn đen-cam. Hệ thống màu sắc đủ đặc biệt để xây dựng khả năng gợi nhớ thương hiệu mạnh mẽ, nhưng đủ cân bằng để tránh mỏi mắt trong quá trình sử dụng hàng ngày kéo dài. Kể từ khi được giới thiệu, bảng màu này đã trở thành nền tảng của nhận diện hình ảnh FYTBET.
 
+![Pre-rebrand desktop 2020](/images/evo-desktop-2020.webp)
+
+![FYTBET rebrand Black-Orange 2020](/images/website-rebrand.webp)
+
+![FYTBET landing page](/images/evo-landing-fytbet.webp)
+
 ---
 
 ## Tại sao FYT chuyển từ toàn cam trở lại đen-cam? Thử nghiệm App v3.0 2021
@@ -86,6 +100,12 @@ Vào tháng 4 năm 2021, App v3.0 đã ra mắt với một định hướng hì
 Thử nghiệm cũng là một minh chứng cho lợi thế cạnh tranh sâu sắc hơn. Tốc độ chuyển từ ý tưởng sang triển khai thực tế của thiết kế toàn cam chỉ có thể thực hiện được nhờ **năng lực phát triển hoàn toàn nội bộ** của FYT. Không có nhà cung cấp bên thứ ba nào để phối hợp, không có hàng đợi phát triển bên ngoài nào để chờ đợi, không có rào cản nhãn trắng nào để điều hướng xung quanh. Từ ý tưởng đến thực thi, được kiểm soát từ đầu đến cuối — một lợi ích hữu hình của ngăn xếp công nghệ tự xây dựng.
 
 Kỷ nguyên toàn cam cuối cùng đã trở thành một ghi chú quan trọng trong lịch sử thiết kế của thương hiệu. Nó chứng minh sự sẵn lòng chấp nhận rủi ro sáng tạo của đội ngũ và khả năng thực thi nhanh chóng. Quan trọng hơn, nó đã tạo ra dữ liệu sử dụng thực tế và phản hồi của hội viên trực tiếp định hình lần lặp lại tiếp theo — và tinh tế nhất.
+
+![Transitional app design](/images/evo-app-teal-2020.webp)
+
+![All-Orange experiment 2021](/images/evo-app-orange-2021.webp)
+
+![9th anniversary splash](/images/evo-splash-9yr.webp)
 
 ---
 
@@ -105,6 +125,10 @@ Nhưng kỷ nguyên hiện tại được định nghĩa bởi nhiều hơn là 
 - **Fortune Insurance (Phú Quý Bảo)** — Sản phẩm bảo hiểm cá cược thể thao độc quyền của FYT: nếu bạn thắng, bạn giữ mọi thứ; nếu bạn thua, số tiền bảo hiểm sẽ trở lại vào ngày hôm sau
 
 Mỗi tính năng này chiếm một vị trí được cân nhắc trong phân cấp thị giác tinh tế. Thiết kế phục vụ chức năng. Chức năng phục vụ hội viên. Đây là nguyên tắc mà mười lăm năm lặp lại đã kết tinh thành thực tiễn.
+
+![FYTBET 2025 tablet desktop](/images/evo-tablet-2025.webp)
+
+![FYTBET current App v4.1 2026](/images/app-2026-mobile.webp)
 
 ---
 

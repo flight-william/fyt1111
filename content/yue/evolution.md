@@ -47,6 +47,8 @@ interlinks:
 
 簡約嘅背後亦都係一種務實。2011 年嗰陣，平台最緊要係提供一個夠快、夠穩嘅玩波體驗。功能係行先過裝飾 —— 呢種設計哲學，到依家都仲影響緊我哋。
 
+![Grey-Blue era 2011](/images/website-v1.webp)
+
 ---
 
 ## 紅金年華幾時出現？2015 澳門鉅星合作年代
@@ -58,6 +60,12 @@ interlinks:
 嗰個年代，我哋本品牌雜誌擺晒喺澳門各大賭場嘅鉅星貴賓廳。網上平台嘅樣一定要同呢啲線下接觸點接軌。紅金配色就係咁樣誕生 —— 等個客行入 VIP 廳同埋開手機嗰陣，感覺係一模一樣、夠晒 Consistent。
 
 紅金年代係富易堂第一次將「管家式服侍」滲入去設計入面。呢個亦都係品牌好重要嘅一課：學識點樣用視覺去講「尊貴」——唔止係靚，仲係有一種態度喺度。
+
+![Red-Gold era desktop](/images/website-red-era.jpg)
+
+![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
+
+![Gold-Orange transition mobile web](/images/evo-web-gold-2017.webp)
 
 ---
 
@@ -73,6 +81,12 @@ interlinks:
 
 時間證明咗黑橙色係揀啱咗。呢套配色夠晒特別，令人一眼就記住，但係長用又唔會令隻眼太攰。由嗰陣開始，呢套配色就變咗 FYTBET 嘅根基。
 
+![Pre-rebrand desktop 2020](/images/evo-desktop-2020.webp)
+
+![FYTBET rebrand Black-Orange 2020](/images/website-rebrand.webp)
+
+![FYTBET landing page](/images/evo-landing-fytbet.webp)
+
 ---
 
 ## 點解由「全橙」變返依家咁？2021 App v3.0 實驗
@@ -86,6 +100,12 @@ interlinks:
 實驗背後仲騷咗一樣競爭優勢。由 Concept 到 Launch 全橙設計可以咁快，係因為富易堂有 **100% 自己嘅研發能力**。唔使等第三方 Vendor，唔使排隊，冇 White-label 嘅限制。由諗到做，全過程自己 Control —— 呢個就係自建技術棧嘅好處。
 
 全橙年代最後變咗品牌歷史入面一個好型嘅註腳。佢證明咗團隊敢搏、敢試，而且執行力極強。最緊要係，佢產生咗好多真實數據同埋老友嘅 Feedback，直接執靚咗下一個 —— 亦都係最精煉嘅 Version。
+
+![Transitional app design](/images/evo-app-teal-2020.webp)
+
+![All-Orange experiment 2021](/images/evo-app-orange-2021.webp)
+
+![9th anniversary splash](/images/evo-splash-9yr.webp)
 
 ---
 
@@ -105,6 +125,10 @@ interlinks:
 - **富貴保** — 富易堂獨創嘅玩波保險：贏咗照攞，輸咗保額第二日退返
 
 每樣功能都喺精煉嘅層次入面搵到自己嘅位。設計係為咗功能，功能係為咗老友。呢個就係十五年磨一劍磨出嚟嘅心法。
+
+![FYTBET 2025 tablet desktop](/images/evo-tablet-2025.webp)
+
+![FYTBET current App v4.1 2026](/images/app-2026-mobile.webp)
 
 ---
 

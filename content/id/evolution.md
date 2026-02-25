@@ -47,6 +47,8 @@ Tidak ada yang mencolok dari desain ini. Justru itulah poin utamanya. Untuk bran
 
 Estetika yang bersih juga mencerminkan realitas praktis. Pada tahun 2011, fokus platform adalah memberikan pengalaman taruhan yang mulus dan andal di atas segalanya. Ornamen dikesampingkan demi fungsi — sebuah filosofi desain yang, jika dipikir-pikir, menetapkan nada untuk semua yang menyusul.
 
+![Grey-Blue era 2011](/images/website-v1.webp)
+
 ---
 
 ## Kapan tampilan Merah-Emas muncul? Era Kemitraan Juxing Macau 2015
@@ -58,6 +60,12 @@ Palet abu-biru digantikan oleh **merah tua dan emas** — pergeseran sengaja yan
 Selama era ini, majalah brand didistribusikan di seluruh lounge VIP Juxing di kasino-kasino utama Macau. Identitas visual platform online perlu terasa mulus bersama titik sentuh fisik ini. Palet merah-emas lahir dari keselarasan ini — warna di layar yang akan terasa akrab dan konsisten bagi pelanggan yang berjalan ke lounge VIP.
 
 Era Merah-Emas menandai pertama kalinya desain visual FYT secara eksplisit memproyeksikan kualitas layanan concierge daripada sekadar platform digital. Itu juga merupakan bab formatif dalam pendidikan desain brand: mempelajari bagaimana bahasa visual dapat mengomunikasikan pemosisian premium — bukan sekadar estetika, tetapi niat.
+
+![Red-Gold era desktop](/images/website-red-era.jpg)
+
+![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
+
+![Gold-Orange transition mobile web](/images/evo-web-gold-2017.webp)
 
 ---
 
@@ -73,6 +81,12 @@ Waktunya membawa signifikansi tersendiri. Rebrand diluncurkan selama bulan-bulan
 
 Waktu telah memvalidasi pilihan hitam-oranye. Sistem warnanya cukup khas untuk membangun ingatan brand yang kuat, namun cukup seimbang untuk menghindari kelelahan visual selama penggunaan harian yang lama. Sejak diperkenalkan, palet ini telah menjadi landasan identitas visual FYTBET.
 
+![Pre-rebrand desktop 2020](/images/evo-desktop-2020.webp)
+
+![FYTBET rebrand Black-Orange 2020](/images/website-rebrand.webp)
+
+![FYTBET landing page](/images/evo-landing-fytbet.webp)
+
 ---
 
 ## Mengapa FYT beralih kembali dari Serba Oranye? Eksperimen App v3.0 2021
@@ -86,6 +100,12 @@ Ini adalah eksperimen yang disengaja dalam maksimalisme brand. Tim ingin menjawa
 Eksperimen tersebut juga merupakan demonstrasi dari keunggulan kompetitif yang lebih dalam. Kecepatan desain serba oranye berpindah dari konsep ke peluncuran langsung hanya mungkin terjadi karena **kemampuan pengembangan yang sepenuhnya dilakukan secara internal** oleh FYT. Tidak ada vendor pihak ketiga untuk dikoordinasikan, tidak ada antrean pengembangan eksternal untuk ditunggu, tidak ada kendala white-label untuk dinavigasi. Ide hingga eksekusi, dikendalikan dari ujung ke ujung — manfaat nyata dari tumpukan teknologi yang dibangun sendiri.
 
 Era serba oranye akhirnya menjadi catatan kaki penting dalam sejarah desain brand. Ini membuktikan kesediaan tim untuk mengambil risiko kreatif dan kemampuannya untuk mengeksekusi dengan cepat. Lebih penting lagi, ini menghasilkan data penggunaan dunia nyata dan umpan balik anggota yang secara langsung menginformasikan iterasi berikutnya — dan yang paling terpoles.
+
+![Transitional app design](/images/evo-app-teal-2020.webp)
+
+![All-Orange experiment 2021](/images/evo-app-orange-2021.webp)
+
+![9th anniversary splash](/images/evo-splash-9yr.webp)
 
 ---
 
@@ -105,6 +125,10 @@ Namun era saat ini didefinisikan oleh lebih dari sekadar penyempurnaan warna. In
 - **Fortune Insurance (富贵保)** — Asuransi taruhan olahraga milik FYT: jika Anda menang, Anda menyimpan semuanya; jika Anda kalah, jumlah yang diasuransikan kembali keesokan harinya
 
 Masing-masing fitur ini menempati tempat yang dipertimbangkan dalam hierarki visual yang terpoles. Desain melayani fungsi. Fungsi melayani anggota. Ini adalah prinsip yang telah dikristalisasi oleh lima belas tahun iterasi menjadi praktik.
+
+![FYTBET 2025 tablet desktop](/images/evo-tablet-2025.webp)
+
+![FYTBET current App v4.1 2026](/images/app-2026-mobile.webp)
 
 ---
 

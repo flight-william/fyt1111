@@ -47,6 +47,8 @@ There was nothing loud about this design. That was precisely the point. For a ne
 
 The clean aesthetic also reflected a practical reality. In 2011, the platform's focus was on delivering a smooth, reliable betting experience above all else. Ornament took a backseat to function — a design philosophy that, in hindsight, set the tone for everything that followed.
 
+![Riche88 original website — Grey-Blue era 2011](/images/website-v1.webp)
+
 ---
 
 ## When Did the Red-Gold Look Appear? The 2015 Macau Juxing Partnership Era
@@ -58,6 +60,12 @@ The grey-blue palette gave way to **deep red and gold** — a deliberate shift t
 During this era, brand magazines were distributed across Juxing's VIP lounges in Macau's major casinos. The online platform's visual identity needed to feel seamless alongside these physical touchpoints. The red-gold palette was born from this convergence — colors on screen that would feel familiar and consistent to a customer walking into a VIP lounge.
 
 The Red-Gold era marked the first time FYT's visual design explicitly projected the quality of a concierge service rather than simply a digital platform. It was also a formative chapter in the brand's design education: learning how visual language can communicate premium positioning — not merely aesthetics, but intent.
+
+![Red-Gold era desktop](/images/website-red-era.jpg)
+
+![Red-Gold era Riche88 mobile app](/images/evo-app-red-2015.webp)
+
+![Gold-Orange transition — mobile web with LeBron James](/images/evo-web-gold-2017.webp)
 
 ---
 
@@ -73,6 +81,12 @@ The timing carried its own significance. The rebrand launched during the early m
 
 Time has validated the black-orange choice. The color system is distinctive enough to build strong brand recall, yet balanced enough to avoid visual fatigue during extended daily use. Since its introduction, this palette has become the bedrock of FYTBET's visual identity.
 
+![Riche88 desktop — March 2020, final days before rebrand](/images/evo-desktop-2020.webp)
+
+![FYTBET rebrand — Black-Orange identity, April 21 2020](/images/website-rebrand.webp)
+
+![FYTBET speed-test landing page with Fortune Insurance](/images/evo-landing-fytbet.webp)
+
 ---
 
 ## Why Did FYT Switch Back from All-Orange? The 2021 App v3.0 Experiment
@@ -86,6 +100,12 @@ This was a deliberate experiment in brand maximalism. The team wanted to answer 
 The experiment was also a demonstration of a deeper competitive advantage. The speed at which the all-orange design moved from concept to live deployment was possible only because of FYT's **fully in-house development capability**. No third-party vendors to coordinate with, no external development queues to wait in, no white-label constraints to navigate around. Idea to execution, controlled end to end — a tangible benefit of the self-built tech stack.
 
 The all-orange era ultimately became an important footnote in the brand's design history. It proved the team's willingness to take creative risks and its ability to execute rapidly. More importantly, it generated real-world usage data and member feedback that directly informed the next — and most refined — iteration.
+
+![FYT transitional app — orange header with teal-dark body](/images/evo-app-teal-2020.webp)
+
+![All-Orange experiment — App v3.0 2021](/images/evo-app-orange-2021.webp)
+
+![9th anniversary splash — Griezmann #9](/images/evo-splash-9yr.webp)
 
 ---
 
@@ -105,6 +125,10 @@ But the current era is defined by more than color refinement. This is the most f
 - **Fortune Insurance (富贵保)** — FYT's proprietary sports betting insurance: if you win, you keep everything; if you lose, the insured amount returns the next day
 
 Each of these features occupies a considered place within the refined visual hierarchy. Design serves function. Function serves the member. This is the principle that fifteen years of iteration has crystallized into practice.
+
+![FYTBET refined Black-Orange — 2025 tablet desktop](/images/evo-tablet-2025.webp)
+
+![FYTBET current App v4.1 — 2026 mobile](/images/app-2026-mobile.webp)
 
 ---
 
