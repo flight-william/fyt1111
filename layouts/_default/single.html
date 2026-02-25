@@ -254,10 +254,13 @@
       <p class="heading-sub mb-3">{{ i18n "continue_reading" }}</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
         {{ range . }}
-        <a href="/{{ $.Language.Lang }}/{{ .url }}/" class="interlink-card">
-          <span class="text-fyt-gold text-xs tracking-widest uppercase block mb-1">{{ .label }}</span>
-          <span class="text-fyt-cream text-sm">{{ .title }}</span>
-        </a>
+          {{ $target := $.Site.GetPage .url }}
+          {{ if $target }}
+          <a href="{{ $target.RelPermalink }}" class="interlink-card">
+            <span class="text-fyt-gold text-xs tracking-widest uppercase block mb-1">{{ .label }}</span>
+            <span class="text-fyt-cream text-sm">{{ .title }}</span>
+          </a>
+          {{ end }}
         {{ end }}
       </div>
     </div>
