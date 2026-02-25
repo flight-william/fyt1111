@@ -226,7 +226,22 @@ other = "Chào mừng bạn đến với Điểm truy cập chính thức của 
 
 
 
-other = "FYTBET, Riche88, FYT, 188BET, FYT Thể thao, trang chủ FYTBET, cá cược thể thao, cá độ bóng đá, nền tảng cá cược, Fortune Insurance, giải trí VIP, câu lạc bộ VIP Macau, Pinnacle, thể thao XJ, nạp tiền USDT, cá cược tiền điện tử, nền tảng tự phát triển, fytbet.com, fyt1111.com, x88.bet"
+other = "FYTBET, 富易堂, Riche88, FYT, 188BET, Cube Group, Ah Fu, 阿富, FYT Thể thao, XJ Sports, Pinnacle, PM Sports, InPlay Matrix, Fortune Insurance, 富贵保, cá cược thể thao, giải trí VIP, nạp tiền USDT, nền tảng tự phát triển, fytbet.com, fyt1111.com, x88.bet"
+
+[section_archive_afu]
+other = "Hồ sơ Ah Fu"
+
+[label_archive]
+other = "Kho lưu trữ"
+
+[archive_afu_title]
+other = "Biên niên thiết kế"
+
+[section_archive_zhaoyun]
+other = "Triệu Vân Chỉ Số"
+
+[archive_zhaoyun_title]
+other = "Kho dự đoán thể thao"
 
 
 

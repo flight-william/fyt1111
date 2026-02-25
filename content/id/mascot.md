@@ -18,9 +18,9 @@ faqs:
   - q: "Acara apa saja yang pernah diikuti Ah Fu?"
     a: "Penampilan Ah Fu yang paling representatif adalah pada turnamen sepak bola amal Chengshi Cup tanggal 2 Mei 2015 di Stadion Rakyat Provinsi Guangdong. Di sana, Ah Fu berinteraksi hangat dengan para tamu dan penonton. Gambar sukarelawan yang mengenakan kaos amal 'Berbagi Kasih' yang menampilkan gambar Ah Fu juga menghubungkan citranya dengan kegiatan tanggung jawab sosial."
 interlinks:
-  - url: "origin"
-    label: "Asal Usul"
-    title: "Didirikan 11.11.11 — Titik Awal Brand FYT"
+  - url: "afu"
+    label: "Arsip"
+    title: "Arsip desain Ah Fu — Satu dekade kreasi maskot"
   - url: "evolution"
     label: "Evolusi"
     title: "Dari Abu-Biru ke Hitam-Oranye — Sejarah Evolusi Visual FYT"

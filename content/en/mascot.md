@@ -18,9 +18,9 @@ faqs:
   - q: "What events has Ah Fu appeared at?"
     a: "Ah Fu's signature appearance was at the Chengshi Cup Charity Soccer Match on May 2, 2015, held at Guangdong Provincial People's Stadium in Guangzhou. He interacted with guests and audiences throughout the event. Charity t-shirts featuring Ah Fu with the slogan 'Spread the Love' (把爱传出去) have since become a recognizable symbol of FYT's community initiatives."
 interlinks:
-  - url: "origin"
-    label: "Origin"
-    title: "Founded 11.11.11 — the FYT Brand Origin Story"
+  - url: "afu"
+    label: "Archive"
+    title: "Ah Fu Design Archive — Mascot Decade of Creation"
   - url: "evolution"
     label: "Evolution"
     title: "From Grey-Blue to Black-Orange — the FYT Visual Identity Journey"
@@ -37,7 +37,7 @@ That year, **Ah Fu** was born.
 
 He is a cartoon character — part boy, part brand ambassador — defined by a head of unmistakable **oversized brown swirl hair** and a pair of large, expressive eyes that radiate mischief and warmth in equal measure. He wears **red suspenders** with the Chinese character **"富"** (wealth/fortune) displayed on his chest. That single character does double duty: it references the brand name 富易堂 (FYT) directly, while carrying the cultural wish for prosperity that runs deep in the brand's DNA.
 
-The design team gave Ah Fu a personality that feels more like a friend than a corporate symbol. He is not the stiff, polished mascot of a boardroom presentation. He is cheeky. He gets impatient. He strikes confident poses and waves you off with a casual "BYE." Across **more than 40 design iterations**, every expression and gesture was refined until the character emerged fully formed — distinctive enough to be instantly recognizable, approachable enough to feel like someone you already know.
+The design team gave Ah Fu a personality that feels more like a friend than a corporate symbol. He is not the stiff, polished mascot of a boardroom presentation. He is cheeky. He gets impatient. He strikes confident poses and waves you off with a casual "BYE." Across **more than 40 design iterations**, every expression and gesture was refined until the character emerged fully formed — distinctive enough to be instantly recognizable, approachable enough to feel like someone you already know. (For the full design journey, see the [Ah Fu Design Archive](/en/afu/).)
 
 In the brand's signature hero image, Ah Fu stands holding a RICHE88 pennant flag beside the original tagline — **"Want to win? It's not hard at all!"** (要赢？一点都不难！) — capturing the spirit of confidence and daring that defined FYT's early identity.
 

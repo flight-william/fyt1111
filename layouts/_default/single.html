@@ -139,7 +139,7 @@
   {{ end }}
 
   {{/* Back-to-story breadcrumb at top of section page */}}
-  {{- $sectionMap := dict "origin" "origin" "experience" "o2o" "mascot" "mascot" "evolution" "evolution" "vip" "vip" "charity" "charity" "technology" "platform" -}}
+  {{- $sectionMap := dict "origin" "origin" "experience" "o2o" "mascot" "mascot" "evolution" "evolution" "vip" "vip" "charity" "charity" "technology" "platform" "afu" "afu-archive" "archive" "archive-hub" "zhaoyun" "zhaoyun-archive" -}}
   {{- $slug := .File.ContentBaseName -}}
   {{- $anchor := index $sectionMap $slug | default "" -}}
   <div class="section-back-nav">
@@ -219,7 +219,7 @@
   </div>{{/* end .article-extended */}}
 
   <div class="py-12 text-center">
-    {{- $sectionMap := dict "origin" "origin" "experience" "o2o" "mascot" "mascot" "evolution" "evolution" "vip" "vip" "charity" "charity" "technology" "platform" -}}
+    {{- $sectionMap := dict "origin" "origin" "experience" "o2o" "mascot" "mascot" "evolution" "evolution" "vip" "vip" "charity" "charity" "technology" "platform" "afu" "afu-archive" "archive" "archive-hub" "zhaoyun" "zhaoyun-archive" -}}
     {{- $slug := .File.ContentBaseName -}}
     {{- $anchor := index $sectionMap $slug | default "" -}}
     <a href="{{ .Site.Home.RelPermalink }}{{ with $anchor }}#{{ . }}{{ end }}" class="inline-block text-[12px] tracking-[0.3em] uppercase text-fyt-muted/40 hover:text-fyt-cream transition-colors duration-300">

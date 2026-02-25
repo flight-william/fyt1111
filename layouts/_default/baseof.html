@@ -127,12 +127,12 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "富易堂",
-    "alternateName": ["Riche88", "FYT", "FYTBET", "富易堂官网", "FYT体育", "FYT體育", "FYT Sports", "FYT Thể thao", "FYT Olahraga"],
+    "alternateName": ["Riche88", "FYT", "FYTBET", "富易堂官网", "FYT体育", "FYT體育", "FYT Sports", "FYT Thể thao", "FYT Olahraga", "188BET", "Cube Group", "阿富", "Ah Fu"],
     "url": "{{ .Site.BaseURL }}",
     "foundingDate": "2011-11-11",
     "logo": "{{ .Site.BaseURL }}images/logo-fytbet.webp",
     "slogan": "让博彩成为娱乐",
-    "knowsAbout": ["Sports Betting", "Online Entertainment", "VIP Gaming", "体育投注", "在线娱乐"],
+    "knowsAbout": ["Sports Betting", "Online Entertainment", "VIP Gaming", "体育投注", "在线娱乐", "Fortune Insurance", "富贵保", "Pinnacle", "XJ Sports", "小金体育"],
     "areaServed": [
       { "@type": "Country", "name": "China" },
       { "@type": "Continent", "name": "Asia" }
@@ -157,7 +157,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "富易堂 FYTBET",
-    "alternateName": ["Riche88", "FYT官网", "FYTBET Official"],
+    "alternateName": ["Riche88", "FYT", "FYT官网", "FYTBET Official", "188BET", "富易堂"],
     "url": "{{ .Site.BaseURL }}",
     "inLanguage": ["zh-CN", "yue", "en", "vi", "th", "id"],
     "publisher": {
@@ -464,6 +464,7 @@
         {{ with .Site.GetPage "/charity" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_temperature" }}</a>{{ end }}
         <span class="text-fyt-muted/15 mx-4">·</span>
         {{ with .Site.GetPage "/technology" }}<a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_tech" }}</a>{{ end }}
+        {{ with .Site.GetPage "/archive" }}<span class="text-fyt-muted/15 mx-4">·</span><a href="{{ .RelPermalink }}" class="text-fyt-muted/50 hover:text-fyt-cream transition-colors duration-300">{{ i18n "label_archive" }}</a>{{ end }}
       </nav>
       {{/* Separator — hairline */}}
       <div class="w-12 h-px bg-fyt-muted/20 mx-auto mb-6"></div>

@@ -78,3 +78,18 @@ other = "溫度"
 
 [label_tech]
 other = "自研"
+
+[section_archive_afu]
+other = "阿富檔案"
+
+[label_archive]
+other = "品牌檔案"
+
+[archive_afu_title]
+other = "設計全記錄"
+
+[section_archive_zhaoyun]
+other = "趙雲指數"
+
+[archive_zhaoyun_title]
+other = "賽事預測檔案"

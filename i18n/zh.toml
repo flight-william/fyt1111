@@ -226,7 +226,22 @@ other = "欢迎访问富易堂官方访问点。本站由 FYTBET 官方维护，
 
 
 
-other = "富易堂,FYTBET,Riche88,FYT,188BET,FYT体育,富易堂官网,体育投注,在线体育竞猜,体育投注平台,富贵保,投注保险,VIP娱乐,澳门贵宾厅,Pinnacle,小金体育,USDT充值,支付宝充值,微信支付,数字人民币,自主研发平台,fytbet,fyt1111,x88bet"
+other = "富易堂,FYTBET,Riche88,FYT,188BET,Cube集团,阿富,Ah Fu,FYT体育,小金体育,XJ Sports,Pinnacle,PM体育,InPlay Matrix,富贵保,投注保险,体育投注,在线体育竞猜,VIP娱乐,澳门贵宾厅,USDT充值,支付宝充值,微信支付,数字人民币,自主研发平台,fytbet,fyt1111,x88bet"
+
+[section_archive_afu]
+other = "阿富档案"
+
+[label_archive]
+other = "品牌档案"
+
+[archive_afu_title]
+other = "设计全记录"
+
+[section_archive_zhaoyun]
+other = "赵云指数"
+
+[archive_zhaoyun_title]
+other = "赛事预测档案"
 
 
 

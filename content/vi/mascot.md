@@ -18,9 +18,9 @@ faqs:
   - q: "Ah Fu đã tham gia những hoạt động nào?"
     a: "Sự xuất hiện tiêu biểu nhất của Ah Fu là tại giải bóng đá từ thiện Chengshi Cup ngày 2 tháng 5 năm 2015 tại Quảng Châu. Tại sự kiện, Ah Fu đã tương tác nhiệt tình với khách mời và khán giả. Hình ảnh các tình nguyện viên mặc áo thun từ thiện 'Lan tỏa yêu thương' có hình Ah Fu đã gắn kết linh vật này với các hoạt động trách nhiệm xã hội."
 interlinks:
-  - url: "origin"
-    label: "Nguồn gốc"
-    title: "Thành lập 11.11.11 — Nguồn gốc thương hiệu FYT"
+  - url: "afu"
+    label: "Hồ sơ"
+    title: "Hồ sơ thiết kế Ah Fu — Một thập kỷ sáng tạo linh vật"
   - url: "evolution"
     label: "Sự tiến hóa"
     title: "Từ Xám-Xanh đến Đen-Cam — Lịch sử tiến hóa hình ảnh FYT"

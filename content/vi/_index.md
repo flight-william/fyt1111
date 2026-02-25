@@ -1,5 +1,5 @@
 ---
-title: "FYTBET | Từ 2011 — Câu chuyện thương hiệu"
-description: "FYTBET (Riche88/FYT), thành lập ngày 11 tháng 11 năm 2011. Mười lăm năm chuyên sâu về cá cược thể thao, tự phát triển nền tảng, tập trung phục vụ VIP."
+title: "FYTBET (富易堂/Riche88) | Cá cược thể thao VIP từ 11.11.11 · Di sản 188BET"
+description: "FYTBET (富易堂/Riche88/FYT), thành lập 11.11.11 cùng Cube Group và 188BET. 15 năm chuyên sâu cá cược thể thao với XJ Sports, Pinnacle, Fortune Insurance. Nền tảng tự phát triển, phục vụ VIP."
 lastmod: 2026-02-24
 ---

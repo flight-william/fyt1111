@@ -1,0 +1,135 @@
+{{/* ===== Brand Archive Hub — index page linking to sub-archives ===== */}}
+<section id="archive-hub" class="section-gradient section-border-top">
+  <div class="page-inner">
+    <div class="relative mb-6 reveal">
+      <span class="vertical-label">{{ i18n "label_archive" }}</span>
+      <div class="gold-line mb-4"></div>
+      <p class="heading-sub mb-2">{{ i18n "label_archive" }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}<span class="text-gold">品牌</span>档案
+        {{ else if eq .Language.Lang "yue" }}<span class="text-gold">品牌</span>檔案
+        {{ else if eq .Language.Lang "vi" }}Kho lưu trữ <span class="text-gold">thương hiệu</span>
+        {{ else if eq .Language.Lang "th" }}คลัง<span class="text-gold">แบรนด์</span>
+        {{ else if eq .Language.Lang "id" }}Arsip <span class="text-gold">merek</span>
+        {{ else }}<span class="text-gold">Brand</span> Archive
+        {{ end }}
+      </h2>
+      <p class="mt-4" style="max-width:640px; opacity:0.7;">
+        {{ if eq .Language.Lang "zh" }}十五年做下来的东西，总得有个地方好好放着。设计手稿、活动素材、产品迭代——一点一点攒起来的，都在这里。
+        {{ else if eq .Language.Lang "yue" }}十五年做落嚟嘅嘢，總要有個地方好好擺住。設計手稿、活動素材、產品迭代——一啲一啲積落嚟嘅，全部喺度。
+        {{ else if eq .Language.Lang "vi" }}15 năm tích lũy — bản thảo thiết kế, tài liệu sự kiện, quá trình phát triển sản phẩm — tất cả được lưu giữ tại đây.
+        {{ else if eq .Language.Lang "th" }}15 ปีที่สะสมมา — ร่างการออกแบบ สื่อกิจกรรม บันทึกการพัฒนา — ทุกอย่างเก็บไว้ที่นี่
+        {{ else if eq .Language.Lang "id" }}15 tahun karya yang terakumulasi — draf desain, materi acara, catatan pengembangan — semuanya tersimpan di sini.
+        {{ else }}Fifteen years of work adds up. Design drafts, event materials, product iterations — everything we've built along the way, all in one place.
+        {{ end }}
+      </p>
+    </div>
+
+    {{/* Archive cards grid */}}
+    <div class="archive-hub-grid reveal reveal-delay-1">
+
+      {{/* Card: 阿富 Design Archive */}}
+      {{ with .Site.GetPage "/afu" }}
+      <a href="{{ .RelPermalink }}" class="archive-hub-card">
+        <div class="archive-hub-thumb">
+          <img src="/images/archive/afu/sticker-fearless.webp" alt="" loading="lazy">
+        </div>
+        <div class="archive-hub-info">
+          <h3 class="archive-hub-title">
+            {{ if eq $.Language.Lang "zh" }}阿富设计档案
+            {{ else if eq $.Language.Lang "yue" }}阿富設計檔案
+            {{ else if eq $.Language.Lang "vi" }}Hồ sơ thiết kế Ah Fu
+            {{ else if eq $.Language.Lang "th" }}แฟ้มออกแบบอาฟู่
+            {{ else if eq $.Language.Lang "id" }}Arsip desain Ah Fu
+            {{ else }}Ah Fu Design Archive
+            {{ end }}
+          </h3>
+          <p class="archive-hub-desc">
+            {{ if eq $.Language.Lang "zh" }}吉祥物十年创作全记录 · 40+表情 · 运动系列 · 成语插画 · 3D建模 · 动画 · 品牌规范
+            {{ else if eq $.Language.Lang "yue" }}吉祥物十年創作全記錄 · 40+表情 · 運動系列 · 成語插畫 · 3D建模 · 動畫 · 品牌規範
+            {{ else }}Mascot decade of creation · 40+ stickers · sports · idioms · 3D · animation · guidelines
+            {{ end }}
+          </p>
+          <span class="archive-hub-tag">2015–2026</span>
+        </div>
+      </a>
+      {{ end }}
+
+      {{/* Card: Visual Identity Evolution — links to existing /evolution/ page */}}
+      {{ with $.Site.GetPage "/evolution" }}
+      <a href="{{ .RelPermalink }}" class="archive-hub-card">
+        <div class="archive-hub-thumb">
+          <img src="/images/website-v1-full.jpg" alt="" loading="lazy">
+        </div>
+        <div class="archive-hub-info">
+          <h3 class="archive-hub-title">
+            {{ if eq $.Language.Lang "zh" }}品牌视觉演变
+            {{ else if eq $.Language.Lang "yue" }}品牌視覺演變
+            {{ else if eq $.Language.Lang "vi" }}Tiến hóa hình ảnh
+            {{ else if eq $.Language.Lang "th" }}วิวัฒนาการภาพลักษณ์
+            {{ else if eq $.Language.Lang "id" }}Evolusi identitas visual
+            {{ else }}Visual Identity Evolution
+            {{ end }}
+          </h3>
+          <p class="archive-hub-desc">
+            {{ if eq $.Language.Lang "zh" }}从灰蓝到黑橙 · 四个设计时代 · 网站与APP界面变迁
+            {{ else if eq $.Language.Lang "yue" }}由灰藍到黑橙 · 四個設計時代 · 網站與APP界面變遷
+            {{ else }}Grey-blue to black-orange · four design eras · website & app UI evolution
+            {{ end }}
+          </p>
+          <span class="archive-hub-tag">2011–2026</span>
+        </div>
+      </a>
+      {{ end }}
+
+      {{/* Card: Zhao Yun Index Archive */}}
+      {{ with .Site.GetPage "/zhaoyun" }}
+      <a href="{{ .RelPermalink }}" class="archive-hub-card">
+        <div class="archive-hub-thumb">
+          <img src="/images/archive/zhaoyun/logo.webp" alt="" loading="lazy" style="background:#f5f0e8; padding:8px;">
+        </div>
+        <div class="archive-hub-info">
+          <h3 class="archive-hub-title">
+            {{ if eq $.Language.Lang "zh" }}赵云指数赛事预测
+            {{ else if eq $.Language.Lang "yue" }}趙雲指數賽事預測
+            {{ else if eq $.Language.Lang "vi" }}Triệu Vân Chỉ Số
+            {{ else if eq $.Language.Lang "th" }}จ้าวหยุนอินเด็กซ์
+            {{ else if eq $.Language.Lang "id" }}Zhao Yun Index
+            {{ else }}Zhao Yun Index
+            {{ end }}
+          </h3>
+          <p class="archive-hub-desc">
+            {{ if eq $.Language.Lang "zh" }}三国主题体育预测 · 富贵保联动 · 近千场实战记录 · 水墨画风视觉
+            {{ else if eq $.Language.Lang "yue" }}三國主題體育預測 · 富貴保聯動 · 近千場實戰記錄 · 水墨畫風視覺
+            {{ else }}Three Kingdoms sports predictions · Fortune Insurance · ~1000 matches · ink-wash visuals
+            {{ end }}
+          </p>
+          <span class="archive-hub-tag">2018–2021</span>
+        </div>
+      </a>
+      {{ end }}
+
+      {{/* Card: 富易堂 Riche88 Brand Guidelines — coming soon placeholder */}}
+      <div class="archive-hub-card archive-hub-card-upcoming">
+        <div class="archive-hub-thumb archive-hub-thumb-empty">
+          <img src="/images/archive/afu/guidelines-color.webp" alt="" loading="lazy" style="opacity:0.4;">
+        </div>
+        <div class="archive-hub-info">
+          <h3 class="archive-hub-title" style="opacity:0.4;">
+            {{ if eq .Language.Lang "zh" }}富易堂 Logo 档案
+            {{ else if eq .Language.Lang "yue" }}富易堂 Logo 檔案
+            {{ else }}Riche88 Logo Archive
+            {{ end }}
+          </h3>
+          <p class="archive-hub-desc" style="opacity:0.3;">
+            {{ if eq .Language.Lang "zh" }}色彩规范 · 字体排印 · 尺寸标注 · FYTBET篇即将上线
+            {{ else if eq .Language.Lang "yue" }}色彩規範 · 字體排印 · 尺寸標註 · FYTBET篇即將上線
+            {{ else }}Color scheme · typography · dimensions · FYTBET edition coming soon
+            {{ end }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

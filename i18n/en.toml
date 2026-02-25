@@ -226,7 +226,22 @@ other = "Welcome to the FYTBET Official Access Point. This site is maintained by
 
 
 
-other = "FYTBET, Riche88, FYT, 188BET, FYT Sports, FYTBET official, sports betting, online sportsbook, betting platform, Fortune Insurance, VIP entertainment, Macau VIP club, Pinnacle, XJ Sports, USDT deposit, crypto gambling, in-house platform, fytbet.com, fyt1111.com, x88.bet"
+other = "FYTBET, 富易堂, Riche88, FYT, 188BET, Cube Group, Ah Fu, 阿富, FYT mascot, FYT Sports, XJ Sports, Pinnacle, PM Sports, InPlay Matrix, Fortune Insurance, 富贵保, sports betting, online sportsbook, VIP entertainment, USDT deposit, in-house platform, fytbet.com, fyt1111.com, x88.bet"
+
+[section_archive_afu]
+other = "Ah Fu Archive"
+
+[label_archive]
+other = "Brand Archive"
+
+[archive_afu_title]
+other = "Design Chronicle"
+
+[section_archive_zhaoyun]
+other = "Zhao Yun Index"
+
+[archive_zhaoyun_title]
+other = "Match Prediction Archive"
 
 
 

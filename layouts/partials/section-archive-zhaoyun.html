@@ -1,0 +1,207 @@
+{{/* ===== Zhao Yun Index Archive — Three Kingdoms sports prediction ===== */}}
+<section id="zhaoyun-archive" class="section-gradient section-border-top">
+  <div class="page-inner">
+    <div class="relative mb-4 reveal">
+      <span class="vertical-label">{{ i18n "label_archive" }}</span>
+      <div class="gold-line mb-4"></div>
+      <p class="heading-sub mb-2">{{ i18n "label_forecasts" }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}赵云指数<span class="text-gold">赛事预测档案</span>
+        {{ else if eq .Language.Lang "yue" }}趙雲指數<span class="text-gold">賽事預測檔案</span>
+        {{ else if eq .Language.Lang "vi" }}Triệu Vân Chỉ Số — <span class="text-gold">Kho dự đoán</span>
+        {{ else if eq .Language.Lang "th" }}จ้าวหยุนอินเด็กซ์ — <span class="text-gold">คลังพยากรณ์</span>
+        {{ else if eq .Language.Lang "id" }}Zhao Yun Index — <span class="text-gold">Arsip prediksi</span>
+        {{ else }}Zhao Yun Index — <span class="text-gold">Match Prediction Archive</span>
+        {{ end }}
+      </h2>
+    </div>
+
+    {{/* === Category 1: Brand Identity — Logo & Concept === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}赵云来指路
+        {{ else if eq .Language.Lang "yue" }}趙雲來指路
+        {{ else if eq .Language.Lang "vi" }}Triệu Vân dẫn đường
+        {{ else if eq .Language.Lang "th" }}จ้าวหยุนนำทาง
+        {{ else if eq .Language.Lang "id" }}Zhao Yun menunjukkan jalan
+        {{ else }}Zhao Yun Leads the Way
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}想给赛事预测起个名字，团队想了很久。后来有人说：赛场不就是战场吗？三国里最稳的人是谁？赵云。常山赵子龙，七进七出都不慌。用他来「指路」，再合适不过。于是有了这枚书法印章Logo——笔墨写意，一看就知道不是普通的数据栏目，而是带着点江湖气的东西。水墨画风的赵云骑白马、执长枪，成了每篇赛事分析的封面。2018年这套视觉就定了型，一直用到栏目收官。
+        {{ else if eq .Language.Lang "yue" }}要帮赛事预测改个名，团队谂咗好耐。后来有人话：球场唔就係战场咩？三国入面最稳嘅人係边个？赵云。常山赵子龙，七进七出都唔慌。用佢嚟「指路」，最啱唔过。于是有咗呢枚书法印章Logo——笔墨写意，一睇就知唔係普通数据栏目。水墨画风嘅赵云骑白马、执长枪，成咗每篇赛事分析嘅封面。
+        {{ else if eq .Language.Lang "vi" }}Khi đặt tên cho chuyên mục dự đoán, đội ngũ đã suy nghĩ rất lâu. Rồi có người nói: sân bóng chẳng phải chiến trường sao? Trong Tam Quốc, ai bình tĩnh nhất? Triệu Vân. Từ đó ra đời logo dấu triện thư pháp và phong cách thủy mặc — Triệu Vân cưỡi bạch mã, cầm thương dài, trở thành bìa mỗi bài phân tích.
+        {{ else if eq .Language.Lang "th" }}ตอนตั้งชื่อคอลัมน์พยากรณ์ ทีมคิดอยู่นาน แล้วมีคนพูดว่า: สนามบอลก็เหมือนสนามรบนี่หว่า? ในสามก๊กใครสุขุมที่สุด? จ้าวหยุน จากนั้นจึงเกิดโลโก้ตราประทับอักษรวิจิตรและภาพวาดหมึก — จ้าวหยุนขี่ม้าขาว ถือทวน กลายเป็นหน้าปกทุกบทวิเคราะห์
+        {{ else if eq .Language.Lang "id" }}Saat memberi nama kolom prediksi, tim berpikir lama. Lalu seseorang berkata: lapangan bola itu medan perang, kan? Siapa yang paling tenang di Tiga Kerajaan? Zhao Yun. Maka lahirlah logo stempel kaligrafi dan gaya tinta — Zhao Yun menunggang kuda putih, memegang tombak, menjadi sampul setiap analisis pertandingan.
+        {{ else }}The team spent a long time naming the predictions column. Then someone said: isn't the pitch just a battlefield? And who's the steadiest warrior in the Three Kingdoms? Zhao Yun. Zhao Zilong of Changshan — seven charges in and out without breaking a sweat. Perfect for "leading the way." That's how the calligraphic seal logo was born — ink-brush style, unmistakably not your average data column, but something with character. The ink-wash Zhao Yun on horseback, spear in hand, became the cover of every match analysis. The visual identity was locked in by 2018 and ran through to the column's final season.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-3">
+        <figure class="artifact artifact-square">
+          <img src="/images/archive/zhaoyun/logo.webp"
+               alt="{{ if eq .Language.Lang "zh" }}赵云指数书法印章Logo 富易堂体育预测栏目标识 2018{{ else }}Zhao Yun Index calligraphic seal logo · FYTBET sports prediction column 2018{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/zhaoyun/wordpress-article.webp"
+               alt="{{ if eq .Language.Lang "zh" }}赵云来指路——三国水墨画风赛事预测配图 富易堂Riche88{{ else }}Zhao Yun leads the way — Three Kingdoms ink-wash match prediction artwork · FYTBET Riche88{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/zhaoyun/event-permanent.webp"
+               alt="{{ if eq .Language.Lang "zh" }}赵云来指路活动专页——三国武将水墨画风 富易堂体育预测{{ else }}Zhao Yun leads the way event page — Three Kingdoms warrior ink-wash · FYTBET sports prediction{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 2: Campaign Banners — Fortune Insurance Integration === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}赵云指数 × 富贵保
+        {{ else if eq .Language.Lang "yue" }}趙雲指數 × 富貴保
+        {{ else if eq .Language.Lang "vi" }}Triệu Vân × Fortune Insurance
+        {{ else if eq .Language.Lang "th" }}จ้าวหยุน × Fortune Insurance
+        {{ else if eq .Language.Lang "id" }}Zhao Yun × Fortune Insurance
+        {{ else }}Zhao Yun Index × Fortune Insurance
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}光有赛事分析还不够，团队琢磨：能不能让会员看完推荐之后，下注的时候心里更踏实一点？于是赵云指数和富贵保绑到了一起——赛前看分析，下注配保险，赢了归你，输了第二天全额返还。文案也玩得很到位，「投注享最高保险白银叁拾捌捌捌」，用古风银两单位写现代的保额数字，把三国的调子贯穿到底。从官网首页到活动专页、优惠入口、预告海报，整套视觉铺满了所有能看到的地方。
+        {{ else if eq .Language.Lang "yue" }}淨係有赛事分析仲唔够，团队谂：可唔可以令会员睇完推荐之后，落注嘅时候心里更定啲？于是赵云指数同富贵保绑埋一齐——赛前睇分析，落注配保险，赢咗归你，输咗第二日全额返还。文案都玩得好到位，「投注享最高保险白银叁拾捌捌捌」，用古风银两写现代保额。由官网首页到活动专页，整套视觉铺满晒。
+        {{ else if eq .Language.Lang "vi" }}Chỉ phân tích thôi chưa đủ. Đội ngũ nghĩ: sao không để hội viên yên tâm hơn khi đặt cược? Thế là Triệu Vân kết hợp Fortune Insurance — xem phân tích trước trận, đặt cược kèm bảo hiểm, thắng giữ tiền, thua hoàn trả hôm sau. Thiết kế phủ từ trang chủ đến trang khuyến mãi, trang sự kiện.
+        {{ else if eq .Language.Lang "th" }}แค่วิเคราะห์อย่างเดียวไม่พอ ทีมคิดว่า: ทำยังไงให้สมาชิกอุ่นใจขึ้นตอนเดิมพัน? เลยจับจ้าวหยุนกับ Fortune Insurance มาด้วยกัน — ดูวิเคราะห์ก่อนแมตช์ เดิมพันพร้อมประกัน ชนะเก็บเงิน แพ้ได้คืนวันรุ่งขึ้น ดีไซน์เต็มทุกช่องทาง ตั้งแต่หน้าแรกถึงหน้าโปรฯ
+        {{ else if eq .Language.Lang "id" }}Analisis saja tidak cukup. Tim berpikir: bagaimana membuat anggota lebih tenang saat bertaruh? Maka Zhao Yun digabungkan dengan Fortune Insurance — baca analisis, taruhan dengan asuransi, menang simpan uang, kalah dikembalikan besoknya. Desain memenuhi setiap channel dari homepage hingga halaman event.
+        {{ else }}Match analysis alone wasn't enough. The team wondered: how do we give members more peace of mind when they place a bet? So the Zhao Yun Index and Fortune Insurance became a pair — read the pre-match analysis, bet with insurance attached. Win and keep the winnings; lose and get the full amount back the next day. Even the copywriting stayed in character: insurance amounts were written in classical silver tael notation, keeping the Three Kingdoms tone all the way through. The visuals rolled out everywhere — homepage, promotions, event pages, teasers.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-2">
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/zhaoyun/homepage-banner.webp"
+               alt="{{ if eq .Language.Lang "zh" }}赵云指数之富贵保——官网首页Banner 三国水墨画风 富易堂体育投注保险{{ else }}Zhao Yun Index × Fortune Insurance — homepage banner · Three Kingdoms ink-wash · FYTBET sports betting insurance{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/zhaoyun/event-banner.webp"
+               alt="{{ if eq .Language.Lang "zh" }}赵云指数之富贵保——活动专页Banner 富易堂{{ else }}Zhao Yun Index × Fortune Insurance — event page banner · FYTBET{{ end }}" loading="lazy">
+        </figure>
+      </div>
+      <div class="archive-grid archive-grid-2 mt-4">
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/zhaoyun/promo-banner.webp"
+               alt="{{ if eq .Language.Lang "zh" }}赵云指数之富贵保——优惠专区Banner 白银叁拾捌捌捌 富易堂Riche88{{ else }}Zhao Yun Index × Fortune Insurance — promotions banner · silver 38888 · FYTBET Riche88{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/zhaoyun/teaser-banner.webp"
+               alt="{{ if eq .Language.Lang "zh" }}赵云指数富贵保预告版Banner 赵云骑马水墨画风{{ else }}Zhao Yun Index Fortune Insurance teaser banner · Zhao Yun on horseback ink-wash{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 3: Prediction Track Record === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}三年，近千场
+        {{ else if eq .Language.Lang "yue" }}三年，近千場
+        {{ else if eq .Language.Lang "vi" }}Ba năm, gần nghìn trận
+        {{ else if eq .Language.Lang "th" }}สามปี เกือบพันแมตช์
+        {{ else if eq .Language.Lang "id" }}Tiga tahun, hampir seribu pertandingan
+        {{ else }}Three Years, Nearly a Thousand Matches
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}赵云指数从2018年开栏，一做就是三年。英超、西甲、德甲、意甲、法甲、欧冠、世预赛——只要有重要赛事，赵云就会出来「指路」。团队留下来的记录表里，密密麻麻记着近千场比赛的分析和推荐。每一条推荐后面都跟着一个富贵保方案，像是给每场比赛配了一把安全锁。这件事最难的不是开始，是日复一日地坚持。
+        {{ else if eq .Language.Lang "yue" }}趙雲指數由2018年開欄，一做就三年。英超、西甲、德甲、意甲、法甲、歐冠、世預賽——淨係有重要賽事，趙雲就會出嚟「指路」。團隊留低嘅記錄表入面，密密麻麻記住近千場比賽嘅分析同推薦。呢件事最難嘅唔係開始，係日復一日咁堅持。
+        {{ else if eq .Language.Lang "vi" }}Triệu Vân Chỉ Số bắt đầu từ 2018 và chạy liên tục ba năm. Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Champions League, vòng loại World Cup — cứ có trận quan trọng là Triệu Vân "dẫn đường". Bảng ghi chép gần 1.000 trận phân tích. Điều khó nhất không phải bắt đầu, mà là kiên trì mỗi ngày.
+        {{ else if eq .Language.Lang "th" }}จ้าวหยุนอินเด็กซ์เริ่มในปี 2018 และทำต่อเนื่องสามปี พรีเมียร์ลีก ลาลีกา บุนเดสลีกา เซเรียอา ลีกเอิง แชมเปียนส์ลีก ฟุตบอลโลกรอบคัดเลือก — มีแมตช์สำคัญเมื่อไหร่ จ้าวหยุนก็จะ "นำทาง" บันทึกเกือบ 1,000 แมตช์ สิ่งที่ยากที่สุดไม่ใช่การเริ่มต้น แต่คือการทำทุกวัน
+        {{ else if eq .Language.Lang "id" }}Zhao Yun Index dimulai 2018 dan berjalan tiga tahun tanpa henti. Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Champions League, kualifikasi Piala Dunia — setiap ada pertandingan penting, Zhao Yun hadir. Catatan mendekati 1.000 pertandingan. Yang tersulit bukan memulai, tapi konsisten setiap hari.
+        {{ else }}The Zhao Yun Index launched in 2018 and ran for three straight years. Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Champions League, World Cup qualifiers — whenever a big match came around, Zhao Yun would show up to "lead the way." The team's spreadsheet tells the story: nearly a thousand matches analyzed and recommended, each one paired with a Fortune Insurance plan like a safety lock on every bet. The hardest part was never starting — it was showing up, day after day.
+        {{ end }}
+      </p>
+    </div>
+
+    {{/* === Category 4: Member Newsletter — Zhao Yun & Weiwei === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}赵云与薇薇的信
+        {{ else if eq .Language.Lang "yue" }}趙雲同薇薇嘅信
+        {{ else if eq .Language.Lang "vi" }}Thư của Triệu Vân và Vi Vi
+        {{ else if eq .Language.Lang "th" }}จดหมายจากจ้าวหยุนและเหว่ยเหว่ย
+        {{ else if eq .Language.Lang "id" }}Surat dari Zhao Yun dan Weiwei
+        {{ else }}Letters from Zhao Yun & Weiwei
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}赵云不只活在Banner上。每周，会员的邮箱里都会收到一封「来自赵云与薇薇的信」——赵云聊赛事、聊富贵保，薇薇负责嘘寒问暖。两个人一个管球、一个管人，像搭档一样配合了好几年。信里有赵云指数入口，有周周富贵保推荐，也有系统改版的预告和游戏上新。不是那种冷冰冰的营销邮件，更像是朋友发来的近况——只不过这个朋友碰巧很懂球。
+        {{ else if eq .Language.Lang "yue" }}趙雲唔止活喺Banner上。每個禮拜，會員嘅郵箱都會收到一封「來自趙雲同薇薇嘅信」——趙雲傾賽事、傾富貴保，薇薇負責噓寒問暖。兩個人一個管球、一個管人，好似拍檔咁合作咗好幾年。信入面有趙雲指數入口、周周富貴保推薦，仲有系統改版預告。唔係嗰種冷冰冰嘅marketing email，更似朋友發嚟嘅近況。
+        {{ else if eq .Language.Lang "vi" }}Triệu Vân không chỉ sống trên banner. Mỗi tuần, hội viên nhận được "Thư từ Triệu Vân và Vi Vi" — Triệu Vân bàn về bóng đá và Fortune Insurance, Vi Vi chăm sóc và hỏi thăm. Hai người như cặp đôi phối hợp suốt nhiều năm. Trong thư có link Triệu Vân Chỉ Số, Fortune Insurance hàng tuần, thông báo cập nhật hệ thống. Không phải email marketing lạnh lẽo, mà giống tin nhắn từ một người bạn — chỉ là người bạn này rất am hiểu bóng đá.
+        {{ else if eq .Language.Lang "th" }}จ้าวหยุนไม่ได้อยู่แค่บนแบนเนอร์ ทุกสัปดาห์สมาชิกจะได้รับ "จดหมายจากจ้าวหยุนและเหว่ยเหว่ย" — จ้าวหยุนคุยเรื่องบอลและ Fortune Insurance, เหว่ยเหว่ยดูแลทักทาย สองคนทำงานคู่กันหลายปี ในจดหมายมีลิงก์จ้าวหยุนอินเด็กซ์ Fortune Insurance ประจำสัปดาห์ และข่าวอัปเดตระบบ ไม่ใช่อีเมลโฆษณาเย็นชา แต่เหมือนข่าวคราวจากเพื่อน
+        {{ else if eq .Language.Lang "id" }}Zhao Yun tidak hanya hidup di banner. Setiap minggu, anggota menerima "Surat dari Zhao Yun dan Weiwei" — Zhao Yun bicara tentang sepak bola dan Fortune Insurance, Weiwei bertanya kabar dan melayani. Keduanya bekerja sama seperti partner selama bertahun-tahun. Di dalam surat ada link Zhao Yun Index, Fortune Insurance mingguan, dan pengumuman update sistem. Bukan email marketing dingin, tapi lebih seperti kabar dari teman.
+        {{ else }}Zhao Yun didn't just live on banners. Every week, members would find a "Letter from Zhao Yun and Weiwei" in their inbox — Zhao Yun talked football and Fortune Insurance, Weiwei handled the personal touch. One covered the matches, the other looked after the people, working as a duo for years. Inside each letter: a Zhao Yun Index link, weekly Fortune Insurance picks, system upgrade previews, and new game announcements. Not the kind of cold marketing email you delete without reading — more like an update from a friend. A friend who happens to know a lot about football.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-3">
+        <figure class="artifact artifact-portrait">
+          <img src="/images/edm-riche88-top.webp"
+               alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88会员EDM——来自赵云与薇薇的信{{ else }}FYTBET Riche88 member EDM — letter from Zhao Yun & Weiwei{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-portrait">
+          <img src="/images/edm-riche88-mid.webp"
+               alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88会员EDM——赵云指数入口 赵云周周富贵保{{ else }}FYTBET Riche88 EDM — Zhao Yun Index · Fortune Insurance weekly{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-portrait">
+          <img src="/images/edm-riche88-btm.webp"
+               alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88会员EDM——RICHE88品牌Logo postmaster@riche88.info{{ else }}FYTBET Riche88 EDM — RICHE88 logo · postmaster@riche88.info{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+  </div>{{/* /page-inner */}}
+</section>
+
+{{/* === CollectionPage structured data === */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ if eq .Language.Lang "zh" }}"赵云指数赛事预测档案 — 富易堂三国主题体育预测三年全记录"{{ else if eq .Language.Lang "yue" }}"趙雲指數賽事預測檔案 — 富易堂三國主題體育預測三年全記錄"{{ else }}"Zhao Yun Index Match Prediction Archive — FYTBET Three Kingdoms Sports Prediction Record"{{ end }},
+  "description": {{ if eq .Language.Lang "zh" }}"富易堂(FYTBET)赵云指数体育赛事预测档案——三国主题水墨画风视觉体系、近千场赛事预测记录、富贵保投注保险联动。2018年至今的自研内容产品全记录。"{{ else }}"FYTBET Zhao Yun Index sports prediction archive — Three Kingdoms ink-wash visual system, nearly 1000 match predictions, Fortune Insurance integration. Complete record of a self-developed content product since 2018."{{ end }},
+  "url": {{ .Permalink | jsonify }},
+  "about": {
+    "@type": "Organization",
+    "name": "富易堂",
+    "alternateName": ["FYTBET", "Riche88", "FYT"]
+  },
+  "dateCreated": "2018",
+  "hasPart": [
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"赵云指数书法印章Logo"{{ else }}"Zhao Yun Index Calligraphic Seal Logo"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"三国主题体育预测栏目原创标识，书法印章风格，2018年设计"{{ else }}"Original logo for Three Kingdoms-themed sports prediction column, calligraphic seal style, designed 2018"{{ end }},
+      "dateCreated": "2018",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"赵云指数水墨画风赛事预测配图"{{ else }}"Zhao Yun Index Ink-Wash Match Prediction Artwork"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"赵云骑马指路——三国武将水墨画风原创插画，用于赛事预测文章配图"{{ else }}"Zhao Yun on horseback — Three Kingdoms warrior ink-wash original illustration for match prediction articles"{{ end }},
+      "dateCreated": "2018",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"赵云指数×富贵保推广Banner系列"{{ else }}"Zhao Yun Index × Fortune Insurance Campaign Banner Series"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"覆盖官网首页、优惠专区、活动专页、预告页的全渠道推广视觉"{{ else }}"Full-channel promotional visuals covering homepage, promotions, events, and teasers"{{ end }},
+      "dateCreated": "2018",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "Dataset",
+      "name": {{ if eq .Language.Lang "zh" }}"赵云指数三年赛事预测记录"{{ else }}"Zhao Yun Index Three-Year Match Prediction Records"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"覆盖近千场足球赛事的预测记录，包含赛事分析与富贵保方案"{{ else }}"Nearly 1000 football match prediction records with analysis and Fortune Insurance plans"{{ end }},
+      "temporalCoverage": "2018/2021",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    }
+  ]
+}
+</script>

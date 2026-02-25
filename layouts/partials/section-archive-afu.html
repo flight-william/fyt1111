@@ -1,0 +1,367 @@
+{{/* ===== Ah Fu Design Archive — vertical editorial layout ===== */}}
+<section id="afu-archive" class="section-gradient section-border-top">
+  <div class="page-inner">
+    <div class="relative mb-4 reveal">
+      <span class="vertical-label">{{ i18n "section_archive_afu" }}</span>
+      <div class="gold-line mb-4"></div>
+      <p class="heading-sub mb-2">{{ i18n "label_archive" }}</p>
+      <h2 class="heading-display">
+        {{ if eq .Language.Lang "zh" }}阿富<span class="text-gold">设计档案</span>
+        {{ else if eq .Language.Lang "yue" }}阿富<span class="text-gold">設計檔案</span>
+        {{ else if eq .Language.Lang "vi" }}Hồ sơ thiết kế <span class="text-gold">Ah Fu</span>
+        {{ else if eq .Language.Lang "th" }}แฟ้มออกแบบ <span class="text-gold">อาฟู่</span>
+        {{ else if eq .Language.Lang "id" }}Arsip desain <span class="text-gold">Ah Fu</span>
+        {{ else }}Ah Fu <span class="text-gold">Design Archive</span>
+        {{ end }}
+      </h2>
+    </div>
+
+    {{/* === Category 1: Sticker Expressions === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}微信表情包
+        {{ else if eq .Language.Lang "yue" }}微信表情包
+        {{ else if eq .Language.Lang "vi" }}Bộ sticker WeChat
+        {{ else if eq .Language.Lang "th" }}สติกเกอร์ WeChat
+        {{ else if eq .Language.Lang "id" }}Stiker WeChat
+        {{ else }}WeChat Sticker Pack
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}一开始只是想给VIP群里多点乐子。设计团队画了第一版阿富表情——「没在怕」，一个叉腰瞪眼的小胖子。群里反应太好了，大家催着要更多。于是一口气画了40多版：比赛赢了发「GO」超人，输了发哭脸，等开赛发「BUSY」。不知不觉，这些表情变成了群里的暗号——看到阿富，就知道是自己人。
+        {{ else if eq .Language.Lang "yue" }}一開始淨係想畀VIP群多啲樂趣。設計團隊畫咗第一版阿富表情——「冇在怕」，一個叉腰瞪眼嘅肥仔。群入面反應太好，大家催住要更多。於是一口氣畫咗40幾版：贏咗發「GO」超人，輸咗發喊包，等開賽就發「BUSY」。不知不覺，呢啲表情變成咗群入面嘅暗號。
+        {{ else if eq .Language.Lang "vi" }}Ban đầu chỉ muốn thêm chút vui cho nhóm VIP. Đội thiết kế vẽ phiên bản đầu — "Fearless", cậu bé mập chống nạnh trừng mắt. Phản ứng quá tốt nên vẽ luôn hơn 40 bản: thắng gửi "GO" siêu nhân, thua gửi mặt khóc. Dần dần trở thành ám hiệu trong nhóm.
+        {{ else if eq .Language.Lang "th" }}ตอนแรกแค่อยากเพิ่มความสนุกในกลุ่ม VIP ทีมออกแบบวาดเวอร์ชันแรก — "ไม่กลัว" เจ้าอ้วนเท้าเอวจ้องตา กลุ่มตอบรับดีมากจนต้องวาดเพิ่มกว่า 40 แบบ: ชนะส่ง "GO" ซูเปอร์แมน แพ้ส่งหน้าร้องไห้ ไม่รู้ตัวก็กลายเป็นรหัสลับในกลุ่ม
+        {{ else if eq .Language.Lang "id" }}Awalnya hanya ingin menambah keseruan di grup VIP. Tim desain menggambar versi pertama — "Fearless", si gendut berkacak pinggang. Respons terlalu bagus, lalu langsung digambar 40+ versi: menang kirim "GO" superman, kalah kirim muka nangis. Tanpa sadar jadi kode rahasia di grup.
+        {{ else }}It started as a small thing — just something fun for the VIP WeChat groups. The design team drew the first Ah Fu sticker: "Fearless" — a chubby little guy with his hands on his hips, staring you down. The group loved it. They wanted more. So the team drew 40 more: "GO" Superman for when you win, the crying face for when you don't, "BUSY" for waiting on kickoff. Before anyone planned it, these stickers became the group's secret handshake — if you saw Ah Fu, you knew you were among friends.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-6">
+        <figure class="artifact artifact-square sticker-item">
+          <img src="/images/archive/afu/sticker-fearless.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富微信表情包——没在怕 富易堂原创吉祥物表情 2015{{ else }}Ah Fu sticker — Fearless (没在怕) · FYTBET original mascot expression 2015{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-square sticker-item">
+          <img src="/images/archive/afu/sticker-go.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富微信表情包——GO超人 富易堂原创吉祥物表情{{ else }}Ah Fu sticker — GO Superman · FYTBET original mascot expression{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-square sticker-item">
+          <img src="/images/archive/afu/sticker-cry.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富微信表情包——哭泣 富易堂原创吉祥物表情{{ else }}Ah Fu sticker — Crying · FYTBET original mascot expression{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-square sticker-item">
+          <img src="/images/archive/afu/sticker-beware.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富微信表情包——暗影 富易堂原创吉祥物表情{{ else }}Ah Fu sticker — Shadow figure · FYTBET original mascot expression{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-square sticker-item">
+          <img src="/images/archive/afu/sticker-10.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富微信表情包 富易堂原创吉祥物表情{{ else }}Ah Fu sticker expression · FYTBET original mascot 2015{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-square sticker-item">
+          <img src="/images/archive/afu/sticker-12.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富微信表情包 富易堂原创吉祥物表情{{ else }}Ah Fu sticker expression · FYTBET original mascot 2015{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 2: Sports Series === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}运动系列
+        {{ else if eq .Language.Lang "yue" }}運動系列
+        {{ else if eq .Language.Lang "vi" }}Bộ sưu tập thể thao
+        {{ else if eq .Language.Lang "th" }}คอลเลกชันกีฬา
+        {{ else if eq .Language.Lang "id" }}Koleksi olahraga
+        {{ else }}Sports Series
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}做体育投注的品牌，吉祥物当然得会踢球。设计团队给阿富换上了#88号球衣——88既是品牌暗号，也是个好意头。红色版致敬曼联红魔，那是富易堂最早和足球结缘的时代。穿上球衣的阿富，看着就像你在球场边会碰到的那个最嗨的朋友。
+        {{ else if eq .Language.Lang "yue" }}做體育投注嘅品牌，吉祥物梗係要識踢波。設計團隊幫阿富換上#88號球衣——88係品牌暗號，亦係好意頭。紅色版致敬曼聯紅魔，嗰個係富易堂最早同足球結緣嘅年代。着住球衣嘅阿富，睇落就好似你喺球場邊會撞到嗰個最嗨嘅friend。
+        {{ else }}A sportsbook brand's mascot had better know how to play. The design team put Ah Fu in a #88 jersey — 88 being both the brand's code and an auspicious number. The red colorway was a nod to Manchester United, from the era when FYT first fell in love with football. Ah Fu in a jersey looks exactly like that one friend who's always the loudest at the stadium.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-2">
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/sports-mufc.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富运动系列——曼联#88球衣版 富易堂体育投注吉祥物{{ else }}Ah Fu sports series — Manchester United #88 jersey · FYTBET sportsbook mascot{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/sports-02.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富运动系列 富易堂体育投注吉祥物变体{{ else }}Ah Fu sports series variant · FYTBET sportsbook mascot{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 3: Idiom Education Series === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}成语教育系列
+        {{ else if eq .Language.Lang "yue" }}成語教育系列
+        {{ else if eq .Language.Lang "vi" }}Bộ sưu tập thành ngữ
+        {{ else if eq .Language.Lang "th" }}คอลเลกชันสำนวน
+        {{ else if eq .Language.Lang "id" }}Koleksi peribahasa
+        {{ else }}Idiom Education Series
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}有一天团队突发奇想：要不让阿富来教成语？于是有了「阿富有问不答频道」。三人成虎、一手遮天、九牛一毛……每个成语都配一幅全新构图的插画，阿富在里面演各种角色。画了二十多幅，幅幅不重样。一个博彩品牌跑去做文化内容，听起来不搭，但阿富穿梭在千年典故里的样子，看着还挺自然。
+        {{ else if eq .Language.Lang "yue" }}有一日團隊突然諗到：不如等阿富教成語？於是有咗「阿富有問不答頻道」。三人成虎、一手遮天、九牛一毛……每個成語都配一幅全新構圖嘅插畫，阿富喺入面演各種角色。畫咗廿幾幅，幅幅唔同。
+        {{ else }}One day the team had an idea: what if Ah Fu taught Chinese idioms? And so the "Ah Fu's Unanswered Questions Channel" was born. Three Men Make a Tiger, Cover the Sky with One Hand, A Drop in the Ocean… each idiom got a brand-new illustration with Ah Fu playing a different role. Over twenty paintings, no two alike. A betting brand doing cultural education sounds odd on paper, but Ah Fu wandering through ancient proverbs somehow just works.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-2">
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/idiom-tigers.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富成语系列——三人成虎 富易堂原创文化插画{{ else }}Ah Fu idiom series — Three Men Make a Tiger (三人成虎) · FYTBET original cultural illustration{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/idiom-coversky.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富成语系列——一手遮天 富易堂原创文化插画{{ else }}Ah Fu idiom series — Cover the Sky with One Hand (一手遮天) · FYTBET original cultural illustration{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 4: Original Comics === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}原创漫画
+        {{ else if eq .Language.Lang "yue" }}原創漫畫
+        {{ else if eq .Language.Lang "vi" }}Truyện tranh gốc
+        {{ else if eq .Language.Lang "th" }}การ์ตูนต้นฉบับ
+        {{ else if eq .Language.Lang "id" }}Komik asli
+        {{ else }}Original Comics
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}表情包画多了，手痒，想讲个完整的故事。阿富被送上了篮球场——运球、传球、投篮，一格一格地往前推。仔细看分镜里的场地广告牌，RICHE88的标志悄悄藏在里面。这不是广告植入，更像是设计团队在画面里留的一个小彩蛋。
+        {{ else if eq .Language.Lang "yue" }}表情包畫多咗，手痕，想講個完整嘅故事。阿富被送上咗籃球場——運球、傳球、射波，一格一格咁推。留心睇分鏡入面嘅場地廣告牌，RICHE88嘅標誌靜靜收埋喺度。
+        {{ else }}After drawing all those stickers, the team's hands were itching to tell a full story. Ah Fu was sent to the basketball court — dribbling, passing, shooting, panel by panel. Look closely at the courtside ads in the frames and you'll spot the RICHE88 logo hiding in there. Not product placement exactly — more like a little easter egg the designers left behind.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-3">
+        <figure class="artifact artifact-portrait">
+          <img src="/images/archive/afu/comic-basketball.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富原创漫画——篮球场 RICHE88品牌漫画{{ else }}Ah Fu original comic — basketball court · RICHE88 brand comic strip{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-portrait">
+          <img src="/images/archive/afu/comic-02.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富原创漫画 RICHE88品牌连载{{ else }}Ah Fu original comic page · RICHE88 brand series{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-portrait">
+          <img src="/images/archive/afu/mug-comic.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富漫画马克杯——RICHE88周年纪念杯 漫画印刷实物{{ else }}Ah Fu comic mug — RICHE88 anniversary collectible · comic strip printed on ceramic{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 5: 3D Sculpt === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}立体化 — 3D建模与手办
+        {{ else if eq .Language.Lang "yue" }}立體化 — 3D建模與手辦
+        {{ else if eq .Language.Lang "vi" }}Mô hình 3D
+        {{ else if eq .Language.Lang "th" }}โมเดล 3 มิติ
+        {{ else if eq .Language.Lang "id" }}Model 3D
+        {{ else }}3D Sculpt & Figurine
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}画在纸上还不够，团队想让阿富「站起来」。于是请了3D建模师，一点一点把平面的阿富雕成立体的——正面、侧面、背面，连头顶那撮招牌卷发的弧度都反复调整过。最后出来的模型精度已经够开模量产了。虽然手办最终没有大批量生产，但这个转身图留了下来，成了阿富最「立体」的一刻。
+        {{ else if eq .Language.Lang "yue" }}畫喺紙上面唔夠，團隊想令阿富「企起身」。於是搵咗3D建模師，一啲一啲咁將平面嘅阿富雕成立體——正面、側面、背面，連頭頂嗰撮招牌捲髮嘅弧度都反覆調整過。最後出嚟嘅模型精度已經夠開模量產，成咗阿富最「立體」嘅一刻。
+        {{ else }}Drawing on paper wasn't enough — the team wanted Ah Fu to stand up. A 3D modeler was brought in to sculpt the flat character into a solid figure, one detail at a time — front, side, back, even the curve of that signature swirl hairstyle, tweaked over and over. The final model hit production-grade precision. The figurines were never mass-produced, but the turnaround stayed — Ah Fu's most "three-dimensional" moment.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-1">
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/sculpt-turnaround.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富3D建模转身图——正面侧面背面 富易堂手办级吉祥物模型{{ else }}Ah Fu 3D sculpt turnaround — front side back · FYTBET production-grade mascot figurine{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/cosplay-concepts.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富Cosplay概念设计——Iron Man Spider Man Jobs 富易堂吉祥物盒仔公仔{{ else }}Ah Fu cosplay concept art — Iron Man · Spider Man · Steve Jobs · FYTBET mascot box figure designs{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 6: Animation === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}动画制作
+        {{ else if eq .Language.Lang "yue" }}動畫製作
+        {{ else if eq .Language.Lang "vi" }}Phim hoạt hình
+        {{ else if eq .Language.Lang "th" }}แอนิเมชัน
+        {{ else if eq .Language.Lang "id" }}Animasi
+        {{ else }}Animation Production
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}那年「小蘋果」火遍全网，团队说：让阿富也跳一个。说做就做——89帧，全部手绘，连舞台背景上的RICHE88灯牌都画得一丝不苟。旁边那个阿富抱着足球跑的循环动画，虽然只有几帧，但那股一往无前的劲头倒是很「富易堂」。做表情包是一回事，做动画完全是另一回事——但这个团队就是闲不住。
+        {{ else if eq .Language.Lang "yue" }}嗰年「小蘋果」紅遍全網，團隊話：等阿富都跳一隻。講做就做——89幀，全部手繪，連舞台背景上嘅RICHE88燈牌都畫得一絲不苟。隔離嗰個阿富攬住足球跑嘅循環動畫，雖然得幾幀，但嗰股衝勁好「富易堂」。
+        {{ else }}That was the year "Little Apple" went mega-viral, and the team said: let Ah Fu dance it too. So they did — 89 frames, all hand-drawn, right down to the RICHE88 sign on the stage backdrop. The running football loop next to it is only a few frames long, but there's something very "FYT" about that charging-forward energy. Making stickers is one thing; making animation is a whole different game — but this team couldn't sit still.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-2">
+        <figure class="artifact artifact-landscape">
+          <video src="/images/archive/afu/anim-dance.mp4"
+                 autoplay loop playsinline controls
+                 poster="/images/archive/afu/anim-dance.webp"
+                 aria-label="{{ if eq .Language.Lang "zh" }}阿富小蘋果舞蹈动画——89帧手绘 RICHE88品牌动画{{ else }}Ah Fu Little Apple dance animation — 89 hand-drawn frames · RICHE88 brand animation{{ end }}">
+          </video>
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/anim-football.gif"
+               alt="{{ if eq .Language.Lang "zh" }}阿富跑跑跑足球循环动画 富易堂品牌GIF{{ else }}Ah Fu football running loop animation · FYTBET brand GIF{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 7: Event Designs === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}活动设计
+        {{ else if eq .Language.Lang "yue" }}活動設計
+        {{ else if eq .Language.Lang "vi" }}Thiết kế sự kiện
+        {{ else if eq .Language.Lang "th" }}ออกแบบอีเวนต์
+        {{ else if eq .Language.Lang "id" }}Desain acara
+        {{ else }}Event Designs
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}逢年过节，平台会搞活动。许愿池是其中一个——会员在线上许愿，阿富站在池子边上当「守愿人」。这类活动素材只在平台内部用，外面看不到。但正因为只给自己人看，反而做得更用心——画面里阿富的表情特别认真，像是真的在替你许愿。
+        {{ else if eq .Language.Lang "yue" }}逢年過節，平台會搞活動。許願池係其中一個——會員喺線上許願，阿富企喺池邊做「守願人」。呢類活動素材淨係喺平台內部用，外面睇唔到。但正因為淨係畀自己人睇，反而做得更用心。
+        {{ else }}Around holidays, the platform would run interactive events. The Wishing Pool was one of them — members made wishes online, and Ah Fu stood by the pool as the "wish guardian." These assets were only used inside the platform, never published externally. But precisely because they were just for members, the team put extra care into them — Ah Fu's expression in the artwork is genuinely earnest, like he's really making that wish for you.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-1">
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/event-wishpool.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富许愿池活动设计 富易堂会员互动活动原创素材{{ else }}Ah Fu Wishing Pool event design · FYTBET member interactive campaign original asset{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+    {{/* === Category 8: Brand Guidelines === */}}
+    <div class="archive-category reveal">
+      <h3 class="heading-section">
+        {{ if eq .Language.Lang "zh" }}品牌规范
+        {{ else if eq .Language.Lang "yue" }}品牌規範
+        {{ else if eq .Language.Lang "vi" }}Quy chuẩn thương hiệu
+        {{ else if eq .Language.Lang "th" }}แนวทางแบรนด์
+        {{ else if eq .Language.Lang "id" }}Panduan merek
+        {{ else }}Brand Guidelines
+        {{ end }}
+      </h3>
+      <p class="archive-narrative">
+        {{ if eq .Language.Lang "zh" }}阿富画多了，团队开始在意一件事：别人会不会乱用？于是认真做了一套品牌规范——哪些颜色可以用、字体怎么搭、阿富的比例不能变形、背景不能用什么色……甚至列了一页「禁止事项」。这种「较真」看着像是多此一举，但十年后回头看，正是这份较真让阿富从头到尾长一个样。
+        {{ else if eq .Language.Lang "yue" }}阿富畫多咗，團隊開始在意一件事：其他人會唔會亂用？於是認真做咗一套品牌規範——邊啲顏色可以用、字體點搭、阿富嘅比例唔可以變形……仲列咗一頁「禁止事項」。呢種「較真」睇落好似多餘，但十年後回頭睇，正係呢份較真令阿富由頭到尾長一個樣。
+        {{ else }}As more Ah Fu artwork piled up, the team started worrying: what if someone uses him wrong? So they built a proper brand guide — approved colors, typography pairings, proportion rules, background restrictions… even a full page of "Do Nots." It seems like overkill at the time. But ten years later, that perfectionism is exactly why Ah Fu still looks like Ah Fu, no matter where you see him.
+        {{ end }}
+      </p>
+      <div class="archive-grid archive-grid-2">
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/guidelines-color.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富品牌色彩规范——富易堂吉祥物标准配色方案{{ else }}Ah Fu brand color guidelines — FYTBET mascot approved color palette{{ end }}" loading="lazy">
+        </figure>
+        <figure class="artifact artifact-landscape">
+          <img src="/images/archive/afu/guidelines-type.webp"
+               alt="{{ if eq .Language.Lang "zh" }}阿富品牌字体排印规范——富易堂吉祥物视觉识别标准{{ else }}Ah Fu brand typography guidelines — FYTBET mascot visual identity standards{{ end }}" loading="lazy">
+        </figure>
+      </div>
+    </div>
+
+  </div>{{/* /page-inner */}}
+</section>
+
+{{/* === CollectionPage + ImageObject structured data === */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ if eq .Language.Lang "zh" }}"阿富设计档案 — 富易堂品牌吉祥物十年创作全记录"{{ else if eq .Language.Lang "yue" }}"阿富設計檔案 — 富易堂品牌吉祥物十年創作全記錄"{{ else }}"Ah Fu Design Archive — FYTBET Brand Mascot Decade of Creation"{{ end }},
+  "description": {{ if eq .Language.Lang "zh" }}"富易堂(FYTBET)品牌吉祥物阿富的完整设计档案，涵盖微信表情包、运动系列、成语插画、原创漫画、3D建模、动画制作、品牌规范。2015年至今的十年创作全记录。"{{ else }}"Complete design archive of Ah Fu, FYTBET's brand mascot — WeChat stickers, sports series, idiom illustrations, comics, 3D sculpts, animation, brand guidelines. A decade of creation from 2015."{{ end }},
+  "url": {{ .Permalink | jsonify }},
+  "about": {
+    "@type": "Organization",
+    "name": "富易堂",
+    "alternateName": ["FYTBET", "Riche88", "FYT"]
+  },
+  "dateCreated": "2015",
+  "hasPart": [
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富微信表情包系列"{{ else }}"Ah Fu WeChat Sticker Pack"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"40余版原创表情贴纸，2015年由富易堂设计团队创作，在VIP会员微信群内自然流传"{{ else }}"40+ original sticker expressions created in 2015 by the FYT design team, spreading organically through VIP WeChat groups"{{ end }},
+      "dateCreated": "2015",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富运动系列"{{ else }}"Ah Fu Sports Series"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富身穿#88号球衣的体育版设计，体现品牌体育投注DNA"{{ else }}"Ah Fu wearing the #88 jersey — sports edition embodying the brand's sportsbook DNA"{{ end }},
+      "dateCreated": "2015",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富成语教育系列"{{ else }}"Ah Fu Idiom Education Series"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富有问不答频道 — 以中国成语为主题的原创插画系列，包含三人成虎、一手遮天等20余幅作品"{{ else }}"Ah Fu's Unanswered Questions Channel — original illustration series on Chinese idioms including 20+ works"{{ end }},
+      "dateCreated": "2015",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富原创漫画"{{ else }}"Ah Fu Original Comics"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"RICHE88品牌标识融入漫画分镜的原创连载漫画"{{ else }}"Original comic series with RICHE88 branding woven into panel layouts"{{ end }},
+      "dateCreated": "2015",
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富3D建模转身图"{{ else }}"Ah Fu 3D Sculpt Turnaround"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"量产级手办精度的3D建模，完成正面、侧面、背面的完整转身"{{ else }}"Production-grade 3D sculpt with full front/side/back turnaround"{{ end }},
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富Cosplay概念设计"{{ else }}"Ah Fu Cosplay Concept Art"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"阿富化身Iron Man、Spider Man、Steve Jobs的盒仔公仔概念设计图"{{ else }}"Ah Fu reimagined as Iron Man, Spider Man, and Steve Jobs — box figure concept art"{{ end }},
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富漫画马克杯"{{ else }}"Ah Fu Comic Mug"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"RICHE88周年纪念马克杯，杯身印有阿富原创漫画，实际生产周边商品"{{ else }}"RICHE88 anniversary collectible mug with Ah Fu original comic strip printed on ceramic"{{ end }},
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "VideoObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富小蘋果舞蹈动画"{{ else }}"Ah Fu Little Apple Dance Animation"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"89帧全手绘动画制作，RICHE88品牌标识融入舞台场景"{{ else }}"89-frame hand-drawn animation production with RICHE88 branding in the stage set"{{ end }},
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富活动设计素材"{{ else }}"Ah Fu Event Design Assets"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"许愿池等平台互动活动的原创阿富设计素材"{{ else }}"Original Ah Fu design assets for platform interactive events"{{ end }},
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    },
+    {
+      "@type": "ImageObject",
+      "name": {{ if eq .Language.Lang "zh" }}"阿富品牌规范文件"{{ else }}"Ah Fu Brand Guidelines"{{ end }},
+      "description": {{ if eq .Language.Lang "zh" }}"包含标准配色、字体排印、禁止使用案例的完整品牌视觉识别规范"{{ else }}"Complete visual identity spec including approved palettes, typography, and prohibited usage examples"{{ end }},
+      "author": {"@type": "Organization", "name": "富易堂"},
+      "copyrightHolder": {"@type": "Organization", "name": "FYTBET"}
+    }
+  ]
+}
+</script>
