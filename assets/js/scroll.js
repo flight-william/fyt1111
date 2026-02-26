@@ -213,11 +213,26 @@
   if (!isSectionPage && pages.length > 1) {
     var scrolling = false;
     var cooldown = 800; // ms lockout after each transition
+    var lastPageIndex = -1;  // track section transitions
+    var feedReady = true;    // false after section change, true after wheel quiet
+    var feedReadyTimer;
 
     window.addEventListener('wheel', function (e) {
       if (scrolling) return;
       var dir = e.deltaY > 0 ? 1 : -1;
       var current = getCurrentPageIndex();
+
+      // Detect section change — disable feed navigation until inertial scroll stops
+      if (current !== lastPageIndex) {
+        lastPageIndex = current;
+        feedReady = false;
+        clearTimeout(feedReadyTimer);
+      }
+      if (!feedReady) {
+        clearTimeout(feedReadyTimer);
+        feedReadyTimer = setTimeout(function () { feedReady = true; }, 500);
+        return;
+      }
 
       // At boundaries (first page up, last page down) — let native scroll handle it (footer, etc.)
       var next = current + dir;

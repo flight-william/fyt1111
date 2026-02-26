@@ -112,6 +112,7 @@
     }
 
     // Visibility observer — reset feed when section comes into view
+    var wheelQuietTimer;
     if ('IntersectionObserver' in window) {
       var section = feed.closest('.page') || feed;
       var obs = new IntersectionObserver(function (entries) {
@@ -119,17 +120,16 @@
           if (entry.isIntersecting) {
             inView = true;
             resetFeed();
-            // Disable wheel until scroll-snap settles to prevent slide jump
+            // Disable wheel until inertial scrolling settles
             wheelEnabled = false;
             clearTimeout(wheelEnableTimer);
+            clearTimeout(wheelQuietTimer);
             wheelCooldowns.delete(feed);
-            wheelEnableTimer = setTimeout(function () {
-              wheelEnabled = true;
-            }, 600);
           } else {
             inView = false;
             wheelEnabled = false;
             clearTimeout(wheelEnableTimer);
+            clearTimeout(wheelQuietTimer);
           }
         });
       }, { threshold: 0.3 });
@@ -140,7 +140,17 @@
     var parentSection = feed.closest('.page');
     if (parentSection) {
       parentSection.addEventListener('wheel', function (e) {
-        if (!wheelEnabled || !inView) return;
+        if (!inView) return;
+
+        // While wheel is disabled, wait for inertial scroll to stop
+        // (no wheel event for 500ms) before enabling slide navigation
+        if (!wheelEnabled) {
+          clearTimeout(wheelQuietTimer);
+          wheelQuietTimer = setTimeout(function () {
+            wheelEnabled = true;
+          }, 500);
+          return;
+        }
 
         var now = Date.now();
         var lastWheel = wheelCooldowns.get(feed) || 0;
