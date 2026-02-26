@@ -1,139 +1,94 @@
-{{/* ===== O2O — PPT slides: Macau partnership, experiential events ===== */}}
+{{/* ===== O2O — Data-driven slides from content/experience/*.md resources ===== */}}
+{{ $page := .Site.GetPage "/experience" }}
+{{ $slides := $page.Resources.Match "*.md" }}
 <section id="o2o" data-section="2" class="page section-dark section-border-top">
   <div class="page-inner">
-    {{/* Section header — static */}}
+    {{/* Section header */}}
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_o2o" }}</span>
       <div class="gold-line mb-2"></div>
       <p class="heading-sub mb-1">{{ i18n "label_experience" }}</p>
       <h2 class="heading-display">
         <a href="{{ "experience" | relLangURL }}">
-        {{ if eq .Language.Lang "zh" }}线上到<span class="text-gold">线下</span>{{ else if eq .Language.Lang "vi" }}Trực tuyến & <span class="text-gold">Thực tế</span>{{ else if eq .Language.Lang "th" }}จากมาเก๊า <span class="text-gold">สู่ออนไลน์</span>{{ else if eq .Language.Lang "id" }}Online ke <span class="text-gold">Offline</span>{{ else if eq .Language.Lang "yue" }}線上到<span class="text-gold">線下</span>{{ else }}Online to <span class="text-gold">Offline</span>{{ end }}
+        {{ with index $slides 0 }}{{ .Params.sectionHeading | safeHTML }}{{ end }}
         </a>
       </h2>
     </div>
 
-    {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" >
+    {{/* Scroll feed — slides from page resources */}}
+    <div class="scroll-feed reveal">
       <div class="scroll-feed-track">
 
-        {{/* Slide 1: Macau Tower bungy + Juxing partnership */}}
-        <div class="scroll-block">
-          <div class="mb-2">
-            <div class="artifact auto-video-section slide-video mx-auto">
-              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="/video/macau-tower-poster.jpg" class="w-full h-full object-cover" data-start="10">
-                <source data-src="/video/macau-tower.mp4" type="video/mp4">
-              </video>
-            </div>
-            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}五周年 · 澳门塔蹦极{{ else if eq .Language.Lang "vi" }}Kỷ niệm 5 năm · Tháp Macau{{ else if eq .Language.Lang "th" }}ครบรอบ 5 ปี · มาเก๊าทาวเวอร์{{ else if eq .Language.Lang "id" }}Ulang Tahun ke-5 · Macau Tower{{ else if eq .Language.Lang "yue" }}五週年 · 澳門塔笨豬跳{{ else }}5th Anniversary · Macau Tower{{ end }}</span>
-          </div>
-            <div class="min-w-0">
-              {{ if eq $.Language.Lang "zh" }}
-              <p class="drop-cap">
-                富易堂从不止于屏幕。与澳门钜星集团的合作，让品牌杂志进入各大赌场VIP贵宾厅——从线上走到线下，只走最短的那条路。
-              </p>
-              <p>
-                五周年，贵宾站上澳门旅游塔，233米纵身一跃，「一点都不难」从口号变成真实体验。新加坡F1赛道亦然：敢踩油门的人，从不担心终点在哪里。
-              </p>
-              {{ else if eq $.Language.Lang "vi" }}
-              <p class="drop-cap">
-                FYT không bao giờ chỉ dừng lại ở màn hình. Quan hệ đối tác với tập đoàn Juxing Macau đã đưa tạp chí thương hiệu vào các phòng VIP sòng bạc lớn — rút ngắn khoảng cách từ trực tuyến đến thực tế.
-              </p>
-              <p>
-                Kỷ niệm 5 năm, thương hiệu đưa khách VIP đứng trên Tháp Macau, từ độ cao 233m, thực hiện cú nhảy bungy — "Không khó chút nào" đã chuyển từ khẩu hiệu thành cảm giác adrenaline mạnh mẽ.
-              </p>
-              {{ else if eq $.Language.Lang "th" }}
-              <p class="drop-cap">
-                FYT ไม่เคยหยุดอยู่เพียงแค่หน้าจอ ความร่วมมือกับ Juxing Group ในมาเก๊า ทำให้เราได้นำนิตยสารแบรนด์เข้าสู่เลาจน์ VIP ในคาสิโนชั้นนำ — นี่คือเส้นทางลัดจากโลกออนไลน์สู่โลกจริงอย่างสมบูรณ์แบบ
-              </p>
-              <p>
-                ในโอกาสครบรอบ 5 ปี เราพาแขก VIP ไปยังมาเก๊าทาวเวอร์ที่ความสูง 233 เมตร เพื่อพิสูจน์ว่า "ไม่ใช่เรื่องยากเลย" ด้วยการกระโดดบันจี้จัมพ์ที่น่าจดจำที่สุด
-              </p>
-              {{ else if eq $.Language.Lang "id" }}
-              <p class="drop-cap">
-                FYT tidak pernah hanya diam di balik layar. Kemitraan dengan Juxing Group di Macau membawa majalah brand kami ke lounge VIP kasino terkemuka — ini adalah jalan pintas dari dunia online ke dunia nyata yang sempurna.
-              </p>
-              <p>
-                Pada ulang tahun ke-5, kami membawa tamu VIP ke Macau Tower pada ketinggian 233 meter untuk membuktikan bahwa "tidak sulit sama sekali" dengan bungy jump yang tak terlupakan.
-              </p>
-              {{ else if eq $.Language.Lang "yue" }}
-              <p class="drop-cap">
-                富易堂從來唔會淨係留喺螢幕入面。我哋同澳門鉅星集團合作，將牌子本雜誌擺晒喺各大賭場嘅 VIP 貴賓廳 —— 由線上行到線下，呢條路係最直接嘅。
-              </p>
-              <p>
-                五週年嗰陣，品牌帶住班貴賓企喺澳門旅遊塔 233 米高位，一躍而下 —— 「一點都不難」由口號變做真嘅腎上腺素。新加坡 F1 賽道駕駛體驗都係一樣：敢踩油門嘅人，就唔會擔心終點喺邊。
-              </p>
-              {{ else }}
-              <p class="drop-cap">
-                FYT never stayed behind the screen. A partnership with Juxing, Macau's VIP concierge group, placed the brand magazine in casino VIP lounges — bridging online to offline in the most exclusive setting.
-              </p>
-              <p>
-                For the 5th anniversary, VIP guests were taken to Macau Tower for the 233-meter bungy jump — turning a tagline into a 10-second freefall. The Singapore F1 street circuit drive carried the same message: step up, and winning follows.
-              </p>
-              {{ end }}
-            </div>
-        </div>
+        {{ range $slides }}
+          {{/* Prepare content with paragraph attribute injection */}}
+          {{ $content := .Content | string }}
+          {{ if .Params.dropCap }}
+            {{ $content = replaceRE `<p>` `<p class="drop-cap">` $content 1 }}
+          {{ end }}
+          {{ if .Params.nosnippet }}
+            {{ $content = replaceRE `(<p)` `${1} data-nosnippet` $content }}
+          {{ end }}
 
-        <div class="scroll-block">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-            <div class="md:col-span-5">
-              <figure>
-                <img src="/images/riche88-macau-vip-lounge-magazine.webp" alt="{{ if eq $.Language.Lang "zh" }}富易堂Riche88澳门贵宾厅杂志{{ else if eq $.Language.Lang "vi" }}FYT Riche88 tạp chí phòng VIP Macau{{ else if eq $.Language.Lang "th" }}FYT Riche88 นิตยสาร VIP มาเก๊า{{ else if eq $.Language.Lang "id" }}FYT Riche88 majalah lounge VIP Macau{{ else if eq $.Language.Lang "yue" }}富易堂Riche88澳門貴賓廳雜誌{{ else }}FYT Riche88 Macau VIP lounge magazine{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-md">
-              </figure>
-              <span class="artifact-caption block mt-1">{{ if eq $.Language.Lang "zh" }}澳门贵宾厅 · 杂志{{ else if eq $.Language.Lang "vi" }}Macau VIP Lounge · Tạp chí{{ else if eq $.Language.Lang "th" }}เลาจน์ VIP มาเก๊า · นิตยสาร{{ else if eq $.Language.Lang "id" }}Lounge VIP Macau · Majalah{{ else if eq $.Language.Lang "yue" }}澳門貴賓廳 · 雜誌{{ else }}Macau VIP Lounge{{ end }}</span>
-            </div>
-            <div class="md:col-span-7">
-              {{ if eq $.Language.Lang "zh" }}
-              <p>
-                在受邀制的贵宾厅里，品牌杂志与高端生活刊物并排摆放。没有Logo墙，也没有广告位——懂的人自然会注意到。与钜星的合作带来一个重要启发：真正的贵宾服务里，每位客人都是一段关系，而不是一个账号。
-              </p>
-              <p>
-                说一千遍"我们很好"，不如亲身体验一次。一起从233米跳下的人之间建立的信任，从来不是广告预算可以买到的。当横幅广告仍是行业主流时，富易堂已经走向线下。这些经历，后来成为品牌最珍贵的资产——把澳门贵宾厅的待客之道，带进数字世界的起点。
-              </p>
-              {{ else if eq $.Language.Lang "vi" }}
-              <p>
-                Trong các phòng VIP đặc quyền, tạp chí thương hiệu đặt cạnh những ấn phẩm thượng lưu. Không phô trương, sự hiện diện tinh tế dành cho những người sành sỏi. Bài học lớn nhất từ Juxing: trong dịch vụ VIP thực thụ, mỗi vị khách là một mối quan hệ, không phải một số tài khoản.
-              </p>
-              <p>
-                Nói ngàn lời "chúng tôi rất tốt" không bằng một lần để quý khách tự trải nghiệm. Sự tin tưởng giữa những người đã cùng nhau thực hiện cú nhảy 233m là thứ mà ngân sách quảng cáo không bao giờ mua được. Khi quảng cáo biểu ngữ vẫn là xu hướng, FYT đã bước ra thế giới thực. Những trải nghiệm này là tài sản quý báu nhất — mỏ neo để đưa tiêu chuẩn phòng VIP Macau vào không gian số.
-              </p>
-              {{ else if eq $.Language.Lang "th" }}
-              <p>
-                ในเลาจน์ VIP ที่จำกัดเฉพาะผู้ได้รับเชิญ นิตยสารของแบรนด์ถูกวางคู่กับนิตยสารไลฟ์สไตล์ระดับหรูโดยไม่มีการโฆษณาที่ฟุ่มเฟือย ความร่วมมือกับ Juxing สอนให้เรารู้ว่า: ในการบริการระดับ VIP ที่แท้จริง แขกทุกคนคือสายสัมพันธ์ที่สำคัญ ไม่ใช่เพียงหมายเลขบัญชี
-              </p>
-              <p>
-                การบอกว่า "เราดีแค่ไหน" นับพันครั้ง ไม่เท่ากับการให้คุณได้สัมผัสด้วยตนเอง ความไว้วางใจระหว่างคนที่เคยกระโดดจากความสูง 233 เมตรมาด้วยกัน คือสิ่งที่งบประมาณโฆษณาไม่สามารถสร้างขึ้นได้ ประสบการณ์เหล่านี้กลายเป็นสินทรัพย์ที่มีค่าที่สุด และเป็นจุดเริ่มต้นของการนำวิถีการต้อนรับระดับมาเก๊าเข้าสู่โลกดิจิทัล
-              </p>
-              {{ else if eq $.Language.Lang "id" }}
-              <p>
-                Di lounge VIP khusus undangan, majalah brand hadir bersama publikasi premium — kehadiran halus bagi yang memahami. Pelajaran Juxing: setiap tamu adalah hubungan, bukan nomor akun.
-              </p>
-              <p>
-                Jangan katakan betapa hebatnya Anda — biarkan mereka merasakannya. Kepercayaan dari 233 meter tak bisa dibeli dengan anggaran iklan. Saat banner masih mendominasi, FYT melangkah ke dunia nyata. Pengalaman ini menjadi cetak biru layanan VIP Macau di ruang digital.
-              </p>
-              {{ else if eq $.Language.Lang "yue" }}
-              <p>
-                喺受邀制嘅貴賓廳入面，我哋本雜誌同高端生活刊物一齊擺喺茶几上面。冇 Logo 牆，冇廣告位 —— 識貨嘅人自然會留意到。同鉅星合作最大嘅收穫，係學識咗一樣嘢：真正嘅貴賓服侍入面，每位客人都係一段關係，而唔係一個 Account。
-              </p>
-              <p>
-                講一千次「我哋好穩陣」，不如帶你親自感受一次。一齊由 233 米跳落嚟嘅老友，之間嗰種信任唔係廣告費可以買到嘅。當螢幕上面嘅 Banner 廣告仲係主流嗰陣，富易堂已經行咗出去。呢啲實地體驗後來變咗品牌最值錢嘅嘢 —— 亦都係將澳門貴賓廳嗰套待客之道搬入數字世界嘅起點。
-              </p>
-              {{ else }}
-              <p>
-                In invitation-only lounges, the brand magazine sat beside luxury lifestyle publications — a quiet signal of belonging. The Juxing lesson: in Macau hospitality, every guest is a relationship, not an account number.
-              </p>
-              <p>
-                Don't tell people how good you are — let them feel it. Trust forged at 233 meters is something no ad budget can buy. When banner ads were the norm, FYT stepped into the real world. These experiences became the blueprint for bringing Macau's concierge standard into digital.
-              </p>
+          {{ if eq .Params.slideLayout "video" }}
+            {{/* Video hero layout */}}
+            <div class="scroll-block">
+              <div class="mb-2">
+                <div class="artifact auto-video-section slide-video mx-auto">
+                  <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="{{ .Params.videoPoster }}" class="w-full h-full object-cover"{{ with .Params.videoStart }} data-start="{{ . }}"{{ end }}>
+                    <source data-src="{{ .Params.video }}" type="video/mp4">
+                  </video>
+                </div>
+                <span class="artifact-caption block mt-1 text-center">{{ .Params.videoCaption }}</span>
+              </div>
+              <div class="min-w-0">
+                {{ $content | safeHTML }}
+              </div>
+              {{ with .Params.pullQuote }}
+              <div class="mt-3">
+                <div class="pull-quote">{{ . }}</div>
+              </div>
               {{ end }}
             </div>
-          </div>
-          <div class="mt-3">
-            <div class="pull-quote">
-              {{ if eq $.Language.Lang "zh" }}贵宾厅有边界，待客之道没有。{{ else if eq $.Language.Lang "vi" }}Phòng VIP có ranh giới, nhưng sự hiếu khách thì không.{{ else if eq $.Language.Lang "th" }}เลาจน์ VIP มีขอบเขต แต่ศิลปะการต้อนรับนั้นไร้ขีดจำกัด{{ else if eq $.Language.Lang "id" }}Lounge VIP memiliki batas, namun seni keramahtamahan tidak mengenal batas.{{ else if eq $.Language.Lang "yue" }}貴賓廳有邊界，但係待客之道係冇嘅。{{ else }}From the energy of Macau's NAPE to the serenity of your screen, the art of hospitality remains unchanged.{{ end }}
+
+          {{ else if eq .Params.slideLayout "split" }}
+            {{/* Split: image (5col) left, text (7col) right */}}
+            <div class="scroll-block">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+                <div class="md:col-span-5">
+                  <figure>
+                    <img src="{{ .Params.image }}" alt="{{ .Params.imageAlt }}" loading="lazy" class="h-auto rounded-sm slide-img-md">
+                  </figure>
+                  <span class="artifact-caption block mt-1">{{ .Params.imageCaption }}</span>
+                </div>
+                <div class="md:col-span-7">
+                  {{ $content | safeHTML }}
+                </div>
+              </div>
+              {{ with .Params.pullQuote }}
+              <div class="mt-3">
+                <div class="pull-quote">{{ . }}</div>
+              </div>
+              {{ end }}
             </div>
-          </div>
-        </div>
+
+          {{ else }}
+            {{/* Fallback: hero layout */}}
+            <div class="scroll-block">
+              <div class="slide-main">
+                <figure class="mb-4">
+                  <img src="{{ .Params.image }}" alt="{{ .Params.imageAlt }}" loading="lazy" class="w-full h-auto rounded-sm">
+                  <span class="artifact-caption block mt-1">{{ .Params.imageCaption }}</span>
+                </figure>
+                {{ $content | safeHTML }}
+              </div>
+              {{ with .Params.pullQuote }}
+              <div class="slide-footer">
+                <div class="pull-quote">{{ . }}</div>
+              </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
 
       </div>{{/* /track */}}
 

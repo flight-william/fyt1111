@@ -258,25 +258,24 @@ img {
 
 /* ===== VIP Section — responsive image sizing ===== */
 .vip-hero { max-height: 45cqh; width: auto; display: block; margin: 0 auto; }
-.vip-figure { flex: 0 1 calc(50% - 6px); max-width: 150px; margin: 0; }
-.vip-figure-img { max-height: 30cqh; width: auto; }
+.vip-figure { flex: 0 1 calc(50% - 6px); max-width: 216px; margin: 0; }
+.vip-figure-img { max-height: 43cqh; width: auto; }
 .vip-card-img { max-height: 30cqh; width: auto; }
 
 @media (max-width: 767px) {
   .vip-hero { max-height: 30cqh; }
-  .vip-figure { max-width: none; flex-shrink: 0; }
-  .vip-figure-img { max-height: 20cqh; }
+  .vip-figure { flex: 1 1 0; max-width: none; }
+  .vip-figure-img { max-height: 34cqh; }
   .vip-card-img { max-height: 25cqh; }
 }
 
 /* ===== Mascot Section — mug images ===== */
-.mug-figure { max-height: 18cqh; }
+.mug-figure { max-height: 32cqh; }
 
 @media (max-width: 767px) {
   .mug-grid { grid-template-columns: 1fr; }
-  .mug-figure { max-height: none; }
+  .mug-figure { height: 30cqh; max-height: none; }
   .mug-figure:nth-child(n+2) { display: none; }
-  .mug-figure img { height: auto; }
 }
 
 /* ===== Sticker Collage ===== */
@@ -316,12 +315,16 @@ img {
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
-.afu-hero-figure { max-height: 38cqh; }
-@media (max-width: 767px) { .afu-hero-figure { max-height: 22cqh; } }
+.afu-hero-figure { max-height: 38cqh; overflow: hidden; }
+@media (max-width: 767px) { .afu-hero-figure { max-height: none; } }
 
 .afu-hero {
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
+  max-height: 38cqh;
+}
+@media (max-width: 767px) {
+  .afu-hero { height: auto !important; max-height: 28cqh; }
 }
 .afu-hero:hover {
   transform: scale(1.1);
@@ -807,7 +810,7 @@ img[loading="lazy"] { background: var(--fyt-dark); }
   container-type: size;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: safe center;
 }
 .scroll-block::-webkit-scrollbar { display: none; }
 
@@ -821,7 +824,7 @@ img[loading="lazy"] { background: var(--fyt-dark); }
 .slide-img-md  { max-height: 35cqh; width: auto; }
 .slide-img-lg  { max-height: 45cqh; width: auto; }
 .slide-video   { max-height: 58cqh; max-width: 800px; overflow: hidden; border-radius: 3px; }
-.slide-thumb   { aspect-ratio: 16/9; max-height: 22cqh; overflow: hidden; }
+.slide-thumb   { aspect-ratio: 16/9; max-height: 14cqh; overflow: hidden; }
 
 @media (max-width: 767px) {
   .scroll-block { padding: 3% 3%; }
@@ -1034,6 +1037,11 @@ html.is-section-page .article-extended {
   border: none;
   border-top: 1px solid rgba(255,255,255,0.06);
   margin: 2.5rem 0;
+}
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
 }
 
 /* ===== FAQ Section ===== */

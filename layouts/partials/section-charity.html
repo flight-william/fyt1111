@@ -1,164 +1,106 @@
-{{/* ===== Charity — PPT slides: rural donations, charity soccer ===== */}}
+{{/* ===== Charity — Data-driven slides from content/charity/*.md resources ===== */}}
+{{ $page := .Site.GetPage "/charity" }}
+{{ $slides := $page.Resources.Match "*.md" }}
 <section id="charity" data-section="6" class="page section-gradient section-border-top">
   <div class="page-inner">
-    {{/* Section header — static */}}
+    {{/* Section header */}}
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_charity" }}</span>
       <div class="gold-line mb-2"></div>
       <p class="heading-sub mb-1">{{ i18n "label_temperature" }}</p>
       <h2 class="heading-display">
         <a href="{{ "charity" | relLangURL }}">
-        {{ if eq .Language.Lang "zh" }}<span class="text-gold">把爱</span>传出去{{ else if eq .Language.Lang "vi" }}Lan tỏa <span class="text-gold">Yêu thương</span>{{ else if eq .Language.Lang "th" }}ส่งต่อ <span class="text-gold">ความรัก</span>{{ else if eq .Language.Lang "id" }}<span class="text-gold">Berbagi</span> Kasih{{ else if eq .Language.Lang "yue" }}<span class="text-gold">將愛</span>傳出去{{ else }}<span class="text-gold">Spread</span> the Love{{ end }}
+        {{ with index $slides 0 }}{{ .Params.sectionHeading | safeHTML }}{{ end }}
         </a>
       </h2>
     </div>
 
-    {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" >
+    {{/* Scroll feed — slides from page resources */}}
+    <div class="scroll-feed reveal">
       <div class="scroll-feed-track">
 
-        {{/* Slide 1: Charity soccer match */}}
-        <div class="scroll-block">
-          <div class="mb-2">
-            <div class="auto-video-section slide-video mx-auto">
-              <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="/video/charity-soccer-poster.jpg" class="w-full h-full object-cover">
-                <source data-src="/video/charity-soccer.mp4" type="video/mp4">
-              </video>
-            </div>
-            <span class="artifact-caption block mt-1 text-center">{{ if eq .Language.Lang "zh" }}诚十杯 · 粤鄂明星慈善足球赛{{ else if eq .Language.Lang "vi" }}Chengshi Cup · Bóng đá Từ thiện{{ else if eq .Language.Lang "th" }}Chengshi Cup · ฟุตบอลการกุศล{{ else if eq .Language.Lang "id" }}Chengshi Cup · Sepak Bola Amal{{ else if eq .Language.Lang "yue" }}誠十杯 · 粵鄂明星慈善波{{ else }}Chengshi Cup · Charity Soccer{{ end }}</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              {{ if eq .Language.Lang "zh" }}
-              <p>
-                2015年5月2日，广东省人民体育场。诚十杯粤鄂慈善足球赛开赛，诚十集团与富易堂联合赞助。那天最动人的一幕，是33位来自广州社会福利院的孩子，对阵11位退役国脚——这不是一场比赛，而是一种陪伴。
-              </p>
-              {{ else if eq .Language.Lang "vi" }}
-              <p>
-                Ngày 2 tháng 5 năm 2015, Sân vận động Nhân dân tỉnh Quảng Đông. Giải bóng đá từ thiện Chengshi Cup khởi tranh với sự đồng tài trợ của FYT. Khoảnh khắc xúc động nhất: 33 trẻ em từ viện phúc lợi đối đầu 11 cựu tuyển thủ quốc gia — không phải một trận đấu, mà là sự sẻ chia ấm áp của người lớn dành cho các em.
-              </p>
-              {{ else if eq .Language.Lang "th" }}
-              <p>
-                วันที่ 2 พฤษภาคม 2015 ณ สนามกีฬามณฑลกวางตุ้ง การแข่งขันฟุตบอลการกุศล Chengshi Cup เริ่มต้นขึ้นด้วยการสนับสนุนจาก FYT วินาทีที่น่าประทับใจที่สุดคือ เด็กๆ 33 คนจากสถานสงเคราะห์ลงสนามพบกับอดีตนักเตะทีมชาติ 11 คน นี่ไม่ใช่แค่เกมกีฬา แต่คือความอบอุ่นที่ส่งต่อให้เด็กๆ
-              </p>
-              {{ else if eq .Language.Lang "id" }}
-              <p>
-                2 Mei 2015, Stadion Rakyat Provinsi Guangdong. Pertandingan sepak bola amal Chengshi Cup dimulai dengan FYT sebagai co-sponsor. Momen paling mengharukan: 33 anak dari panti sosial berhadapan dengan 11 mantan pemain timnas — bukan pertandingan, melainkan bentuk kasih sayang tulus dari orang dewasa kepada anak-anak.
-              </p>
-              {{ else if eq .Language.Lang "yue" }}
-              <p>
-                2015 年 5 月 2 號，廣東省人民體育場。誠十杯粵鄂慈善波開波，誠十集團同富易堂聯合贊助。最感動嗰幕：33 個來自廣州社會福利院嘅細路，對住 11 位退役國腳——唔係比賽，係大人對細路最溫柔嘅陪伴。
-              </p>
-              {{ else }}
-              <p>
-                May 2, 2015, Guangdong Provincial People's Stadium. The Chengshi Cup charity match, co-sponsored by FYT. The highlight: a heartwarming 33-vs-11 match — 33 children from Guangzhou Social Welfare Institute against 11 veteran national players.
-              </p>
-              {{ end }}
-            </div>
-            <div>
-              {{ if eq .Language.Lang "zh" }}
-              <p>
-                曲楚良、胡志军、谢育新、林强、殷立华……曾经驰骋绿茵场的名字，那天只有一个身份：陪孩子踢球的人。广州电视台全程直播，所有善款用于福利院孤残儿童的教育援助。有些事，比赢球更值得认真对待。
-              </p>
-              {{ else if eq .Language.Lang "vi" }}
-              <p>
-                Qu Chuliang, Hu Zhijun, Xie Yuxin... những cái tên huyền thoại của đội tuyển quốc gia ngày ấy chỉ có một vai trò: những người bạn chơi bóng cùng trẻ thơ. Toàn bộ quỹ thu được đã dành cho việc hỗ trợ giáo dục trẻ em mồ côi. Có những việc còn đáng để dốc sức hơn cả chiến thắng.
-              </p>
-              {{ else if eq .Language.Lang "th" }}
-              <p>
-                นักเตะระดับตำนานทีมชาติอย่าง ฉวี่ ฉู่เหลียง และ หู จื้อจวิน ต่างวางเกียรติยศไว้ข้างหลังเพื่อร่วมเล่นกับเด็กๆ รายได้ทั้งหมดมอบให้เป็นทุนการศึกษาแก่เด็กกำพร้าและเด็กพิการในสถานสงเคราะห์ เพราะบางสิ่งมีค่ามากกว่าชัยชนะในการแข่งขัน
-              </p>
-              {{ else if eq .Language.Lang "id" }}
-              <p>
-                Legenda timnas seperti Qu Chuliang dan Hu Zhijun menyimpan gelar mereka untuk bermain bersama anak-anak. Disiarkan langsung di TV Guangzhou, seluruh dana digunakan untuk bantuan pendidikan anak yatim dan penyandang disabilitas. Ada hal-hal yang lebih berharga dari sekadar memenangkan pertandingan.
-              </p>
-              {{ else if eq .Language.Lang "yue" }}
-              <p>
-                曲楚良、胡志軍、謝育新、林強、殷立華……呢啲曾經馳騁國家隊嘅名字，嗰日得一個身份：陪細路踢波嘅人。廣州電視台全程直播，善款全部用喺福利院孤殘兒童嘅教育。有啲嘢，比贏波更值得全力以赴。
-              </p>
-              {{ else }}
-              <p>
-                National stars like Qu Chuliang and Hu Zhijun (1994 top scorer) set aside their titles to play. Broadcast on Guangzhou TV, all proceeds benefited educational assistance for orphaned and disabled children. Some things are worth more than winning.
-              </p>
-              {{ end }}
-            </div>
-          </div>
-          <div class="mt-2">
-            <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}有些事，比赢球更值得认真对待。{{ else if eq .Language.Lang "vi" }}Trong cuộc đời, có những điều còn đáng để dốc sức hơn cả việc thắng một trận bóng.{{ else if eq .Language.Lang "th" }}บางสิ่งบางอย่าง... มีค่ามากกว่าชัยชนะในสนามฟุตบอล{{ else if eq .Language.Lang "id" }}Ada hal-hal yang lebih layak diperjuangkan daripada sekadar memenangkan pertandingan.{{ else if eq .Language.Lang "yue" }}有啲嘢，比贏波更值得全力去做。{{ else }}Beyond the game, we find purpose in sharing the same sun with the children the world forgot.{{ end }}
-            </div>
-          </div>
-        </div>
+        {{ range $slides }}
+          {{/* Prepare content with paragraph attribute injection */}}
+          {{ $content := .Content | string }}
+          {{ if .Params.dropCap }}
+            {{ $content = replaceRE `<p>` `<p class="drop-cap">` $content 1 }}
+          {{ end }}
+          {{ if .Params.nosnippet }}
+            {{ $content = replaceRE `(<p)` `${1} data-nosnippet` $content }}
+          {{ end }}
 
-        {{/* Slide 2: Rural China donations */}}
-        <div class="scroll-block">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-            <div class="md:col-span-7">
-              {{ if eq .Language.Lang "zh" }}
-              <p class="drop-cap">
-                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener noreferrer" class="text-fyt-gold hover:underline">「那些被遗忘的孩子」</a>——既是一份纪实报告的名字，也是行动的起点。团队穿上印着「把爱传出去」的T恤，带着食用油和大米，驶向偏远山村。书包、足球、蜡笔、文具，一样样亲手递到孩子手中。
-              </p>
-              <p>
-                不是汇一笔款项就结束，而是走过泥路，走进家门。车上的粮油沉甸甸，是责任的分量。孩子接过新书包时的笑很轻，却足以提醒我们：有些回报，不写在财报里。
-              </p>
-              {{ else if eq .Language.Lang "vi" }}
-              <p class="drop-cap">
-                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener noreferrer" class="text-fyt-gold hover:underline">"Những đứa trẻ bị lãng quên"</a> — tên một bản báo cáo, cũng là lý do để chúng tôi khởi hành. Đội ngũ mặc áo thun "Lan tỏa yêu thương", chất đầy gạo và dầu ăn, tiến vào những bản làng xa xôi nhất. Từng chiếc cặp sách, bút màu đều được trao tận tay các em.
-              </p>
-              <p>
-                Không chỉ là gửi một khoản tiền. Đó là hành trình trên những con đường bùn lầy, là sự hiện diện trực tiếp. Gạo và dầu ăn trên xe mang nặng sức nặng của lời hứa. Nụ cười của trẻ thơ khi nhận quà tuy nhẹ nhàng nhưng giá trị hơn mọi thành công thương mại.
-              </p>
-              {{ else if eq .Language.Lang "th" }}
-              <p class="drop-cap">
-                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener noreferrer" class="text-fyt-gold hover:underline">"เด็กที่ถูกลืม"</a> — คือชื่อของรายงานสารคดีและเป็นเหตุผลในการเดินทางของเรา ทีมงานสวมเสื้อยืด "ส่งต่อความรัก" ขนข้าวสารและน้ำมันพืชขับเข้าไปยังหมู่บ้านที่ห่างไกลที่สุด กระเป๋านักเรียนและเครื่องเขียนทุกชิ้นถูกส่งมอบถึงมือเด็กๆ โดยตรง
-              </p>
-              <p>
-                ไม่ใช่เพียงการโอนเงินบริจาค แต่คือการเดินบนถนนที่เต็มไปด้วยโคลนเพื่อเข้าถึงบ้านที่ต้องการความช่วยเหลือจริงๆ รอยยิ้มบนหน้าของเด็กๆ เมื่อได้รับกระเป๋าใบใหม่ มีค่ามากกว่าความสำเร็จทางธุรกิจใดๆ ที่เราเคยได้รับมา
-              </p>
-              {{ else if eq .Language.Lang "id" }}
-              <p class="drop-cap">
-                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener noreferrer" class="text-fyt-gold hover:underline">"Anak-Anak yang Terlupakan"</a> — nama laporan dokumenter, sekaligus alasan untuk kami berangkat. Tim mengenakan kaos "Berbagi Kasih", memuat penuh beras dan minyak goreng, berkendara ke desa-desa paling terpencil. Tas sekolah, bola sepak, krayon, dan perlengkapan sekolah lainnya diserahkan langsung ke tangan anak-anak.
-              </p>
-              <p>
-                Bukan sekadar transfer dana. Ini adalah perjalanan melalui jalan berlumpur, memasuki rumah-rumah yang jarang dikunjungi orang luar. Beras dan minyak goreng di dalam mobil membawa bobot sebuah janji. Senyum anak-anak saat menerima tas sekolah baru terasa ringan, namun nilainya melampaui segala pencapaian bisnis.
-              </p>
-              {{ else if eq .Language.Lang "yue" }}
-              <p class="drop-cap">
-                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener noreferrer" class="text-fyt-gold hover:underline">「嗰啲被遺忘嘅細路」</a>——一份紀實報告嘅名，亦係出發嘅理由。團隊著住印住「將愛傳出去」嘅 T 恤，裝滿成車食油同白米，揸入中國最偏遠嘅山村。書包、足球、蠟筆、文具，每一樣都親手遞到細路手上。
-              </p>
-              <p>
-                唔係匯筆款就算。係行泥路，入去好少有外人到過嘅屋企。架麵包車上嘅天府之花食油同白米，沉甸甸，係承諾嘅重量。細路接過新書包嗰陣笑，好輕，但比任何生意上嘅收穫都值。
-              </p>
-              {{ else }}
-              <p class="drop-cap">
-                <a href="/docs/forgotten-children.pdf" target="_blank" rel="noopener noreferrer" class="text-fyt-gold hover:underline">"The Forgotten Children"</a> — this documentary report's title was also the starting point of FYT's charitable mission. The team traveled deep into rural China, donating funds to schools, delivering cooking oil, rice, and daily necessities to families in need. Wearing charity t-shirts printed with "Spread the Love," they crossed mountains to hand school bags, footballs, crayons, and stationery directly to children.
-              </p>
-              <p>
-                This was not remote donation — it was hands-on action. The team walked into remote villages, along muddy paths, to homes that rarely see outside visitors. Vans loaded with Sichuan specialty cooking oil and rice were tangible expressions of the brand's social commitment. The smiles on children's faces when receiving new school bags and stationery are a return no commercial success can replace.
-              </p>
+          {{ if eq .Params.slideLayout "video-grid" }}
+            {{/* Video + 2-column text grid layout */}}
+            <div class="scroll-block">
+              <div class="mb-2">
+                <div class="auto-video-section slide-video mx-auto">
+                  <video loop playsinline controls controlslist="nodownload" oncontextmenu="return false;" preload="none" poster="{{ .Params.videoPoster }}" class="w-full h-full object-cover">
+                    <source data-src="{{ .Params.video }}" type="video/mp4">
+                  </video>
+                </div>
+                <span class="artifact-caption block mt-1 text-center">{{ .Params.videoCaption }}</span>
+              </div>
+              {{/* Split body content into 2 columns at <!--split--> marker */}}
+              {{ $parts := split $content "<!--split-->" }}
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {{ range $parts }}
+                  <div>{{ . | safeHTML }}</div>
+                {{ end }}
+              </div>
+              {{ with .Params.pullQuote }}
+              <div class="mt-2">
+                <div class="pull-quote">{{ . }}</div>
+              </div>
               {{ end }}
             </div>
-            <div class="md:col-span-5">
-              <div class="flex gap-2 mb-2 justify-center">
-                <figure>
-                  <img src="/images/charity-tshirt.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂FYTBET把爱传出去慈善T恤{{ else if eq .Language.Lang "vi" }}FYT áo từ thiện Lan tỏa Yêu thương{{ else if eq .Language.Lang "th" }}FYT เสื้อการกุศลส่งต่อความรัก{{ else if eq .Language.Lang "id" }}FYT kaos amal Berbagi Kasih{{ else if eq .Language.Lang "yue" }}富易堂FYTBET將愛傳出去慈善 T 恤{{ else }}FYTBET Spread the Love charity T-shirt{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-xs">
-                </figure>
-                <figure>
-                  <img src="/images/charity-hero.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂FYTBET山区慈善捐赠{{ else if eq .Language.Lang "vi" }}FYT quyên góp nông thôn từ thiện{{ else if eq .Language.Lang "th" }}FYT บริจาคชนบทการกุศล{{ else if eq .Language.Lang "id" }}FYT donasi pedesaan amal{{ else if eq .Language.Lang "yue" }}富易堂FYTBET山區慈善捐贈{{ else }}FYTBET rural charity donations{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-xs">
-                </figure>
+
+          {{ else if eq .Params.slideLayout "collage-split" }}
+            {{/* 7/5 split: text left, 2×2 image collage right */}}
+            <div class="scroll-block">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+                <div class="md:col-span-7">
+                  {{ $content | safeHTML }}
+                </div>
+                <div class="md:col-span-5">
+                  {{ $images := .Params.images }}
+                  <div class="flex gap-2 mb-2 justify-center">
+                    {{ range first 2 $images }}
+                    <figure>
+                      <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" class="h-auto rounded-sm {{ .class }}">
+                    </figure>
+                    {{ end }}
+                  </div>
+                  <div class="flex gap-2 justify-center">
+                    {{ range after 2 $images }}
+                    <figure>
+                      <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" class="h-auto rounded-sm {{ .class }}">
+                    </figure>
+                    {{ end }}
+                  </div>
+                  <span class="artifact-caption block mt-1">{{ .Params.imageCaption }}</span>
+                </div>
               </div>
-              <div class="flex gap-2 justify-center">
-                <figure>
-                  <img src="/images/charity-van.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂FYTBET慈善志愿者证{{ else if eq .Language.Lang "vi" }}FYT thẻ tình nguyện từ thiện{{ else if eq .Language.Lang "th" }}FYT บัตรอาสาสมัครการกุศล{{ else if eq .Language.Lang "id" }}FYT kartu sukarelawan amal{{ else if eq .Language.Lang "yue" }}富易堂FYTBET慈善義工證{{ else }}FYTBET charity volunteer badge{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-sm">
-                </figure>
-                <figure>
-                  <img src="/images/charity-children.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂FYTBET慈善捐赠山区孩子们{{ else if eq .Language.Lang "vi" }}FYT quyên góp cho các em nhỏ nông thôn{{ else if eq .Language.Lang "th" }}FYT บริจาคให้เด็กๆ ในชนบท{{ else if eq .Language.Lang "id" }}FYT donasi untuk anak-anak pedesaan{{ else if eq .Language.Lang "yue" }}富易堂FYTBET慈善捐贈山區細路仔{{ else }}FYTBET charity donations to rural children{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-sm">
-                </figure>
+              {{ with .Params.pullQuote }}
+              <div class="mt-3">
+                <div class="pull-quote">{{ . }}</div>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}山区捐赠 · 把爱传出去{{ else if eq .Language.Lang "vi" }}Quyên góp Nông thôn · Lan tỏa Yêu thương{{ else if eq .Language.Lang "th" }}บริจาคชนบท · ส่งต่อความรัก{{ else if eq .Language.Lang "id" }}Donasi Pedesaan · Berbagi Kasih{{ else if eq .Language.Lang "yue" }}山區捐贈 · 將愛傳出去{{ else }}Rural Donations · Spread the Love{{ end }}</span>
+              {{ end }}
             </div>
-          </div>
-        </div>
+
+          {{ else }}
+            {{/* Fallback: hero layout */}}
+            <div class="scroll-block">
+              <div class="slide-main">
+                {{ $content | safeHTML }}
+              </div>
+              {{ with .Params.pullQuote }}
+              <div class="slide-footer">
+                <div class="pull-quote">{{ . }}</div>
+              </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
 
       </div>{{/* /track */}}
 

@@ -1,232 +1,101 @@
-{{/* ===== Evolution — PPT slides: overview + era details ===== */}}
+{{/* ===== Evolution — Data-driven slides from content/evolution/*.md resources ===== */}}
+{{ $page := .Site.GetPage "/evolution" }}
+{{ $slides := $page.Resources.Match "*.md" }}
 <section id="evolution" data-section="4" class="page section-gradient section-border-top">
   <div class="page-inner">
-    {{/* Section header — static */}}
+    {{/* Section header */}}
     <div class="relative mb-3 reveal">
       <span class="vertical-label">{{ i18n "section_evolution" }}</span>
       <div class="gold-line mb-3"></div>
       <p class="heading-sub mb-2">{{ i18n "label_evolution" }}</p>
       <h2 class="heading-display">
         <a href="{{ "evolution" | relLangURL }}">
-        {{ if eq .Language.Lang "zh" }}设计<span class="text-gold">演变</span>{{ else if eq .Language.Lang "vi" }}Sự tiến hóa <span class="text-gold">Thiết kế</span>{{ else if eq .Language.Lang "th" }}วิวัฒนาการ <span class="text-gold">ดีไซน์</span>{{ else if eq .Language.Lang "id" }}Evolusi <span class="text-gold">Desain</span>{{ else if eq .Language.Lang "yue" }}<span class="text-gold">設計</span>演變{{ else }}Design <span class="text-gold">Evolution</span>{{ end }}
+        {{ with index $slides 0 }}{{ .Params.sectionHeading | safeHTML }}{{ end }}
         </a>
       </h2>
     </div>
 
-    {{/* Scroll feed — PPT slides */}}
-    <div class="scroll-feed reveal" >
+    {{/* Scroll feed — slides from page resources */}}
+    <div class="scroll-feed reveal">
       <div class="scroll-feed-track">
 
-        {{/* Slide 1: Overview + 2x2 image grid */}}
-        <div class="scroll-block">
-          {{ if eq $.Language.Lang "zh" }}
-          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            十五年，五次面貌。灰蓝、红金、黑橙、全橙，最终回到精炼的黑橙——沉稳而有力。不追风，不跟潮，只做更顺手的那一版。
-          </p>
-          {{ else if eq $.Language.Lang "vi" }}
-          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            15 năm, 5 diện mạo. Xám xanh, Đỏ vàng, Đen cam, Toàn cam, rồi trở lại Đen cam tinh tế — vững chãi và mạnh mẽ. Không theo xu hướng, chỉ làm phiên bản tốt nhất cho bạn.
-          </p>
-          {{ else if eq $.Language.Lang "th" }}
-          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            15 ปี 5 รูปโฉม เทา-ฟ้า, แดง-ทอง, ดำ-ส้ม, ส้มล้วน แล้วกลับสู่ดำ-ส้มที่ประณีต — สุขุมแต่ทรงพลัง ไม่วิ่งตามเทรนด์ แค่ทำเวอร์ชันที่ดีที่สุดให้คุณ
-          </p>
-          {{ else if eq $.Language.Lang "id" }}
-          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            Lima belas tahun, lima desain ulang. Abu-biru, merah-emas, hitam-oranye, serba oranye, dan akhirnya kembali ke hitam-oranye yang terpoles — tenang namun kuat. Kami tidak mengikuti tren, kami hanya membuat versi yang paling nyaman Anda gunakan.
-          </p>
-          {{ else if eq $.Language.Lang "yue" }}
-          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            十五年，五次大變身。由灰藍、紅金、黑橙、全橙，最後返返去精煉嘅黑橙 —— 沉穩、夠晒火。唔追風，唔跟潮，只做令你用得最順手嘅嗰個樣。
-          </p>
-          {{ else }}
-          <p class="max-w-2xl text-fyt-cream opacity-60 mb-3">
-            Fifteen years, five redesigns — each one driven by the same question: how do we make the experience better for our members? From the original grey-blue to a rich red-gold era, then bold black-orange, an all-orange experiment — ultimately returning to refined black-orange. No chasing trends. Just relentless refinement for the people who use it every day.
-          </p>
+        {{ range $slides }}
+          {{/* Prepare content with paragraph attribute injection */}}
+          {{ $content := .Content | string }}
+          {{ if .Params.dropCap }}
+            {{ $content = replaceRE `<p>` `<p class="drop-cap">` $content 1 }}
           {{ end }}
-          <div class="max-w-3xl mx-auto">
-            <div class="grid grid-cols-3 md:grid-cols-3 gap-3">
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/website-v1.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88原版网站 灰蓝时代 2011{{ else if eq .Language.Lang "vi" }}Trang web gốc Riche88 FYT{{ else if eq .Language.Lang "th" }}เว็บไซต์ต้นฉบับ Riche88 FYT{{ else if eq .Language.Lang "id" }}Situs web asli Riche88 FYT{{ else if eq .Language.Lang "yue" }}富易堂Riche88原版網站{{ else }}Original Riche88 FYT website{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}灰蓝 · 2011{{ else if eq .Language.Lang "vi" }}Xám xanh · 2011{{ else if eq .Language.Lang "th" }}เทา-ฟ้า · 2011{{ else if eq .Language.Lang "id" }}Abu-Biru · 2011{{ else if eq .Language.Lang "yue" }}灰藍 · 2011{{ else }}Grey-Blue · 2011{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/evo-app-red-2015.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88红金时代移动端{{ else if eq .Language.Lang "vi" }}FYT Riche88 kỷ nguyên Đỏ vàng{{ else if eq .Language.Lang "th" }}FYT Riche88 ยุคแดง-ทอง{{ else if eq .Language.Lang "id" }}FYT Riche88 era Merah-Emas{{ else if eq .Language.Lang "yue" }}富易堂Riche88紅金年代{{ else }}FYT Riche88 Red-Gold era mobile{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}红金 · 2015{{ else if eq .Language.Lang "vi" }}Đỏ vàng · 2015{{ else if eq .Language.Lang "th" }}แดง-ทอง · 2015{{ else if eq .Language.Lang "id" }}Merah-Emas · 2015{{ else if eq .Language.Lang "yue" }}紅金 · 2015{{ else }}Red-Gold · 2015{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/evo-web-gold-2017.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂金橙过渡期移动网页{{ else if eq .Language.Lang "vi" }}FYT chuyển tiếp vàng-cam{{ else if eq .Language.Lang "th" }}FYT ยุคเปลี่ยนผ่านทอง-ส้ม{{ else if eq .Language.Lang "id" }}FYT transisi Emas-Oranye{{ else if eq .Language.Lang "yue" }}富易堂金橙過渡期{{ else }}FYT Gold-Orange transition{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}金橙 · ~2017{{ else if eq .Language.Lang "vi" }}Vàng cam · ~2017{{ else if eq .Language.Lang "th" }}ทอง-ส้ม · ~2017{{ else if eq .Language.Lang "id" }}Emas-Oranye · ~2017{{ else if eq .Language.Lang "yue" }}金橙 · ~2017{{ else }}Gold-Orange · ~2017{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/evo-desktop-2020.webp" alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88桌面端 品牌重塑前{{ else if eq .Language.Lang "vi" }}FYT Riche88 desktop trước tái thương hiệu{{ else if eq .Language.Lang "th" }}FYT Riche88 เดสก์ท็อปก่อนรีแบรนด์{{ else if eq .Language.Lang "id" }}FYT Riche88 desktop pra-rebrand{{ else if eq .Language.Lang "yue" }}富易堂Riche88重塑前桌面版{{ else }}FYT Riche88 pre-rebrand desktop{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}重塑前 · 2020{{ else if eq .Language.Lang "vi" }}Trước rebrand · 2020{{ else if eq .Language.Lang "th" }}ก่อนรีแบรนด์ · 2020{{ else if eq .Language.Lang "id" }}Pra-Rebrand · 2020{{ else if eq .Language.Lang "yue" }}重塑前 · 2020{{ else }}Pre-Rebrand · 2020{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/website-rebrand.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET品牌重塑{{ else if eq .Language.Lang "vi" }}FYTBET Tái thương hiệu{{ else if eq .Language.Lang "th" }}FYTBET รีแบรนด์{{ else if eq .Language.Lang "id" }}FYTBET Rebrand{{ else if eq .Language.Lang "yue" }}FYTBET品牌重塑{{ else }}FYTBET Rebrand{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}黑橙 · 2020{{ else if eq .Language.Lang "vi" }}Đen cam · 2020{{ else if eq .Language.Lang "th" }}ดำ-ส้ม · 2020{{ else if eq .Language.Lang "id" }}Hitam-Oranye · 2020{{ else if eq .Language.Lang "yue" }}黑橙 · 2020{{ else }}Black-Orange · 2020{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/evo-app-orange-2021.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET全橙试验 App v3.0{{ else if eq .Language.Lang "vi" }}FYTBET thử nghiệm toàn cam{{ else if eq .Language.Lang "th" }}FYTBET ทดลองสีส้มล้วน{{ else if eq .Language.Lang "id" }}FYTBET eksperimen serba oranye{{ else if eq .Language.Lang "yue" }}FYTBET全橙實驗{{ else }}FYTBET All-Orange experiment{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}全橙 · 2021{{ else if eq .Language.Lang "vi" }}Toàn cam · 2021{{ else if eq .Language.Lang "th" }}ส้มล้วน · 2021{{ else if eq .Language.Lang "id" }}Serba Oranye · 2021{{ else if eq .Language.Lang "yue" }}全橙 · 2021{{ else }}All-Orange · 2021{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/evo-splash-9yr.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET九周年闪屏{{ else if eq .Language.Lang "vi" }}FYTBET màn hình kỷ niệm 9 năm{{ else if eq .Language.Lang "th" }}FYTBET หน้าจอครบรอบ 9 ปี{{ else if eq .Language.Lang "id" }}FYTBET splash 9 tahun{{ else if eq .Language.Lang "yue" }}FYTBET九週年閃屏{{ else }}FYTBET 9th anniversary splash{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}九周年{{ else if eq .Language.Lang "vi" }}9 năm{{ else if eq .Language.Lang "th" }}ครบ 9 ปี{{ else if eq .Language.Lang "id" }}9 Tahun{{ else if eq .Language.Lang "yue" }}九週年{{ else }}9th Year{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/evo-landing-fytbet.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET线路检测页{{ else if eq .Language.Lang "vi" }}FYTBET trang kiểm tra đường dây{{ else if eq .Language.Lang "th" }}FYTBET หน้าตรวจสอบสาย{{ else if eq .Language.Lang "id" }}FYTBET halaman pengecekan jalur{{ else if eq .Language.Lang "yue" }}FYTBET線路檢測頁{{ else }}FYTBET speed-test landing{{ end }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}线路页{{ else if eq .Language.Lang "vi" }}Trang đường dây{{ else if eq .Language.Lang "th" }}หน้าเลือกสาย{{ else if eq .Language.Lang "id" }}Halaman jalur{{ else if eq .Language.Lang "yue" }}線路頁{{ else }}Speed-Test{{ end }}</span>
-              </div>
-              <div>
-                <div class="slide-thumb rounded-sm">
-                  <img src="/images/evo-tablet-2025.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET 2025平板桌面端{{ else if eq .Language.Lang "vi" }}FYTBET 2025 máy tính bảng{{ else if eq .Language.Lang "th" }}FYTBET 2025 แท็บเล็ต{{ else if eq .Language.Lang "id" }}FYTBET 2025 tablet{{ else if eq .Language.Lang "yue" }}FYTBET 2025 平板版{{ else }}FYTBET 2025 tablet{{ end }}" loading="lazy" class="w-full h-full object-cover object-top">
-                </div>
-                <span class="artifact-caption block mt-1 text-[10px]">{{ if eq .Language.Lang "zh" }}精炼 · 2025{{ else if eq .Language.Lang "vi" }}Tinh tế · 2025{{ else if eq .Language.Lang "th" }}ประณีต · 2025{{ else if eq .Language.Lang "id" }}Terpoles · 2025{{ else if eq .Language.Lang "yue" }}精煉 · 2025{{ else }}Refined · 2025{{ end }}</span>
-              </div>
-            </div>
-          </div>
-          <div class="mt-3">
-            <div class="pull-quote">
-              {{ if eq .Language.Lang "zh" }}五次更新，同一个问题：用得顺手吗？{{ else if eq .Language.Lang "vi" }}Năm diện mạo, cùng một câu hỏi: Quý khách sử dụng có thuận tiện không?{{ else if eq .Language.Lang "th" }}ห้าใบหน้า กับหนึ่งคำถามเดิม: คุณใช้งานได้สะดวกขึ้นไหม?{{ else if eq .Language.Lang "id" }}Lima wajah, satu pertanyaan yang sama: apakah Anda nyaman menggunakannya?{{ else if eq .Language.Lang "yue" }}五次大變身，同一個問題：你用得順唔順手？{{ else }}Through five iterations of identity, we refine the aesthetic to preserve the soul.{{ end }}
-            </div>
-          </div>
-        </div>
+          {{ if .Params.nosnippet }}
+            {{ $content = replaceRE `(<p)` `${1} data-nosnippet` $content }}
+          {{ end }}
 
-        {{/* Slide 2: Era-by-era detail with app screenshots */}}
-        <div class="scroll-block">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-            <div class="md:col-span-5">
-              <div class="grid grid-cols-3 gap-2 justify-items-center">
-                <figure>
-                  <img src="/images/evo-app-teal-2020.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET橙+青过渡版{{ else if eq .Language.Lang "vi" }}FYTBET phiên bản chuyển tiếp{{ else if eq .Language.Lang "th" }}FYTBET เวอร์ชันเปลี่ยนผ่าน{{ else if eq .Language.Lang "id" }}FYTBET versi transisi{{ else if eq .Language.Lang "yue" }}FYTBET過渡版本{{ else }}FYTBET transitional design{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-lg">
-                </figure>
-                <figure>
-                  <img src="/images/evo-app-orange-2021.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET全橙试验 App v3.0{{ else if eq .Language.Lang "vi" }}FYTBET thử nghiệm toàn cam{{ else if eq .Language.Lang "th" }}FYTBET การทดลองสีส้มล้วน{{ else if eq .Language.Lang "id" }}FYTBET eksperimen serba oranye{{ else if eq .Language.Lang "yue" }}FYTBET全橙實驗{{ else }}FYTBET All-orange experiment{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-lg">
-                </figure>
-                <figure>
-                  <img src="/images/app-2026-mobile.webp" alt="{{ if eq .Language.Lang "zh" }}FYTBET 2026手机应用{{ else if eq .Language.Lang "vi" }}FYTBET ứng dụng di động 2026{{ else if eq .Language.Lang "th" }}FYTBET แอปมือถือ 2026{{ else if eq .Language.Lang "id" }}FYTBET aplikasi seluler 2026{{ else if eq .Language.Lang "yue" }}FYTBET 2026 手機 App{{ else }}FYTBET 2026 Mobile App{{ end }}" loading="lazy" class="h-auto rounded-sm slide-img-lg">
-                </figure>
+          {{ if eq .Params.slideLayout "thumb-grid" }}
+            {{/* Overview: intro text + 9-image thumbnail grid + pullQuote */}}
+            <div class="scroll-block">
+              {{ $content | safeHTML }}
+              <div class="max-w-3xl mx-auto">
+                <div class="grid grid-cols-3 md:grid-cols-3 gap-3">
+                  {{ range .Params.thumbs }}
+                  <div>
+                    <div class="slide-thumb rounded-sm">
+                      <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" class="w-full h-full object-cover object-top opacity-60">
+                    </div>
+                    <span class="artifact-caption block mt-1 text-[10px]">{{ .caption }}</span>
+                  </div>
+                  {{ end }}
+                </div>
               </div>
-              <span class="artifact-caption block mt-1">{{ if eq .Language.Lang "zh" }}过渡 → 全橙试验 → 精炼回归{{ else if eq .Language.Lang "vi" }}Chuyển tiếp → Toàn cam → Tinh tế{{ else if eq .Language.Lang "th" }}เปลี่ยนผ่าน → ส้มล้วน → ประณีต{{ else if eq .Language.Lang "id" }}Transisi → Serba Oranye → Terpoles{{ else if eq .Language.Lang "yue" }}過渡 → 全橙實驗 → 精煉回歸{{ else }}Transition → All-Orange → Refined Return{{ end }}</span>
-            </div>
-            <div class="md:col-span-7">
-              {{ if eq $.Language.Lang "zh" }}
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">灰蓝时代（2011）</h3><span>——以「富易堂 RICHE88」之名启航，简洁清新，带来当时最流畅的投注体验。</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">红金年华（2015）</h3><span>——深红配金，澳门钜星合作时期的经典形象，贵宾厅的气质开始走进屏幕。</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">黑橙新生（2020）</h3><span>——正式更名 FYTBET，更醒目、更直觉。在最艰难的年份，用一句「你我同心抗疫」与会员站在一起。</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">全橙冒险（2021）</h3><span>——App v3.0 大胆尝试。自研的意义，在于想做的事可以立刻开始。</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">精炼至今（2026）</h3><span>——App v4.1：每日签到、幸运红包、好友推荐、VIP俱乐部。每一个新功能，都来自会员的声音。</span>
-              </div>
-              {{ else if eq $.Language.Lang "vi" }}
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Kỷ nguyên Xám xanh (2011)</h3><span class="text-xs"> — Khởi hành với tên gọi "Riche88", tối giản và thanh lịch, mang lại giao diện mượt mà nhất thời bấy giờ.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Năm tháng Đỏ vàng (2015)</h3><span class="text-xs"> — Sắc đỏ trầm và vàng kim, hình ảnh kinh điển trong giai đoạn hợp tác với Macau Juxing. Khí chất phòng VIP bắt đầu thấm nhuần qua màn hình.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Khởi đầu Đen cam (2020)</h3><span class="text-xs"> — Chính thức đổi tên thành FYTBET, trực quan hơn. Trong đại dịch, thương hiệu luôn sát cánh cùng hội viên.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Thử nghiệm Toàn cam (2021)</h3><span class="text-xs"> — App v3.0 táo bạo. Lợi thế tự phát triển thể hiện rõ: hiện thực hóa ý tưởng tức thì, làm chủ nhịp độ.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Tinh tế hiện tại (2026)</h3><span class="text-xs"> — App v4.1, từ điểm danh đến hồng bao may mắn. Mỗi tính năng mới đều do hội viên quyết định.</span>
-              </div>
-              {{ else if eq $.Language.Lang "th" }}
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">ยุคเทา-ฟ้า (2011)</h3><span class="text-xs"> — เปิดตัวในชื่อ "Riche88" ด้วยอินเทอร์เฟซที่สะอาดตาและมินิมอล เพื่อการใช้งานที่ลื่นไหลที่สุดในยุคนั้น</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">ยุคแดง-ทอง (2015)</h3><span class="text-xs"> — สีแดงเข้มและทอง สะท้อนช่วงความร่วมมือกับ Juxing มาเก๊า กลิ่นอายของเลาจน์ VIP เริ่มปรากฏบนหน้าจอ</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">อัตลักษณ์ดำ-ส้ม (2020)</h3><span class="text-xs"> — เปลี่ยนเป็น FYTBET อย่างเป็นทางการ พร้อมความ直觉ยิ่งขึ้น เรายืนหยัดเคียงข้างสมาชิกแม้ในยามวิกฤต</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">การทดลองสีส้ม (2021)</h3><span class="text-xs"> — App v3.0 กล้าที่จะแตกต่าง ข้อดีของการพัฒนาเองคือเราสามารถทำตามจินตนาการได้ทันที</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">ความประณีต (2026)</h3><span class="text-xs"> — App v4.1 พร้อมฟีเจอร์ที่ตอบโจทย์สมาชิกที่สุด ทุกการอัปเดตมาจากเสียงสะท้อนของคุณเสมอ</span>
-              </div>
-              {{ else if eq $.Language.Lang "id" }}
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Era Abu-Biru (2011)</h3><span class="text-xs"> — Diluncurkan sebagai "Riche88" dengan antarmuka bersih dan minimalis untuk kenyamanan bertaruh.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Era Merah-Emas (2015)</h3><span class="text-xs"> — Merah tua dan emas, mencerminkan kemitraan Juxing Macau. Tampilan premium yang sesuai dengan layanan VIP.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Rebrand Hitam-Oranye (2020)</h3><span class="text-xs"> — Menjadi FYTBET dengan visual lebih berani. Selama pandemi, brand berdiri teguh bersama anggotanya.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Eksperimen Serba Oranye (2021)</h3><span class="text-xs"> — App v3.0 mendobrak batas. Keunggulan pengembangan mandiri: ide hingga peluncuran tanpa hambatan.</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">Desain Terpoles (2026)</h3><span class="text-xs"> — App v4.1 dengan hadiah harian hingga angpao. Setiap peningkatan adalah respons terhadap feedback anggota.</span>
-              </div>
-              {{ else if eq $.Language.Lang "yue" }}
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">灰藍年代 (2011)</h3><span class="text-xs"> —— 以「富易堂 RICHE88」啟航，玩開 Apple 嗰種清新簡約，提供當時最爽嘅介面。</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">紅金盛世 (2015)</h3><span class="text-xs"> —— 深紅配金，係澳門鉅星合作期間嘅經典樣。貴賓廳嗰種壓場感，開始滲入手機。</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">黑橙新生 (2020)</h3><span class="text-xs"> —— 正式改名做 FYTBET，一睇就認得。疫情嗰陣寫埋「你我同心抗疫」，同老友一齊捱。</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">全橙實驗 (2021)</h3><span class="text-xs"> —— App v3.0 大膽試水。自研就係有呢個好處：諗到就做，節奏自己掌握。</span>
-              </div>
-              <div class="mb-2">
-                <h3 class="text-gold-light inline text-sm font-bold">精煉回歸 (2026)</h3><span class="text-xs"> —— App v4.1，簽到、紅包、好友分享全部齊晒。每個新功能，都係聽老友話。</span>
-              </div>
-              {{ else }}
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">Grey-Blue Era (2011)</h3><span> — Launched as "富易堂 RICHE88" with a clean, minimal interface designed for smooth betting.</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">Red-Gold Era (2015)</h3><span> — Deep red with gold accents, coinciding with the Macau Juxing International partnership. A more mature, premium look that matched the VIP concierge positioning.</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">Black-Orange Rebrand (2020)</h3><span> — Became FYTBET with bolder visuals and more intuitive navigation. During the pandemic, the brand stood with its members through a public social responsibility statement.</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">All-Orange Experiment (2021)</h3><span> — App v3.0 pushed boundaries. The advantage of in-house development was clear: idea to launch with zero external dependency.</span>
-              </div>
-              <div class="mb-3">
-                <h3 class="text-gold-light inline text-base font-bold">Refined Return (2026)</h3><span> — App v4.1 with daily check-in rewards, referral bonuses, lucky red envelopes, and VIP club perks. Every upgrade is a direct response to member feedback.</span>
+              {{ with .Params.pullQuote }}
+              <div class="mt-3">
+                <div class="pull-quote">{{ . }}</div>
               </div>
               {{ end }}
             </div>
-          </div>
-        </div>
+
+          {{ else if eq .Params.slideLayout "era-split" }}
+            {{/* Era-by-era: 3-image column (5col) + era timeline (7col) */}}
+            <div class="scroll-block">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+                <div class="md:col-span-5">
+                  <div class="grid grid-cols-3 gap-2 justify-items-center">
+                    {{ range .Params.images }}
+                    <figure>
+                      <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" class="h-auto rounded-sm slide-img-lg">
+                    </figure>
+                    {{ end }}
+                  </div>
+                  <span class="artifact-caption block mt-1">{{ .Params.imageCaption }}</span>
+                </div>
+                <div class="md:col-span-7">
+                  {{ $size := .Params.eraSize | default "base" }}
+                  {{ range .Params.eras }}
+                  <div class="mb-{{ if eq $size "sm" }}2{{ else }}3{{ end }}">
+                    <h3 class="text-gold-light inline text-{{ $size }} font-bold">{{ .title }}</h3><span{{ if eq $size "sm" }} class="text-xs"{{ end }}>{{ if eq $size "sm" }} — {{ end }}{{ .text }}</span>
+                  </div>
+                  {{ end }}
+                </div>
+              </div>
+              {{ with .Params.pullQuote }}
+              <div class="mt-3">
+                <div class="pull-quote">{{ . }}</div>
+              </div>
+              {{ end }}
+            </div>
+
+          {{ else }}
+            {{/* Fallback: hero layout */}}
+            <div class="scroll-block">
+              <div class="slide-main">
+                {{ $content | safeHTML }}
+              </div>
+              {{ with .Params.pullQuote }}
+              <div class="slide-footer">
+                <div class="pull-quote">{{ . }}</div>
+              </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
 
       </div>{{/* /track */}}
 
