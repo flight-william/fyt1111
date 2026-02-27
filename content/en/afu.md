@@ -29,6 +29,9 @@ interlinks:
   - url: "charity"
     label: "Charity"
     title: "Chengshi Cup Charity Soccer · Rural Donations · Spread the Love"
+  - url: "afu-stickers"
+    label: "Stickers"
+    title: "Ah Fu Sticker Collection — WeChat sticker pack 40+ original designs"
 ---
 
 ## The Birth of a Brand Symbol: A Decade-Long Creation Story

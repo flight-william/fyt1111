@@ -23,6 +23,9 @@ interlinks:
   - url: "charity"
     label: "Amal"
     title: "Sepak Bola Amal Chengshi Cup · Donasi Pedesaan · Sebarkan Cinta"
+  - url: "afu-stickers"
+    label: "Stiker"
+    title: "Koleksi stiker Ah Fu lengkap — WeChat stiker 40+ desain orisinal"
 ---
 
 ## Lahirnya Simbol Merek

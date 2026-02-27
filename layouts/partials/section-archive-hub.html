@@ -32,7 +32,7 @@
       {{ with .Site.GetPage "/afu" }}
       <a href="{{ .RelPermalink }}" class="archive-hub-card">
         <div class="archive-hub-thumb">
-          <img src="/images/archive/afu/sticker-fearless.webp" alt="" loading="lazy">
+          <img src="/images/archive/afu/sticker-fearless.webp" alt="{{ if or (eq $.Language.Lang "zh") (eq $.Language.Lang "yue") }}阿富表情包「没在怕」— 富易堂FYTBET吉祥物设计档案{{ else if eq $.Language.Lang "vi" }}Sticker Ah Fu Fearless — Hồ sơ thiết kế linh vật FYTBET{{ else if eq $.Language.Lang "th" }}สติกเกอร์อาฟู่ ไม่กลัว — แฟ้มออกแบบมาสคอต FYTBET{{ else if eq $.Language.Lang "id" }}Stiker Ah Fu Fearless — Arsip desain maskot FYTBET{{ else }}Ah Fu Fearless sticker — FYTBET mascot design archive{{ end }}" loading="lazy">
         </div>
         <div class="archive-hub-info">
           <h3 class="archive-hub-title">
@@ -55,11 +55,38 @@
       </a>
       {{ end }}
 
+      {{/* Card: Ah Fu Sticker Collection */}}
+      {{ with .Site.GetPage "/afu-stickers" }}
+      <a href="{{ .RelPermalink }}" class="archive-hub-card">
+        <div class="archive-hub-thumb">
+          <img src="/images/archive/afu-stickers/1.webp" alt="{{ if or (eq $.Language.Lang "zh") (eq $.Language.Lang "yue") }}阿富微信表情包「没在怕」— 富易堂FYTBET原创贴图完整收录{{ else if eq $.Language.Lang "vi" }}Sticker WeChat Ah Fu Fearless — Bộ sưu tập đầy đủ FYTBET{{ else if eq $.Language.Lang "th" }}สติกเกอร์ WeChat อาฟู่ ไม่กลัว — คอลเลกชันครบชุด FYTBET{{ else if eq $.Language.Lang "id" }}Stiker WeChat Ah Fu Fearless — Koleksi lengkap FYTBET{{ else }}Ah Fu WeChat sticker Fearless — FYTBET complete sticker collection{{ end }}" loading="lazy">
+        </div>
+        <div class="archive-hub-info">
+          <h3 class="archive-hub-title">
+            {{ if eq $.Language.Lang "zh" }}阿富表情包完整收录
+            {{ else if eq $.Language.Lang "yue" }}阿富表情包完整收錄
+            {{ else if eq $.Language.Lang "vi" }}Sticker Ah Fu đầy đủ
+            {{ else if eq $.Language.Lang "th" }}สติกเกอร์อาฟู่ครบชุด
+            {{ else if eq $.Language.Lang "id" }}Koleksi stiker Ah Fu
+            {{ else }}Ah Fu Sticker Collection
+            {{ end }}
+          </h3>
+          <p class="archive-hub-desc">
+            {{ if eq $.Language.Lang "zh" }}微信表情贴图40+款 · 原创设计 · VIP社群暗号
+            {{ else if eq $.Language.Lang "yue" }}微信表情貼圖40+款 · 原創設計 · VIP社群暗號
+            {{ else }}WeChat sticker pack · 40+ original designs · VIP community icons
+            {{ end }}
+          </p>
+          <span class="archive-hub-tag">2015</span>
+        </div>
+      </a>
+      {{ end }}
+
       {{/* Card: Visual Identity Evolution — links to existing /evolution/ page */}}
       {{ with $.Site.GetPage "/evolution" }}
       <a href="{{ .RelPermalink }}" class="archive-hub-card">
         <div class="archive-hub-thumb">
-          <img src="/images/riche88-website-v1-original-2011.jpg" alt="" loading="lazy">
+          <img src="/images/riche88-website-v1-original-2011.jpg" alt="{{ if or (eq $.Language.Lang "zh") (eq $.Language.Lang "yue") }}富易堂Riche88初版网站截图 2011 — 品牌视觉演变档案{{ else if eq $.Language.Lang "vi" }}Ảnh chụp web gốc Riche88 2011 — Tiến hóa hình ảnh FYTBET{{ else if eq $.Language.Lang "th" }}ภาพหน้าจอเว็บไซต์ดั้งเดิม Riche88 2011 — วิวัฒนาการภาพลักษณ์ FYTBET{{ else if eq $.Language.Lang "id" }}Tangkapan layar web asli Riche88 2011 — Evolusi identitas visual FYTBET{{ else }}Riche88 original website screenshot 2011 — FYTBET visual identity evolution{{ end }}" loading="lazy">
         </div>
         <div class="archive-hub-info">
           <h3 class="archive-hub-title">
@@ -86,7 +113,7 @@
       {{ with .Site.GetPage "/zhaoyun" }}
       <a href="{{ .RelPermalink }}" class="archive-hub-card">
         <div class="archive-hub-thumb">
-          <img src="/images/archive/zhaoyun/logo.webp" alt="" loading="lazy" style="background:#f5f0e8; padding:8px;">
+          <img src="/images/archive/zhaoyun/logo.webp" alt="{{ if or (eq $.Language.Lang "zh") (eq $.Language.Lang "yue") }}赵云指数书法印章Logo — 富易堂三国主题体育预测{{ else if eq $.Language.Lang "vi" }}Logo triện thư pháp Triệu Vân Chỉ Số — FYTBET dự đoán thể thao Tam Quốc{{ else if eq $.Language.Lang "th" }}โลโก้ตราประทับจ้าวหยุนอินเด็กซ์ — FYTBET พยากรณ์กีฬาสามก๊ก{{ else if eq $.Language.Lang "id" }}Logo stempel kaligrafi Zhao Yun Index — FYTBET prediksi olahraga Tiga Kerajaan{{ else }}Zhao Yun Index calligraphic seal logo — FYTBET Three Kingdoms sports prediction{{ end }}" loading="lazy" style="background:#f5f0e8; padding:8px;">
         </div>
         <div class="archive-hub-info">
           <h3 class="archive-hub-title">
@@ -109,10 +136,37 @@
       </a>
       {{ end }}
 
+      {{/* Card: Virtual Sports Archive */}}
+      {{ with .Site.GetPage "/virtual-sports" }}
+      <a href="{{ .RelPermalink }}" class="archive-hub-card">
+        <div class="archive-hub-thumb">
+          <img src="/images/archive/virtual-sports/virtual-basketball-sensors.jpg" alt="{{ if or (eq $.Language.Lang "zh") (eq $.Language.Lang "yue") }}FYTBET虚拟体育精密传感器动作捕捉 虚拟篮球{{ else if eq $.Language.Lang "vi" }}FYTBET thể thao ảo cảm biến bắt chuyển động · bóng rổ ảo{{ else if eq $.Language.Lang "th" }}FYTBET กีฬาเสมือนจริงเซ็นเซอร์จับการเคลื่อนไหว · บาสเกตบอลเสมือนจริง{{ else if eq $.Language.Lang "id" }}FYTBET virtual sports sensor penangkap gerakan · basket virtual{{ else }}FYTBET virtual sports motion capture sensors · virtual basketball{{ end }}" loading="lazy">
+        </div>
+        <div class="archive-hub-info">
+          <h3 class="archive-hub-title">
+            {{ if eq $.Language.Lang "zh" }}虚拟体育档案
+            {{ else if eq $.Language.Lang "yue" }}虛擬體育檔案
+            {{ else if eq $.Language.Lang "vi" }}Thể thao ảo
+            {{ else if eq $.Language.Lang "th" }}กีฬาเสมือนจริง
+            {{ else if eq $.Language.Lang "id" }}Virtual Sports
+            {{ else }}Virtual Sports Archive
+            {{ end }}
+          </h3>
+          <p class="archive-hub-desc">
+            {{ if eq $.Language.Lang "zh" }}疫情下的产品创新 · 动作捕捉 · 99%真实还原 · 第三方审计
+            {{ else if eq $.Language.Lang "yue" }}疫情下嘅產品創新 · 動作捕捉 · 99%真實還原 · 第三方審計
+            {{ else }}Pandemic-era innovation · motion capture · 99% realism · third-party audited
+            {{ end }}
+          </p>
+          <span class="archive-hub-tag">2020</span>
+        </div>
+      </a>
+      {{ end }}
+
       {{/* Card: 富易堂 Riche88 Brand Guidelines — coming soon placeholder */}}
       <div class="archive-hub-card archive-hub-card-upcoming">
         <div class="archive-hub-thumb archive-hub-thumb-empty">
-          <img src="/images/archive/afu/guidelines-color.webp" alt="" loading="lazy" style="opacity:0.4;">
+          <img src="/images/archive/afu/guidelines-color.webp" alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}阿富品牌色彩规范 — 富易堂吉祥物配色方案{{ else if eq .Language.Lang "vi" }}Quy chuẩn màu sắc Ah Fu — Bảng màu linh vật FYTBET{{ else if eq .Language.Lang "th" }}แนวทางสีแบรนด์อาฟู่ — จานสีมาสคอต FYTBET{{ else if eq .Language.Lang "id" }}Panduan warna merek Ah Fu — Palet warna maskot FYTBET{{ else }}Ah Fu brand color guidelines — FYTBET mascot color palette{{ end }}" loading="lazy" style="opacity:0.4;">
         </div>
         <div class="archive-hub-info">
           <h3 class="archive-hub-title" style="opacity:0.4;">

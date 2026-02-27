@@ -23,6 +23,9 @@ interlinks:
   - url: "charity"
     label: "Từ thiện"
     title: "Giải bóng đá Chengshi Cup · Quyên góp vùng sâu · Lan tỏa yêu thương"
+  - url: "afu-stickers"
+    label: "Sticker"
+    title: "Bộ sticker Ah Fu đầy đủ — WeChat sticker 40+ thiết kế gốc"
 ---
 
 ## Sự ra đời của một biểu tượng thương hiệu

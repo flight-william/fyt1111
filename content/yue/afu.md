@@ -27,6 +27,9 @@ interlinks:
   - url: "charity"
     label: "公益"
     title: "誠十杯慈善足球賽 · 山區捐贈 · 把愛傳出去"
+  - url: "afu-stickers"
+    label: "表情包"
+    title: "阿富表情包完整收錄——微信貼圖40+款原創設計"
 ---
 
 ## 開篇：一個品牌符號嘅十年誕生記

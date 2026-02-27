@@ -39,15 +39,15 @@
       <div class="archive-grid archive-grid-3">
         <figure class="artifact artifact-square">
           <img src="/images/archive/zhaoyun/logo.webp"
-               alt="{{ if eq .Language.Lang "zh" }}赵云指数书法印章Logo 富易堂体育预测栏目标识 2018{{ else }}Zhao Yun Index calligraphic seal logo · FYTBET sports prediction column 2018{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}赵云指数书法印章Logo 富易堂体育预测栏目标识 2018{{ else if eq .Language.Lang "vi" }}Logo triện thư pháp Triệu Vân Chỉ Số · nhận diện cột dự đoán FYTBET 2018{{ else if eq .Language.Lang "th" }}โลโก้ตราประทับจ้าวหยุนอินเด็กซ์ · เอกลักษณ์คอลัมน์พยากรณ์ FYTBET 2018{{ else if eq .Language.Lang "id" }}Logo stempel kaligrafi Zhao Yun Index · identitas kolom prediksi FYTBET 2018{{ else }}Zhao Yun Index calligraphic seal logo · FYTBET sports prediction column 2018{{ end }}" loading="lazy">
         </figure>
         <figure class="artifact artifact-landscape">
           <img src="/images/archive/zhaoyun/wordpress-article.webp"
-               alt="{{ if eq .Language.Lang "zh" }}赵云来指路——三国水墨画风赛事预测配图 富易堂Riche88{{ else }}Zhao Yun leads the way — Three Kingdoms ink-wash match prediction artwork · FYTBET Riche88{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}赵云来指路——三国水墨画风赛事预测配图 富易堂Riche88{{ else if eq .Language.Lang "vi" }}Triệu Vân dẫn đường — minh họa dự đoán phong cách thủy mặc Tam Quốc · FYTBET Riche88{{ else if eq .Language.Lang "th" }}จ้าวหยุนนำทาง — ภาพประกอบพยากรณ์สไตล์หมึกสามก๊ก · FYTBET Riche88{{ else if eq .Language.Lang "id" }}Zhao Yun menunjukkan jalan — ilustrasi prediksi gaya tinta Tiga Kerajaan · FYTBET Riche88{{ else }}Zhao Yun leads the way — Three Kingdoms ink-wash match prediction artwork · FYTBET Riche88{{ end }}" loading="lazy">
         </figure>
         <figure class="artifact artifact-landscape">
           <img src="/images/archive/zhaoyun/event-permanent.webp"
-               alt="{{ if eq .Language.Lang "zh" }}赵云来指路活动专页——三国武将水墨画风 富易堂体育预测{{ else }}Zhao Yun leads the way event page — Three Kingdoms warrior ink-wash · FYTBET sports prediction{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}赵云来指路活动专页——三国武将水墨画风 富易堂体育预测{{ else if eq .Language.Lang "vi" }}Trang sự kiện Triệu Vân dẫn đường — phong cách thủy mặc chiến binh Tam Quốc · FYTBET{{ else if eq .Language.Lang "th" }}หน้าอีเวนต์จ้าวหยุนนำทาง — สไตล์หมึกนักรบสามก๊ก · FYTBET{{ else if eq .Language.Lang "id" }}Halaman event Zhao Yun menunjukkan jalan — gaya tinta prajurit Tiga Kerajaan · FYTBET{{ else }}Zhao Yun leads the way event page — Three Kingdoms warrior ink-wash · FYTBET sports prediction{{ end }}" loading="lazy">
         </figure>
       </div>
     </div>
@@ -75,21 +75,21 @@
       <div class="archive-grid archive-grid-2">
         <figure class="artifact artifact-landscape">
           <img src="/images/archive/zhaoyun/homepage-banner.webp"
-               alt="{{ if eq .Language.Lang "zh" }}赵云指数之富贵保——官网首页Banner 三国水墨画风 富易堂体育投注保险{{ else }}Zhao Yun Index × Fortune Insurance — homepage banner · Three Kingdoms ink-wash · FYTBET sports betting insurance{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}赵云指数之富贵保——官网首页Banner 三国水墨画风 富易堂体育投注保险{{ else if eq .Language.Lang "vi" }}Triệu Vân × Fortune Insurance — banner trang chủ · phong cách thủy mặc · bảo hiểm cá cược FYTBET{{ else if eq .Language.Lang "th" }}จ้าวหยุน × Fortune Insurance — แบนเนอร์หน้าแรก · สไตล์หมึก · ประกันเดิมพัน FYTBET{{ else if eq .Language.Lang "id" }}Zhao Yun × Fortune Insurance — banner homepage · gaya tinta · asuransi taruhan FYTBET{{ else }}Zhao Yun Index × Fortune Insurance — homepage banner · Three Kingdoms ink-wash · FYTBET sports betting insurance{{ end }}" loading="lazy">
         </figure>
         <figure class="artifact artifact-landscape">
           <img src="/images/archive/zhaoyun/event-banner.webp"
-               alt="{{ if eq .Language.Lang "zh" }}赵云指数之富贵保——活动专页Banner 富易堂{{ else }}Zhao Yun Index × Fortune Insurance — event page banner · FYTBET{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}赵云指数之富贵保——活动专页Banner 富易堂{{ else if eq .Language.Lang "vi" }}Triệu Vân × Fortune Insurance — banner trang sự kiện · FYTBET{{ else if eq .Language.Lang "th" }}จ้าวหยุน × Fortune Insurance — แบนเนอร์หน้าอีเวนต์ · FYTBET{{ else if eq .Language.Lang "id" }}Zhao Yun × Fortune Insurance — banner halaman event · FYTBET{{ else }}Zhao Yun Index × Fortune Insurance — event page banner · FYTBET{{ end }}" loading="lazy">
         </figure>
       </div>
       <div class="archive-grid archive-grid-2 mt-4">
         <figure class="artifact artifact-landscape">
           <img src="/images/archive/zhaoyun/promo-banner.webp"
-               alt="{{ if eq .Language.Lang "zh" }}赵云指数之富贵保——优惠专区Banner 白银叁拾捌捌捌 富易堂Riche88{{ else }}Zhao Yun Index × Fortune Insurance — promotions banner · silver 38888 · FYTBET Riche88{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}赵云指数之富贵保——优惠专区Banner 白银叁拾捌捌捌 富易堂Riche88{{ else if eq .Language.Lang "vi" }}Triệu Vân × Fortune Insurance — banner khuyến mãi · bạch ngân 38888 · FYTBET Riche88{{ else if eq .Language.Lang "th" }}จ้าวหยุน × Fortune Insurance — แบนเนอร์โปรโมชัน · เงิน 38888 · FYTBET Riche88{{ else if eq .Language.Lang "id" }}Zhao Yun × Fortune Insurance — banner promosi · perak 38888 · FYTBET Riche88{{ else }}Zhao Yun Index × Fortune Insurance — promotions banner · silver 38888 · FYTBET Riche88{{ end }}" loading="lazy">
         </figure>
         <figure class="artifact artifact-landscape">
           <img src="/images/archive/zhaoyun/teaser-banner.webp"
-               alt="{{ if eq .Language.Lang "zh" }}赵云指数富贵保预告版Banner 赵云骑马水墨画风{{ else }}Zhao Yun Index Fortune Insurance teaser banner · Zhao Yun on horseback ink-wash{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}赵云指数富贵保预告版Banner 赵云骑马水墨画风{{ else if eq .Language.Lang "vi" }}Banner teaser Triệu Vân Fortune Insurance · Triệu Vân cưỡi ngựa phong cách thủy mặc{{ else if eq .Language.Lang "th" }}แบนเนอร์ทีเซอร์จ้าวหยุน Fortune Insurance · จ้าวหยุนขี่ม้าสไตล์หมึก{{ else if eq .Language.Lang "id" }}Banner teaser Zhao Yun Fortune Insurance · Zhao Yun menunggang kuda gaya tinta{{ else }}Zhao Yun Index Fortune Insurance teaser banner · Zhao Yun on horseback ink-wash{{ end }}" loading="lazy">
         </figure>
       </div>
     </div>
@@ -139,15 +139,15 @@
       <div class="archive-grid archive-grid-3">
         <figure class="artifact artifact-portrait">
           <img src="/images/edm-riche88-top.webp"
-               alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88会员EDM——来自赵云与薇薇的信{{ else }}FYTBET Riche88 member EDM — letter from Zhao Yun & Weiwei{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}富易堂Riche88会员EDM——来自赵云与薇薇的信{{ else if eq .Language.Lang "vi" }}EDM hội viên FYTBET Riche88 — thư từ Triệu Vân và Vi Vi{{ else if eq .Language.Lang "th" }}EDM สมาชิก FYTBET Riche88 — จดหมายจากจ้าวหยุนและเหว่ยเหว่ย{{ else if eq .Language.Lang "id" }}EDM anggota FYTBET Riche88 — surat dari Zhao Yun dan Weiwei{{ else }}FYTBET Riche88 member EDM — letter from Zhao Yun & Weiwei{{ end }}" loading="lazy">
         </figure>
         <figure class="artifact artifact-portrait">
           <img src="/images/edm-riche88-mid.webp"
-               alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88会员EDM——赵云指数入口 赵云周周富贵保{{ else }}FYTBET Riche88 EDM — Zhao Yun Index · Fortune Insurance weekly{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}富易堂Riche88会员EDM——赵云指数入口 赵云周周富贵保{{ else if eq .Language.Lang "vi" }}EDM FYTBET Riche88 — link Triệu Vân Chỉ Số · Fortune Insurance hàng tuần{{ else if eq .Language.Lang "th" }}EDM FYTBET Riche88 — ลิงก์จ้าวหยุนอินเด็กซ์ · Fortune Insurance ประจำสัปดาห์{{ else if eq .Language.Lang "id" }}EDM FYTBET Riche88 — link Zhao Yun Index · Fortune Insurance mingguan{{ else }}FYTBET Riche88 EDM — Zhao Yun Index · Fortune Insurance weekly{{ end }}" loading="lazy">
         </figure>
         <figure class="artifact artifact-portrait">
           <img src="/images/edm-riche88-btm.webp"
-               alt="{{ if eq .Language.Lang "zh" }}富易堂Riche88会员EDM——RICHE88品牌Logo postmaster@riche88.info{{ else }}FYTBET Riche88 EDM — RICHE88 logo · postmaster@riche88.info{{ end }}" loading="lazy">
+               alt="{{ if or (eq .Language.Lang "zh") (eq .Language.Lang "yue") }}富易堂Riche88会员EDM——RICHE88品牌Logo postmaster@riche88.info{{ else if eq .Language.Lang "vi" }}EDM FYTBET Riche88 — logo RICHE88 · postmaster@riche88.info{{ else if eq .Language.Lang "th" }}EDM FYTBET Riche88 — โลโก้ RICHE88 · postmaster@riche88.info{{ else if eq .Language.Lang "id" }}EDM FYTBET Riche88 — logo RICHE88 · postmaster@riche88.info{{ else }}FYTBET Riche88 EDM — RICHE88 logo · postmaster@riche88.info{{ end }}" loading="lazy">
         </figure>
       </div>
     </div>
